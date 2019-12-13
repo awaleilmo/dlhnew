@@ -1,0 +1,159 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Auth::routes();
+// api auth mobile
+Route::post("/api/app/register", "UserMobileController@register")->name("mobileRegister");
+Route::post("/api/app/login", "UserMobileController@login")->name("mobileLogin");
+Route::get("/api/app/showuser", "UserMobileController@alluser")->name("showuser");
+
+//tampilan admin
+Route::get("/admin","AdminController@index")->name("admin");
+Route::get("/pengaduan","AdminController@pengaduan")->name("pengaduan");
+Route::get("/tpengaduan","AdminController@tpengaduan")->name("tpengaduan");
+Route::get("/pengaduan/{id}","AdminController@printpengaduan");
+Route::get("/adminpengawasan","AdminController@pengawasan")->name("admin/pengawasan");
+Route::get("/admintimbulansampah","AdminController@timbulansampah")->name("admin/timbulansampah");
+Route::get("/adminpenanganansampah","AdminController@penanganansampah")->name("admin/penanganansampah");
+Route::get("/admindatatps","AdminController@datatps")->name("admin/datatps");
+Route::get("/adminjenistps","AdminController@jenistps")->name("admin/jenistps");
+Route::get("/adminangkutan","AdminController@angkutan")->name("admin/angkutan");
+Route::get("/adminsca","AdminController@sca")->name("admin/sca");
+Route::get("/adminscatingkat","AdminController@scatingkat")->name("admin/scatingkat");
+Route::get("/adminsna","AdminController@sna")->name("admin/sna");
+Route::get("/adminbank","AdminController@bank")->name("admin/banksampah");
+Route::get("/admindoklingkungan","AdminController@doklingkungan")->name("admin/doklingkungan");
+Route::get("/adminlimbah","AdminController@limbah")->name("admin/limbah");
+Route::get("/admindata","AdminController@adata")->name("admin/data");
+Route::get("/adminpojok","AdminController@pojok")->name("admin/pojok");
+Route::get("/adminartikel","AdminController@artikel")->name("admin/artikel");
+Route::get("/adminpengumuman","AdminController@pengumuman")->name("admin/pengumuman");
+//admin function button
+Route::get('/tpelaku', 'AdminController@tpelaku')->name('tpelaku');
+Route::post('/cpelaku', 'AdminController@cpelaku')->name('cpelaku');
+Route::get('/spelaku/{id}', 'AdminController@spelaku')->name('spelaku');
+Route::post('/epelaku', 'AdminController@epelaku')->name('epelaku');
+Route::get('/hpelaku', 'AdminController@hpelaku')->name('hpelaku');
+Route::get('/tdiawasi', 'AdminController@tdiawasi')->name('tdiawasi');
+Route::post('/cdiawasi', 'AdminController@cdiawasi')->name('cdiawasi');
+Route::get('/sdiawasi/{id}', 'AdminController@sdiawasi')->name('sdiawasi');
+Route::post('/ediawasi', 'AdminController@ediawasi')->name('ediawasi');
+Route::get('/hdiawasi', 'AdminController@hdiawasi')->name('hdiawasi');
+Route::get('/ttimbulan','AdminController@ttimbulan')->name('ttimbulan');
+Route::post('/ctimbulan', 'AdminController@ctimbulan')->name('ctimbulan');
+Route::get('/stimbulan/{id}', 'AdminController@stimbulan')->name('stimbulan');
+Route::post('/etimbulan', 'AdminController@etimbulan')->name('etimbulan');
+Route::get('/htimbulan', 'AdminController@htimbulan')->name('htimbulan');
+Route::get('/tliar','AdminController@tliar')->name('tliar');
+Route::post('/cliar', 'AdminController@cliar')->name('cliar');
+Route::get('/sliar/{id}', 'AdminController@sliar')->name('sliar');
+Route::post('/eliar', 'AdminController@eliar')->name('eliar');
+Route::get('/hliar', 'AdminController@hliar')->name('hliar');
+Route::get('/tjtps','AdminController@tjtps')->name('tjtps');
+Route::post('/cjtps', 'AdminController@cjtps')->name('cjpts');
+Route::get('/sjtps/{id}', 'AdminController@sjtps')->name('sjtps');
+Route::post('/ejtps', 'AdminController@ejtps')->name('ejtps');
+Route::get('/hjtps', 'AdminController@hjtps')->name('hjtps');
+Route::get('/ttps','AdminController@ttps')->name('ttps');
+Route::post('/ctps', 'AdminController@ctps')->name('cpts');
+Route::get('/stps/{id}', 'AdminController@stps')->name('stps');
+Route::post('/etps', 'AdminController@etps')->name('etps');
+Route::get('/htps', 'AdminController@htps')->name('htps');
+Route::get('/tangkut','AdminController@tangkut')->name('tangkut');
+Route::post('/cangkut', 'AdminController@cangkut')->name('cangkut');
+Route::get('/sangkut/{id}', 'AdminController@sangkut')->name('sangkut');
+Route::post('/eangkut', 'AdminController@eangkut')->name('eangkut');
+Route::get('/hangkut', 'AdminController@hangkut')->name('hangkut');
+Route::get('/tsca','AdminController@tsca')->name('tsca');
+Route::post('/csca', 'AdminController@csca')->name('csca');
+Route::get('/ssca/{id}', 'AdminController@ssca')->name('ssca');
+Route::post('/esca', 'AdminController@esca')->name('esca');
+Route::get('/hsca', 'AdminController@hsca')->name('hsca');
+Route::get('/tsna','AdminController@tsna')->name('tsna');
+Route::post('/csna', 'AdminController@csna')->name('csna');
+Route::get('/ssna/{id}', 'AdminController@ssna')->name('ssna');
+Route::post('/esna', 'AdminController@esna')->name('esna');
+Route::get('/hsna', 'AdminController@hsna')->name('hsna');
+Route::get('/tscatingkat','AdminController@tscatingkat')->name('tscatingkat');
+Route::post('/cscatingkat', 'AdminController@cscatingkat')->name('cscatingkat');
+Route::get('/sscatingkat/{id}', 'AdminController@sscatingkat')->name('sscatingkat');
+Route::post('/escatingkat', 'AdminController@escatingkat')->name('escatingkat');
+Route::get('/hscatingkat', 'AdminController@hscatingkat')->name('hscatingkat');
+Route::get('/tbank','AdminController@tbank')->name('tbank');
+Route::post('/cbank', 'AdminController@cbank')->name('cbank');
+Route::get('/sbank/{id}', 'AdminController@sbank')->name('sbank');
+Route::post('/ebank', 'AdminController@ebank')->name('ebank');
+Route::get('/hbank', 'AdminController@hbank')->name('hbank');
+Route::get('/tdokling','AdminController@tdokling')->name('tdokling');
+Route::post('/cdokling', 'AdminController@cdokling')->name('cdokling');
+Route::get('/sdokling/{id}', 'AdminController@sdokling')->name('sdokling');
+Route::post('/edokling', 'AdminController@edokling')->name('edokling');
+Route::get('/hdokling', 'AdminController@hdokling')->name('hdokling');
+Route::get('/tlimbah','AdminController@tlimbah')->name('tlimbah');
+Route::post('/climbah', 'AdminController@climbah')->name('climbah');
+Route::get('/slimbah/{id}', 'AdminController@slimbah')->name('slimbah');
+Route::post('/elimbah', 'AdminController@elimbah')->name('elimbah');
+Route::get('/hlimbah', 'AdminController@hlimbah')->name('hlimbah');
+Route::get('/tdata','AdminController@tdata')->name('tdata');
+Route::post('/cdata', 'AdminController@cdata')->name('cdata');
+Route::get('/sdata/{id}', 'AdminController@sdata')->name('sdata');
+Route::post('/edata', 'AdminController@edata')->name('edata');
+Route::get('/hdata', 'AdminController@hdata')->name('hdata');
+Route::get('/tartikel','AdminController@tartikel')->name('tartikel');
+Route::post('/cartikel', 'AdminController@cartikel')->name('cartikel');
+Route::get('/sartikel/{id}', 'AdminController@sartikel')->name('sartikel');
+Route::post('/eartikel', 'AdminController@eartikel')->name('eartikel');
+Route::get('/hartikel', 'AdminController@hartikel')->name('hartikel');
+Route::get('/adminartikel/{id}', 'AdminController@vartikel');
+
+//tampilan
+//Route::get('/s', 'UserController@')->name('');
+//menu tengtang kami
+Route::get('/', 'UserController@welcome')->name('welcome');
+Route::get('/dasarhukum', 'UserController@dasarhukum')->name('dasarhukum');
+Route::get('/kewenangan', 'UserController@kewenangan')->name('kewenangan');
+Route::get('/sejarah', 'UserController@sejarah')->name('sejarah');
+Route::get('/visimisi', 'UserController@visimisi')->name('visimisi');
+Route::get('/struktur', 'UserController@struktur')->name('struktur');
+Route::get('/jmlpnsthl', 'UserController@jmlpnsthl')->name('jmlpnsthl');
+Route::get('/programs', 'UserController@programs')->name('programs');
+//menu tpas cilowong
+Route::get('/cilowong','UserController@cilowong')->name('cilowong');
+//menu pelayanan
+Route::get('/amdal','UserController@amdal')->name('amdal');
+Route::get('/uklupl','UserController@uklupl')->name('uklupl');
+Route::get('/sppl','UserController@sppl')->name('sppl');
+Route::get('/perizinanlimbah', 'UserController@perizinanlimbah')->name('perizinanlimbah');
+//menu program
+Route::get('/adwiyata','UserController@adwiyata')->name('adwiyata');
+Route::get('/persampahan','UserController@persampahan')->name('persampahan');
+Route::get('/pengawasan','UserController@pengawasan')->name('pengawasan');
+Route::get('/banksampah','UserController@amdal')->name('banksampah');
+//menu data
+Route::get('/data','UserController@data')->name('data');
+//menu pelaporan
+Route::get('/pojok_pengaduan', 'UserController@pojok_pengaduan')->name('pojok_pengaduan');
+Route::post('/pojok_pengaduan','UserInputWebController@pengaduan');
+//menu struktur bidang
+Route::get('/kadis', 'UserController@kadis')->name('kadis');
+Route::get('/sekdis', 'UserController@sekdis')->name('sekdis');
+Route::get('/unpeg', 'UserController@unpeg')->name('unpeg');
+Route::get('/pep', 'UserController@pep')->name('pep');
+Route::get('/pplh', 'UserController@pplh')->name('pplh');
+Route::get('/pslb', 'UserController@pslb')->name('pslb');
+Route::get('/ppklh', 'UserController@ppklh')->name('ppklh');
+Route::get('/uptlab', 'UserController@uptlab')->name('uptlab');
+Route::get('/uptperbekalan', 'UserController@uptperbekalan')->name('uptperbekalan');
+//menu berita
+Route::get('/artikel','UserController@artikel')->name('artikel');
+Route::get('/blog-single','UserController@artikelsub')->name('blog-single');
