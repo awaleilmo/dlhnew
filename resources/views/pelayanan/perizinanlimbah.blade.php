@@ -28,56 +28,18 @@
                         <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     </td>
                 </tr>
+                @foreach($p as $pp)
                 <tr>
                     <td style="width: 27px;" valign="top">
-                        <strong>Form Permohonan TPSL B3</strong>
+                        <strong>{{$pp->nama}}</strong>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <a href="#" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
+                        <a href="upload/limbah/{{$pp->forms}}" download="upload/limbah/{{$pp->forms}}" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
                     </td>
                 </tr>
-                <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>Form Izin SIPAL</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 976px;">
-                        <a href="#" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>Kelengkapan Administrasi Pembuangan Air Limbah</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 976px;">
-                        <a href="#" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>Kelengkapan Administrasi Pengumpulan Limbah</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 976px;">
-                        <a href="#" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>Kelengkapan Administrasi Penyimpanan Limbah</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 976px;">
-                        <a href="#" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
-                    </td>
-                </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

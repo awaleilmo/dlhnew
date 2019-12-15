@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\dokling;
+use App\limbah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
@@ -114,7 +116,8 @@ class UserController extends Controller
     }
     public function amdal(){
         if(Auth::check()){
-            return view('pelayanan.amdal');
+            $p = dokling::where('nama','like','AM%')->get();
+            return view('pelayanan.amdal',compact('p'));
         }
         return redirect('/login');
 
@@ -122,7 +125,8 @@ class UserController extends Controller
 
     public function uklupl(){
         if(Auth::check()){
-            return view('pelayanan.uklupl');
+            $p = dokling::where('nama','like','UK%')->get();
+            return view('pelayanan.uklupl',compact('p'));
         }
         return redirect('/login');
 
@@ -130,7 +134,8 @@ class UserController extends Controller
 
     public function sppl(){
         if(Auth::check()){
-            return view('pelayanan.sppl');
+            $p = dokling::where('nama','like','SP%')->get();
+            return view('pelayanan.sppl',compact('p'));
         }
         return redirect('/login');
 
@@ -138,7 +143,8 @@ class UserController extends Controller
 
     public function perizinanlimbah(){
         if(Auth::check()){
-            return view('pelayanan.perizinanlimbah');
+            $p = limbah::all();
+            return view('pelayanan.perizinanlimbah', compact('p'));
         }
         return redirect('/login');
 
