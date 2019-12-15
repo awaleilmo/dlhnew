@@ -1072,6 +1072,14 @@ class AdminController extends Controller
         $pelaku = artikel::all();
         return datatables()->of($pelaku)
             ->addIndexColumn()
+            ->addColumn('tipe', function($row){
+                if($row->tipe == "1"){
+                    $t = "<label class='label label-success' style='font-size: large'>Publikasi</label>";
+                }else if ($row->tipe == "0"){
+                    $t = "<label class='label label-warning' style='font-size: large'>Draft</label>";
+                }
+                return $t;
+            })
             ->addColumn('action', function($row){
                 $btn = '<a href="adminartikel/'.$row->id.'"  class="tooltip-button demo-icon"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="View"><i class="glyph-icon icon-eye"></i></a>';
                 $btn = $btn.'<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Edit"><i class="glyph-icon icon-pencil"></i></a>';
@@ -1081,18 +1089,44 @@ class AdminController extends Controller
                 return $btn;
 
             })
-            ->rawColumns(['action'])
+            ->rawColumns(['action','tipe'])
             ->make(true);
     }
     public function cartikel(Request $request){
-        $data['judul'] = $request->judul;
-        $data['deskripsi'] = $request->konten;
-        $check = artikel::create($data);
-        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
-        if($check){
-            $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+        if(isset($_POST['publish'])){
+            $file = $request->file('foto');
+            $tujuan_upload = 'upload/artikel/';
+            $now = Carbon::now();
+            $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '1';
+            $data['foto'] = $fulname;
+            $check = artikel::create($data);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminartikel')->with($arr);
         }
-        return Response()->json($arr);
+        else if(isset($_POST['draft'])){
+            $file = $request->file('foto');
+            $tujuan_upload = 'upload/artikel/';
+            $now = Carbon::now();
+            $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '0';
+            $data['foto'] = $fulname;
+            $check = artikel::create($data);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminartikel')->with($arr);
+        }
     }
     public function sartikel($id){
         $pelaku = artikel::find($id);
@@ -1103,18 +1137,65 @@ class AdminController extends Controller
         return view('admin.viewartikel',compact('p'));
     }
     public function eartikel(Request $request){
-        $id = $request->id;
-        $data['judul'] = $request->judul;
-        $data['deskripsi'] = $request->konten;
-        $check = artikel::whereId($id)->update($data);
-        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
-        if($check){
-            $arr = ['msg' => 'Berhasil Diubah'];
+        if(isset($_POST['publish'])){
+            $id = $request->id;
+            $ls = $request->desk;
+            $file = $request->file('foto');
+            $cek = artikel::find($id);
+            if ($cek['foto'] == $ls){
+                $fulname = $cek->foto;
+            }else{
+                $tujuan_upload = 'upload/artikel/';
+                $hps = 'upload/artikel/'.$cek['foto'];
+                File::delete($hps);
+                $now = Carbon::now();
+                $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+                $file->move($tujuan_upload, $fulname);
+            }
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '1';
+            $data['foto'] = $fulname;
+            $check = artikel::update($data)->whereId($id);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminartikel')->with($arr);
         }
-        return Response()->json($arr);
+        else if(isset($_POST['draft'])){
+            $id = $request->id;
+            $ls = $request->desk;
+            $file = $request->file('foto');
+            $cek = artikel::find($id);
+            if ($cek['foto'] == $ls){
+                $fulname = $cek->foto;
+            }else{
+                $tujuan_upload = 'upload/artikel/';
+                $hps = 'upload/artikel/'.$cek['foto'];
+                File::delete($hps);
+                $now = Carbon::now();
+                $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+                $file->move($tujuan_upload, $fulname);
+            }
+
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '0';
+            $data['foto'] = $fulname;
+            $check = artikel::update($data)->whereId($id);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminartikel')->with($arr);
+        }
     }
     public function hartikel(Request $request){
         $id = $request->id;
+        $cek = artikel::find($id);
+        $hps = 'upload/artikel/'.$cek->foto;
+        File::delete($hps);
         $check = artikel::whereId($id)->delete();
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){

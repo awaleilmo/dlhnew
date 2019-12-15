@@ -179,8 +179,7 @@
                         <span>Berita</span>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="{{route('admin/pojok')}}">Pojok Warga LH</a></li>
-                        <li><a href="{{route('admin/artikel')}}">Artikel</a></li>
+                        <li><a href="{{route('admin/artikel')}}">Pojok Warga LH</a></li>
                         <li><a href="{{route('admin/pengumuman')}}">Pengumuman</a></li>
                     </ul>
                 </li>

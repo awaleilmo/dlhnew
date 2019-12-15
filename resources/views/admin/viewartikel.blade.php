@@ -191,7 +191,7 @@
     <div id="page-content">
         <div class="container">
             <div id="page-title">
-                <h2>{{$p->judul}}</h2>
+                <h1>{{$p->judul}}</h1>
             </div>
         </div>
         <div id="summernote">
