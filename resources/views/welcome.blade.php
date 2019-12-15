@@ -42,7 +42,7 @@
             Dinas Lingkungan Hidup
         </h2>
         <p class="hero-text font-white ls-l" style=" color: black; top: 50%;left: 0;width: 600px;font-size: 20px;line-height: 1.6em;text-align: left;" data-ls="offsetxin:150; durationin:1500; easingin:easeInOutQuart; rotateyin:40; offsetxout:150; rotateyout:40;">
-            Like these sweet mornings of spring which I enjoy with my whole heart. Like these sweet mornings of spring which I enjoy with my whole heart.
+            Dinas Lingkungan Hidup ( DLH ) Kota Serang dibentuk berdasarkan Peraturan Daerah Kota Serang Nomor 18 Tahun 2011 tentang Perubahan Atas Peraturan Daerah Nomor 10 Tahun 2008 tentang Pembentukan dan Susunan Organisasi Lembaga Teknis Daerah Kota Serang.
         </p>
 
         <img src="../../image-resources/dlh/foto1.jpg" class="ls-l" style="
@@ -122,7 +122,7 @@
 						rotatexout:90;
 						transformoriginout:50% bottom 0;
 					"
-        >Example heading title</h2>
+        >Menuju Zero Waste</h2>
         <p class="hero-text font-white ls-l"
            style="
 					top: 46%;
@@ -140,7 +140,7 @@
 					rotateyin:40;
 					offsetxout:150;
 					rotateyout:40;
-				">This hero box examples has an action button and smaller spacing. Like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				">Pemerintah Kota Serang menargetkan pada tahun 2023 untuk menyandang zero waste atau tidak ada pengiriman sampah ke Tempat Pembuangan Sampah Akhir (TPSA). </p>
         <div class="ls-l"
              style="
 					top: 65%;
@@ -264,19 +264,19 @@
                     <tr>
                         <td align="left"><h4 class="hero-heading wow fadeInDown" style="padding: 0">AMDAL</h4>
                             <p style="font-size: 15px">Analisis Mengenai Dampak Lingkungan Hidup yang disebut Amdal adalah kajian mengenai dampak penting suatu Usaha dan/atau Kegiatan yang direncanakan pada lingkungan hidup yang diperlukan bagi proses pengambilan keputusan tentang penyelenggaraan Usaha dan/atau Kegiatan</p>
-                            <a href="#" style="left:75%">Lanjut <i class="glyph-icon icon-chevron-circle-right"></i></a>
+                            <a href="{{route('amdal')}}" style="left:75%">Lanjut <i class="glyph-icon icon-chevron-circle-right"></i></a>
                         </td>
                     </tr>
                     <tr>
                         <td align="left"><h4 class="hero-heading wow fadeInDown" style="padding: 0">UKL.UPL</h4>
                             <p style="font-size: 15px">Upaya Pengelolaan Lingkungan Hidup dan Upaya Pemantauan Lingkungan Hidup yang disebut UKL.UPL, adalah pengelolaan dan pemantauan terhadap Usaha dan/atau Kegiatan yang tidak berdampak penting terhadap lingkungan hidup yang diperlukan bagi proses pengambilan keputusan tentang penyelenggaraan Usaha dan/atau Kegiatan</p>
-                            <a href="#" style="left:75%">Lanjut <i class="glyph-icon icon-chevron-circle-right"></i></a>
+                            <a href="{{route('uklupl')}}" style="left:75%">Lanjut <i class="glyph-icon icon-chevron-circle-right"></i></a>
                         </td>
                     </tr>
                     <tr>
                         <td align="left"><h4 class="hero-heading wow fadeInDown" style="padding: 0">SPPL</h4>
                             <p style="font-size: 15px">Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup yang disebut SPPL, adalah pernyataan kesanggupan dari penanggung jawab Usaha dan/atau Kegiatan untuk melakukan pengelolaan dan pemantauan lingkungan hidup atas dampak lingkungan hidup dari Usaha dan/atau Kegiatannya di luar Usaa dan/atau Kegiatan yang wajib Amdal atau UKL.UPL</p>
-                            <a href="#" style="left:75%">Lanjut <i class="glyph-icon icon-chevron-circle-right"></i></a>
+                            <a href="{{route('sppl')}}" style="left:75%">Lanjut <i class="glyph-icon icon-chevron-circle-right"></i></a>
                         </td>
                     </tr>
                 </table>
