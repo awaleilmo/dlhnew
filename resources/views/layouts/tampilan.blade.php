@@ -180,7 +180,7 @@
             </li>
             <li>
                 <a href="#" title="Pages">
-                    Program
+                    Program <i class="glyph-icon icon-caret-down"></i>
                 </a>
                 <ul>
                     <li class="dropdown"><a href="{{route('pengawasan')}}">Pengawasan</a></li>

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\artikel;
 use App\dokling;
 use App\limbah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+
 class UserController extends Controller
 {
     public function welcome(Request $request)
@@ -107,7 +110,8 @@ class UserController extends Controller
 
     public function artikel(){
 
-        return view('berita.artikel');
+        $p = artikel::all();
+        return view('berita.artikel', compact('p'));
     }
     public function artikelsub(){
 
