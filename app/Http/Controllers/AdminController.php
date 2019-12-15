@@ -13,6 +13,7 @@ use App\limbah;
 use App\lokasitps;
 use App\pelaku;
 use App\Pengaduan;
+use App\pengumuman;
 use App\sca;
 use App\sna;
 use App\scatingkat;
@@ -1069,29 +1070,29 @@ class AdminController extends Controller
         return Response()->json($arr);
     }
     public function tartikel(){
-        $pelaku = artikel::all();
-        return datatables()->of($pelaku)
-            ->addIndexColumn()
-            ->addColumn('tipe', function($row){
-                if($row->tipe == "1"){
-                    $t = "<label class='label label-success' style='font-size: large'>Publikasi</label>";
-                }else if ($row->tipe == "0"){
-                    $t = "<label class='label label-warning' style='font-size: large'>Draft</label>";
-                }
-                return $t;
-            })
-            ->addColumn('action', function($row){
-                $btn = '<a href="adminartikel/'.$row->id.'"  class="tooltip-button demo-icon"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="View"><i class="glyph-icon icon-eye"></i></a>';
-                $btn = $btn.'<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Edit"><i class="glyph-icon icon-pencil"></i></a>';
-                $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Delete"><i class="glyph-icon icon-trash"></i></a>';
+    $pelaku = artikel::all();
+    return datatables()->of($pelaku)
+        ->addIndexColumn()
+        ->addColumn('tipe', function($row){
+            if($row->tipe == "1"){
+                $t = "<label class='label label-success' style='font-size: large'>Publikasi</label>";
+            }else if ($row->tipe == "0"){
+                $t = "<label class='label label-warning' style='font-size: large'>Draft</label>";
+            }
+            return $t;
+        })
+        ->addColumn('action', function($row){
+            $btn = '<a href="adminartikel/'.$row->id.'"  class="tooltip-button demo-icon"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="View"><i class="glyph-icon icon-eye"></i></a>';
+            $btn = $btn.'<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Edit"><i class="glyph-icon icon-pencil"></i></a>';
+            $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Delete"><i class="glyph-icon icon-trash"></i></a>';
 
 
-                return $btn;
+            return $btn;
 
-            })
-            ->rawColumns(['action','tipe'])
-            ->make(true);
-    }
+        })
+        ->rawColumns(['action','tipe'])
+        ->make(true);
+}
     public function cartikel(Request $request){
         if(isset($_POST['publish'])){
             $file = $request->file('foto');
@@ -1156,7 +1157,7 @@ class AdminController extends Controller
             $data['deskripsi'] = $request->konten;
             $data['tipe'] = '1';
             $data['foto'] = $fulname;
-            $check = artikel::update($data)->whereId($id);
+            $check = artikel::whereId($id)->update($data);
             $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
             if($check){
                 $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
@@ -1183,7 +1184,7 @@ class AdminController extends Controller
             $data['deskripsi'] = $request->konten;
             $data['tipe'] = '0';
             $data['foto'] = $fulname;
-            $check = artikel::update($data)->whereId($id);
+            $check = artikel::whereId($id)->update($data);
             $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
             if($check){
                 $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
@@ -1203,5 +1204,139 @@ class AdminController extends Controller
         }
         return Response()->json($arr);
     }
+    public function tpengumuman(){
+        $pelaku = pengumuman::all();
+        return datatables()->of($pelaku)
+            ->addIndexColumn()
+            ->addColumn('tipe', function($row){
+                if($row->tipe == "1"){
+                    $t = "<label class='label label-success' style='font-size: large'>Publikasi</label>";
+                }else if ($row->tipe == "0"){
+                    $t = "<label class='label label-warning' style='font-size: large'>Draft</label>";
+                }
+                return $t;
+            })
+            ->addColumn('action', function($row){
+                $btn = '<a href="adminpengumuman/'.$row->id.'"  class="tooltip-button demo-icon"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="View"><i class="glyph-icon icon-eye"></i></a>';
+                $btn = $btn.'<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Edit"><i class="glyph-icon icon-pencil"></i></a>';
+                $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px" title="Delete"><i class="glyph-icon icon-trash"></i></a>';
 
+
+                return $btn;
+
+            })
+            ->rawColumns(['action','tipe'])
+            ->make(true);
+    }
+    public function cpengumuman(Request $request){
+        if(isset($_POST['publish'])){
+            $file = $request->file('foto');
+            $tujuan_upload = 'upload/pengumuman/';
+            $now = Carbon::now();
+            $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '1';
+            $data['foto'] = $fulname;
+            $check = pengumuman::create($data);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminpengumuman')->with($arr);
+        }
+        else if(isset($_POST['draft'])){
+            $file = $request->file('foto');
+            $tujuan_upload = 'upload/pengumuman/';
+            $now = Carbon::now();
+            $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '0';
+            $data['foto'] = $fulname;
+            $check = pengumuman::create($data);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminpengumuman')->with($arr);
+        }
+    }
+    public function spengumuman($id){
+        $pelaku = pengumuman::find($id);
+        return response()->json($pelaku);
+    }
+    public function vpengumuman($id){
+        $p = pengumuman::find($id);
+        return view('admin.viewpengumuman',compact('p'));
+    }
+    public function epengumuman(Request $request){
+        if(isset($_POST['publish'])){
+            $id = $request->id;
+            $ls = $request->desk;
+            $file = $request->file('foto');
+            $cek = pengumuman::find($id);
+            if ($cek['foto'] == $ls){
+                $fulname = $cek->foto;
+            }else{
+                $tujuan_upload = 'upload/pengumuman/';
+                $hps = 'upload/pengumuman/'.$cek['foto'];
+                File::delete($hps);
+                $now = Carbon::now();
+                $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+                $file->move($tujuan_upload, $fulname);
+            }
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '1';
+            $data['foto'] = $fulname;
+            $check = pengumuman::whereId($id)->update($data);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminpengumuman')->with($arr);
+        }
+        else if(isset($_POST['draft'])){
+            $id = $request->id;
+            $ls = $request->desk;
+            $file = $request->file('foto');
+            $cek = pengumuman::find($id);
+            if ($cek['foto'] == $ls){
+                $fulname = $cek->foto;
+            }else{
+                $tujuan_upload = 'upload/pengumuman/';
+                $hps = 'upload/pengumuman/'.$cek['foto'];
+                File::delete($hps);
+                $now = Carbon::now();
+                $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+                $file->move($tujuan_upload, $fulname);
+            }
+
+            $data['judul'] = $request->judul;
+            $data['deskripsi'] = $request->konten;
+            $data['tipe'] = '0';
+            $data['foto'] = $fulname;
+            $check = pengumuman::whereId($id)->update($data);
+            $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+            if($check){
+                $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+            }
+            return Redirect('/adminpengumuman')->with($arr);
+        }
+    }
+    public function hpengumuman(Request $request){
+        $id = $request->id;
+        $cek = pengumuman::find($id);
+        $hps = 'upload/pengumuman/'.$cek->foto;
+        File::delete($hps);
+        $check = pengumuman::whereId($id)->delete();
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $arr = ['msg' => 'Berhasil Dihapus', 'status' => true];
+        }
+        return Response()->json($arr);
+    }
 }

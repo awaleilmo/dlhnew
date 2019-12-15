@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePengumumenTable extends Migration
+class CreatePengumumansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreatePengumumenTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengumumen', function (Blueprint $table) {
+        Schema::create('pengumumans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("judul");
-            $table->text("deskripsi");
-            $table->string("oleh");
+            $table->longText("deskripsi");
+            $table->string("tipe");
             $table->string("foto");
-            $table->string("file");
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreatePengumumenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengumumen');
+        Schema::dropIfExists('pengumumans');
     }
 }

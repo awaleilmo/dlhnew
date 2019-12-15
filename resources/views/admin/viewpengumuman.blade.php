@@ -187,46 +187,46 @@
     </div>
     <div id="page-content-wrapper">
         <script type="text/javascript" src="../../assets/widgets/summernote-wysiwyg/summernote-wysiwyg.js"></script>
-    <div id="page-content">
-        <div class="panel">
-            <div class="panel-body">
-                <div class="ribbon">
-                    <div class="bg-blue-alt">PREVIEW</div>
-                </div>
-                <div class="ribbon ribbon-tr">
-                @if($p->tipe == 1)
-                   <div class="bg-green">PUBLIKASI</div>
-                @endif
-                    @if($p->tipe == 0)
-                        <div class="bg-orange">DRAFT</div>
-                    @endif
-                </div>
-        <div class="container">
-            <div id="page-title">
-                <h1 align="center">{{$p->judul}}</h1>
-            </div>
-        </div>
-        <p align="center">
-            <img src="../upload/artikel/{{$p->foto}}" style="width: 800px; height: 400px"><br><br>
-                <div class="post-meta clearfix">
+        <div id="page-content">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="ribbon">
+                        <div class="bg-blue-alt">PREVIEW</div>
+                    </div>
+                    <div class="ribbon ribbon-tr">
+                        @if($p->tipe == 1)
+                            <div class="bg-green">PUBLIKASI</div>
+                        @endif
+                        @if($p->tipe == 0)
+                            <div class="bg-orange">DRAFT</div>
+                        @endif
+                    </div>
+                    <div class="container">
+                        <div id="page-title">
+                            <h1 align="center">{{$p->judul}}</h1>
+                        </div>
+                    </div>
+                    <p align="center">
+                        <img src="../upload/pengumuman/{{$p->foto}}" style="width: 800px; height: 400px"><br><br>
+                    <div class="post-meta clearfix">
                         <span class="float-left">
                             <i class="glyph-icon icon-user"></i>
                             Admin DLH Kota Serang
                         </span>
-                    <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-                    <span class="float-left" style="padding-left: 10px">
+                        <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+                        <span class="float-left" style="padding-left: 10px">
                             <i class="glyph-icon icon-clock-o"></i>
                             {{$p->created_at->day." ".$p->created_at->monthName." ".$p->created_at->year}}
                         </span>
+                    </div>
+                    <div class="divider"></div>
+                    </p>
+                    <div id="summernote">
+                        {!! $p->deskripsi !!}
+                    </div>
                 </div>
-                <div class="divider"></div>
-        </p>
-        <div id="summernote">
-            {!! $p->deskripsi !!}
-        </div>
             </div>
         </div>
-    </div>
     </div>
     @include('jsother')
 </div>

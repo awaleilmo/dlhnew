@@ -1,6 +1,11 @@
 @extends('layouts.layouts')
 
 @section('konten')
+    <script>
+        $(window).load(function () {
+            $(".note-insert").addClass("hidden");
+        });
+    </script>
     <div id="page-content">
         @if ($message = Session::get('msg'))
             <div class="alert alert-success hidden" id="msg_div">
@@ -66,14 +71,13 @@
                     y.reset();
                     y.style.display = '';
                     yx.reset();
-                    $(".note-insert").addClass("hidden");
                     u.style.display = 'none';
                     //yx.style.display = 'none';
                     $('#labelfile').html('Select File');
                     $('#labelfile1').html('Select File');
                     $('#btn-submit').attr('type','submit');
                 } else {
-                    $(".note-insert").addClass("hidden");
+
                     x.innerHTML = "Add";
                     y.style.display = 'none';
                     yx.style.display = 'none';
@@ -153,10 +157,10 @@
                             Foto :
                         </div>
                         <div class="col-md-2">
-                            <input class="hidden" for="foto" id="desk" name="dek">
+                            <input class="hidden" for="foto" id="desk" name="desk">
                             <span class="btn btn-primary btn-file">
                                 <span class="fileinput-new" id="labelfile">Select file</span>
-                                <input accept="image/*" id="foto" name="foto" type="file"  onchange="document.getElementById('desk').value = this.value; document.getElementById('labelfile').innerHTML = this.value;" required autocomplete="off">
+                                <input accept="image/*" id="foto" name="foto" type="file"  onchange="document.getElementById('desk').value = this.value; document.getElementById('labelfile').innerHTML = this.value;" autocomplete="off">
                             </span>
                         </div>
                     </div>
@@ -200,6 +204,8 @@
                     $('#btn-submit').addClass('hidden');
                     $('#btn-edit').removeClass('hidden');
                     $('#judul').val(data.judul);
+                    $('#desk').val(data.foto);
+                    $('#labelfile').html(data.foto);
                     $('.note-editable').html(data.deskripsi );
                     $('#id').val(data.id);
                     var oTable = $('#datatable1').dataTable();

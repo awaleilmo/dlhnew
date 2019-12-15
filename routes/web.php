@@ -115,6 +115,12 @@ Route::get('/sartikel/{id}', 'AdminController@sartikel')->name('sartikel');
 Route::post('/eartikel', 'AdminController@eartikel')->name('eartikel');
 Route::get('/hartikel', 'AdminController@hartikel')->name('hartikel');
 Route::get('/adminartikel/{id}', 'AdminController@vartikel');
+Route::get('/tpengumuman','AdminController@tpengumuman')->name('tpengumuman');
+Route::post('/cpengumuman', 'AdminController@cpengumuman')->name('cpengumuman');
+Route::get('/spengumuman/{id}', 'AdminController@spengumuman')->name('spengumuman');
+Route::post('/epengumuman', 'AdminController@epengumuman')->name('epengumuman');
+Route::get('/hpengumuman', 'AdminController@hpengumuman')->name('hpengumuman');
+Route::get('/adminpengumuman/{id}', 'AdminController@vpengumuman');
 
 //tampilan
 //Route::get('/s', 'UserController@')->name('');
