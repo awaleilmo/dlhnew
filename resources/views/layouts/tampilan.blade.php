@@ -202,7 +202,6 @@
                 </a>
                 <ul>
                     <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pojok Warga LH</a></li>
-                    <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Artikel</a></li>
                     <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pengumuman</a>
                     </li>
                 </ul>
@@ -220,6 +219,9 @@
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
                     <ul>
+                        @if(Auth::user()->level == "admin")
+                            <li><a href="{{route('admin')}}">Dashboard Admin</a></li>
+                        @endif
                         <li>
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
