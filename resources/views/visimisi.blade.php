@@ -10,7 +10,7 @@
                 <tr>
                     <td valign="top"></td>
                     <td align="left">
-                        <p style="text-align: justify">"Terwujudnya Kota Peradaban yang Berdaya dan Berbudaya"</p></td>
+                        <p style="text-align: center">“Bersama Menjaga Kualitas Lingkungan Hidup Kota Serang”</p></td>
 
                 </tr>
                 <tr>
@@ -20,28 +20,22 @@
                 <tr>
                     <td valign="top"><strong>1.</strong></td>
                     <td align="left">
-                        <p style="text-align: justify">Menguatkan Peradaban Berbasis Nilai-Nilai Kemanusiaan</p></td>
+                        <p style="text-align: justify">Meningkatkan kapasitas dan akuntabilitas.</p></td>
 
                 </tr>
                 <tr>
                     <td valign="top"><strong>2.</strong></td>
                     <td align="left">
-                        <p style="text-align: justify">Meningkatkan Sarana Prasarana Daerah yang Berwawasan Lingkungan.</p></td>
+                        <p style="text-align: justify">Meningkatkan kualitas lingkungan hidup dan pengelolaan sumberdaya alam</p></td>
 
                 </tr>
                  <tr>
                     <td valign="top"><strong>3.</strong></td>
                     <td align="left">
-                        <p style="text-align: justify">Meningkatkan Perekonomian Daerah dan Pemberdayaan Masyarakat yang Berdaya Saing.</p></td>
+                        <p style="text-align: justify">Meningkatkan kemampuan, kesadaran, kepedulian, dan partisipasi para pemangku kepentingan terhadap fungsi lingkungan hidup </p></td>
 
                 </tr>
-                 <tr>
-                    <td valign="top"><strong>4.</strong></td>
-                    <td align="left">
-                        <p style="text-align: justify">Meningkatkan Tata Kelola Pemerintahan yang Baik.</p></td>
-
-                </tr>
-            </table>
+                       </table>
 
         </div>
     </div>
