@@ -137,49 +137,47 @@
             <div class="col-md-3">
                 <div class="content-box">
                     <h3 class="content-box-header bg-default">
-                        Recent posts
+                        Berita Terbaru
                     </h3>
                     <div class="posts-list content-box-wrapper">
                         <ul class="">
+                            @foreach($z as $zz)
                             <li>
                                 <div class="post-image">
-                                    <a href="../../assets/image-resources/stock-images/img-10.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
-                                        <img class="img-responsive" src="../../assets/image-resources/stock-images/img-10.jpg" alt="" />
+                                    <a href=".../upload/artikel/{{$zz->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$zz->judul}}">
+                                        <img class="img-responsive" src="../upload/artikel/{{$zz->foto}}" alt="" />
                                     </a>
                                 </div>
                                 <div class="post-body">
-                                    <a class="post-title" href="blog-single.html" title="">
-                                        <h3>When our power of choice is untrammelled prevents</h3>
+                                    <a class="post-title" href="{{$zz->id}}" title="">
+                                        <h3>{{$zz->judul}}</h3>
                                     </a>
-                                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.</p>
                                 </div>
                             </li>
-                            <li>
-                                <div class="post-image">
-                                    <a href="../../assets/image-resources/stock-images/img-11.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
-                                        <img class="img-responsive" src="../../assets/image-resources/stock-images/img-11.jpg" alt="" />
-                                    </a>
-                                </div>
-                                <div class="post-body">
-                                    <a class="post-title" href="blog-single.html" title="">
-                                        <h3>And when nothing prevents our being able</h3>
-                                    </a>
-                                    <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="post-image">
-                                    <a href="../../assets/image-resources/stock-images/img-12.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
-                                        <img class="img-responsive" src="../../assets/image-resources/stock-images/img-12.jpg" alt="" />
-                                    </a>
-                                </div>
-                                <div class="post-body">
-                                    <a class="post-title" href="blog-single.html" title="">
-                                        <h3>When our power of choice is untrammelled</h3>
-                                    </a>
-                                    <p>Occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
-                                </div>
-                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3 class="content-box-header bg-default">
+                        Pengumuman Terbaru
+                    </h3>
+                    <div class="posts-list content-box-wrapper">
+                        <ul class="">
+                            @foreach($x as $xx)
+                                <li>
+                                    <div class="post-image">
+                                        <a href=".../upload/pengumuman/{{$xx->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$xx->judul}}">
+                                            <img class="img-responsive" src="../upload/pengumuman/{{$xx->foto}}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="post-body">
+                                        <a class="post-title" href="pengumuman/{{$xx->id}}" title="">
+                                            <h3>{{$xx->judul}}</h3>
+                                        </a>
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

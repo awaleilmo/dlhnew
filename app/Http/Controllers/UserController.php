@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\artikel;
 use App\dokling;
 use App\limbah;
+use App\pengumuman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -110,13 +111,21 @@ class UserController extends Controller
 
     public function artikel(){
 
-        $p = artikel::all();
-        return view('berita.artikel', compact('p'));
+        $p = artikel::where('tipe','=','1')->paginate(1);
+        $z = artikel::where('tipe','=','1')->limit(4)->get();
+        $x = pengumuman::where('tipe','=','1')->limit(4)->get();
+        return view('berita.artikel', compact('p','z','x'));
     }
     public function artikelsub($id){
 
         $p = artikel::find($id);
-        return view('berita.artikelsub',compact('p'));
+        if($p->tipe == 1) {
+            $z = artikel::where('tipe','=','1')->limit(4)->get();
+            $x = pengumuman::where('tipe','=','1')->limit(4)->get();
+            return view('berita.artikelsub', compact('p','z','x'));
+        }else{
+            return redirect('artikel');
+        }
 
     }
     public function amdal(){

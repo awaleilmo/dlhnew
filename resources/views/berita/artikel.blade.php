@@ -59,9 +59,10 @@
     </script>
 
 
-    <div id="page-content" class="container mrg25T">
-        @foreach($p as $pp)
+    <div id="page-content row" class="container mrg25T">
 
+        <div class="col-md-9">
+            @foreach($p as $pp)
         <div class="blog-box row">
             <div class="post-image col-md-4">
                 <a href="../upload/artikel/{{$pp->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$pp->judul}}">
@@ -81,9 +82,6 @@
                     <i class="glyph-icon icon-clock-o"></i>
                     {{$pp->created_at->day." ".$pp->created_at->monthName." ".$pp->created_at->year}}
                 </span>
-                    <span>
-                    <i class="glyph-icon icon-comments-o"></i>
-                </span>
                 </div>
                 <div class="post-content isianya" style="height: 45px">
 
@@ -91,6 +89,57 @@
                 <a href="artikel/{{$pp->id}}" class="btn btn-sm btn-default" title="Read more">Read more</a>
             </div>
         </div>
-        @endforeach
+            @endforeach
+            {{ $p ?? ''->links() }}
+        </div>
+
+            <div class="col-md-3">
+                <div class="content-box">
+                    <h3 class="content-box-header bg-default">
+                        Berita Terbaru
+                    </h3>
+                    <div class="posts-list content-box-wrapper">
+                        <ul class="">
+                            @foreach($z as $zz)
+                                <li>
+                                    <div class="post-image">
+                                        <a href=".../upload/artikel/{{$zz->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$zz->judul}}">
+                                            <img class="img-responsive" src="../upload/artikel/{{$zz->foto}}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="post-body">
+                                        <a class="post-title" href="artikel/{{$zz->id}}" title="">
+                                            <h3>{{$zz->judul}}</h3>
+                                        </a>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3 class="content-box-header bg-default">
+                        Pengumuman Terbaru
+                    </h3>
+                    <div class="posts-list content-box-wrapper">
+                        <ul class="">
+                            @foreach($x as $xx)
+                                <li>
+                                    <div class="post-image">
+                                        <a href=".../upload/pengumuman/{{$xx->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$xx->judul}}">
+                                            <img class="img-responsive" src="../upload/pengumuman/{{$xx->foto}}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="post-body">
+                                        <a class="post-title" href="pengumuman/{{$xx->id}}" title="">
+                                            <h3>{{$xx->judul}}</h3>
+                                        </a>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
     </div>
 @endsection
