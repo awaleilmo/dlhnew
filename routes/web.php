@@ -162,4 +162,4 @@ Route::get('/uptlab', 'UserController@uptlab')->name('uptlab');
 Route::get('/uptperbekalan', 'UserController@uptperbekalan')->name('uptperbekalan');
 //menu berita
 Route::get('/artikel','UserController@artikel')->name('artikel');
-Route::get('/blog-single','UserController@artikelsub')->name('blog-single');
+Route::get('/artikel/{id}','UserController@artikelsub');
