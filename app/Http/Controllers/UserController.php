@@ -111,18 +111,37 @@ class UserController extends Controller
 
     public function artikel(){
 
-        $p = artikel::where('tipe','=','1')->paginate(1);
-        $z = artikel::where('tipe','=','1')->limit(4)->get();
-        $x = pengumuman::where('tipe','=','1')->limit(4)->get();
+        $p = artikel::where('tipe','=','1')->orderBy('created_at','desc')->paginate(10);
+        $z = artikel::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
+        $x = pengumuman::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
         return view('berita.artikel', compact('p','z','x'));
     }
     public function artikelsub($id){
 
         $p = artikel::find($id);
         if($p->tipe == 1) {
-            $z = artikel::where('tipe','=','1')->limit(4)->get();
-            $x = pengumuman::where('tipe','=','1')->limit(4)->get();
+            $z = artikel::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
+            $x = pengumuman::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
             return view('berita.artikelsub', compact('p','z','x'));
+        }else{
+            return redirect('artikel');
+        }
+
+    }
+    public function pengumuman(){
+
+        $p = pengumuman::where('tipe','=','1')->orderBy('created_at','desc')->paginate(10);
+        $z = artikel::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
+        $x = pengumuman::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
+        return view('berita.pengumuman', compact('p','z','x'));
+    }
+    public function pengumumansub($id){
+
+        $p = pengumuman::find($id);
+        if($p->tipe == 1) {
+            $z = artikel::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
+            $x = pengumuman::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
+            return view('berita.pengumumansub', compact('p','z','x'));
         }else{
             return redirect('artikel');
         }

@@ -109,7 +109,7 @@
                 </a>
                 <ul>
                     <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pojok Warga LH</a></li>
-                    <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pengumuman</a>
+                    <li class="dropdown" style="color: white"><a href="{{route('pengumuman')}}"> Pengumuman</a>
                     </li>
                 </ul>
 

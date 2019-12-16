@@ -163,3 +163,5 @@ Route::get('/uptperbekalan', 'UserController@uptperbekalan')->name('uptperbekala
 //menu berita
 Route::get('/artikel','UserController@artikel')->name('artikel');
 Route::get('/artikel/{id}','UserController@artikelsub');
+Route::get('/pengumuman','UserController@pengumuman')->name('pengumuman');
+Route::get('/pengumuman/{id}','UserController@pengumumansub');
