@@ -113,9 +113,10 @@ class UserController extends Controller
         $p = artikel::all();
         return view('berita.artikel', compact('p'));
     }
-    public function artikelsub(){
+    public function artikelsub($id){
 
-        return view('berita.artikelsub');
+        $p = artikel::find($id);
+        return view('berita.artikelsub',compact('p'));
 
     }
     public function amdal(){

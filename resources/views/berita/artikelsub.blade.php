@@ -1,10 +1,73 @@
-@extends('layouts.tampilan')
+<!DOCTYPE html>
+<html lang ="en">
 
-@section('content')
-    <div class="hero-box hero-box-smaller full-bg-13 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
+<!-- Mirrored from agileui.com/demo/monarch/demo/frontend-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 03:58:24 GMT -->
+<head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <style>
+        /* Loading Spinner */
+        .spinner{margin:0;width:70px;height:18px;margin:-35px 0 0 -9px;position:absolute;top:50%;left:50%;text-align:center}.spinner > div{width:18px;height:18px;background-color:#333;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes bouncedelay{0%,80%,100%{-webkit-transform:scale(0.0)}40%{-webkit-transform:scale(1.0)}}@keyframes bouncedelay{0%,80%,100%{transform:scale(0.0);-webkit-transform:scale(0.0)}40%{transform:scale(1.0);-webkit-transform:scale(1.0)}}
+    </style>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Dinas Lingkungan Hidup Kota Serang</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    @include('cssfronother')
+    <script type="text/javascript">
+        $(window).load(function(){
+            setTimeout(function() {
+                $('#loading').fadeOut( 400, "linear" );
+            }, 300);
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+<div id="loading">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > 450) {
+            document.getElementById("myP").style.height = "0px";
+            document.getElementById("myL").style.height = "0px";
+            document.getElementById("myP").style.transition = "height 10s";
+            document.getElementById("myP").style.webkitTransition = "height 0s";
+            document.getElementById("myO").style.position = "fixed";
+            document.getElementById("myO").style.marginTop = "0";
+            document.getElementById("myI").style.marginTop = "5em";
+        } else if(prevScrollpos < 12) {
+            document.getElementById("myP").style.height = "200px";
+            document.getElementById("myL").style.height = "200px";
+            document.getElementById("myP").style.transition = "height 1s";
+            document.getElementById("myP").style.webkitTransition = "height 1s";
+            document.getElementById("myO").style.position = "relative";
+            document.getElementById("myO").style.marginTop = "0";
+            document.getElementById("myI").style.marginTop = "0em";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+<!-- banner -->
+
+<div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 200px; margin-bottom: -.5em; background: linear-gradient(to right, #8EC220, #006B35)">
+    <img id="myP"  src="../image-resources/dlh/banner2,1.png" style="margin-left:10%; width: 80%; height: 200px; ">
+</div>
+@include('layouts.menuuser')
+    <div class="hero-box hero-box-smaller blurred-img-5 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
         <div class="container">
-            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s">Single post</h1>
-            <p class="hero-text wow bounceInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">Monarch comes with example pages for single blog posts.</p>
+            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s">{{$p->judul}}</h1>
         </div>
         <div class="hero-overlay bg-black"></div>
     </div>
@@ -37,93 +100,162 @@
 
     <div id="page-content" class="container mrg25T">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <div class="blog-box blog-box-single blog-box-alt row">
-                    <a class="post-title" href="blog-single" title="">
-                        <h3>When our power of choice is untrammelled and when nothing prevents our being able</h3>
-                    </a>
                     <div class="post-image">
-                        <a href="../../assets/image-resources/stock-images/img-42.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
-                            <img class="img-responsive lazy img-rounded" src="#" data-original="../../assets/image-resources/slides-bg/slide-3.jpg" alt="" />
+                        <a href="../upload/artikel/{{$p->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
+                            <img class="img-responsive lazy img-rounded" src="#" data-original="../upload/artikel/{{$p->foto}}" alt="" />
                         </a>
                     </div>
+                    <a class="post-title" href="artikel/{{$p->id}}" title="">
+                        <h3>{{$p->judul}}</h3>
+                    </a>
                     <div class="post-content-wrapper">
                         <div class="post-meta clearfix">
                         <span class="float-left">
                             <i class="glyph-icon icon-user"></i>
-                            <a href="#" title="">Thomas Edison</a>
+                            Admin DLH Kota Serang
                         </span>
                             <span class="float-left">
                             <i class="glyph-icon icon-clock-o"></i>
-                            21 December 2014
-                        </span>
-                            <span class="float-right">
-                            <i class="glyph-icon icon-comments-o"></i>
-                            <a href="#comments" title="">4 Comments</a>
+                            {{$p->created_at->day." ".$p->created_at->monthName." ".$p->created_at->year}}
                         </span>
                         </div>
                         <div class="divider"></div>
                         <div class="post-content">
-                            <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.</p>
-
-                            <p>The languages only differ in their grammar, their pronunciation and their most common words.</p>
-
-                            <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</p>
-
-                            <p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
-
-                            <p>If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
-
-                            <p>The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental.</p>
-
-                            <p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family. Their separate existence is a myth.</p>
-
-                            <p>For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
-
-                            <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
-
-                            <p>If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages.</p>
-
-                            <p>It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family.</p>
-
-                            <p>Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
-
-                            <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as</p>
+                            {!! $p->deskripsi !!}
                         </div>
 
                     </div>
                 </div>
 
-                <div class="text-center post-share-box">
-                    <a href="#" class="btn btn-xs bg-facebook">
-                    <span class="glyph-icon icon-separator">
-                        <i class="glyph-icon icon-facebook"></i>
-                    </span>
-                        <span class="button-content">
-                        Share on Facebook
-                    </span>
-                    </a>
-                    <a href="#" class="btn btn-xs bg-google">
-                    <span class="glyph-icon icon-separator">
-                        <i class="glyph-icon icon-google-plus"></i>
-                    </span>
-                        <span class="button-content">
-                        Share on Google
-                    </span>
-                    </a>
-                    <a href="#" class="btn btn-xs bg-twitter">
-                    <span class="glyph-icon icon-separator">
-                        <i class="glyph-icon icon-twitter"></i>
-                    </span>
-                        <span class="button-content">
-                        Share on Twitter
-                    </span>
-                    </a>
-                </div>
+
 
 
 
             </div>
+            <div class="col-md-3">
+                <div class="content-box">
+                    <h3 class="content-box-header bg-default">
+                        Recent posts
+                    </h3>
+                    <div class="posts-list content-box-wrapper">
+                        <ul class="">
+                            <li>
+                                <div class="post-image">
+                                    <a href="../../assets/image-resources/stock-images/img-10.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
+                                        <img class="img-responsive" src="../../assets/image-resources/stock-images/img-10.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="post-body">
+                                    <a class="post-title" href="blog-single.html" title="">
+                                        <h3>When our power of choice is untrammelled prevents</h3>
+                                    </a>
+                                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-image">
+                                    <a href="../../assets/image-resources/stock-images/img-11.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
+                                        <img class="img-responsive" src="../../assets/image-resources/stock-images/img-11.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="post-body">
+                                    <a class="post-title" href="blog-single.html" title="">
+                                        <h3>And when nothing prevents our being able</h3>
+                                    </a>
+                                    <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-image">
+                                    <a href="../../assets/image-resources/stock-images/img-12.jpg" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
+                                        <img class="img-responsive" src="../../assets/image-resources/stock-images/img-12.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="post-body">
+                                    <a class="post-title" href="blog-single.html" title="">
+                                        <h3>When our power of choice is untrammelled</h3>
+                                    </a>
+                                    <p>Occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-@endsection
+<div class="main-footer bg-black clearfix">
+    <div class="container col-md-6" style="margin-top: 5%">
+        <h4 class="header"><center>Hubungi Kami</center></h4>
+        <ul class="footer-contact">
+            <li>
+                <center>
+                    Jl. Letnan Jidul No 5 Kepandean, Kelurahan Lontar Baru, Kecamatan Serang, Kota Serang, Provinsi Banten
+                </center>
+            </li>
+            <li>
+                <center>
+                    <i class="glyph-icon icon-phone"></i>
+                    (0254) 221-764
+                </center>
+            </li>
+        </ul>
+    </div>
+    <div class="container col-md-6">
+
+        <div id="googleMaphk" style="width:80%;height:300px; border-radius: 20px; margin-top: 20px"></div>
+        <script>
+
+            var dlh = L.layerGroup();
+
+            L.marker([-6.112387777530127, 106.14165547958123]).addTo(dlh)
+                .bindPopup('<a href="https://www.google.com/maps/dir/?api=1&destination=-6.112387777530127,106.14165547958123" target="_blank" style="color: deepskyblue">Petunjuk Arah</a>').openPopup();
+
+            var street =
+                    L.tileLayer('https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}', {
+                        maxZoom: 20,
+                        minZoom: 2,
+                        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+                    }),
+
+                satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+                    maxZoom: 20,
+                    subdomains:['mt0','mt1','mt2','mt3']
+                });
+
+            var mymap = L.map('googleMaphk', {
+                center: [-6.112387777530127, 106.14165547958123],
+                zoom: 17,
+                layers: [street, dlh]
+            });
+
+            var baseLayers = {
+                "Map": street,
+                "Satellite": satelite
+            };
+
+            var overlays = {
+                "dinas lingkungan hidup kota serang": dlh,
+
+            };
+
+            L.control.layers(baseLayers, overlays).addTo(mymap);
+
+
+        </script>
+    </div>
+    <div class="footer-pane">
+        <div class="container">
+            <div class="logo" tyle="font-size: 18px">&copy; 2019 Awaludin Ramdani. All Rights Reserved.</div>
+            <div class="footer-nav-bottom">
+
+            </div>
+        </div>
+    </div>
+</div></div>
+    @include('jsfronother')
+</body>
+</html>
+

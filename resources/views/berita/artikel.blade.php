@@ -53,6 +53,9 @@
             $(".prettyphoto").prettyPhoto();
             $(".pp_social").addClass('hidden');
         });
+        $(window).load(function () {
+            $(".pp_social").addClass('hidden');
+        })
     </script>
 
 
@@ -66,7 +69,7 @@
                 </a>
             </div>
             <div class="post-content-wrapper col-md-8">
-                <a class="post-title" href="blog-single" title="">
+                <a class="post-title" href="artikel/{{$pp->id}}" title="">
                     <h3>{{$pp->judul}}</h3>
                 </a>
                 <div class="post-meta">
@@ -82,10 +85,10 @@
                     <i class="glyph-icon icon-comments-o"></i>
                 </span>
                 </div>
-                <div class="post-content isianya" >
+                <div class="post-content isianya" style="height: 45px">
 
                 </div>
-                <a href="blog-single" class="btn btn-sm btn-default" title="Read more">Read more</a>
+                <a href="artikel/{{$pp->id}}" class="btn btn-sm btn-default" title="Read more">Read more</a>
             </div>
         </div>
         @endforeach
