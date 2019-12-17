@@ -19,36 +19,43 @@
                     <p style="text-align: justify">Untuk menyelenggarakan tugas sebagaimana tersebut pada ayat (1) pasal ini, kepala Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup mempunyai fungsi :</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>a.</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Penyelenggaraan penyusunan rencana kerja, kinerja, dan anggaran tahunan yang berkenaan dengan penataan dan penaatan perlindungan dan pengelolaan lingkungan hidup</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>b.</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Penyelenggaraan kebijakan penataan dan penaatan perlindungan dan pengelolaan lingkungan hidup</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>c.</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Penyelenggaraan pengendalian pelaksanaan penataan dan penaatan perlindungan dan pengelolaan lingkungan hidup</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>d.</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Penyelenggaraan pelaksanaan penataan dan penaatan perlindungan dan pengelolaan lingkungan hidup</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>e.</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Penyelenggaraan pengawasan pelaksanaan penataan dan penaatan perlindungan dan pengelolaan lingkungan hidup</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>f.</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Pelaporan</p></td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>(3)</strong></td>
                     <td align="left">
                     <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggungjawab kepada Kepala Dinas.</p></td>
