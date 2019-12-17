@@ -40,8 +40,8 @@
                             <li class="dropdown" style="width:100%; color: white"><a href="{{route('pplh')}}"> Bidang Penataan dan Penaatan <br>Perlindungan Pengelolaan <br>Lingkungan Hidup</a></li>
                             <li class="dropdown" style="width:100%; color: white"><a href="{{route('pslb')}}"> Bidang Pengelolaan Sampah,<br> Limbah B3 dan Peningkatan <br>Kapasitas</a></li>
                             <li class="dropdown" style="width:100%; color: white"><a href="{{route('ppklh')}}"> Bidang Pengendalian Pencemaran <br>dan Kerusakan Lingkungan Hidup</a></li>
-                            <li class="dropdown" style="width:100%; color: white"><a href="{{route('uptlab')}}"> UPT Laboratorium</a></li>
-                            <li class="dropdown" style="width:100%; color: white"><a href="{{route('uptperbekalan')}}"> UPT Perbekalan</a>
+                            <li class="dropdown" style="width:100%; color: white"><a href="{{route('uptlab')}}"> UPTD Laboratorium</a></li>
+                            <li class="dropdown" style="width:100%; color: white"><a href="{{route('uptperbekalan')}}"> UPTD Perlengkapan dan Perbekalan</a>
                             </li>
                             <li class="dropdown" style="color: white"><a href=""> Kelompok Jabatan Fungsional</a></li>
                         </ul>

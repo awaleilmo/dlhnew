@@ -9,10 +9,10 @@
                 <br>
                 <tr>
                     <td align="left">
-                        <img src="image-resources/dlh/struk.jpg">
+                        <img src="image-resources/dlh/strukdlh.png">
                     </td>
                 </tr>
-               
+
             </table>
 
         </div>
