@@ -187,12 +187,38 @@
                 <tr>
                     <td valign="top"><strong>i.</strong></td>
                     <td align="left">
-                        <p style="text-align: justify">Sampling dan analisa kebisingan.</p></td>
+                        <p style="text-align: justify">Membimbing Pelaksana/Pejabat Fungsional/Bawahan sesuai bidang tugas jabatannya guna pencapaian kinerja jabatannya.</p></td>
                 </tr>
 
+                <tr>
+                    <td valign="top"><strong>j.</strong></td>
+                    <td align="left">
+                        <p style="text-align: justify">Memeriksa hasil kerja Pelaksana/Pejabat Fungsional/Bawahan sesuai bidang tugas jabatannya sebagai bahan evaluasi.</p></td>
+                </tr>
 
-                <br>
-                <br>
+                <tr>
+                    <td valign="top"><strong>k.</strong></td>
+                    <td align="left">
+                        <p style="text-align: justify">Mengevaluasi pelaksanaan tugas Pelaksana/Pejabat Fungsional/ Bawahan sesuai target kinerja yang diperjanjikan dalam rangka penilaian kinerja.</p></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><strong>l.</strong></td>
+                    <td align="left">
+                        <p style="text-align: justify">Menyampaikan saran dan pertimbangan kepada Atasan sebagai bahan masukan guna kelancaran pelaksanaan tugas.</p></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><strong>m.</strong></td>
+                    <td align="left">
+                        <p style="text-align: justify">Melaporkan pelaksanaan tugas kepada Atasan sesuai bidang tugasnya sebagai dasar pengambilan kebijakan.</p></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><strong>n.</strong></td>
+                    <td align="left">
+                        <p style="text-align: justify">Melaksanakan tugas kedinasan lain yang diberikan oleh Atasan sesuai dengan tugas jabatannya.</p></td>
+                </tr>
 
                 <tr>
                     <td valign="buttom"></td>
