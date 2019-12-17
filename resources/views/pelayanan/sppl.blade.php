@@ -19,15 +19,33 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 27px;" valign="top">
+                    <td style="width: 27px;" valign="top" align="center">
                         <strong>Syarat</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <td>
+                        <img src="image-resources/dlh/syaratsppl.png" style="width:100%; height:450px">
                     </td>
                 </tr>
+
+                <tr>
+                    <td style="width: 27px;" valign="top" align="center">
+                        <strong>Alur Penilaian SPPL</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="image-resources/dlh/sppl.png" style="width:100%; height:450px">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen SPPL</p>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>
                         <a href="upload/dokumenlingkungan/@foreach($p as $pp) {{$pp->forms}} @endforeach" download="upload/dokumenlingkungan/@foreach($p as $pp) {{$pp->forms}} @endforeach" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>

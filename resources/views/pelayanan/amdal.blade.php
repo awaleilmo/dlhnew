@@ -19,18 +19,30 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 27px;" valign="top">
+                    <td style="width: 27px;" valign="top" align="center">
                         <strong>Syarat</strong>
                 </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="image-resources/dlh/pic1.png" style="width:100%; height:450px">
+                        <img src="image-resources/dlh/syaratamdal.png" style="width:100%; height:450px">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 27px;" valign="top" align="center">
+                        <strong>Alur Penilaian Amdal</strong>
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <img src="image-resources/dlh/amdal.png" style="width:100%; height:450px">
+                    </td>
+                </tr>
+
+                <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen KA-Andal, Amdal dan RKL-RPL</p>
                     </td>
                 </tr>
                 <tr>
