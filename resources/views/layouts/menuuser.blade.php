@@ -1,3 +1,8 @@
+    <div class="top-bar bg-topbar" style="padding: 0 0;">
+            <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 200px; margin-bottom: -.1em; background: linear-gradient(to right, #8EC220, #006B35)">
+                <img id="myP"  src="image-resources/dlh/banner2,1.png" style="margin-left:10%; width: 80%; height: 200px; ">
+            </div>
+    </div>
 <div id="myO" class="main-header bg-gradient-7 wow fadeInDown font-inverse" style=" width: 100%;">
     <div class="container">
 

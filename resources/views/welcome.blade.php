@@ -220,6 +220,7 @@
     </div>
 </div>
 <!--tentang-->
+<div class="row">
 <div class="hero-box bg-white hero-box-smaller ">
     <div class="container">
         <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dinas Lingkungan Hidup Kota Serang</h2>
@@ -416,5 +417,6 @@
     </div>
     <div class="hero-overlay bg-black opacity-60"></div>
     <div class="hero-pattern pattern-bg-1"></div>
+</div>
 </div>
 @endsection

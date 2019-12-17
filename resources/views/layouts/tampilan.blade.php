@@ -50,7 +50,7 @@
 
 </head>
 
-<body>
+<body class="main-header-fixed">
 
 <div id="loading">
     <div class="spinner">
@@ -61,34 +61,32 @@
 </div>
 
 <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > 450) {
-            document.getElementById("myP").style.height = "0px";
-            document.getElementById("myL").style.height = "0px";
-            document.getElementById("myP").style.transition = "height 10s";
-            document.getElementById("myP").style.webkitTransition = "height 0s";
-            document.getElementById("myO").style.position = "fixed";
-            document.getElementById("myO").style.marginTop = "0";
-            document.getElementById("myI").style.marginTop = "5em";
-        } else if(prevScrollpos < 12) {
-            document.getElementById("myP").style.height = "200px";
-            document.getElementById("myL").style.height = "200px";
-            document.getElementById("myP").style.transition = "height 1s";
-            document.getElementById("myP").style.webkitTransition = "height 1s";
-            document.getElementById("myO").style.position = "relative";
-            document.getElementById("myO").style.marginTop = "0";
-            document.getElementById("myI").style.marginTop = "0em";
-        }
-        prevScrollpos = currentScrollPos;
-    }
+    // var prevScrollpos = window.pageYOffset;
+    // window.onscroll = function() {
+    //     var currentScrollPos = window.pageYOffset;
+    //     if (prevScrollpos > 450) {
+    //         document.getElementById("myP").style.height = "0px";
+    //         document.getElementById("myL").style.height = "0px";
+    //         document.getElementById("myP").style.transition = "height 10s";
+    //         document.getElementById("myP").style.webkitTransition = "height 0s";
+    //         document.getElementById("myO").style.position = "fixed";
+    //         document.getElementById("myO").style.marginTop = "0";
+    //         document.getElementById("myI").style.marginTop = "5em";
+    //     } else if(prevScrollpos < 12) {
+    //         document.getElementById("myP").style.height = "200px";
+    //         document.getElementById("myL").style.height = "200px";
+    //         document.getElementById("myP").style.transition = "height 1s";
+    //         document.getElementById("myP").style.webkitTransition = "height 1s";
+    //         document.getElementById("myO").style.position = "relative";
+    //         document.getElementById("myO").style.marginTop = "0";
+    //         document.getElementById("myI").style.marginTop = "0em";
+    //     }
+    //     prevScrollpos = currentScrollPos;
+    // }
 </script>
 <!-- banner -->
 
-<div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 200px; margin-bottom: -.5em; background: linear-gradient(to right, #8EC220, #006B35)">
-       <img id="myP"  src="image-resources/dlh/banner2,1.png" style="margin-left:10%; width: 80%; height: 200px; ">
-</div>
+
 
 <!-- .top-bar -->
 @include('layouts.menuuser')
