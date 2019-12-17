@@ -9,13 +9,13 @@
                 <br>
                 <tr>
                     <td valign="top"><strong>(1)</strong></td>
-                    <td align="left">
+                    <td colspan="2" align="left">
 
                         <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup mempunyai tugas menyelenggarakan sebagian tugas dinas yang berkenaan dengan Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup.</p></td>
                 </tr>
                 <tr>
                     <td valign="top"><strong>(2)</strong></td>
-                    <td align="left">
+                    <td colspan="2" align="left">
                     <p style="text-align: justify">Untuk menyelenggarakan tugas sebagaimana tersebut pada ayat (1) pasal ini, kepala Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup mempunyai fungsi :</p></td>
                 </tr>
                 <tr>
@@ -55,9 +55,8 @@
                     <p style="text-align: justify">Pelaporan</p></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>(3)</strong></td>
-                    <td align="left">
+                    <td colspan="2" align="left">
                     <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggungjawab kepada Kepala Dinas.</p></td>
                 </tr>
             </table>

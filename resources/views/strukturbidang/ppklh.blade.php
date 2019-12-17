@@ -55,7 +55,6 @@
                         <p style="text-align: justify">Pelaporan</p></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>(3)</strong></td>
                     <td colspan="2" align="left">
                         <p style="text-align: justify">Bidang Pengendalian Pencemaran dan Kerusakan Lingkungan Hidup dipimpin oleh seorang kepala bidang yang dibawah dan bertanggungjawab kepada Kepala Dinas.</p></td>

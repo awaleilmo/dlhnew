@@ -108,7 +108,6 @@
                         <p style="text-align: justify">Melaksanakan tugas lain sesuai dengan bidang tugasnya.</p></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td valign="top"><strong>(3)</strong></td>
                     <td colspan="2" align="left">
                         <p style="text-align: justify">Sub Bagian Keuangan, Program, Evaluasi dan Pelaporan dipimpin oleh Kepala Sub Bagian yang berada dibawah dan bertanggungjawab kepada Sekretaris.</p></td>
