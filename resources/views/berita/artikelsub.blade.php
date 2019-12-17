@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="main-header-fixed">
 
 <div id="loading">
     <div class="spinner">
@@ -35,41 +35,19 @@
     </div>
 </div>
 
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > 450) {
-            document.getElementById("myP").style.height = "0px";
-            document.getElementById("myL").style.height = "0px";
-            document.getElementById("myP").style.transition = "height 10s";
-            document.getElementById("myP").style.webkitTransition = "height 0s";
-            document.getElementById("myO").style.position = "fixed";
-            document.getElementById("myO").style.marginTop = "0";
-            document.getElementById("myI").style.marginTop = "5em";
-        } else if(prevScrollpos < 12) {
-            document.getElementById("myP").style.height = "200px";
-            document.getElementById("myL").style.height = "200px";
-            document.getElementById("myP").style.transition = "height 1s";
-            document.getElementById("myP").style.webkitTransition = "height 1s";
-            document.getElementById("myO").style.position = "relative";
-            document.getElementById("myO").style.marginTop = "0";
-            document.getElementById("myI").style.marginTop = "0em";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
+<div class="top-bar bg-topbar" style="padding: 0 0;">
+    <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 200px; margin-bottom: -.1em; background: linear-gradient(to right, #8EC220, #006B35)">
+        <img id="myP"  src="../image-resources/dlh/banner2,1.png" style="margin-left:10%; width: 80%; height: 200px; ">
+    </div>
+</div>
 <!-- banner -->
 
-<div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 200px; margin-bottom: -.5em; background: linear-gradient(to right, #8EC220, #006B35)">
-    <img id="myP"  src="../image-resources/dlh/banner2,1.png" style="margin-left:10%; width: 80%; height: 200px; ">
-</div>
 @include('layouts.menuuser')
-    <div class="hero-box hero-box-smaller blurred-img-5 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
+    <div class="hero-box hero-box-smaller blurred-img-2 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
         <div class="container">
-            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s">{{$p->judul}}</h1>
+            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s" style="opacity: 1;text-shadow: black 0px 0px 10px; color: white">{{$p->judul}}</h1>
         </div>
-        <div class="hero-overlay bg-black"></div>
+        <div class="hero-pattern opacity-10 pattern-bg-2" style="opacity: .19 !important;"></div>
     </div>
 
     <!-- Lazyload -->
@@ -172,7 +150,7 @@
                                         </a>
                                     </div>
                                     <div class="post-body">
-                                        <a class="post-title" href="pengumuman/{{$xx->id}}" title="">
+                                        <a class="post-title" href="../pengumuman/{{$xx->id}}" title="">
                                             <h3>{{$xx->judul}}</h3>
                                         </a>
                                     </div>

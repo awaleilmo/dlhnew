@@ -25,7 +25,7 @@
         <div class="container">
             <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s">Pojok Warga LH</h1>
         </div>
-        <div class="hero-overlay bg-black"></div>
+        <div class="hero-pattern opacity-10 pattern-bg-2" style="opacity: .19 !important;"></div>
     </div>
 
     <!-- Lazyload -->
