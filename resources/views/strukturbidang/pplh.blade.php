@@ -7,10 +7,14 @@
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
+
+                <tr>
+                    <td colspan="3" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;">Tugas Pokok dan Fungsi</h2></td>
+                </tr>
+
                 <tr>
                     <td valign="top"><strong>(1)</strong></td>
                     <td colspan="2" align="left">
-
                         <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup mempunyai tugas menyelenggarakan sebagian tugas dinas yang berkenaan dengan Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup.</p></td>
                 </tr>
                 <tr>
@@ -59,6 +63,28 @@
                     <td colspan="2" align="left">
                     <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggungjawab kepada Kepala Dinas.</p></td>
                 </tr>
+
+                <tr>
+                    <td colspan="4" align="left">
+                        <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan Pengelolaan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggung jawab kepada Kepala Dinas Lingkungan Hidup, membawahi :</p></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><strong>A.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Perencanaan dan Pengkajian Dampak Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>B.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Pengaduan dan Penyelesaian Sengketa Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>C.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Penegakan Hukum Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+
             </table>
 
         </div>

@@ -7,10 +7,13 @@
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
+
+                <tr>
+                    <td colspan="3" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;">Tugas Pokok dan Fungsi</h2></td>
+                </tr>
                 <tr>
                     <td valign="top"><strong>(1)</strong></td>
                     <td colspan="2" align="left">
-
                         <p style="text-align: justify">Bidang Pengendalian Pencemaran dan Kerusakan Lingkungan Hidup mempunyai tugas menyelenggarakan sebagian tugas dinas yang berkenaan dengan pengendalian pencemaran dan kerusakan lingkungan hidup.</p></td>
                 </tr>
                 <tr>
@@ -58,6 +61,27 @@
                     <td valign="top"><strong>(3)</strong></td>
                     <td colspan="2" align="left">
                         <p style="text-align: justify">Bidang Pengendalian Pencemaran dan Kerusakan Lingkungan Hidup dipimpin oleh seorang kepala bidang yang dibawah dan bertanggungjawab kepada Kepala Dinas.</p></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" align="left">
+                        <p style="text-align: justify">Bidang Pengendalian Pencemaran dan Kerusakan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggung jawab kepada Kepala Dinas Lingkungan Hidup, membawahi :</p></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><strong>A.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>B.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>C.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
                 </tr>
             </table>
 

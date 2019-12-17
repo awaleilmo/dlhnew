@@ -7,6 +7,11 @@
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
+
+                <tr>
+                    <td colspan="3" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;">Tugas Pokok dan Fungsi</h2></td>
+                </tr>
+
                 <tr>
                     <td valign="top"><strong>(1)</strong></td>
                     <td colspan="2" align="left">
@@ -59,6 +64,28 @@
                     <td colspan="2" align="left">
                         <p style="text-align: justify">Bidang Pengelolaan Limbah B3 dan Peningkatan Kapasitas dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggungjawab kepada Kepala Dinas.</p></td>
                 </tr>
+
+                <tr>
+                    <td colspan="4" align="left">
+                        <p style="text-align: justify">Bidang Pengelolaan Sampah, Limbah B3 dan Peningkatan Kapasitas Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggung jawab kepada Kepala Dinas Lingkungan Hidup, membawahi :</p></td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><strong>A.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Pengelolaan Sampah (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>B.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Limbah B3 (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>C.</strong></td>
+                    <td colspan="2" align="left">
+                        <p style="text-align: justify">Seksi Peningkatan Kapasitas (bisa di klik dan muncul page baru)</p></td>
+                </tr>
+
             </table>
 
         </div>
