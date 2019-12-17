@@ -268,6 +268,8 @@
                         <p style="text-align: justify">Melaksanakan tugas kedinasan lain yang diberikan oleh Atasan sesuai dengan tugas jabatannya.</p></td>
                 </tr>
 
+
+
                 <tr>
                     <td colspan="4" align="center">
                 <img src="image-resources/dlh/sopsample.png" style="width: 30em; border-radius: 30px">
