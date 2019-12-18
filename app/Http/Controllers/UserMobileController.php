@@ -341,14 +341,196 @@ class UserMobileController extends Controller
     }
 
     /**
-     * @OA\Get(
+     * @OA\Post(
      *     path="/api/app/pengaduan",
      *     tags={"Pengaduan"},
      *     operationId="downloaddok",
      *
      *      @OA\Parameter(
+     *          name="tempat",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
      *          name="nama",
-     *          description="nama dokumen",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="alamat",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="nohp",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="alamatkejadian",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="jeniskegiatan",
+     *          description="",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="namakegiatan",
+     *          description="",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="waktu",
+     *          description="00:00 AM/PM",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="uraiankejadian",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="dampak",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="penyelesaian",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Parameter(
+     *          name="namainstansi",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="namainstansi2",
+     *          description="",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="namainstansi3",
+     *          description="",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="tglpengaduan",
+     *          description="dd-mm-yyyy",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *       @OA\Parameter(
+     *          name="tglpengaduan2",
+     *          description="dd-mm-yyyy",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="tglpengaduan3",
+     *          description="dd-mm-yyyy",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *
+     *
+     *      @OA\RequestBody(
+     *         required=true,
+     *         @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     description="file to upload",
+     *                     property="foto",
+     *                     type="file",
+     *                     format="file",
+     *                 ),
+     *                 required={"file"}
+     *             )
+     *         )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="lokasi",
+     *          description="latlng example: -6.234234,106.69934",
      *          required=true,
      *          in="query",
      *          @OA\Schema(
@@ -376,28 +558,6 @@ class UserMobileController extends Controller
         }
 
         $file = $request->file('foto');
-        /*
-        // nama file
-        echo 'File Name: '.$file->getClientOriginalName();
-        echo '<br>';
-
-        // ekstensi file
-        echo 'File Extension: '.$file->getClientOriginalExtension();
-        echo '<br>';
-
-        // real path
-        echo 'File Real Path: '.$file->getRealPath();
-        echo '<br>';
-
-        // ukuran file
-        echo 'File Size: '.$file->getSize();
-        echo '<br>';
-
-        // tipe mime
-        echo 'File Mime Type: '.$file->getMimeType();
-        */
-
-        // isi dengan nama folder tempat kemana file diupload
         $tujuan_upload = 'upload/pengaduan';
         $now = Carbon::now();
         $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
@@ -410,9 +570,9 @@ class UserMobileController extends Controller
         $input['alamatkejadian'] = $request->alamatkejadian;
         $input['jeniskegiatan'] = $request->jeniskegiatan;
         $input['namakegiatan'] = $request->namakegiatan;
-        $input['waktu'] = $request->uraianwaktu;
+        $input['waktu'] = $request->waktu;
         $input['uraiankejadian'] = $request->uraiankejadian;
-        $input['dampak'] = $request->uraiandampak;
+        $input['dampak'] = $request->dampak;
         $input['penyelesaian'] = $request->penyelesaian;
         $input['namainstansi'] = $ins;
         $input['tgl'] = $instgl;
@@ -425,9 +585,9 @@ class UserMobileController extends Controller
         ]);
         $user = Pengaduan::create($input);
         if($user){
-            return redirect("pojok_pengaduan")->with(['alert' => 'Sukses']);
+            return response()->json(['status'=>'sukses']);
         }
-        return redirect("pojok_pengaduan")->with(['gagal' => 'Gagal']);
+        return response()->json(['status'=>'gagal']);
 
 
     }

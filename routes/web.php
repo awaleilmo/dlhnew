@@ -25,7 +25,7 @@ Route::get("/api/app/sipal", "UserMobileController@perizinan")->name("sipal/user
 Route::get("/api/app/cek/sipal",'UserMobileController@cekperizinan')->name('ceksipal/user');
 Route::get('/api/app/artikel','UserMobileController@pojokwarga')->name('artikel/user');
 Route::get('/api/app/pengumuman','UserMobileController@pengumuman')->name('pengumuman/user');
-Route::get('/api/app/pengaduan','UserMobileController@pengaduan')->name('pengaduan/user');
+Route::post('/api/app/pengaduan','UserMobileController@pengaduan')->name('pengaduan/user');
 
 //tampilan admin
 Route::get("/admin","AdminController@index")->name("admin");

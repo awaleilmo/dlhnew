@@ -259,22 +259,189 @@
             }
         },
         "/api/app/pengaduan": {
-            "get": {
+            "post": {
                 "tags": [
                     "Pengaduan"
                 ],
                 "operationId": "downloaddok",
                 "parameters": [
                     {
+                        "name": "tempat",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "nama",
                         "in": "query",
-                        "description": "nama dokumen",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "alamat",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nohp",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "alamatkejadian",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "jeniskegiatan",
+                        "in": "query",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "namakegiatan",
+                        "in": "query",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "waktu",
+                        "in": "query",
+                        "description": "00:00 AM/PM",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "uraiankejadian",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dampak",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "penyelesaian",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "namainstansi",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "namainstansi2",
+                        "in": "query",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "namainstansi3",
+                        "in": "query",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tglpengaduan",
+                        "in": "query",
+                        "description": "dd-mm-yyyy",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tglpengaduan2",
+                        "in": "query",
+                        "description": "dd-mm-yyyy",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tglpengaduan3",
+                        "in": "query",
+                        "description": "dd-mm-yyyy",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lokasi",
+                        "in": "query",
+                        "description": "latlng example: -6.234234,106.69934",
                         "required": true,
                         "schema": {
                             "type": "string"
                         }
                     }
                 ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "file"
+                                ],
+                                "properties": {
+                                    "foto": {
+                                        "description": "file to upload",
+                                        "type": "file",
+                                        "format": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "default": {
                         "description": "successful operation"
