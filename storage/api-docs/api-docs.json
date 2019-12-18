@@ -208,8 +208,7 @@
     },
     "tags": [
         {
-            "name": "Auth",
-            "description": "Login,Register,FindUser,Logout"
+            "name": "Auth"
         }
     ]
 }

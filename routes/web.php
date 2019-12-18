@@ -12,6 +12,7 @@
 */
 
 Auth::routes();
+
 // api auth mobile
 Route::post("/api/app/register", "UserMobileController@register")->name("mobileRegister");
 Route::post("/api/app/login", "UserMobileController@login")->name("mobileLogin");
@@ -42,6 +43,7 @@ Route::get("/admindata","AdminController@adata")->name("admin/data");
 Route::get("/adminpojok","AdminController@pojok")->name("admin/pojok");
 Route::get("/adminartikel","AdminController@artikel")->name("admin/artikel");
 Route::get("/adminpengumuman","AdminController@pengumuman")->name("admin/pengumuman");
+
 //admin function button
 Route::get('/tpelaku', 'AdminController@tpelaku')->name('tpelaku');
 Route::post('/cpelaku', 'AdminController@cpelaku')->name('cpelaku');
@@ -137,23 +139,29 @@ Route::get('/visimisi', 'UserController@visimisi')->name('visimisi');
 Route::get('/struktur', 'UserController@struktur')->name('struktur');
 Route::get('/jmlpnsthl', 'UserController@jmlpnsthl')->name('jmlpnsthl');
 Route::get('/programs', 'UserController@programs')->name('programs');
+
 //menu tpas cilowong
 Route::get('/cilowong','UserController@cilowong')->name('cilowong');
+
 //menu pelayanan
 Route::get('/amdal','UserController@amdal')->name('amdal');
 Route::get('/uklupl','UserController@uklupl')->name('uklupl');
 Route::get('/sppl','UserController@sppl')->name('sppl');
 Route::get('/perizinanlimbah', 'UserController@perizinanlimbah')->name('perizinanlimbah');
+
 //menu program
 Route::get('/adwiyata','UserController@adwiyata')->name('adwiyata');
 Route::get('/persampahan','UserController@persampahan')->name('persampahan');
 Route::get('/pengawasan','UserController@pengawasan')->name('pengawasan');
 Route::get('/banksampah','UserController@amdal')->name('banksampah');
+
 //menu data
 Route::get('/data','UserController@data')->name('data');
+
 //menu pelaporan
 Route::get('/pojok_pengaduan', 'UserController@pojok_pengaduan')->name('pojok_pengaduan');
 Route::post('/pojok_pengaduan','UserInputWebController@pengaduan');
+
 //menu struktur bidang
 Route::get('/kadis', 'UserController@kadis')->name('kadis');
 Route::get('/sekdis', 'UserController@sekdis')->name('sekdis');
@@ -164,6 +172,7 @@ Route::get('/pslb', 'UserController@pslb')->name('pslb');
 Route::get('/ppklh', 'UserController@ppklh')->name('ppklh');
 Route::get('/uptlab', 'UserController@uptlab')->name('uptlab');
 Route::get('/uptperbekalan', 'UserController@uptperbekalan')->name('uptperbekalan');
+
 //menu berita
 Route::get('/artikel','UserController@artikel')->name('artikel');
 Route::get('/artikel/{id}','UserController@artikelsub');
