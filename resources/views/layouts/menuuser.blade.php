@@ -1,9 +1,4 @@
-<style>
-    #loadingbar, #nav-toggle span:after, #nav-toggle span:before, #nav-toggle.collapsed span, .badge-primary, .bg-primary, .bootstrap-switch-primary, .btn-primary, .chosen-container .chosen-results li.active-result.highlighted, .daterangepicker .ranges li.active, .daterangepicker .ranges li.active:hover, .fc-event, .form-wizard>ul>li.active .wizard-step, .irs-line-left, .irs-line-mid, .irs-line-right, .label-primary, .ms-hover.ui-state-focus, .ms-list .ms-hover, .nav>li.active>a, .nav>li.active>a:focus, .nav>li.active>a:hover, .owl-controls .owl-page span, .ui-accordion-header.ui-accordion-header-active, .ui-datepicker .ui-datepicker-current-day a, .ui-datepicker .ui-datepicker-current-day span, .ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev, .ui-dialog-buttonset button, .ui-menu li>a:hover, .ui-rangeSlider-bar, .ui-slider-handle, .ui-spinner .ui-spinner-button:hover, .ui-tabs-nav li.ui-state-active.ui-state-hover>a, .ui-tabs-nav li.ui-state-active>a, a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover, div.switch-toggle.switch-on, div[id^=uniform-] span.checked, li.active a.list-group-item, li.active a.list-group-item:focus, li.active a.list-group-item:hover{
-        color: #fff;
-        background: aliceblue;
-    }
-</style>
+
 <div id="myO" class="main-header bg-gradient-7 wow fadeInDown font-inverse" style=" width: 100%;">
     <div class="container">
 

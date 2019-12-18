@@ -84,6 +84,7 @@ class UserMobileController extends Controller
             return response()->json(['error'=>$validator->errors()], 401);
         }
         $input = $request->all();
+        $input['level'] = 'user';
         $input['remember_token'] = csrf_token();
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
