@@ -1,9 +1,8 @@
 <?php
 /**
  * @OA\Info(
- *     description="Contoh API doc menggunakan OpenAPI/Swagger",
  *     version="1.0.0",
- *     title="Contoh API documentation",
+ *     title="API documentation",
  *     termsOfService="http://swagger.io/terms/",
  *     @OA\Contact(
  *         email="awal.eilmo@gmail.com"

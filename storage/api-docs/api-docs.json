@@ -1,8 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Contoh API documentation",
-        "description": "Contoh API doc menggunakan OpenAPI/Swagger",
+        "title": "API documentation",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
             "email": "awal.eilmo@gmail.com"
@@ -189,6 +188,69 @@
                         }
                     }
                 ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/cek/sipal": {
+            "get": {
+                "tags": [
+                    "Perizinan Limbah B3 ( SIPAL )"
+                ],
+                "operationId": "showall",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/sipal": {
+            "get": {
+                "tags": [
+                    "Perizinan Limbah B3 ( SIPAL )"
+                ],
+                "operationId": "downloaddok",
+                "parameters": [
+                    {
+                        "name": "nama",
+                        "in": "query",
+                        "description": "nama dokumen",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/artikel": {
+            "get": {
+                "tags": [
+                    "Berita"
+                ],
+                "operationId": "showall",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/pengumuman": {
+            "get": {
+                "tags": [
+                    "Berita"
+                ],
+                "operationId": "downloaddok",
                 "responses": {
                     "default": {
                         "description": "successful operation"
