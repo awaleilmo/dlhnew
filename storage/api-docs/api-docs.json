@@ -432,7 +432,6 @@
                                 ],
                                 "properties": {
                                     "foto": {
-                                        "description": "file to upload",
                                         "type": "file",
                                         "format": "file"
                                     }
