@@ -177,6 +177,9 @@ Route::get('/pslb', 'UserController@pslb')->name('pslb');
 Route::get('/ppklh', 'UserController@ppklh')->name('ppklh');
 Route::get('/uptlab', 'UserController@uptlab')->name('uptlab');
 Route::get('/uptperbekalan', 'UserController@uptperbekalan')->name('uptperbekalan');
+Route::get('/jabatan',function (){
+    return view('strukturbidang.jabatan');
+} )->name('jabatan');
 
 //menu berita
 Route::get('/artikel','UserController@artikel')->name('artikel');

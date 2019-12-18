@@ -234,12 +234,12 @@
             </br>
             </br>
             <tr>
-                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="#" class="label"> Sekilas DLH Kota Serang</a> </td>
-                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="#" class="label"> Struktur Organisasi</a> </td>
+                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="{{route('sejarah')}}" class="label"> Sejarah DLH</a> </td>
+                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="{{route('struktur')}}" class="label"> Struktur Organisasi</a> </td>
             </tr>
             <tr>
-                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="#" class="label"> Visi & Misi</a> </td>
-                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="#" class="label"> Manajemen</a> </td>
+                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="{{route('visimisi')}}" class="label"> Visi & Misi</a> </td>
+                <td align="left"><i class="glyph-icon icon-arrow-right"></i> <a href="{{route('cilowong')}}" class="label"> TPAS Cilowong</a> </td>
             </tr>
         </table>
 
