@@ -215,7 +215,7 @@ class UserMobileController extends Controller
     /**
      * @OA\Get(
      *     path="/api/app/cek/dokling",
-     *     tags={"Dokumen lingkungan"},
+     *     tags={"Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"},
      *     operationId="showall",
      *
      *     @OA\Response(
@@ -231,7 +231,7 @@ class UserMobileController extends Controller
     /**
      * @OA\Get(
      *     path="/api/app/dokling",
-     *     tags={"Dokumen lingkungan"},
+     *     tags={"Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"},
      *     operationId="downloaddok",
      *
      *      @OA\Parameter(
@@ -342,8 +342,8 @@ class UserMobileController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/app/sipal",
-     *     tags={"Perizinan Limbah B3 ( SIPAL )"},
+     *     path="/api/app/pengaduan",
+     *     tags={"Pengaduan"},
      *     operationId="downloaddok",
      *
      *      @OA\Parameter(

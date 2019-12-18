@@ -161,7 +161,7 @@
         "/api/app/cek/dokling": {
             "get": {
                 "tags": [
-                    "Dokumen lingkungan"
+                    "Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"
                 ],
                 "operationId": "showall",
                 "responses": {
@@ -174,7 +174,7 @@
         "/api/app/dokling": {
             "get": {
                 "tags": [
-                    "Dokumen lingkungan"
+                    "Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"
                 ],
                 "operationId": "downloaddok",
                 "parameters": [
@@ -251,6 +251,30 @@
                     "Berita"
                 ],
                 "operationId": "downloaddok",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/pengaduan": {
+            "get": {
+                "tags": [
+                    "Pengaduan"
+                ],
+                "operationId": "downloaddok",
+                "parameters": [
+                    {
+                        "name": "nama",
+                        "in": "query",
+                        "description": "nama dokumen",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "default": {
                         "description": "successful operation"
