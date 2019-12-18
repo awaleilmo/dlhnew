@@ -15,7 +15,7 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p style="text-align: justify">Limbah bahan berbahaya dan beracun, yang selanjutnya disebut limbah B3 adalah sisa suatu usaha dan/atau kegiatan yang mengandung bahan berbahaya dan/atau beracun yang karena sifat dan/atau konsentrasinya dan/atau jumlahnya, baik secara langsung maupun tidak langsung, dapat mencemarkan dan/atau merusakkan lingkungan hidup, dan/atau dapat membahayakan lingkungan hidup, kesehatan, kelangsungan hidup manusia serta makhluk hidup lainnya.</p>
                     </td>
                 </tr>
                 <tr>
@@ -23,11 +23,15 @@
                         <strong>Persyaratan</strong>
                     </td>
                 </tr>
+                <br>
+
                 <tr>
-                    <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <td>
+                        <img src="image-resources/dlh/syaratsipal.png" style="width:100%; height:450px">
                     </td>
                 </tr>
+
+
                 @foreach($p as $pp)
                 <tr>
                     <td style="width: 27px;" valign="top">

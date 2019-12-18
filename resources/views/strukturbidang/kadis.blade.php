@@ -10,7 +10,6 @@
                 <tr>
                     <td valign="top"><strong>(1)</strong></td>
                     <td colspan="2" align="left">
-
                         <p style="text-align: justify">Dinas dipimpin oleh Kepala Dinas yang berada dibawah dan bertanggungjawab kepada Walikota melalui Sekretaris Daerah.</p></td>
                 </tr>
                 <tr>

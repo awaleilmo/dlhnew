@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td style="width: 27px;" valign="top" align="center">
-                    <strong>Syarat</strong>
+                    <strong>Persyaratan</strong>
                 </td>
             </tr>
             </td>
