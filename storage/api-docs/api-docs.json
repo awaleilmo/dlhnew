@@ -159,12 +159,25 @@
                 }
             }
         },
+        "/api/app/cek/dokling": {
+            "get": {
+                "tags": [
+                    "Dokumen lingkungan"
+                ],
+                "operationId": "showall",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/dokling": {
             "get": {
                 "tags": [
-                    "dokumen lingkungan"
+                    "Dokumen lingkungan"
                 ],
-                "operationId": "finduser",
+                "operationId": "downloaddok",
                 "parameters": [
                     {
                         "name": "nama",
