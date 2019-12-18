@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\dokling;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -161,4 +162,94 @@ class UserMobileController extends Controller
 
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/app/finduser",
+     *     tags={"Auth"},
+     *     operationId="finduser",
+     *
+     *      @OA\Parameter(
+     *          name="id",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function alluserfind(Request $request){
+        $user = User::find($request->id);
+        return response()->json(['status'=>'sukses','data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/logout",
+     *     tags={"Auth"},
+     *     operationId="logout",
+     *
+     *
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function logout (Request $request){
+        $user = Auth::logout();
+        return response()->json(['status'=>'sukses']);
+    }
+    /**
+     * @OA\Get(
+     *     path="/api/app/cek/dokling",
+     *     tags={"Dokumen lingkungan"},
+     *     operationId="showall",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function cekdokling (){
+        $user = dokling::all();
+        return response()->json(['status'=>'sukses','data' =>$user]);
+    }
+    /**
+     * @OA\Get(
+     *     path="/api/app/dokling",
+     *     tags={"Dokumen lingkungan"},
+     *     operationId="downloaddok",
+     *
+     *      @OA\Parameter(
+     *          name="nama",
+     *          description="nama dokumen",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+
+    public function dokling(Request $request){
+        $nama = $request->nama;
+        $doc = dokling::where('nama','like','%'.$nama.'%')->get();
+        foreach ($doc as $p){ $no = $p->forms; }
+        $loc = public_path('upload/dokumenlingkungan/'.$no);
+        return response()->download($loc);
+    }
 }

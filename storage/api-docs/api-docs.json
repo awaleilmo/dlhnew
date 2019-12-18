@@ -122,6 +122,79 @@
                     }
                 }
             }
+        },
+        "/api/app/finduser": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "operationId": "finduser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/logout": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "operationId": "logout",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/cek/dokling": {
+            "get": {
+                "tags": [
+                    "Dokumen lingkungan"
+                ],
+                "operationId": "showall",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/dokling": {
+            "get": {
+                "tags": [
+                    "Dokumen lingkungan"
+                ],
+                "operationId": "downloaddok",
+                "parameters": [
+                    {
+                        "name": "nama",
+                        "in": "query",
+                        "description": "nama dokumen",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
         }
     },
     "components": {

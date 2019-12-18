@@ -16,6 +16,10 @@ Auth::routes();
 Route::post("/api/app/register", "UserMobileController@register")->name("mobileRegister");
 Route::post("/api/app/login", "UserMobileController@login")->name("mobileLogin");
 Route::get("/api/app/showuser", "UserMobileController@alluser")->name("showuser");
+Route::get("/api/app/finduser", "UserMobileController@alluserfind")->name("finduser");
+Route::get("/api/app/logout", "UserMobileController@logout")->name("logout/user");
+Route::get("/api/app/dokling", "UserMobileController@dokling")->name("dokling/user");
+Route::get("/api/app/cek/dokling",'UserMobileController@cekdokling')->name('cekdokling/user');
 
 //tampilan admin
 Route::get("/admin","AdminController@index")->name("admin");
