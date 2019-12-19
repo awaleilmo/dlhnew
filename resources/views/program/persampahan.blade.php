@@ -10,22 +10,33 @@
                 <tbody>
                 <tr>
                     <td style="width: 27px;" valign="top">
-                        <strong>Pengertian</strong>
+                        <strong>Pengertian Sampah</strong>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p style="text-align: justify">Sampah adalah sisa kegiatan sehari-hari manusia dan/atau proses alam yang berbentuk padat yang terdiri atas sampah rumah tangga maupun sampah sejenis sampah rumah tangga.</p>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 27px;" valign="top">
-                        <strong>Syarat</strong>
+                        <strong>Pengertian TPS</strong>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p style="text-align: justify">TPS adalah singkatan dari Tempat Penampungan Sementara yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan/atau tempat pengolahan sampah terpadu.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 27px;" valign="top">
+                        <strong>Pengertian TPA</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">Sedangkan TPA adalah singkatan dari Tempat Pemrosesan Akhir yaitu tempat untuk memroses dan mengembalikan sampah ke media lingkungan secara aman bagi manusia dan lingkungan.</p>
                     </td>
                 </tr>
                 </tbody>
