@@ -43,7 +43,7 @@
                   <td colspan="2" style=""><strong style="text-decoration: underline;">Fungsi</strong></td>
                   </tr>
                 <tr>
-                  <td colspan="2" style="">Fungsi  program adiwiyata agar seluruh pelajar ikut terlibat dalam seggala kegiatan  atau aktivita persekolahan demi menuju lingkunga yang sehata dan juga mampu menghindari  dampak lingkungan yang negatif.</td>
+                  <td colspan="2" style="">Fungsi  program adiwiyata agar seluruh pelajar ikut terlibat dalam seggala kegiatan  atau aktivitas persekolahan demi menuju lingkungan yang sehat dan juga mampu menghindari  dampak lingkungan yang negatif.</td>
                   </tr>
                 <tr>
                   <td colspan="2" style=""><strong style="text-decoration: underline;">Prinsip Program Adwiyata</strong></td>
@@ -54,7 +54,7 @@
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
-                  <td style="">&emsp;Komunitas  sekolah terlibat dalam manajemenn sekolah yang melingkupi keseluruhan proses  perencanaan, pelaksanaan serta evaluasi sesuai tanggungjawab dan juga peran.</td>
+                  <td style="">Komunitas  sekolah terlibat dalam manajemen sekolah yang melingkupi keseluruhan proses  perencanaan, pelaksanaan serta evaluasi sesuai tanggungjawab dan juga peran.</td>
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>

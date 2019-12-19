@@ -69,20 +69,18 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>A.</strong></td>
-                    <td colspan="2" align="left">
-                        <p style="text-align: justify">Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                    <td style="">&nbsp;</td>
+                    <td style=""><strong>Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td valign="top"><strong>B.</strong></td>
-                    <td colspan="2" align="left">
-                        <p style="text-align: justify">Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                    <td style="">&nbsp;</td>
+                    <td style=""><strong>Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td valign="top"><strong>C.</strong></td>
-                    <td colspan="2" align="left">
-                        <p style="text-align: justify">Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</p></td>
+                    <td style="">&nbsp;</td>
+                    <td style=""><strong>Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
+
             </table>
 
         </div>
