@@ -101,7 +101,7 @@
                         </div>
                         <div class="divider"></div>
                         <div class="post-content">
-                            {!! $p->deskripsi !!}
+                            {!!  $p->deskripsi !!}
                         </div>
 
                     </div>

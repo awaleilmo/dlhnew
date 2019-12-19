@@ -1,7 +1,7 @@
 @extends('layouts.tampilan')
 
 @section('content')
-    <div class="center-vertical bg-black">
+    <div class="center-vertical bg-black" style="position: inherit">
         <div class="center-content row">
             <br>
             <h3 class="text-center pad25B font-gray font-size-23">Login</h3>
