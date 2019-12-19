@@ -44,7 +44,7 @@
             <br>
             <br>
             <p class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify ; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
-                Pengadu melengkapi informasi sesuai dengan formulir pengadun di bawah ini : </p>
+                Pengadu melengkapi informasi sesuai dengan formulir pengaduan di bawah ini : </p>
             <br>
 
         </div>

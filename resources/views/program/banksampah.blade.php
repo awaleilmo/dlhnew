@@ -8,6 +8,16 @@
                 <br>
                 <br>
                 <tbody>
+
+                <tr>
+                    <td colspan="2" style=""><strong style="text-decoration: underline;">Sekilas Bank Sampah</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="">Semenjak Tahun 2012 dengan  nama Badan Lingkungan Hidup Daerah Kota Serang  telah melakukan program Sosialisasi dan Bimbingan Teknis (BIMTEK)  terkait pengolahan persampahan  kepada masyarakat hingga  Tahun 2019 dengan nama Dinas Lingkungan Hidup Kota Serang.</td>
+                    <br>
+                    <td colspan="2" style="">Teridentifikasi mulai Tahun 2014 hingga 2019 di Kota Serang telah terbentuk 22 Bank Sampah yang dibina oleh Dinas Lingkungan Hidup Kota Serang dengan jumlah nasabah setiap Bank Sampah meningkat dari tahun ke tahun.</td>
+
+                </tr>
                 <tr>
                     <td style="width: 27px;" valign="top">
                         <strong>Pengertian</strong>
@@ -15,19 +25,37 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p style="text-align: justify">Bank sampah menurut Peraturan Menteri Lingkungan Hidup RI nomor 13 tahun 2012 adalah tempat pemilahan dan pengumpulan sampah yang dapat didaur ulang dan/atau diguna ulang yang memiliki nilai ekonomi.</p>
                     </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style=""><strong style="text-decoration:underline">Pengelola Bank Sampah</strong></td>
                 </tr>
                 <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>Syarat</strong>
-                    </td>
+                    <td style="">Pengelola Bank Sampah terdiri dari :</td>
                 </tr>
                 <tr>
-                    <td style="width: 976px;">
-                        <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </td>
+                    <td style=""><strong>1.</strong></td>
+                    <td style="">Ketua/direktur</td>
                 </tr>
+                <tr>
+                    <td style=""><strong>2.</strong></td>
+                    <td style="">Administrasi/teller</td>
+                </tr>
+                <tr>
+                    <td style=""><strong>3.</strong></td>
+                    <td style="">Bendahara</td>
+                </tr>
+                <tr>
+                    <td style=""><strong>4.</strong></td>
+                    <td style="">Pemilah/pengepul</td>
+                </tr>
+
+
+
+
+
                 </tbody>
             </table>
         </div>

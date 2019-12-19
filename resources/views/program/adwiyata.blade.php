@@ -15,9 +15,9 @@
                 </tr>
                 <tr>
                     <td colspan="2" >
-                        <p style="text-align: justify">&emsp; Adiwiyata (Green School) merupkan salah satu program kementrian negara lingkungan hidup yang memiliki tujuan untuk mendorong terciptanya pengetahuan serta kesadaran warga sekolah dalam pelestarian lingkungan hidup.</p>
+                        <p style="text-align: justify">Adiwiyata (Green School) merupkan salah satu program kementrian negara lingkungan hidup yang memiliki tujuan untuk mendorong terciptanya pengetahuan serta kesadaran warga sekolah dalam pelestarian lingkungan hidup.</p>
                         <br>
-                        <p style="text-align: justify">&emsp;Peraturan Menteri Lingkungan Hidup Republik Indonesia Nomor 05 Tahun 2013 Tentang Pedoman Pelaksanaan Program Adiwiyata menyatakan bahwa sekolah adiwiyata merupakan sekolah yang peduli serta berbudaya lingkungan dan juga program adiwiyata ialah suatu program untuk dapat mewujudkan sekolah yang peduli serta juga berbudaya lingkungan.</p>
+                        <p style="text-align: justify">Peraturan Menteri Lingkungan Hidup Republik Indonesia Nomor 05 Tahun 2013 Tentang Pedoman Pelaksanaan Program Adiwiyata menyatakan bahwa sekolah adiwiyata merupakan sekolah yang peduli serta berbudaya lingkungan dan juga program adiwiyata ialah suatu program untuk dapat mewujudkan sekolah yang peduli serta juga berbudaya lingkungan.</p>
                     </td>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                         <strong style="    text-decoration: underline;">Tujuan Adwiyata</strong></td>
                 </tr>
                 <tr>
-                  <td colspan="2" style=""><span style="text-align: justify">&emsp;Tujuan sekolah Adiwiyata yang secara umum itu menerangkan dalam mewujudkan masyarakat sekolah yang peduli serta juga berbudaya dalam lingkungan dengan</span>:</td>
+                  <td colspan="2" style=""><span style="text-align: justify">Tujuan sekolah Adiwiyata yang secara umum itu menerangkan dalam mewujudkan masyarakat sekolah yang peduli serta juga berbudaya dalam lingkungan dengan</span>:</td>
                 </tr>
                 <tr>
                   <td valign="top" style=""><strong>1.</strong></td>
@@ -43,7 +43,7 @@
                   <td colspan="2" style=""><strong style="text-decoration: underline;">Fungsi</strong></td>
                   </tr>
                 <tr>
-                  <td colspan="2" style="">&emsp;Fungsi  program adiwiyata agar seluruh pelajar ikut terlibat dalam seggala kegiatan  atau aktivita persekolahan demi menuju lingkunga yang sehata dan juga mampu menghindari  dampak lingkungan yang negatif.</td>
+                  <td colspan="2" style="">Fungsi  program adiwiyata agar seluruh pelajar ikut terlibat dalam seggala kegiatan  atau aktivita persekolahan demi menuju lingkunga yang sehata dan juga mampu menghindari  dampak lingkungan yang negatif.</td>
                   </tr>
                 <tr>
                   <td colspan="2" style=""><strong style="text-decoration: underline;">Prinsip Program Adwiyata</strong></td>
@@ -62,18 +62,18 @@
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
-                  <td style="">&emsp;Seluruh  kegiatan atau aktivitas harus dilakukan secara terrencana dan terus menerus  secara komprehensif.</td>
+                  <td style="">Seluruh  kegiatan atau aktivitas harus dilakukan secara terrencana dan terus menerus  secara komprehensif.</td>
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
                   <td style=""><strong>Edukatif </strong>( Permen LH No 2013 )</td>
                 </tr>
                 <tr>
-                  <td colspan="2" style=""><strong style="text-decoration:underline">Manfaat Peogram Adwiyata</strong></td>
+                  <td colspan="2" style=""><strong style="text-decoration:underline">Manfaat Program Adwiyata</strong></td>
                   </tr>
                 <tr>
                   <td style=""><strong>1.</strong></td>
-                  <td style="">Mengubah  perilaku warga sekolah untuk dapat melakukan budaya pelestarian lingkungan,</td>
+                  <td style="">Mengubah  perilaku warga sekolah untuk dapat melakukan budaya pelestarian lingkungan.</td>
                 </tr>
                 <tr>
                   <td style=""><strong>2.</strong></td>
@@ -108,7 +108,7 @@
                   </tr>
                 <tr>
                   <td style=""><p>&nbsp;</p></td>
-                  <td style="">&emsp;Penghargaan yang  diberikan oleh Bupati/Walikota.</td>
+                  <td style="">Penghargaan yang  diberikan oleh Bupati/Walikota.</td>
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
@@ -116,7 +116,7 @@
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
-                  <td style="">&emsp;Penghargaan  yang diberikan langsung oleh Menteri Lingkungan Hidup dan Kehutanan</td>
+                  <td style="">Penghargaan  yang diberikan langsung oleh Menteri Lingkungan Hidup dan Kehutanan</td>
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
@@ -124,7 +124,7 @@
                   </tr>
                 <tr>
                   <td style=""><p>&nbsp;</p></td>
-                  <td style="">&emsp;Penghargaan yang  diberikan oleh Gubernur.</td>
+                  <td style="">Penghargaan yang  diberikan oleh Gubernur.</td>
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
@@ -132,7 +132,7 @@
                   </tr>
                 <tr>
                   <td style="">&nbsp;</td>
-                  <td style="">&emsp;Penghargaan  khusus bagi tiap-tiap sekolah dengan penilaian berupa sekolah yang mempunyai  minimal 10 Sekolah binaan yang telah mendapatkan penghargaan Adiwiyata  Kabupaten/Kota, juga penghargaan yang diberikan oleh Presiden.</td>
+                  <td style="">Penghargaan  khusus bagi tiap-tiap sekolah dengan penilaian berupa sekolah yang mempunyai  minimal 10 Sekolah binaan yang telah mendapatkan penghargaan Adiwiyata  Kabupaten/Kota, juga penghargaan yang diberikan oleh Presiden.</td>
                   </tr>
                 <tr>
                   <td colspan="2" style=""><strong style="text-decoration:underline">Kriteria Penilaian Penghargaan Adwiyata</strong></td>
