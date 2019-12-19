@@ -20,6 +20,7 @@ class CreateSnasTable extends Migration
             $table->string("sk");
             $table->string("kepalasekolah");
             $table->string("tahun");
+            $table->string('kecamatan');
             $table->timestamps();
         });
     }
