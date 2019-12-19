@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <td>
-                    <img src="image-resources/dlh/syaratuklupl.png" style="width:100%; height:450px">
+                    <img src="image-resources/dlh/syaratuklupl.png" style="width:100%; height:50%">
                 </td>
             </tr>
 
@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td>
-                    <img src="image-resources/dlh/uklupl.png" style="width:100%; height:450px">
+                    <img src="image-resources/dlh/uklupl.png" style="width:100%; height:50%">
                 </td>
             </tr>
 

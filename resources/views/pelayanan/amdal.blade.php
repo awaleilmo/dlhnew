@@ -24,8 +24,8 @@
                 </td>
                 </tr>
                 <tr>
-                    <td>
-                        <img src="image-resources/dlh/syaratamdal.png" style="width:100%; height:450px">
+                    <td align="center">
+                        <img src="image-resources/dlh/syaratamdal.png" style="width:80%; height:70%">
                     </td>
                 </tr>
 
@@ -36,7 +36,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="image-resources/dlh/amdal.png" style="width:100%; height:450px">
+                        <img src="image-resources/dlh/amdal.png" style="width:100%; height:50%">
                     </td>
                 </tr>
 

@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="image-resources/dlh/syaratsppl.png" style="width:100%; height:450px">
+                        <img src="image-resources/dlh/syaratsppl.png" style="width:100%; height:50%">
                     </td>
                 </tr>
 
@@ -36,7 +36,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="image-resources/dlh/sppl.png" style="width:100%; height:450px">
+                        <img src="image-resources/dlh/sppl.png" style="width:100%; height:50%">
                     </td>
                 </tr>
 
