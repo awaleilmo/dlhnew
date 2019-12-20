@@ -15,7 +15,7 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Sampah adalah sisa kegiatan sehari-hari manusia dan/atau proses alam yang berbentuk padat yang terdiri atas sampah rumah tangga maupun sampah sejenis sampah rumah tangga.</p>
+                        <p style="text-align: justify">&emsp;Sampah adalah sisa kegiatan sehari-hari manusia dan/atau proses alam yang berbentuk padat yang terdiri atas sampah rumah tangga maupun sampah sejenis sampah rumah tangga.</p>
                     </td>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">TPS adalah singkatan dari Tempat Penampungan Sementara yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan/atau tempat pengolahan sampah terpadu.</p>
+                        <p style="text-align: justify">&emsp;TPS adalah singkatan dari Tempat Penampungan Sementara yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan/atau tempat pengolahan sampah terpadu.</p>
                     </td>
                 </tr>
 
@@ -36,7 +36,7 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Sedangkan TPA adalah singkatan dari Tempat Pemrosesan Akhir yaitu tempat untuk memroses dan mengembalikan sampah ke media lingkungan secara aman bagi manusia dan lingkungan.</p>
+                        <p style="text-align: justify">&emsp;Sedangkan TPA adalah singkatan dari Tempat Pemrosesan Akhir yaitu tempat untuk memroses dan mengembalikan sampah ke media lingkungan secara aman bagi manusia dan lingkungan.</p>
                     </td>
                 </tr>
                 </tbody>

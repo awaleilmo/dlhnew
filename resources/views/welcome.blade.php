@@ -261,7 +261,7 @@
             <div class="col-md-4"></center><img src="image-resources/dlh/foto6.jpg" style="width: 30em; border-radius: 30px">
             </div>
             <div class="col-md-8">
-                <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="width: 80%; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+                <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="color:white; width: 80%; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                     <tr>
                         <td align="left"><h4 class="hero-heading wow fadeInDown" style="padding: 0">AMDAL</h4>
                             <p style="font-size: 15px">Analisis Mengenai Dampak Lingkungan Hidup yang disebut Amdal adalah kajian mengenai dampak penting suatu Usaha dan/atau Kegiatan yang direncanakan pada lingkungan hidup yang diperlukan bagi proses pengambilan keputusan tentang penyelenggaraan Usaha dan/atau Kegiatan</p>
