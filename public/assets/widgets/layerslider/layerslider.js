@@ -282,59 +282,59 @@ function lsShowNotice(lsobj,issue,ver){
 
                     // Applying skin
 
-                    $(el).addClass('ls-'+ls.o.skin);
-
-                    var skinStyle = ls.o.skinsPath+ls.o.skin+'/skin.css';
-
-                    cssContainer = $('head');
-
-                    if( !$('head').length ){
-                        cssContainer = $('body');
-                    }
-
-                    if( $('link[href="'+skinStyle+'"]').length ){
-
-                        // ls.d.aU('Skin "'+ls.o.skin+'" is already loaded.');
-
-                        curSkin = $('link[href="'+skinStyle+'"]');
-
-                        if( !ls.g.loaded ){
-
-                            ls.g.loaded = true;
-
-                            // IMPROVEMENT v4.5.0 Added delay because of caching bugs
-
-                            ls.g.t1 = setTimeout(function(){
-                                ls.init();
-                            },150);
-                        }
-
-                    }else{
-                        if (document.createStyleSheet){
-                            document.createStyleSheet(skinStyle);
-                            var curSkin = $('link[href="'+skinStyle+'"]');
-                        }else{
-                            var curSkin = $('<link rel="stylesheet" href="'+skinStyle+'" type="text/css" />').appendTo( cssContainer );
-                        }
-                    }
-
-                    // curSkin.load(); function for most of the browsers.
-
-                    curSkin.load(function(){
-
-                        if( !ls.g.loaded ){
-
-                            // ls.d.aU('curSkin.load(); fired');
-
-                            ls.g.loaded = true;
-
-                            // IMPROVEMENT v4.5.0 Added delay because of caching bugs
-
-                            ls.g.t2 = setTimeout(function(){
-                                ls.init();
-                            },150);
-                        }
-                    });
+                    // $(el).addClass('ls-'+ls.o.skin);
+                    //
+                    // var skinStyle = ls.o.skinsPath+ls.o.skin+'/skin.css';
+                    //
+                    // cssContainer = $('head');
+                    //
+                    // if( !$('head').length ){
+                    //     cssContainer = $('body');
+                    // }
+                    //
+                    // if( $('link[href="'+skinStyle+'"]').length ){
+                    //
+                    //     // ls.d.aU('Skin "'+ls.o.skin+'" is already loaded.');
+                    //
+                    //     curSkin = $('link[href="'+skinStyle+'"]');
+                    //
+                    //     if( !ls.g.loaded ){
+                    //
+                    //         ls.g.loaded = true;
+                    //
+                    //         // IMPROVEMENT v4.5.0 Added delay because of caching bugs
+                    //
+                    //         ls.g.t1 = setTimeout(function(){
+                    //             ls.init();
+                    //         },150);
+                    //     }
+                    //
+                    // }else{
+                    //     if (document.createStyleSheet){
+                    //         document.createStyleSheet(skinStyle);
+                    //         var curSkin = $('link[href="'+skinStyle+'"]');
+                    //     }else{
+                    //         var curSkin = $('<link rel="stylesheet" href="'+skinStyle+'" type="text/css" />').appendTo( cssContainer );
+                    //     }
+                    // }
+                    //
+                    // // curSkin.load(); function for most of the browsers.
+                    //
+                    // curSkin.load(function(){
+                    //
+                    //     if( !ls.g.loaded ){
+                    //
+                    //         // ls.d.aU('curSkin.load(); fired');
+                    //
+                    //         ls.g.loaded = true;
+                    //
+                    //         // IMPROVEMENT v4.5.0 Added delay because of caching bugs
+                    //
+                    //         ls.g.t2 = setTimeout(function(){
+                    //             ls.init();
+                    //         },150);
+                    //     }
+                    // });
 
                     // $(window).load(); function for older webkit ( < v536 ).
 
@@ -1040,9 +1040,6 @@ function lsShowNotice(lsobj,issue,ver){
 
                     if( typeof $(this).data('src') !== 'string' ){
 
-                        $(this).data('src', $(this).attr('src') );
-                        var src = ls.o.skinsPath+'../css/blank.gif';
-                        $(this).attr('src',src);
                     }
                 }else{
                     if( typeof $(this).data('src') === 'string' ){

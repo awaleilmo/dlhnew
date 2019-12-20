@@ -145,7 +145,6 @@
                     </ul>
                 </li>
                 @endguest
-                </li>
         </ul><!-- .header-nav -->
     </div><!-- .container -->
 </div><!-- .main-header -->

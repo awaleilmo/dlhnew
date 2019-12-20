@@ -7,6 +7,5 @@
             layersContainer : 1270,
 	        skin: 'fullwidth',
 	        hoverPrevNext: true,
-	        skinsPath: '../assets/widgets/layerslider/skins/'
 	    });
 	});

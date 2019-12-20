@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang ="en">
 
 <!-- Mirrored from agileui.com/demo/monarch/demo/frontend-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 03:58:24 GMT -->
