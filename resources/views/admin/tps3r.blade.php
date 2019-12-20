@@ -20,8 +20,8 @@
         </div>
         <div class="container">
             <div id="page-title">
-                <h2>{{__('Dashboard Bank Sampah')}}</h2>
-                <p>{{__('tampilan tps 3r bank sampah')}}</p>
+                <h2>{{__('Dashboard TPS 3R')}}</h2>
+                <p>{{__('tampilan menu tps 3r')}}</p>
             </div>
         </div>
         <form id="pelaku"  method="post" enctype="multipart/form-data" action="javascript:void(0)" style="display: none;">
@@ -39,6 +39,15 @@
                 <br>
                 <div class="row">
                     <div class="col-md-2">
+                        Nama Pengurus :
+                    </div>
+                    <div class="col-md-2">
+                        <input name="namapengurus" type="text" class="form-control" required autocomplete="off" placeholder="Nama Pengurus">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
                         Alamat :
                     </div>
                     <div class="col-md-2">
@@ -48,28 +57,37 @@
                 <br>
                 <div class="row">
                     <div class="col-md-2">
-                        Jenis Kerajinan :
+                        Status :
                     </div>
                     <div class="col-md-2">
-                        <input name="jenis" type="text" class="form-control" required autocomplete="off" placeholder="Jenis Kerajinan">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-2">
-                        Jumlah Nasabah :
-                    </div>
-                    <div class="col-md-2">
-                        <input name="jumlah" type="number" class="form-control" required autocomplete="off" placeholder="Jumlah Nasabah">
+                        <input name="status" type="text" class="form-control" required autocomplete="off" placeholder=Status>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-md-2">
-                        Tahun :
+                        Alat :
                     </div>
                     <div class="col-md-2">
-                        <input name="tahun" type="number" class="form-control" required autocomplete="off" placeholder="Tahun">
+                        <input name="alat" type="text" class="form-control" required autocomplete="off" placeholder="Alat">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        Kendala :
+                    </div>
+                    <div class="col-md-2">
+                        <input name="kendala" type="text" class="form-control" required autocomplete="off" placeholder="Kendala">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        Keterangan :
+                    </div>
+                    <div class="col-md-2">
+                        <input name="keterangan" type="text" class="form-control" required autocomplete="off" placeholder="Keterangan">
                     </div>
                 </div>
                 <br>
@@ -109,6 +127,15 @@
                 <br>
                 <div class="row">
                     <div class="col-md-2">
+                        Nama Pengurus :
+                    </div>
+                    <div class="col-md-2">
+                        <input name="namapengurus" id="pengurus" type="text" class="form-control" required autocomplete="off" placeholder="Nama Pengurus">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
                         Alamat :
                     </div>
                     <div class="col-md-2">
@@ -118,28 +145,37 @@
                 <br>
                 <div class="row">
                     <div class="col-md-2">
-                        Jenis Kerajinan :
+                        Status :
                     </div>
                     <div class="col-md-2">
-                        <input id="jenis" name="jenis" type="text" class="form-control" required autocomplete="off" placeholder="Jenis Kerajinan">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-2">
-                        Jumlah Nasabah :
-                    </div>
-                    <div class="col-md-2">
-                        <input id="jumlah" name="jumlah" type="number" class="form-control" required autocomplete="off" placeholder="Jumlah Nasabah">
+                        <input name="status" id="status" type="text" class="form-control" required autocomplete="off" placeholder=Status>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-md-2">
-                        Tahun :
+                        Alat :
                     </div>
                     <div class="col-md-2">
-                        <input id="tahun" name="tahun" type="number" class="form-control" required autocomplete="off" placeholder="Tahun">
+                        <input name="alat" type="text" id="alat" class="form-control" required autocomplete="off" placeholder="Alat">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        Kendala :
+                    </div>
+                    <div class="col-md-2">
+                        <input name="kendala" id="kendala" type="text" class="form-control" required autocomplete="off" placeholder="Kendala">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        Keterangan :
+                    </div>
+                    <div class="col-md-2">
+                        <input name="keterangan" id="keterangan" type="text" class="form-control" required autocomplete="off" placeholder="Keterangan">
                     </div>
                 </div>
                 <br>
@@ -197,14 +233,16 @@
         <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
             <thead>
             <tr>
-                <th>{{__("No")}}</th>
-                <th>{{__("Nama")}}</th>
-                <th>{{__("Alamat")}}</th>
-                <th>{{__("Jenis Kerajinan")}}</th>
-                <th>{{__("Jumlah Nasabah")}}</th>
-                <th>{{__("Tahun")}}</th>
-                <th>{{__("Foto")}}</th>
-                <th>{{__("Action")}}</th>
+                <th valign="top">{{__("No")}}</th>
+                <th valign="top">{{__("Nama")}}</th>
+                <th valign="top">{{__("Nama Pengurus")}}</th>
+                <th valign="top">{{__("Alamat")}}</th>
+                <th valign="top">{{__("Status")}}</th>
+                <th valign="top">{{__("Alat")}}</th>
+                <th valign="top">{{__("Kendala")}}</th>
+                <th valign="top">{{__("Keterangan")}}</th>
+                <th valign="top">{{__("Foto")}}</th>
+                <th valign="top">{{__("Action")}}</th>
             </tr>
             </thead>
 
@@ -214,90 +252,90 @@
 
             $("#pelaku").submit(function (e) {
 
-                    e.preventDefault();
-                    var formData = new FormData($(this)[0]);
-                    var x = document.getElementById("myDIV");
-                       $.ajax({
-                           url: '{{url("cbank")}}',
-                           type: "POST",
-                           data: formData,
-                           async: false,
-                           cache: false,
-                           contentType: false,
-                           enctype: 'multipart/form-data',
-                           processData: false,
-                           success: function (response) {
-                               x.innerHTML = "Add";
-                               x.style.borderColor= "#29b765";
-                               x.style.background= "#58d68d";
-                               $('#btn-submit').html('Simpan');
-                               $('#res_message').show();
-                               var oTable = $('#datatable1').dataTable();
-                               oTable.fnDraw(false);
-                               $('#res_message').html(response.msg);
-                               $('#msg_div').removeClass('hidden');
-                               document.getElementById("pelaku").reset();
-                               document.getElementById("pelaku").style.display='none';
-                               $('#bar').addClass('hidden');
-                               $('#frm').removeClass('hidden');
-                               setTimeout(function () {
-                                   $('#res_message').addClass('hidden');
-                                   $('#msg_div').addClass('hidden');
-                               }, 3000);
-                           },
-                           error: function (data) {
-                               console.log("Error:", data.statusText);
-                               console.log("Error:", data.responseJSON.message);
-                           }
+                e.preventDefault();
+                var formData = new FormData($(this)[0]);
+                var x = document.getElementById("myDIV");
+                $.ajax({
+                    url: '{{url("ctps3r")}}',
+                    type: "POST",
+                    data: formData,
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    processData: false,
+                    success: function (response) {
+                        x.innerHTML = "Add";
+                        x.style.borderColor= "#29b765";
+                        x.style.background= "#58d68d";
+                        $('#btn-submit').html('Simpan');
+                        $('#res_message').show();
+                        var oTable = $('#datatable1').dataTable();
+                        oTable.fnDraw(false);
+                        $('#res_message').html(response.msg);
+                        $('#msg_div').removeClass('hidden');
+                        document.getElementById("pelaku").reset();
+                        document.getElementById("pelaku").style.display='none';
+                        $('#bar').addClass('hidden');
+                        $('#frm').removeClass('hidden');
+                        setTimeout(function () {
+                            $('#res_message').addClass('hidden');
+                            $('#msg_div').addClass('hidden');
+                        }, 3000);
+                    },
+                    error: function (data) {
+                        console.log("Error:", data.statusText);
+                        console.log("Error:", data.responseJSON.message);
+                    }
 
-                       });
+                });
             });
             $("#editor").submit(function (e) {
                 e.preventDefault();
                 var formData = new FormData($(this)[0]);
                 var x = document.getElementById("myDIV");
-                        $.ajax({
-                            url: '{{url("ebank")}}' ,
-                            type: "POST",
-                            data: formData,
-                            async: false,
-                            cache: false,
-                            contentType: false,
-                            enctype: 'multipart/form-data',
-                            processData: false,
-                            success: function( response ) {
-                                var j = [response.msg];
-                                x.innerHTML = "Add";
-                                x.style.borderColor= "#29b765";
-                                x.style.background= "#58d68d";
-                                $('#btn-edit').html('Edit');
-                                $('#res_message').show();
-                                $('#btn-submit').removeClass('hidden');
-                                $('#btn-edit').addClass('hidden');
-                                var oTable = $('#datatable1').dataTable();
-                                oTable.fnDraw(false);
-                                $('#res_message').html(j[0]);
-                                $('#msg_div').removeClass('hidden');
-                                document.getElementById("editor").reset();
-                                document.getElementById("editor").style.display='none';
-                                setTimeout(function(){
-                                    $('#res_message').addClass('hidden');
-                                    $('#msg_div').addClass('hidden');
-                                },3000);
-                            },
-                            error: function (data) {
-                                console.log(data);
-                                alert("Error: "+data.statusText + " & " + data.responseJSON.message);
+                $.ajax({
+                    url: '{{url("etps3r")}}' ,
+                    type: "POST",
+                    data: formData,
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    processData: false,
+                    success: function( response ) {
+                        var j = [response.msg];
+                        x.innerHTML = "Add";
+                        x.style.borderColor= "#29b765";
+                        x.style.background= "#58d68d";
+                        $('#btn-edit').html('Edit');
+                        $('#res_message').show();
+                        $('#btn-submit').removeClass('hidden');
+                        $('#btn-edit').addClass('hidden');
+                        var oTable = $('#datatable1').dataTable();
+                        oTable.fnDraw(false);
+                        $('#res_message').html(j[0]);
+                        $('#msg_div').removeClass('hidden');
+                        document.getElementById("editor").reset();
+                        document.getElementById("editor").style.display='none';
+                        setTimeout(function(){
+                            $('#res_message').addClass('hidden');
+                            $('#msg_div').addClass('hidden');
+                        },3000);
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        alert("Error: "+data.statusText + " & " + data.responseJSON.message);
 
-                            }
-                        });
+                    }
+                });
 
             });
 
             $('body').on('click','.fotol',function () {
-               const id = $(this).attr('id');
-               let x = document.getElementById(id).style;
-               let y = document.getElementById('fotol'+id).style;
+                const id = $(this).attr('id');
+                let x = document.getElementById(id).style;
+                let y = document.getElementById('fotol'+id).style;
                 if (x.width === "800px") {
                     x.width = '150px';
                     x.height = '100px';
@@ -328,7 +366,7 @@
             $('body').on('click', '.edit-user', function () {
                 var user_id = $(this).attr('id');
                 var x = document.getElementById("myDIV")
-                $.get("{{url('/sbank')}}"+ '/' +user_id, function (data) {
+                $.get("{{url('/stps3r')}}"+ '/' +user_id, function (data) {
                     document.getElementById("pelaku").style.display='none';
                     document.getElementById("editor").style.display='';
                     x.innerHTML = "Cancel";
@@ -336,12 +374,13 @@
                     x.style.background = "#e67e22";
                     $('#btn-submit').addClass('hidden');
                     $('#btn-edit').removeClass('hidden');
-                    $('#tahun').val(data.tahun);
+                    $('#keterangan').val(data.keterangan);
                     $('#alamat').val(data.alamat);
-                    $('#jenis').val(data.jeniskegiatan);
-                    $('#jumlah').val(data.jumlahnasabah);
+                    $('#status').val(data.status);
+                    $('#kendala').val(data.kendala);
                     $('#labelfile').html(data.foto);
                     $('#desk').val(data.foto);
+                    $('#alat').val(data.alat);
                     $('#nama').val(data.nama);
                     $('#id').val(data.id);
                     var oTable = $('#datatable1').dataTable();
@@ -353,7 +392,7 @@
                 var user_id=$(this).attr("id");
                 $.ajax({
                     type: "GET",
-                    url: "{{url('/hbank')}}",
+                    url: "{{url('/htps3r')}}",
                     data: 'id='+user_id,
                     success: function(response){
                         $('#res_message').removeClass('hidden');
@@ -376,49 +415,20 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "{{url('tbank')}}",
+                    url: "{{url('ttps3r')}}",
                     type: 'GET',
-                },
-                "footerCallback": function ( row, data, start, end, display ) {
-                    var api = this.api(), data;
-
-                    // Remove the formatting to get integer data for summation
-                    var intVal = function ( i ) {
-                        return typeof i === 'string' ?
-                            i.replace(/[\$,]/g, '')*1 :
-                            typeof i === 'number' ?
-                                i : 0;
-                    };
-
-                    // Total over all pages
-                    total = api
-                        .column( 4 )
-                        .data()
-                        .reduce( function (a, b) {
-                            return intVal(a) + intVal(b);
-                        }, 0 );
-
-                    // Total over this page
-                    pageTotal = api
-                        .column( 4, { page: 'current'} )
-                        .data()
-                        .reduce( function (a, b) {
-                            return intVal(a) + intVal(b);
-                        }, 0 );
-                    // Update footer
-                    $( api.column( 4 ).footer() ).html(
-                        ' '+ pageTotal +' M3 ( Total '+ total +' M3)'
-                    );
                 },
                 columns: [
                     { data: 'DT_RowIndex', name: 'DT_RowIndex', },
                     { data: 'nama', name: 'nama', },
+                    { data: 'namapengurus', name: 'namapengurus', },
                     { data: 'alamat', name: 'alamat', },
-                    { data: 'jeniskegiatan', name: 'jeniskegiatan'},
-                    { data: 'jumlahnasabah', name: 'jumlahnasabah'},
-                    { data: 'tahun', name: 'tahun'},
+                    { data: 'status', name: 'status'},
+                    { data: 'alat', name: 'alat'},
+                    { data: 'kendala', name: 'kendala'},
+                    { data: 'keterangan', name: 'keterangan', },
                     { data: 'foto', name: 'foto'},
-                    {data: 'action', name: 'action', orderable: false, searchable: false},
+                    { data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
                 order: [[0, 'asc']],
             });

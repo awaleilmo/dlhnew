@@ -54,6 +54,7 @@
                         </ul>
                     </li>
                     <li><a href="{{route('admin/banksampah')}}">Bank Sampah</a></li>
+                    <li><a href="{{route('admin/tps3r')}}">TPS 3R</a></li>
                 </ul>
             </li>
             <li class="divider"></li>

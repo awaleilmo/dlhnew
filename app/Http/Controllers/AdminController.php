@@ -19,6 +19,7 @@ use App\sna;
 use App\scatingkat;
 use App\smphliar;
 use App\timbulan;
+use App\tps;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,12 @@ class AdminController extends Controller
 
             return view('admin.admin');
 
+        }
+        return redirect('/');
+    }
+    public function tps(){
+        if (Auth::check()&& Auth::user()->level=='admin'){
+            return view('admin.tps3r');
         }
         return redirect('/');
     }
@@ -1333,6 +1340,95 @@ class AdminController extends Controller
         $hps = 'upload/pengumuman/'.$cek->foto;
         File::delete($hps);
         $check = pengumuman::whereId($id)->delete();
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $arr = ['msg' => 'Berhasil Dihapus', 'status' => true];
+        }
+        return Response()->json($arr);
+    }
+
+    public function ttps3r(){
+        $pelaku = tps::all();
+        return datatables()->of($pelaku)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+
+                $btn = '<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-pencil"></i></a>';
+                $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-trash"></i></a>';
+
+
+                return $btn;
+
+            })
+            ->addColumn('foto',function ($row){
+                $t = '<div id="fotol'.$row->id.'" style="transition: 1s"><img id="'.$row->id.'" class="fotol" src="upload/tps/'.$row->foto.'" style="width:150px; height:100px"></div>';
+                return $t;
+            })
+            ->rawColumns(['action','foto'])
+            ->make(true);
+    }
+    public function ctps3r(Request $request){
+        $file = $request->file('foto');
+        $tujuan_upload = 'upload/tps';
+        $now = Carbon::now();
+        $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+        $file->move($tujuan_upload, $fulname);
+        $data['nama'] = $request->nama;
+        $data['namapengurus'] = $request->namapengurus;
+        $data['alamat'] = $request->alamat;
+        $data['status'] = $request->status;
+        $data['alat'] = $request->alat;
+        $data['kendala'] = $request->kendala;
+        $data['keterangan'] = $request->keterangan;
+        $data['foto'] = $fulname;
+        $check = tps::create($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+        }
+        return Response()->json($arr);
+        //return $data;
+    }
+    public function stps3r($id){
+        $pelaku = tps::find($id);
+        return response()->json($pelaku);
+    }
+    public function etps3r(Request $request){
+        $id = $request->id;
+        $ids = $request->desk;
+        $file = $request->file('foto');
+        $cek = tps::find($id);
+        if($cek->foto == $ids){
+            $fulname = $cek->foto;
+        } else {
+            $tujuan_upload = 'upload/tpssampah';
+            $hps = 'upload/tps/'.$cek->foto;
+            File::delete($hps);
+            $now = Carbon::now();
+            $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+        }
+        $data['nama'] = $request->nama;
+        $data['namapengurus'] = $request->namapengurus;
+        $data['alamat'] = $request->alamat;
+        $data['status'] = $request->status;
+        $data['alat'] = $request->alat;
+        $data['kendala'] = $request->kendala;
+        $data['keterangan'] = $request->keterangan;
+        $data['foto'] = $fulname;
+        $check = tps::whereId($id)->update($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
+        if($check){
+            $arr = ['msg' => 'Berhasil Diubah'];
+        }
+        return Response()->json($arr);
+    }
+    public function htps3r(Request $request){
+        $id = $request->id;
+        $cek = tps::find($id);
+        $hps = 'upload/tps/'.$cek->foto;
+        File::delete($hps);
+        $check = tps::whereId($id)->delete();
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){
             $arr = ['msg' => 'Berhasil Dihapus', 'status' => true];

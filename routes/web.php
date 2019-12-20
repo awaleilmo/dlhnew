@@ -48,6 +48,7 @@ Route::get("/admindata","AdminController@adata")->name("admin/data");
 Route::get("/adminpojok","AdminController@pojok")->name("admin/pojok");
 Route::get("/adminartikel","AdminController@artikel")->name("admin/artikel");
 Route::get("/adminpengumuman","AdminController@pengumuman")->name("admin/pengumuman");
+Route::get('/tps3r','AdminController@tps')->name('admin/tps3r');
 
 //admin function button
 Route::get('/tpelaku', 'AdminController@tpelaku')->name('tpelaku');
@@ -132,6 +133,11 @@ Route::get('/spengumuman/{id}', 'AdminController@spengumuman')->name('spengumuma
 Route::post('/epengumuman', 'AdminController@epengumuman')->name('epengumuman');
 Route::get('/hpengumuman', 'AdminController@hpengumuman')->name('hpengumuman');
 Route::get('/adminpengumuman/{id}', 'AdminController@vpengumuman');
+Route::get('/ttps3r','AdminController@ttps3r')->name('ttps3r');
+Route::post('/ctps3r', 'AdminController@ctps3r')->name('ctps3r');
+Route::get('/stps3r/{id}', 'AdminController@stps3r')->name('stps3r');
+Route::post('/etps3r', 'AdminController@etps3r')->name('etps3r');
+Route::get('/htps3r', 'AdminController@htps3r')->name('htps3r');
 
 //tampilan
 //Route::get('/s', 'UserController@')->name('');
