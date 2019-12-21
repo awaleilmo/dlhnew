@@ -787,8 +787,9 @@ class AdminController extends Controller
             $fulname = "kosong";
         }else {
             $fulname = $now->year . "-" . $now->month . "-" . $now->day . "_" . $now->hour . "-" . $now->minute . "-" . $now->second . "_" . $file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
         }
-        $file->move($tujuan_upload, $fulname);
+
         $data['nama'] = $request->nama;
         $data['alamat'] = $request->alamat;
         $data['jeniskegiatan'] = $request->jenis;
