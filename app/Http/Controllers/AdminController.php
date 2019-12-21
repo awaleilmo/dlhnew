@@ -763,6 +763,10 @@ class AdminController extends Controller
         $pelaku = bank::all();
         return datatables()->of($pelaku)
             ->addIndexColumn()
+            ->addColumn('jeniskegiatan', function ($row){
+                $t = '<textarea> '.$row->jeniskegiatan.' </textarea>';
+                return $t;
+            })
             ->addColumn('action', function($row){
 
                 $btn = '<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-pencil"></i></a>';
