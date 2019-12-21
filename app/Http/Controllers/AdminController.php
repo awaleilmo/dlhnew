@@ -784,7 +784,7 @@ class AdminController extends Controller
                 }
                 return $t;
             })
-            ->rawColumns(['action','foto'])
+            ->rawColumns(['action','foto','jeniskegiatan'])
             ->make(true);
     }
     public function cbank(Request $request){
