@@ -764,7 +764,17 @@ class AdminController extends Controller
         return datatables()->of($pelaku)
             ->addIndexColumn()
             ->addColumn('jeniskegiatan', function ($row){
-                $t = '<textarea> '.$row->jeniskegiatan.' </textarea>';
+                $t = '<p style="margin: 0px;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    resize: none;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    flex-direction: column;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;"> '.$row->jeniskegiatan.' </p>';
                 return $t;
             })
             ->addColumn('action', function($row){
