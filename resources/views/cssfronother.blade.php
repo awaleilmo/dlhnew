@@ -22,3 +22,5 @@
 <script type="text/javascript" src="../assets/js-core/jquery-cookie.js"></script>
 <link rel="stylesheet" href="../leaflet/leaflet.css" />
 <script src="../leaflet/leaflet.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-bootstrap.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-responsive.js"></script>

@@ -1,10 +1,33 @@
 @extends('layouts.tampilan')
 
 @section('content')
+
+    <script type="text/javascript" src="../../assets/widgets/tabs/tabs.js"></script>
     <div class="hero-box bg-white hero-box-smaller ">
         <div class="container">
-          <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">ADIWIYATA</h2>
-            <table width="100%" border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" style=" opacity:1; text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;" data-wow-duration="0.9s" data-wow-delay="0.2s">
+          <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">ADIWIYATA</h2><br>
+            <ul class="tabs-nav" role="tablist" >
+                <li >
+                    <a href="#tentang" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Adwiyata</a>
+                </li>
+                <li >
+                    <a href="#sca" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Calon Adwiyata</a>
+                </li>
+                <li >
+                    <a href="#sna" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Non Adwiyata</a>
+                </li>
+                <li >
+                    <a href="#scatingkat" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Calon Adwiyata Tingkat</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <script type="text/javascript" src="../../assets/widgets/datatable/datatable.js"></script>
+                <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
+                <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
+                <div id="tentang" class="tab-pane active">
+                    <br>
+                    <h2 class="hero-heading">Tentang Adwiyata</h2>
+                    <table width="100%" border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" style=" opacity:1; text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;" data-wow-duration="0.9s" data-wow-delay="0.2s">
                 <br>
                 <br>
                 <tbody>
@@ -161,6 +184,141 @@
                 </tr>
                 </tbody>
             </table>
+                </div>
+                <div id="sca" class="tab-pane">
+                    <br>
+                    <br>
+                    <h2 class="hero-heading">Sekolah Calon Adwiyata</h2>
+                    <br>
+                    <br>
+                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>{{__("No")}}</th>
+                            <th>{{__("Nama Sekolah")}}</th>
+                            <th>{{__("Alamat")}}</th>
+                            <th>{{__("SK")}}</th>
+                            <th>{{__("Kepala Sekolah")}}</th>
+                            <th>{{__("Tahun")}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                                @php
+                                $no = 1;
+                                @endphp
+                                @foreach($sca as $ssc)
+                                <tr>
+                                    <td>{{$no}}</td>
+                                    <td>{{$ssc->namasekolah}}</td>
+                                    <td>{{$ssc->alamat}}</td>
+                                    <td>{{$ssc->sk}}</td>
+                                    <td>{{$ssc->kepalasekolah}}</td>
+                                    <td>{{$ssc->tahun}}</td>
+
+                                </tr>
+                                @php $no++ @endphp
+                                @endforeach
+
+                        </tbody>
+                    </table>
+                    <script>
+                        $(document).ready(function () {
+                        $('#datatable1').dataTable();
+                        });
+                    </script>
+                </div>
+                <div id="sna" class="tab-pane">
+                    <br>
+                    <br>
+                    <h2 class="hero-heading">Sekolah Non Adwiyata</h2>
+                    <br>
+                    <br>
+                    <table id="datatable2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>{{__("No")}}</th>
+                            <th>{{__("Nama Sekolah")}}</th>
+                            <th>{{__("Alamat")}}</th>
+                            <th>{{__("SK")}}</th>
+                            <th>{{__("Kepala Sekolah")}}</th>
+                            <th>{{__("Kecamatan")}}</th>
+                            <th>{{__("Tahun")}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        @php
+                            $no = 1;
+                        @endphp
+                        @foreach($sna as $ssc)
+                            <tr>
+                                <td>{{$no}}</td>
+                                <td>{{$ssc->namasekolah}}</td>
+                                <td>{{$ssc->alamat}}</td>
+                                <td>{{$ssc->sk}}</td>
+                                <td>{{$ssc->kepalasekolah}}</td>
+                                <td>{{$ssc->kecamatan}}</td>
+                                <td>{{$ssc->tahun}}</td>
+
+                            </tr>
+                            @php $no++ @endphp
+                        @endforeach
+
+                        </tbody>
+                    </table>
+                    <script>
+                        $(document).ready(function () {
+                            $('#datatable2').dataTable();
+                        });
+                    </script>
+                </div>
+                <div id="scatingkat" class="tab-pane">
+                    <br>
+                    <br>
+                    <h2 class="hero-heading">Sekolah Calon Adwiyata Tingkat</h2>
+                    <br>
+                    <br>
+                    <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>{{__("No")}}</th>
+                            <th>{{__("Nama Sekolah")}}</th>
+                            <th>{{__("Alamat")}}</th>
+                            <th>{{__("SK")}}</th>
+                            <th>{{__("Kepala Sekolah")}}</th>
+                            <th>{{__("Penghargaan")}}</th>
+                            <th>{{__("Tahun")}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        @php
+                            $no = 1;
+                        @endphp
+                        @foreach($sna as $ssc)
+                            <tr>
+                                <td>{{$no}}</td>
+                                <td>{{$ssc->namasekolah}}</td>
+                                <td>{{$ssc->alamat}}</td>
+                                <td>{{$ssc->sk}}</td>
+                                <td>{{$ssc->kepalasekolah}}</td>
+                                <td>{{$ssc->penghargaan}}</td>
+                                <td>{{$ssc->tahun}}</td>
+
+                            </tr>
+                            @php $no++ @endphp
+                        @endforeach
+
+                        </tbody>
+                    </table>
+                    <script>
+                        $(document).ready(function () {
+                            $('#datatable3').dataTable();
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

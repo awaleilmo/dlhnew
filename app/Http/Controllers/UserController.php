@@ -6,6 +6,9 @@ use App\artikel;
 use App\dokling;
 use App\limbah;
 use App\pengumuman;
+use App\sca;
+use App\scatingkat;
+use App\sna;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -186,7 +189,10 @@ class UserController extends Controller
 
     public function adwiyata(){
         if(Auth::check()){
-            return view('program.adwiyata');
+            $sca = sca::all();
+            $sct = scatingkat::all();
+            $sna = sna::all();
+            return view('program.adwiyata',compact('sna','sct','sca'));
         }
         return redirect('/login');
 
