@@ -382,6 +382,7 @@
                     $('#desk').val(data.foto);
                     $('#alat').val(data.alat);
                     $('#nama').val(data.nama);
+                    $('#pengurus').val(data.namapengurus);
                     $('#id').val(data.id);
                     var oTable = $('#datatable1').dataTable();
                     oTable.fnDraw(false);
