@@ -12,6 +12,7 @@
 <script type="text/javascript" src="../../assets/widgets/layerslider/layerslider-transitions.js"></script>
 <script type="text/javascript" src="../../assets/widgets/layerslider/layerslider-demo.js"></script>
 
+
 <!-- Boostrap Tabs -->
 
 <script type="text/javascript" src="../../assets/widgets/tabs/tabs.js"></script>
