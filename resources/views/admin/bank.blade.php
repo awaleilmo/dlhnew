@@ -51,7 +51,7 @@
                         Jenis Kerajinan :
                     </div>
                     <div class="col-md-2">
-                        <input name="jenis" type="text" class="form-control" required autocomplete="off" placeholder="Jenis Kerajinan">
+                        <input name="jenis" type="text" class="form-control"  autocomplete="off" placeholder="Jenis Kerajinan">
                     </div>
                 </div>
                 <br>
@@ -81,7 +81,7 @@
                         <input class="hidden" for="foto" id="deskq" name="dek">
                         <span class="btn btn-primary btn-file">
                                 <span class="fileinput-new" id="labelfileq">Select file</span>
-                                <input accept="image/*" id="foto" name="foto" type="file"  onchange="document.getElementById('deskq').value = this.value; document.getElementById('labelfileq').innerHTML = this.value;" required autocomplete="off">
+                                <input accept="image/*" id="foto" name="foto" type="file"  onchange="document.getElementById('deskq').value = this.value; document.getElementById('labelfileq').innerHTML = this.value;"  autocomplete="off">
                             </span>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                         Jenis Kerajinan :
                     </div>
                     <div class="col-md-2">
-                        <input id="jenis" name="jenis" type="text" class="form-control" required autocomplete="off" placeholder="Jenis Kerajinan">
+                        <input id="jenis" name="jenis" type="text" class="form-control" autocomplete="off" placeholder="Jenis Kerajinan">
                     </div>
                 </div>
                 <br>
