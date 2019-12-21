@@ -51,7 +51,7 @@
                         Jenis Kerajinan :
                     </div>
                     <div class="col-md-2">
-                        <input name="jenis" type="text" class="form-control"  autocomplete="off" placeholder="Jenis Kerajinan">
+                        <textarea name="jenis" type="text" class="form-control"  autocomplete="off" placeholder="Jenis Kerajinan"></textarea>
                     </div>
                 </div>
                 <br>
@@ -121,7 +121,7 @@
                         Jenis Kerajinan :
                     </div>
                     <div class="col-md-2">
-                        <input id="jenis" name="jenis" type="text" class="form-control" autocomplete="off" placeholder="Jenis Kerajinan">
+                        <textarea id="jenis" name="jenis" type="text" class="form-control" autocomplete="off" placeholder="Jenis Kerajinan"></textarea>
                     </div>
                 </div>
                 <br>
