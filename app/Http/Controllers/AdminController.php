@@ -773,7 +773,11 @@ class AdminController extends Controller
 
             })
             ->addColumn('foto',function ($row){
-                $t = '<div id="fotol'.$row->id.'" style="transition: 1s"><img id="'.$row->id.'" class="fotol" src="upload/banksampah/'.$row->foto.'" style="width:150px; height:100px"></div>';
+                if($row->foto == "kosong"){
+                    $t = '';
+                }else {
+                    $t = '<div id="fotol' . $row->id . '" style="transition: 1s"><img id="' . $row->id . '" class="fotol" src="upload/banksampah/' . $row->foto . '" style="width:150px; height:100px"></div>';
+                }
                 return $t;
             })
             ->rawColumns(['action','foto'])
