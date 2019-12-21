@@ -784,7 +784,7 @@ class AdminController extends Controller
         $tujuan_upload = 'upload/banksampah';
         $now = Carbon::now();
         if($file == null){
-            $fullname = "kosong";
+            $fulname = "kosong";
         }else {
             $fulname = $now->year . "-" . $now->month . "-" . $now->day . "_" . $now->hour . "-" . $now->minute . "-" . $now->second . "_" . $file->getClientOriginalName();
         }
