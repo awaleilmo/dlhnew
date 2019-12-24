@@ -1,9 +1,28 @@
 @extends('layouts.tampilan')
 
 @section('content')
+    <script type="text/javascript" src="../../assets/widgets/tabs/tabs.js"></script>
     <div class="hero-box bg-white hero-box-smaller ">
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">BANK SAMPAH</h2>
+            <ul class="tabs-nav" role="tablist" >
+                <li >
+                    <a href="#tentang" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Bank Sasmpah</a>
+                </li>
+                <li >
+                    <a href="#bnksmph" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Bank Sampah di Kota Serang</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <script type="text/javascript" src="../../assets/widgets/datatable/datatable.js"></script>
+                <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
+                <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
+                <div id="tentang" class="tab-pane active">
+                    <br>
+                    <br>
+                    <h2 class="hero-heading">Tentang Bank Sampah</h2>
+                    <br>
+                    <br>
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
@@ -140,6 +159,42 @@
 
                 </tbody>
             </table>
+                </div>
+                <div id="bnksmph" class="tab-pane">
+                    <br>
+                    <br>
+                    <h2 class="hero-heading">Bank Sampah di Kota Serang</h2>
+                    <br>
+                    <br>
+                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>{{__("No")}}</th>
+                            <th>{{__("Nama")}}</th>
+                            <th>{{__("Alamat")}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @php
+                            $no = 1;
+                        @endphp
+                        @foreach($t as $tt)
+                            <tr>
+                                <td>{{$no}}</td>
+                                <td>{{$tt->nama}}</td>
+                                <td>{{$tt->alamat}}</td>
+                            </tr>
+                            @php $no++ @endphp
+                        @endforeach
+                        </tbody>
+                    </table>
+                    <script>
+                        $(document).ready(function () {
+                            $('#datatable1').dataTable();
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

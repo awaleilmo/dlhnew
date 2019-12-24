@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\artikel;
+use App\bank;
 use App\dokling;
 use App\limbah;
 use App\pengumuman;
@@ -216,7 +217,8 @@ class UserController extends Controller
 
     public function banksampah(){
         if(Auth::check()){
-            return view('program.banksampah');
+            $t = bank::all();
+            return view('program.banksampah', compact('t'));
         }
         return redirect('/login');
 
