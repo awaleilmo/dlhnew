@@ -339,6 +339,7 @@ class UserMobileController extends Controller
     public function pengumuman(Request $request){
         $user = pengumuman::select('judul','foto','created_at as tanggal')->where('tipe','=','1')->get();
         $user['foto'] = 'http://dlh-serangkota.com/pengumuman/artikel/'.$user->foto;
+
         return response()->json(['status'=>'sukses','data' =>$user]);
     }
 
