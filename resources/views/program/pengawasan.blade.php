@@ -7,7 +7,7 @@
         <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">PENGAWASAN</h2>
-            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s; opacity: 1">
                 <br>
                 <br>
                 <tbody>
@@ -67,6 +67,12 @@
                                 <td></td>
                             </tr>
                             </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="2">Jumlah</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            </tfoot>
                         </table>
                         <br>
                         <br>
@@ -78,6 +84,37 @@
                 ajax: {
                     url: "{{url('tpelaku')}}",
                     type: 'GET',
+                },
+                "footerCallback": function ( row, data, start, end, display ) {
+                    var api = this.api(), data;
+
+                    // Remove the formatting to get integer data for summation
+                    var intVal = function ( i ) {
+                        return typeof i === 'string' ?
+                            i.replace(/[\$,]/g, '')*1 :
+                            typeof i === 'number' ?
+                                i : 0;
+                    };
+
+                    // Total over all pages
+                    total = api
+                        .column( 2 )
+                        .data()
+                        .reduce( function (a, b) {
+                            return intVal(a) + intVal(b);
+                        }, 0 );
+
+                    // Total over this page
+                    pageTotal = api
+                        .column( 2, { page: 'current'} )
+                        .data()
+                        .reduce( function (a, b) {
+                            return intVal(a) + intVal(b);
+                        }, 0 );
+                    // Update footer
+                    $( api.column( 2 ).footer() ).html(
+                        ' '+ pageTotal +' ( Total '+ total +' )'
+                    );
                 },
                 columns: [
                     { data: 'DT_RowIndex', name: 'DT_RowIndex', },
@@ -102,14 +139,7 @@
                                 <th>Tahun</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            </tbody>
+
                         </table>
         <script>
             $("#datatable2").dataTable({
@@ -118,6 +148,37 @@
                 ajax: {
                     url: "{{url('tdiawasi')}}",
                     type: 'GET',
+                },
+                "footerCallback": function ( row, data, start, end, display ) {
+                    var api = this.api(), data;
+
+                    // Remove the formatting to get integer data for summation
+                    var intVal = function ( i ) {
+                        return typeof i === 'integer' ?
+                            i.replace(/[\$,]/g, '')*1 :
+                            typeof i === 'integer' ?
+                                i : 0;
+                    };
+
+                    // Total over all pages
+                    total = api
+                        .column( 3 )
+                        .data()
+                        .reduce( function (a, b) {
+                            return intVal(a) + intVal(b);
+                        }, 0 );
+
+                    // Total over this page
+                    pageTotal = api
+                        .column( 3, { page: 'current'} )
+                        .data()
+                        .reduce( function (a, b) {
+                            return intVal(a) + intVal(b);
+                        }, 0 );
+                    // Update footer
+                    $( api.column( 3 ).footer() ).html(
+                        ' '+ pageTotal +' ( Total '+ total +' )'
+                    );
                 },
                 columns: [
                     { data: 'DT_RowIndex', name: 'DT_RowIndex', },
