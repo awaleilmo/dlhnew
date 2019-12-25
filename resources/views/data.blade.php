@@ -13,10 +13,6 @@
                         <p style="text-align: justify">Data Informasi Publik</p>
                     </td>
                 </tr>
-                <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>SOP</strong>
-                    </td>
                 </tr>
                 </tbody>
             </table>
