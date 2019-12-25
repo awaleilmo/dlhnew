@@ -92,13 +92,11 @@
                 </div>
             </div>
         @endif
-        <div class="container">
+        <div class="container" style="max-width: 95%">
 
                 <script type="text/javascript" src="../../assets/widgets/datatable/datatable.js"></script>
                 <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
                 <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
-
-                <div id="bnksmph">
                     <br>
                     <br>
                     <h2 class="hero-heading">Bank Sampah {{$p->nama}}</h2>
@@ -108,8 +106,14 @@
                         <div class="col-md-6">
                             <img src="../upload/banksampah/{{$p->foto}}" style="width: 100%; height: 65%">
                         </div>
-                        <div class="col-md-6" style="padding-top: 5em; text-align: left ">
-                        <div class="row">
+                        <div class="col-md-6 hero-text wow bounceInUp animated animated blurred-bg-1" style="border:1px solid green;
+                        padding-top: 2.5em;
+                        padding-bottom: 2.5em;
+                        text-align: left;
+                        font-size: 18px;
+                        border-radius: 2em;
+                        opacity: 1">
+                            <div class="row">
                             <div class="col-md-6">
                                 Nama :
                             </div>
@@ -117,7 +121,7 @@
                                 {{$p->nama}}
                             </div>
                         </div>
-
+                            <br>
                             <div class="row">
                                 <div class="col-md-6">
                                     Alamat :
@@ -126,16 +130,18 @@
                                     {{$p->alamat}}
                                 </div>
                             </div>
-
+                            <br>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6"><br>
                                     Jenis Kerajinan :
                                 </div>
                                 <div class="col-md-6">
-                                    {{$p->jeniskegiatan}}
+                                    <p style="margin: 0px;    height: auto;    width: auto;    overflow: hidden;    resize: none;    text-rendering: auto;    letter-spacing: normal;    word-spacing: normal;    flex-direction: column;    white-space: pre-line;    overflow-wrap: break-word;">
+                                        {{$p->jeniskegiatan}}
+                                    </p>
                                 </div>
                             </div>
-
+                            <br>
                             <div class="row">
                                 <div class="col-md-6">
                                     Jumlah Nasabah :
@@ -144,7 +150,7 @@
                                     {{$p->jumlahnasabah}}
                                 </div>
                             </div>
-
+                            <br>
                             <div class="row">
                                 <div class="col-md-6">
                                     Tahun :
@@ -155,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
             </div>
 <!-- Owl carousel -->
 
