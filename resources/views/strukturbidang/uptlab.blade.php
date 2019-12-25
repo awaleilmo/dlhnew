@@ -8,7 +8,7 @@
                 <br>
 
                 <tr>
-                    <td colspan="4"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dasar Hukum</h2></td>
+                    <td colspan="4" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dasar Hukum</h2></td>
                 </tr>
 
                 <tr>
@@ -19,7 +19,7 @@
                 <br>
 
                 <tr>
-                    <td colspan="4"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Struktur Organisasi</h2></td>
+                    <td colspan="4" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Struktur Organisasi</h2></td>
                 </tr>
 
                 <tr>
@@ -418,7 +418,7 @@
 
                 <tr>
                     <td valign="top"><strong>1.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Oven</p></td>
                 </tr>
 
@@ -437,7 +437,7 @@
 
                 <tr>
                     <td valign="top"><strong>2.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Desikator Besar Maupun Kecil</p></td>
                 </tr>
 
@@ -456,7 +456,7 @@
 
                 <tr>
                     <td valign="top"><strong>3.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Auto Clave</p></td>
                 </tr>
 
@@ -474,7 +474,7 @@
 
                 <tr>
                     <td valign="top"><strong>4.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Alat Uji TCLP</p></td>
                 </tr>
 
@@ -493,7 +493,7 @@
 
                 <tr>
                     <td valign="top"><strong>5.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Ruang Asam</p></td>
                 </tr>
 
@@ -525,7 +525,7 @@
 
                 <tr>
                     <td valign="top"><strong>6.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">AAS</p></td>
                 </tr>
 
@@ -543,7 +543,7 @@
 
                 <tr>
                     <td valign="top"><strong>7.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Water Purification</p></td>
                 </tr>
 
@@ -561,7 +561,7 @@
 
                 <tr>
                     <td valign="top"><strong>8.</strong></td>
-                    <td colspan="2" align="left">
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Spektrofotometer</p></td>
                 </tr>
 
@@ -578,8 +578,8 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>8.</strong></td>
-                    <td colspan="2" align="left">
+                    <td valign="top"><strong>9.</strong></td>
+                    <td colspan="3" align="left">
                         <p style="text-align: justify">Mercury Analyzer</p></td>
                 </tr>
 

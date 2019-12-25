@@ -8,7 +8,7 @@
                 <br>
 
                 <tr>
-                    <td colspan="4"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dasar Hukum</h2></td>
+                    <td colspan="4" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dasar Hukum</h2></td>
                 </tr>
 
                 <tr>
@@ -29,7 +29,7 @@
                 <br>
 
                 <tr>
-                    <td colspan="4"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Struktur Organisasi</h2></td>
+                    <td colspan="4" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Struktur Organisasi</h2></td>
                 </tr>
 
                 <tr>

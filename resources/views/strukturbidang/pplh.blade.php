@@ -70,16 +70,13 @@
                 </tr>
 
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Perencanaan dan Pengkajian Dampak Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
+                    <td style="" colspan="4"><strong>Seksi Perencanaan dan Pengkajian Dampak Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Pengaduan dan Penyelesaian Sengketa Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
+                    <td style="" colspan="4"><strong>Seksi Pengaduan dan Penyelesaian Sengketa Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Penegakan Hukum Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
+                    <td style="" colspan="4"><strong>Seksi Penegakan Hukum Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
 
             </table>

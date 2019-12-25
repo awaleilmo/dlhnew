@@ -8,14 +8,12 @@
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <tr>
-                    <td valign="top"></td>
-                    <td align="left">
+                    <td colspan="2" align="left">
                         <p style="text-align: center">“Bersama Menjaga Kualitas Lingkungan Hidup Kota Serang”</p></td>
 
                 </tr>
                 <tr>
-                    <td align="center"></td>
-                    <td><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Misi</h2></td>
+                    <td colspan="2" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Misi</h2></td>
                 </tr>
                 <tr>
                     <td valign="top"><strong>1.</strong></td>

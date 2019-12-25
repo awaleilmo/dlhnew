@@ -69,16 +69,16 @@
                 </tr>
 
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
+
+                    <td colspan="4" style=""><strong>Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
+
+                    <td colspan="4" style=""><strong>Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
+
+                    <td colspan="4" style=""><strong>Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
 
             </table>

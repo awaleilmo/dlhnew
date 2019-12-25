@@ -71,16 +71,13 @@
                 </tr>
 
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Pengelolaan Sampah (bisa di klik dan muncul page baru)</strong></td>
+                    <td style="" colspan="4"><strong>Seksi Pengelolaan Sampah (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>SSeksi Limbah B3 (bisa di klik dan muncul page baru)</strong></td>
+                    <td style="" colspan="4"><strong>SSeksi Limbah B3 (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
                 <tr>
-                    <td style="">&nbsp;</td>
-                    <td style=""><strong>Seksi Peningkatan Kapasitas (bisa di klik dan muncul page baru)</strong></td>
+                    <td style="" colspan="4"><strong>Seksi Peningkatan Kapasitas (bisa di klik dan muncul page baru)</strong></td>
                 </tr>
 
             </table>
