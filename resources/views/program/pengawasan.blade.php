@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="hero-box bg-white hero-box-smaller ">
+        <script type="text/javascript" src="../../assets/widgets/datatable/datatable.js"></script>
+        <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
+        <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">PENGAWASAN</h2>
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
@@ -46,10 +49,87 @@
                     <td colspan="2" style="">Berikut adalah data pelaku usaha dan hasil pengawasan kegiatan usaha di kota serang :</td>
                 </tr>
                 <tr>
-                    <td colspan="2" style=""><strong>Data Pelaku Usaha</strong></td>
+                    <td colspan="2" style=""><strong>Data Pelaku Usaha</strong><br><br>
+                        <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Jenis Kegiatan</th>
+                                <th>Jumlah Perusahaan</th>
+                                <th>Tahun</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <br>
+        <script>
+
+            $("#datatable1").dataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "{{url('tpelaku')}}",
+                    type: 'GET',
+                },
+                columns: [
+                    { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                    { data: 'jeniskegiatan', name: 'jeniskegiatan', },
+                    { data: 'jumlahperusahaan', name: 'jumlahperusahaan', },
+                    { data: 'tahun', name: 'tahun'},
+                ],
+                order: [[0, 'asc']]
+            });
+        </script>
+                    </td>
                   </tr>
                 <tr>
-                    <td colspan="2" style=""><strong>Hasi Pengawasan</strong></td>
+                    <td colspan="2" style=""><strong>Hasil Pengawasan</strong><br><br>
+                        <table id="datatable2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Temuan Hasil Pengawasan</th>
+                                <th>Kategori Dokumen</th>
+                                <th>Jumlah Perusahaan</th>
+                                <th>Tahun</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+        <script>
+            $("#datatable2").dataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "{{url('tdiawasi')}}",
+                    type: 'GET',
+                },
+                columns: [
+                    { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                    { data: 'temuan', name: 'temuan', },
+                    { data: 'kategori', name: 'kategori', },
+                    { data: 'jumlah', name: 'jumlah', },
+                    { data: 'tahun', name: 'tahun'},
+                ],
+                order: [[0, 'asc']]
+            });
+        </script>
+                    </td>
                   </tr>
 
                 </tbody>

@@ -320,7 +320,7 @@ class UserMobileController extends Controller
      * )
      */
     public function pojokwarga (){
-        $user = artikel::select('judul','foto','created_at as tanggal')->where('tipe','=','1')->get();
+        $user = artikel::select('judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->get();
         $user['foto'] = 'http://dlh-serangkota.com/upload/artikel/'.$user->foto;
         return response()->json(['status'=>'sukses','data' =>$user]);
     }
@@ -338,7 +338,7 @@ class UserMobileController extends Controller
      */
 
     public function pengumuman(Request $request){
-        $user = pengumuman::select('judul','foto','created_at as tanggal')->where('tipe','=','1')->get();
+        $user = pengumuman::select('judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->get();
         $user['foto'] = 'http://dlh-serangkota.com/pengumuman/artikel/'.$user->foto;
 
         return response()->json(['status'=>'sukses','data' =>$user]);

@@ -296,7 +296,7 @@
                         @php
                             $no = 1;
                         @endphp
-                        @foreach($sna as $ssc)
+                        @foreach($sct as $ssc)
                             <tr>
                                 <td>{{$no}}</td>
                                 <td>{{$ssc->namasekolah}}</td>

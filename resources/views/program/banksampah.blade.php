@@ -7,7 +7,7 @@
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">BANK SAMPAH</h2>
             <ul class="tabs-nav" role="tablist" >
                 <li >
-                    <a href="#tentang" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Bank Sasmpah</a>
+                    <a href="#tentang" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Bank Sampah</a>
                 </li>
                 <li >
                     <a href="#bnksmph" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Bank Sampah di Kota Serang</a>
