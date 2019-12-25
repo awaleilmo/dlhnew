@@ -63,7 +63,7 @@
 
 <!-- banner -->
 <div class="top-bar bg-topbar" style="padding: 0 0;">
-    <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 136px; margin-bottom: -.1em; background: linear-gradient(to right, #8EC220, #006B35)">
+    <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 136px; margin-bottom: -.1em; background: linear-gradient(to right, #ffffff, #ffffff)">
         <img id="myP"  src="image-resources/dlh/banner.png" style="margin-left:24%; width: 50%; height: 136px; ">
     </div>
 </div>
