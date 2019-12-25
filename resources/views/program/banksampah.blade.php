@@ -191,6 +191,7 @@
                             <th>{{__("No")}}</th>
                             <th>{{__("Nama")}}</th>
                             <th>{{__("Alamat")}}</th>
+                            <th>{{__("Detail")}}</th>
                         </tr>
                         </thead>
                         <tbody>
