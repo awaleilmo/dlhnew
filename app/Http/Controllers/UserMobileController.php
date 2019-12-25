@@ -140,7 +140,7 @@ class UserMobileController extends Controller
             update([
                 'remember_token' => csrf_token(),
             ]);
-            $user = User::select("name","email","remember_token","nohp")->where("email",$request->email)->get();
+            $user = User::select("id","name","email","remember_token","nohp")->where("email",$request->email)->get();
             return  response()->json(['status'=>'sukses','data'=>$user]);
         }
         return  response()->json(['status'=>"gagal"]);
