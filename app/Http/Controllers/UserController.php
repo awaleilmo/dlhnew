@@ -6,6 +6,7 @@ use App\artikel;
 use App\bank;
 use App\dokling;
 use App\limbah;
+use App\Pengaduan;
 use App\pengumuman;
 use App\sca;
 use App\scatingkat;
@@ -222,6 +223,17 @@ class UserController extends Controller
         }
         return redirect('/login');
 
+    }
+    public function bankdetail($id){
+        if(Auth::check()){
+            $p = bank::find($id);
+            if($p != null) {
+                return view('program.bankdetail', compact('p'));
+            }else{
+                return redirect('banksampah')->with('error','Data yang Diminta Tidak Diketemukan');
+            }
+        }
+        return redirect('/');
     }
 
     public function data(){

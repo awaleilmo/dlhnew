@@ -172,6 +172,7 @@ Route::get('/adwiyata','UserController@adwiyata')->name('adwiyata');
 Route::get('/persampahan','UserController@persampahan')->name('persampahan');
 Route::get('/pengawasan','UserController@pengawasan')->name('pengawasan');
 Route::get('/banksampah','UserController@banksampah')->name('banksampah');
+Route::get('/banksampah/{id}','UserController@bankdetail')->name('bankdetail');
 
 //menu data
 Route::get('/data','UserController@data')->name('data');

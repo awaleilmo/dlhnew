@@ -3,6 +3,25 @@
 @section('content')
     <script type="text/javascript" src="../../assets/widgets/tabs/tabs.js"></script>
     <div class="hero-box bg-white hero-box-smaller ">
+        @if($message = Session::get('error'))
+            <script>
+                $(window).load(function(){
+                    setTimeout(function() {
+                        $('.alert').fadeOut( 400, "linear" );
+                    }, 3000);
+                });
+            </script>
+            <div class="alert alert-danger">
+                <div class="bg-red alert-icon">
+                    <i class="glyph-icon icon-times"></i>
+                </div>
+                <div class="alert-content">
+                    <button type="button" style="float: right" onclick="document.getElementById('alert').style.display ='none'" class="close" data-dismiss="alert">×</button>
+                    <h4 class="alert-title">Error</h4>
+                    <p>{{ $message }}</p>
+                </div>
+            </div>
+        @endif
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">BANK SAMPAH</h2>
             <ul class="tabs-nav" role="tablist" >
@@ -183,6 +202,7 @@
                                 <td>{{$no}}</td>
                                 <td>{{$tt->nama}}</td>
                                 <td>{{$tt->alamat}}</td>
+                                <td><a href="banksampah/{{$tt->id}}" class="btn btn-default">Detail</a></td>
                             </tr>
                             @php $no++ @endphp
                         @endforeach
