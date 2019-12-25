@@ -10,6 +10,7 @@ use App\pengumuman;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
@@ -592,5 +593,119 @@ class UserMobileController extends Controller
         return response()->json(['status'=>'gagal']);
 
 
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/tentang",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu Tentang",
+     *     description="Menu Tentang",
+     *     operationId="tentang",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function tentang(Request $request){
+        $user = DB::table('d_menu')->where('menu','=','tentang')->get();
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/bidang",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu Struktur Bidang",
+     *     description="Menu Struktur Bidang",
+     *     operationId="bidang",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function bidang(Request $request){
+        $user = DB::table('d_menu')->where('menu','=','struktur_bidang')->get();
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/ukl",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu Info UKL",
+     *     description="Menu Info UKL",
+     *     operationId="ukl",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function ukl(Request $request){
+        $user = DB::table('d_menu')->where('menu','=','info_ukl')->get();
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/menu/sipal",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu Info SIPAL",
+     *     description="Menu Info SIPAL",
+     *     operationId="sipal",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function sipal(Request $request){
+        $user = DB::table('d_menu')->where('menu','=','info_sipal')->get();
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/sppl",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu Info SPPL",
+     *     description="Menu Info SPPL",
+     *     operationId="sppl",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function sppl(Request $request){
+        $user = DB::table('d_menu')->where('menu','=','info_sppl')->get();
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/amdal",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu AMDAL",
+     *     description="Menu AMDAL",
+     *     operationId="ukl",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function amdal(Request $request){
+        $user = DB::table('d_menu')->where('menu','=','info_amdal')->get();
+        return response()->json(['status' => 'sukses', 'data' => $user]);
     }
 }

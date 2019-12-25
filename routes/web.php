@@ -26,6 +26,13 @@ Route::get("/api/app/cek/sipal",'UserMobileController@cekperizinan')->name('ceks
 Route::get('/api/app/artikel','UserMobileController@pojokwarga')->name('artikel/user');
 Route::get('/api/app/pengumuman','UserMobileController@pengumuman')->name('pengumuman/user');
 Route::post('/api/app/pengaduan','UserMobileController@pengaduan')->name('pengaduan/user');
+Route::get('/api/app/tentang','UserMobileController@tentang')->name('tentang/user');
+Route::get('/api/app/bidang','UserMobileController@bidang')->name('bidang/user');
+Route::get('/api/app/ukl','UserMobileController@ukl')->name('ukl/user');
+Route::get('/api/app/menu/sipal','UserMobileController@sipal')->name('sipal/user');
+Route::get('/api/app/sppl','UserMobileController@sppl')->name('sppl/user');
+Route::get('/api/app/amdal','UserMobileController@amdal')->name('amdal/user');
+
 
 //tampilan admin
 Route::get("/admin","AdminController@index")->name("admin");

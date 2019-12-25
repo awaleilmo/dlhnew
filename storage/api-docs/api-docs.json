@@ -447,6 +447,96 @@
                     }
                 }
             }
+        },
+        "/api/app/tentang": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu Tentang",
+                "description": "Menu Tentang",
+                "operationId": "tentang",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/bidang": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu Struktur Bidang",
+                "description": "Menu Struktur Bidang",
+                "operationId": "bidang",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/ukl": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu Info UKL",
+                "description": "Menu Info UKL",
+                "operationId": "ukl",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/menu/sipal": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu Info SIPAL",
+                "description": "Menu Info SIPAL",
+                "operationId": "sipal",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/sppl": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu Info SPPL",
+                "description": "Menu Info SPPL",
+                "operationId": "sppl",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/amdal": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu AMDAL",
+                "description": "Menu AMDAL",
+                "operationId": "ukl",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
         }
     },
     "components": {
