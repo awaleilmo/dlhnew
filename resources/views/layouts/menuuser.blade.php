@@ -96,6 +96,7 @@
                         <li class="dropdown"><a href="{{route('banksampah')}}">Bank Sampah</a></li>
                         <li class="dropdown"><a href="{{route('pengawasan')}}">Pengawasan</a></li>
                         <li class="dropdown"><a href="{{route('persampahan')}}">Persampahan</a></li>
+                        <li class="dropdown"><a href="{{route('tps3r')}}">TPS 3R</a></li>
                     </ul>
                 </li>
                 <li>
