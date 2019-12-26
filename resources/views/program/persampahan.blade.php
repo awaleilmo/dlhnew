@@ -226,10 +226,302 @@
                     </script>
                 </div>
                 <div id="sampah" class="tab-pane">
-                    sampah liar
+                    <table id="datatabl2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>{{__("No")}}</th>
+                            <th>{{__("Lokasi")}}</th>
+                            <th>{{__("Ritasi")}}</th>
+                            <th>{{__("Kapasitas")}}</th>
+                            <th>{{__("Jumlah Rit")}}</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>JUMLAH</th>
+                            <th></th>
+                            <th></th>
+                            <th colspan="2"></th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <script>
+                        var tables = $("#datatabl2").dataTable({
+                            processing: true,
+                            serverSide: true,
+                            ajax: {
+                                url: "{{url('tliar')}}",
+                                type: 'GET',
+                            },
+                            "footerCallback": function ( row, data, start, end, display ) {
+                                var api = this.api(), data;
+
+                                // Remove the formatting to get integer data for summation
+                                var intVal = function ( i ) {
+                                    return typeof i === 'string' ?
+                                        i.replace(/[\$,]/g, '')*1 :
+                                        typeof i === 'number' ?
+                                            i : 0;
+                                };
+
+                                // Total over all pages
+                                total = api
+                                    .column( 4 )
+                                    .data()
+                                    .reduce( function (a, b) {
+                                        return intVal(a) + intVal(b);
+                                    }, 0 );
+
+                                // Total over this page
+                                pageTotal = api
+                                    .column( 4, { page: 'current'} )
+                                    .data()
+                                    .reduce( function (a, b) {
+                                        return intVal(a) + intVal(b);
+                                    }, 0 );
+                                // Update footer
+                                $( api.column( 4 ).footer() ).html(
+                                    ' '+ pageTotal +' M3 ( Total '+ total +' M3)'
+                                );
+                            },
+                            columns: [
+                                { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                                { data: 'lokasi', name: 'lokasi', },
+                                { data: 'ritasi', name: 'ritasi', },
+                                { data: 'kapasitas', name: 'kapasitas'},
+                                { data: 'jumlahrit', name: 'jumlahrit'},
+                                { data: 'm3', name: 'm3'},
+                            ],
+                            order: [[0, 'asc']],
+                        });
+                    </script>
                 </div>
                 <div id="tps" class="tab-pane">
-                    tps
+                    <div class="panel panel-info" style="padding: 10px 10px">
+                        <h1 class="hero-heading">Jenis Angkutan TPS</h1>
+                        <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>{{__("No")}}</th>
+                                <th>{{__("Jenis")}}</th>
+                                <th>{{__("unit")}}</th>
+                                <th>{{__("Keterangan")}}</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th></th>
+                                <th>JUMLAH</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <script> var tabled = $("#datatable3").dataTable({
+                                processing: true,
+                                serverSide: true,
+                                ajax: {
+                                    url: "{{url('tangkut')}}",
+                                    type: 'GET',
+                                },
+                                "footerCallback": function ( row, data, start, end, display ) {
+                                    var api = this.api(), data;
+
+                                    // Remove the formatting to get integer data for summation
+                                    var intVal = function ( i ) {
+                                        return typeof i === 'string' ?
+                                            i.replace(/[\$,]/g, '')*1 :
+                                            typeof i === 'number' ?
+                                                i : 0;
+                                    };
+
+                                    // Total over all pages
+                                    total = api
+                                        .column( 2 )
+                                        .data()
+                                        .reduce( function (a, b) {
+                                            return intVal(a) + intVal(b);
+                                        }, 0 );
+
+                                    // Total over this page
+                                    pageTotal = api
+                                        .column( 2, { page: 'current'} )
+                                        .data()
+                                        .reduce( function (a, b) {
+                                            return intVal(a) + intVal(b);
+                                        }, 0 );
+                                    // Update footer
+                                    $( api.column( 2 ).footer() ).html(
+                                        ' '+ pageTotal + ' ( Total '+total+' )'
+                                    );
+                                },
+                                columns: [
+                                    { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                                    { data: 'jenis', name: 'jenis', },
+                                    { data: 'unit', name: 'unit', },
+                                    { data: 'keterangan', name: 'keterangan', },
+                                ],
+                                order: [[0, 'asc']],
+                            });</script>
+                    </div>
+
+                    <div class="panel panel-info" style="padding: 10px 10px">
+                        <h2 class="hero-heading">Jenis TPS</h2>
+                        <table id="datatable4" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>{{__("No")}}</th>
+                                <th>{{__("Jenis TPS")}}</th>
+                                <th>{{__("Unit")}}</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th></th>
+                                <th>JUMLAH</th>
+                                <th></th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <br>
+                        <p style="white-space: pre-line" align="left">
+                            1.	TPS 				    : Tempat Pembuangan Sampah <br>
+                            2.	TPST				    : Tempat Penampungan Sampah Terpadu<br>
+                            3.	TPS BATA			    : Tempat Penampungan Sampah yang Terbuat dari Batu<br>
+                            4.	TPS 3R			        : Ada 6 TPS Daur Ulang (TPS 3R) di 6 Kecamatan di Kota Serang<br>
+                            5.	Tempat Sampah outdoor	: Pengumpulan Sampah yang Terletak di jalan utama<br>
+
+                        </p>
+
+                        <script>
+
+                            var table = $("#datatable4").dataTable({
+                                processing: true,
+                                serverSide: true,
+                                ajax: {
+                                    url: "{{url('tjtps')}}",
+                                    type: 'GET',
+                                },
+                                "footerCallback": function ( row, data, start, end, display ) {
+                                    var api = this.api(), data;
+
+                                    // Remove the formatting to get integer data for summation
+                                    var intVal = function ( i ) {
+                                        return typeof i === 'string' ?
+                                            i.replace(/[\$,]/g, '')*1 :
+                                            typeof i === 'number' ?
+                                                i : 0;
+                                    };
+
+                                    // Total over all pages
+                                    total = api
+                                        .column( 2 )
+                                        .data()
+                                        .reduce( function (a, b) {
+                                            return intVal(a) + intVal(b);
+                                        }, 0 );
+
+                                    // Total over this page
+                                    pageTotal = api
+                                        .column( 2, { page: 'current'} )
+                                        .data()
+                                        .reduce( function (a, b) {
+                                            return intVal(a) + intVal(b);
+                                        }, 0 );
+                                    // Update footer
+                                    $( api.column( 2 ).footer() ).html(
+                                        ' '+ pageTotal + ''
+                                    );
+                                },
+                                columns: [
+                                    { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                                    { data: 'jenistps', name: 'jenistps', },
+                                    { data: 'unit', name: 'unit', },
+                                ],
+                                order: [[0, 'asc']],
+                            });
+                        </script>
+                    </div>
+
+                    <div class="panel panel-info" style="padding: 10px 10px">
+                        <table id="datatable5" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>{{__("No")}}</th>
+                                <th>{{__("Lokasi")}}</th>
+                                <th>{{__("Kel/Des")}}</th>
+                                <th>{{__("Kecamatan")}}</th>
+                                <th>{{__("Jenis TPS")}}</th>
+                                <th>{{__("Unit")}}</th>
+                                <th>{{__("Action")}}</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th></th>
+                                <th>JUMLAH</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <script>
+                            var table = $("#datatable5").dataTable({
+                                processing: true,
+                                serverSide: true,
+                                ajax: {
+                                    url: "{{url('ttps')}}",
+                                    type: 'GET',
+                                },
+                                "footerCallback": function ( row, data, start, end, display ) {
+                                    var api = this.api(), data;
+
+                                    // Remove the formatting to get integer data for summation
+                                    var intVal = function ( i ) {
+                                        return typeof i === 'string' ?
+                                            i.replace(/[\$,]/g, '')*1 :
+                                            typeof i === 'number' ?
+                                                i : 0;
+                                    };
+
+                                    // Total over all pages
+                                    total = api
+                                        .column( 5 )
+                                        .data()
+                                        .reduce( function (a, b) {
+                                            return intVal(a) + intVal(b);
+                                        }, 0 );
+
+                                    // Total over this page
+                                    pageTotal = api
+                                        .column( 5, { page: 'current'} )
+                                        .data()
+                                        .reduce( function (a, b) {
+                                            return intVal(a) + intVal(b);
+                                        }, 0 );
+                                    // Update footer
+                                    $( api.column( 5 ).footer() ).html(
+                                        ' '+ pageTotal + ' ( Total '+total+' )'
+                                    );
+                                },
+                                columns: [
+                                    { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                                    { data: 'lks', name: 'lks', },
+                                    { data: 'keldesa', name: 'keldesa', },
+                                    { data: 'kecamatan', name: 'kecamatan', },
+                                    { data: 'jenistps', name: 'jenistps', },
+                                    { data: 'unit', name: 'unit', },
+                                    {data: 'action', name: 'action', orderable: false, searchable: false},
+                                ],
+                                order: [[0, 'asc']],
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
