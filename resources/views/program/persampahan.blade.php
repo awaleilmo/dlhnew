@@ -455,14 +455,12 @@
                                 <th>{{__("Kecamatan")}}</th>
                                 <th>{{__("Jenis TPS")}}</th>
                                 <th>{{__("Unit")}}</th>
-                                <th>{{__("Action")}}</th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
                                 <th></th>
                                 <th>JUMLAH</th>
-                                <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -516,7 +514,6 @@
                                     { data: 'kecamatan', name: 'kecamatan', },
                                     { data: 'jenistps', name: 'jenistps', },
                                     { data: 'unit', name: 'unit', },
-                                    {data: 'action', name: 'action', orderable: false, searchable: false},
                                 ],
                                 order: [[0, 'asc']],
                             });
