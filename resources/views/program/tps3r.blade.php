@@ -7,6 +7,7 @@
         <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
         <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
         <div class="container">
+            <h2 class="hero-heading">Data TPS 3R</h2>
             <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
                 <thead>
                 <tr>
