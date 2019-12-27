@@ -530,7 +530,22 @@
                 ],
                 "summary": "Menu AMDAL",
                 "description": "Menu AMDAL",
-                "operationId": "ukl",
+                "operationId": "amdal",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/info_data": {
+            "get": {
+                "tags": [
+                    "Tantang Kami"
+                ],
+                "summary": "Menu INFO DATA",
+                "description": "Menu INFO DATA",
+                "operationId": "info_data",
                 "responses": {
                     "default": {
                         "description": "successful operation"

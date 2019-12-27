@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\artikel;
+use App\data;
 use App\dokling;
 use App\limbah;
 use App\Pengaduan;
@@ -321,8 +322,9 @@ class UserMobileController extends Controller
      */
     public function pojokwarga (){
         $user = artikel::select('judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->get();
-        $user['foto'] = 'http://dlh-serangkota.com/upload/artikel/'.$user->foto;
-        return response()->json(['status'=>'sukses','data' =>$user]);
+        $url = 'http://dlh-serangkota.com/upload/artikel/{nama foto}';
+        //$user['foto'] = $url+$user->foto;
+        return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
     }
     /**
      * @OA\Get(
@@ -339,9 +341,9 @@ class UserMobileController extends Controller
 
     public function pengumuman(Request $request){
         $user = pengumuman::select('judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->get();
-        $user['foto'] = 'http://dlh-serangkota.com/pengumuman/artikel/'.$user->foto;
-
-        return response()->json(['status'=>'sukses','data' =>$user]);
+        $url = 'http://dlh-serangkota.com/upload/pengumuman/{nama foto}';
+        //$user['foto'] = $url+$user->foto;
+        return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
     }
 
     /**
@@ -696,7 +698,7 @@ class UserMobileController extends Controller
      *     tags={"Tantang Kami"},
      *     summary="Menu AMDAL",
      *     description="Menu AMDAL",
-     *     operationId="ukl",
+     *     operationId="amdal",
      *
      *     @OA\Response(
      *         response="default",
@@ -707,5 +709,25 @@ class UserMobileController extends Controller
     public function amdal(Request $request){
         $user = DB::table('d_menu')->where('menu','=','info_amdal')->get();
         return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/info_data",
+     *     tags={"Tantang Kami"},
+     *     summary="Menu INFO DATA",
+     *     description="Menu INFO DATA",
+     *     operationId="info_data",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function info_data(Request $request){
+        $user = data::all();
+        $url = 'http://dlh-serangkota.com/upload/data/{nama data}';
+        return response()->json(['status' => 'sukses','URL Download' => $url, 'data' => $user]);
     }
 }

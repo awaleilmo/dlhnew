@@ -32,6 +32,7 @@ Route::get('/api/app/ukl','UserMobileController@ukl')->name('ukl/user');
 Route::get('/api/app/menu/sipal','UserMobileController@sipal')->name('sipal/user');
 Route::get('/api/app/sppl','UserMobileController@sppl')->name('sppl/user');
 Route::get('/api/app/amdal','UserMobileController@amdal')->name('amdal/user');
+Route::get('/api/app/info_data','UserMobileController@info_data')->name('info_data/user');
 
 
 //tampilan admin
