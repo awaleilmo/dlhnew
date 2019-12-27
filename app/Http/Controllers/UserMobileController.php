@@ -596,7 +596,25 @@ class UserMobileController extends Controller
 
 
     }
-
+    /**
+     * @OA\Get(
+     *     path="/api/app/showpengaduan",
+     *     tags={"Pengaduan"},
+     *     summary="",
+     *     description="",
+     *     operationId="showall",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function showpengaduan(){
+      $p = Pengaduan::all();
+        $url = 'http://dlh-serangkota.com/upload/pengaduan/{nama foto}';
+        return response()->json(['status'=>'sukses', 'URL Foto' =>$url, 'data' => $p]);
+    }
     /**
      * @OA\Get(
      *     path="/api/app/tentang",

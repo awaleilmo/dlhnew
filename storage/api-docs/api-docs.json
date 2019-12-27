@@ -448,6 +448,21 @@
                 }
             }
         },
+        "/api/app/showpengaduan": {
+            "get": {
+                "tags": [
+                    "Pengaduan"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "showall",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/tentang": {
             "get": {
                 "tags": [
