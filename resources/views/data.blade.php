@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="hero-box bg-white hero-box-smaller ">
+        <script type="text/javascript" src="../../assets/widgets/datatable/datatable.js"></script>
+        <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
+        <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">DATA</h2>
             <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
