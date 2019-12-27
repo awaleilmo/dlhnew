@@ -4,18 +4,32 @@
     <div class="hero-box bg-white hero-box-smaller ">
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">DATA</h2>
-            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
-                <br>
-                <br>
-                <tbody>
+            <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                <thead>
                 <tr>
-                    <td style="width: 976px;">
-                        <p style="text-align: justify">Data Informasi Publik</p>
-                    </td>
+                    <th>{{__("No")}}</th>
+                    <th>{{__("Nama")}}</th>
+                    <th>{{__("Files")}}</th>
                 </tr>
-                </tr>
-                </tbody>
+                </thead>
+
             </table>
+            <script>
+                var table = $("#datatable1").dataTable({
+                    processing: true,
+                    serverSide: true,
+                    ajax: {
+                        url: "{{url('tdata')}}",
+                        type: 'GET',
+                    },
+                    columns: [
+                        { data: 'DT_RowIndex', name: 'DT_RowIndex', },
+                        { data: 'nama', name: 'nama', },
+                        { data: 'files', name: 'files', },
+                    ],
+                    order: [[0, 'asc']],
+                });
+            </script>
         </div>
     </div>
 @endsection
