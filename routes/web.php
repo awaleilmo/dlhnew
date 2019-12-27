@@ -173,7 +173,7 @@ Route::get('/persampahan','UserController@persampahan')->name('persampahan');
 Route::get('/pengawasan','UserController@pengawasan')->name('pengawasan');
 Route::get('/banksampah','UserController@banksampah')->name('banksampah');
 Route::get('/banksampah/{id}','UserController@bankdetail')->name('bankdetail');
-Route::get('/tps3r',function (){return view('program.tps3r');})->name('tps3r');
+Route::get('/usertps3r',function (){return view('program.tps3r');})->name('tps3r');
 //menu data
 Route::get('/data','UserController@data')->name('data');
 
