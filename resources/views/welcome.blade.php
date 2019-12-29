@@ -33,7 +33,7 @@
 			transition2d: 10;
 			">
         <img src="../../assets/image-resources/blurred-bg/blurred-bg-5.jpg" class="ls-bg" alt="Slide background 2">
-
+        <div class="col-md-6">
         <h2 class="hero-heading font-white ls-l" style="
 					top: 33%;
 					left: 0;
@@ -45,7 +45,8 @@
         <p class="hero-text font-white ls-l" style=" color: black; top: 50%;left: 0;width: 600px;font-size: 20px;line-height: 1.6em;text-align: left;" data-ls="offsetxin:150; durationin:1500; easingin:easeInOutQuart; rotateyin:40; offsetxout:150; rotateyout:40;">
             Dinas Lingkungan Hidup ( DLH ) Kota Serang dibentuk berdasarkan Peraturan Daerah Kota Serang Nomor 18 Tahun 2011 tentang Perubahan Atas Peraturan Daerah Nomor 10 Tahun 2008 tentang Pembentukan dan Susunan Organisasi Lembaga Teknis Daerah Kota Serang.
         </p>
-
+        </div>
+        <div class="col-md-6">
         <img src="../../image-resources/dlh/foto1.jpg" class="ls-l" style="
                 top: 30%;
                 left: 65%;
@@ -96,15 +97,13 @@
                 rotatein: 65;
                 "
         >
-
+        </div>
     </div>
 
 
-    <div class="ls-slide" data-ls="slidedelay: 4000;
-	     transition2d: 6,37,19;
-	     ">
+    <div class="ls-slide row" data-ls="slidedelay: 4000; transition2d: 6,37,19;">
         <img src="../../assets/image-resources/blurred-bg/blurred-bg-7.jpg" class="ls-bg" alt="Slide background 1">
-
+        <div class="col-md-6">
         <h2 class="hero-heading font-white ls-l"
             style="
 					top: 29%;
@@ -158,8 +157,8 @@
 				">
 
         </div>
-
-
+        </div>
+        <div class="col-md-6">
         <img src="../../image-resources/dlh/foto3.jpg" class="ls-l"
              style="
 					top: 55%;
@@ -185,39 +184,35 @@
 					scaleyin:1;
 				"
         >
-
+        </div>
     </div>
 
 
-    <div class="ls-slide" data-ls="slidedelay: 7000; transition3d: 22;">
+    <div class="ls-slide row" data-ls="slidedelay: 7000; transition3d: 22;">
         <img src="../../assets/image-resources/blurred-bg/blurred-bg-3.jpg" class="ls-bg" alt="Slide background 3" style="padding: 40px">
-
-        <img src="../../assets/image-resources/objects/iphone_hand.png" class="ls-l" style="bottom:-45px;left:50px; padding-top: 50px" data-ls="durationin:1500;delayin:10;rotatein:20;rotatexin:30;scalexin:3;scaleyin:3;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;" />
+        <div class="col-md-4">
+            <img src="../../image-resources/dlh/foto12.jpg" class="ls-l" style="width:30%; height:50%;border-radius: 20px; bottom:0px;left:50px; padding-top: 50px" data-ls="durationin:1500;delayin:10;rotatein:20;rotatexin:30;scalexin:3;scaleyin:3;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;" />
+         </div>
+        <div class="col-md-4">
         <p class="ls-l" style="top:80px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:500;rotatein:20;rotatexin:30;scalexin:3;scaleyin:3;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
-            EASY TO CUSTOMIZE
+            VISI
         </p>
-        <p class="ls-l" style="top:140px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);white-space: nowrap;" data-ls="offsetxin:0;durationin:1500;delayin:2600;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Modular assets architecture
+        <p class="ls-l" style="top:140px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:2300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
+            Bersama Menjaga Kualitas Lingkungan Hidup Kota Serang
         </p>
         <p class="ls-l" style="top:180px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:1000;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
-            BASED ON BOOTSTRAP 3.3
+            MISI
         </p>
-        <p class="ls-l" style="top:240px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);white-space: nowrap;" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Separate files for components and interfaces color styles
+        <p class="ls-l" style="top:240px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:2600;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
+            Meningkatkan kapasitas dan akuntabilitas.
         </p>
-        <p class="ls-l" style="top:280px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:1500;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
-            EXTENSIVE DOCUMENTATION
+        <p class="ls-l" style="top:280px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3000;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
+            Meningkatkan kualitas lingkungan hidup dan pengelolaan sumberdaya alam
         </p>
-        <p class="ls-l" style="top:340px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);white-space: nowrap;" data-ls="offsetxin:0;durationin:1500;delayin:4000;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Contact forms for new features requests and bug reports
+        <p class="ls-l" style="top:320px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
+            Meningkatkan kemampuan, kesadaran, kepedulian, dan partisipasi para pemangku kepentingan terhadap fungsi lingkungan hidup
         </p>
-        <p class="ls-l" style="top:380px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:2000;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
-            Source code examples
-        </p>
-        <p class="ls-l" style="top:440px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);white-space: nowrap;" data-ls="offsetxin:0;durationin:1500;delayin:4600;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Components without headaches.
-        </p>
-
+        </div>
     </div>
 </div>
 <!--tentang-->
