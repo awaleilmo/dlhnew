@@ -119,6 +119,11 @@
 
             </li>
             <li>
+                <a href="{{route('aplikasi')}}" title="Pages">
+                    Aplikasi
+                </a>
+            </li>
+            <li>
                 @guest
                     <a href="{{route('login')}}" title="Pages">
                         Masuk / Daftar
