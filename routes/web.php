@@ -199,6 +199,11 @@ Route::get('/jabatan',function (){
     return view('strukturbidang.jabatan');
 } )->name('jabatan');
 
+//Aplikasi
+Route::get('/aplikasi',function (){
+    return view('aplikasi');
+} )->name('aplikasi');
+
 //menu berita
 Route::get('/artikel','UserController@artikel')->name('artikel');
 Route::get('/artikel/{id}','UserController@artikelsub');
