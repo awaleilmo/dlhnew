@@ -245,12 +245,49 @@
                 }
             }
         },
+        "/api/app/findartikel": {
+            "get": {
+                "tags": [
+                    "Berita"
+                ],
+                "operationId": "showfind",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/pengumuman": {
             "get": {
                 "tags": [
                     "Berita"
                 ],
                 "operationId": "downloaddok",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/findpengumuman": {
+            "get": {
+                "tags": [
+                    "Berita"
+                ],
+                "operationId": "downloa",
                 "responses": {
                     "default": {
                         "description": "successful operation"
