@@ -321,7 +321,7 @@ class UserMobileController extends Controller
      * )
      */
     public function pojokwarga (){
-        $user = artikel::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->get();
+        $user = artikel::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->orderBy('created_at','desc')->get();
         $url = 'http://dlh-serangkota.com/upload/artikel/{nama foto}';
         //$user['foto'] = $url+$user->foto;
         return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
@@ -348,7 +348,7 @@ class UserMobileController extends Controller
      * )
      */
     public function findpojokwarga (Request $request){
-        $user = artikel::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->where('id','=',$request->id)->get();
+        $user = artikel::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->where('id','=',$request->id)->orderBy('created_at','desc')->get();
         $url = 'http://dlh-serangkota.com/upload/artikel/{nama foto}';
         //$user['foto'] = $url+$user->foto;
         return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
@@ -367,7 +367,7 @@ class UserMobileController extends Controller
      */
 
     public function pengumuman(Request $request){
-        $user = pengumuman::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->get();
+        $user = pengumuman::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->orderBy('created_at','desc')->get();
         $url = 'http://dlh-serangkota.com/upload/pengumuman/{nama foto}';
         //$user['foto'] = $url+$user->foto;
         return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
@@ -386,7 +386,7 @@ class UserMobileController extends Controller
      */
 
     public function findpengumuman(Request $request){
-        $user = pengumuman::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->where('id','=',$request->id)->get();
+        $user = pengumuman::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->where('id','=',$request->id)->orderBy('created_at','desc')->get();
         $url = 'http://dlh-serangkota.com/upload/pengumuman/{nama foto}';
         //$user['foto'] = $url+$user->foto;
         return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
