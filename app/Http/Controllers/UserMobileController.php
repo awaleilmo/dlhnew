@@ -321,7 +321,7 @@ class UserMobileController extends Controller
      * )
      */
     public function pojokwarga (){
-        $user = artikel::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->orderBy('created_at','desc')->paginate(5);
+        $user = artikel::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->orderBy('created_at','desc')->paginate(4);
         $url = 'http://dlh-serangkota.com/upload/artikel/{nama foto}';
         //$user['foto'] = $url+$user->foto;
         return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
