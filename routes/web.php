@@ -37,6 +37,10 @@ Route::get('/api/app/amdal','UserMobileController@amdal')->name('amdal/user');
 Route::get('/api/app/info_data','UserMobileController@info_data')->name('info_data/user');
 Route::get('/api/app/showpengaduan','UserMobileController@showpengaduan')->name('showpengaduan/user');
 
+//app mobile web
+Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });
+
+
 
 //tampilan admin
 Route::get("/admin","AdminController@index")->name("admin");
