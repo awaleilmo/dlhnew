@@ -367,7 +367,7 @@ class UserMobileController extends Controller
      */
 
     public function pengumuman(Request $request){
-        $user = pengumuman::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->orderBy('created_at','desc')->get();
+        $user = pengumuman::select('id','judul','foto','created_at as tanggal','deskripsi')->where('tipe','=','1')->orderBy('created_at','desc')->paginate(4);
         $url = 'http://dlh-serangkota.com/upload/pengumuman/{nama foto}';
         //$user['foto'] = $url+$user->foto;
         return response()->json(['status'=>'sukses','URL Foto' => $url,'data' =>$user]);
