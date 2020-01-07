@@ -794,4 +794,6 @@ class UserMobileController extends Controller
         $url = 'http://dlh-serangkota.com/upload/data/{nama data}';
         return response()->json(['status' => 'sukses','URL Download' => $url, 'data' => $user]);
     }
+
+
 }

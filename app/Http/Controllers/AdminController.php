@@ -1035,7 +1035,28 @@ class AdminController extends Controller
 
             })
             ->addColumn('files',function ($row){
-                $t = '<a href="upload/data/'.$row->files.'" class="btn btn-default" download="'.$row->files.'">'.$row->files.'</a>';
+                $t = '<a href="upload/data/'.$row->files.'" class="btn btn-default" download="'.$row->files.'">Download</a>';
+                return $t;
+            })
+            ->rawColumns(['action','files'])
+            ->make(true);
+    }
+
+    public function tdatat(){
+        $pelaku = data::all();
+        return datatables()->of($pelaku)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+
+                $btn = '<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-pencil"></i></a>';
+                $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-trash"></i></a>';
+
+
+                return $btn;
+
+            })
+            ->addColumn('files',function ($row){
+                $t = '<a href="../upload/data/'.$row->files.'" class="btn btn-default" download="'.$row->files.'">Download</a>';
                 return $t;
             })
             ->rawColumns(['action','files'])
