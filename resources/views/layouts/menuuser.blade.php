@@ -111,7 +111,7 @@
                     Berita <i class="glyph-icon icon-caret-down"></i>
                 </a>
                 <ul>
-                    <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pojok Warga LH</a></li>
+                    <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pojok Warta LH</a></li>
                     <li class="dropdown" style="color: white"><a href="{{route('pengumuman')}}"> Pengumuman</a>
                     </li>
                 </ul>

@@ -23,7 +23,7 @@
 
     <div class="hero-box hero-box-smaller full-bg-13 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
         <div class="container">
-            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s" style="opacity: 1;text-shadow: black 0px 0px 10px; color: white">Pojok Warga LH</h1>
+            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s" style="opacity: 1;text-shadow: black 0px 0px 10px; color: white">Pojok Warta LH</h1>
         </div>
         <div class="hero-pattern opacity-10 pattern-bg-2" style="opacity: .19 !important;"></div>
     </div>
