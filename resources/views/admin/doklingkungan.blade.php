@@ -168,8 +168,7 @@
                         }, 3000);
                     },
                     error: function (data) {
-                        console.log("Error:", data.statusText);
-                        console.log("Error:", data.responseJSON.message);
+                        console.log("Error:", data);
                     }
 
                 });
