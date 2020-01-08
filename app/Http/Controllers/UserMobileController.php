@@ -256,9 +256,8 @@ class UserMobileController extends Controller
     public function dokling(Request $request){
         $nama = $request->nama;
         $doc = dokling::where('nama','like','%'.$nama.'%')->get();
-        foreach ($doc as $p){ $no = $p->forms; }
-        $loc = public_path('upload/dokumenlingkungan/'.$no);
-        return response()->download($loc);
+        $loc = 'https://dlh-serangkota.com/upload/dokumenlingkungan/';
+
     }
 
     /**
