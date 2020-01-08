@@ -36,7 +36,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="../image-resources/dlh/sppl.png" style="width:100%; height:20%">
+                        <img src="../image-resources/dlh/sppl.png" style="width:100%; height:15%">
                     </td>
                 </tr>
 
