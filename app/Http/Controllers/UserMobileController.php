@@ -790,7 +790,7 @@ class UserMobileController extends Controller
      * )
      */
     public function info_data(Request $request){
-        $user = data::all();
+        $user = data::paginate(4);
         $url = 'http://dlh-serangkota.com/upload/data/{nama data}';
         return response()->json(['status' => 'sukses','URL Download' => $url, 'data' => $user]);
     }
