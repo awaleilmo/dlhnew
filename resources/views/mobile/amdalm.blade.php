@@ -14,7 +14,7 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup yang disebut SPPL, adalah pernyataan kesanggupan dari penanggung jawab Usaha dan/atau Kegiatan untuk melakukan pengelolaan dan pemantauan lingkungan hidup atas dampak lingkungan hidup dari Usaha dan/atau Kegiatannya di luar Usaa dan/atau Kegiatan yang wajib Amdal atau UKL.UPL</p>
+                        <p style="text-align: justify">Analisis Mengenai Dampak Lingkungan Hidup yang disebut Amdal adalah kajian mengenai dampak penting suatu Usaha dan/atau Kegiatan yang direncanakan pada lingkungan hidup yang diperlukan bagi proses pengambilan keputusan tentang penyelenggaraan Usaha dan/atau Kegiatan</p>
                     </td>
                 </tr>
                 <tr>
@@ -23,25 +23,25 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <img src="../image-resources/dlh/syaratsppl.png" style="width:100%; height:35%">
+                    <td align="center">
+                        <img src="../image-resources/dlh/syaratamdal.png" style="width:100%; height:30%">
                     </td>
                 </tr>
 
                 <tr>
                     <td style="width: 27px;" valign="top" align="center">
-                        <strong>Alur Penilaian SPPL</strong>
+                        <strong>Alur Penilaian Amdal</strong>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="../image-resources/dlh/sppl.png" style="width:100%; height:15%">
+                        <img src="../image-resources/dlh/amdal.png" style="width:100%; height:15%">
                     </td>
                 </tr>
 
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen SPPL</p>
+                        <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen KA-Andal, Amdal dan RKL-RPL</p>
                     </td>
                 </tr>
                 </tbody>

@@ -41,6 +41,8 @@ Route::get('/api/app/showpengaduan','UserMobileController@showpengaduan')->name(
 Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });
 Route::get('/mobile/data',function (){ return view('mobile.datam'); });
 Route::get('/mobile/sppl',function (){ return view('mobile.spplm'); });
+Route::get('/mobile/amdal',function (){ return view('mobile.amdalm'); });
+Route::get('/mobile/uklupl',function (){ return view('mobile.uklm'); });
 Route::get('/tdatat','AdminController@tdatat')->name('tdatat');
 
 

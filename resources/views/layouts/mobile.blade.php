@@ -48,6 +48,9 @@
 </head>
 
 <body>
+<div id="loading">
+    <img src="../image-resources/dlh/attente.gif" style="width: 80%; margin-left: 10%; margin-top: 20%;">
+</div>
 
 <div id="myI">
     @yield('content')
