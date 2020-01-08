@@ -257,7 +257,7 @@ class UserMobileController extends Controller
         $nama = $request->nama;
         $doc = dokling::where('nama','like','%'.$nama.'%')->get();
         $loc = 'https://dlh-serangkota.com/upload/dokumenlingkungan/';
-
+        return response()->json(['status'=>'sukses','Url' => $loc,'data' =>$doc]);
     }
 
     /**
