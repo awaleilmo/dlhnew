@@ -40,6 +40,7 @@ Route::get('/api/app/showpengaduan','UserMobileController@showpengaduan')->name(
 //app mobile web
 Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });
 Route::get('/mobile/data',function (){ return view('mobile.datam'); });
+Route::get('/mobile/sppl',function (){ return view('mobile.spplm'); });
 Route::get('/tdatat','AdminController@tdatat')->name('tdatat');
 
 
