@@ -1,10 +1,9 @@
 @extends('layouts.mobile')
 
 @section('content')
-            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">UPTD Perlengkapan dan Perbekalan</h2>
-            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
-                <br>
-
+            <h2 style="text-align: center">UPTD Perlengkapan dan Perbekalan</h2>
+            <div style="width: 98%">
+            <table border="0" style="width: 98%;" align="center">
                 <tr>
                     <td colspan="4" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dasar Hukum</h2></td>
                 </tr>
@@ -32,7 +31,7 @@
 
                 <tr>
                     <td colspan="4" align="center">
-                        <img src="image-resources/dlh/strukperbekalan.jpg" style="width: 30em; border-radius: 30px">
+                        <img src="../image-resources/dlh/strukperbekalan.jpg" style="width: 85%; height: 35%">
                     </td>
                 </tr>
 
@@ -345,14 +344,15 @@
 
                 <tr>
                     <td colspan="4" align="center">
-                        <img src="image-resources/dlh/satuperbekalan.jpg" style="width: 30em; border-radius: 30px">
+                        <img src="../image-resources/dlh/satuperbekalan.jpg" style="width: 85%; height: 25%">
                     </td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="center">
-                        <img src="image-resources/dlh/duaperbekalan.jpg" style="width: 30em; border-radius: 30px">
+                        <img src="../image-resources/dlh/duaperbekalan.jpg" style="width: 85%; height: 25%">
                     </td>
                 </tr>
             </table>
+            </div>
 @endsection

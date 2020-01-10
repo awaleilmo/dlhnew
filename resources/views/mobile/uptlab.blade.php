@@ -1,17 +1,17 @@
 @extends('layouts.mobile')
 
 @section('content')
-            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">UPTD Laboratorium Lingkungan</h2>
-            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;opacity:1; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
-                <br>
-
+            <h2 style="text-align: center">UPTD Laboratorium Lingkungan</h2><br>
+            <div style="width: 100%">
+            <table border="0"style="width: 98%" align="center">
                 <tr>
                     <td colspan="4" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Dasar Hukum</h2></td>
                 </tr>
 
                 <tr>
-                    <td colspan="4" align="left">
-                        <p style="text-align: justify">Berdasarkan Peraturan Walikota Nomor 28 Tahun 2019 tentang pembentukan, kedudukan, susunan organisasi, tugas dan fungsi serta tata kerja unit pelaksana teknis daerah laboratorium lingkungan pada Dinas Lingkungan Hidup Kota Serang</p></td>
+                    <td colspan="4" align="justify">
+                        Berdasarkan Peraturan Walikota Nomor 28 Tahun 2019 tentang pembentukan, kedudukan, susunan organisasi, tugas dan fungsi serta tata kerja unit pelaksana teknis daerah laboratorium lingkungan pada Dinas Lingkungan Hidup Kota Serang
+                    </td>
 
                 </tr>
                 <br>
@@ -21,9 +21,8 @@
                 </tr>
 
                 <tr>
-                    <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/struklab.png" style="width: 30em; border-radius: 30px">
-                        </center>
+                    <td colspan="4" align="center">
+                       <img src="../image-resources/dlh/struklab.png" style="width: 85%; height: 35%;">
                     </td>
                 </tr>
 
@@ -398,31 +397,30 @@
                 </tr>
 
                 <tr>
-                    <td><class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;"></td>
+                    <td></td>
                     <td colspan="3" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;">Sop Pengelolaan Laboratorium Lingkungan</h2></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/sopsample.png" style="width: 30em; border-radius: 30px">
-                        </center>
+                        <img src="../image-resources/dlh/sopsample.png" style="width: 85%; height: 35%">
                     </td>
                 </tr>
 
                 <tr>
-                    <td><class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;"></td>
+                    <td></td>
                     <td colspan="3" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;">Alat-alat Laboratorium Lingkungan dan Fungsinya</h2></td>
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>1.</strong></td>
+                    <td ><strong>1.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Oven</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/oven.png" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/oven.png" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -434,14 +432,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>2.</strong></td>
+                    <td ><strong>2.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Desikator Besar Maupun Kecil</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/desikator.png" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/desikator.png" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -453,14 +451,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>3.</strong></td>
+                    <td ><strong>3.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Auto Clave</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/autoclave.jpg" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/autoclave.jpg" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -471,14 +469,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>4.</strong></td>
+                    <td><strong>4.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Alat Uji TCLP</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/tclp.png" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/tclp.png" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -490,14 +488,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>5.</strong></td>
+                    <td ><strong>5.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Ruang Asam</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/ruangasam.png" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/ruangasam.png" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -522,14 +520,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>6.</strong></td>
+                    <td ><strong>6.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">AAS</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/aas.png" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/aas.png" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -540,14 +538,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>7.</strong></td>
+                    <td ><strong>7.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Water Purification</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/water.jpg" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/water.jpg" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -558,14 +556,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>8.</strong></td>
+                    <td ><strong>8.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Spektrofotometer</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/spektrofotometer.jpg" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/spektrofotometer.jpg" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -576,14 +574,14 @@
                 </tr>
 
                 <tr>
-                    <td valign="top"><strong>9.</strong></td>
+                    <td ><strong>9.</strong></td>
                     <td colspan="3" align="left">
                         <p style="text-align: justify">Mercury Analyzer</p></td>
                 </tr>
 
                 <tr>
                     <td colspan="4" align="left">
-                        <center><img src="image-resources/dlh/mercury.jpg" style="width: 30em; border-radius: 30px">
+                        <center><img src="../image-resources/dlh/mercury.jpg" style="width: 85%; height: 35%">
                         </center>
                     </td>
                 </tr>
@@ -595,4 +593,5 @@
 
 
             </table>
+            </div>
 @endsection

@@ -1,7 +1,8 @@
 @extends('layouts.mobile')
 
 @section('content')
-            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Kepala Dinas Lingkungan Hidup</h2>
+            <h2 data-wow-duration="0.6s" style="text-align: center">Kepala Dinas Lingkungan Hidup</h2>
+            <br>
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <tr>
                     <td valign="top"><strong>(1)</strong></td>
