@@ -43,7 +43,17 @@ Route::get('/mobile/data',function (){ return view('mobile.datam'); });
 Route::get('/mobile/sppl',function (){ return view('mobile.spplm'); });
 Route::get('/mobile/amdal',function (){ return view('mobile.amdalm'); });
 Route::get('/mobile/uklupl',function (){ return view('mobile.uklm'); });
-Route::get('/tdatat','AdminController@tdatat')->name('tdatat');
+Route::get('/tdatat','AdminController@tdatat');
+Route::get('/mobile/kadis', function (){return view('mobile.kadis');} );
+Route::get('/mobile/sekdis', function (){return view('mobile.sekdis');} );
+Route::get('/mobile/unpeg', function (){return view('mobile.unpeg');} );
+Route::get('/mobile/pep', function (){return view('mobile.pep');} );
+Route::get('/mobile/pplh', function (){return view('mobile.pplh');} );
+Route::get('/mobile/pslb', function (){return view('mobile.pslb');} );
+Route::get('/mobile/ppklh', function (){return view('mobile.ppklh');} );
+Route::get('/mobile/uptlab', function (){return view('mobile.uptlab');} );
+Route::get('/mobile/uptperbekalan', function (){return view('mobile.uptperbekalan');});
+Route::get('/mobile/jabatan', function (){return view('mobile.jabatan');} );
 
 
 
