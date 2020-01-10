@@ -283,8 +283,8 @@ class UserMobileController extends Controller
      *     operationId="downloaddok",
      *
      *      @OA\Parameter(
-     *          name="nama",
-     *          description="nama dokumen",
+     *          name="id",
+     *          description="id dokumen",
      *          required=true,
      *          in="query",
      *          @OA\Schema(
@@ -300,11 +300,10 @@ class UserMobileController extends Controller
      */
 
     public function perizinan(Request $request){
-        $nama = $request->nama;
-        $doc = limbah::where('nama','like','%'.$nama.'%')->get();
-        foreach ($doc as $p){ $no = $p->forms; }
-        $loc = public_path('upload/limbah/'.$no);
-        return response()->download($loc);
+        $nama = $request->id;
+        $doc = limbah::where('id','=',$nama)->get();
+        $url = 'https://dlh-serangkota.com/upload/limbah/{nama dokumen}';
+        return response()->json(['status'=>'sukses','URL' => $url,'data' =>$doc]);
     }
 
     /**

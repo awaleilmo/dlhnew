@@ -54,6 +54,7 @@ Route::get('/mobile/ppklh', function (){return view('mobile.ppklh');} );
 Route::get('/mobile/uptlab', function (){return view('mobile.uptlab');} );
 Route::get('/mobile/uptperbekalan', function (){return view('mobile.uptperbekalan');});
 Route::get('/mobile/jabatan', function (){return view('mobile.jabatan');} );
+Route::get('/mobile/sipal', function (){return view('mobile.sipal');} );
 
 
 

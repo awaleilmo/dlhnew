@@ -216,9 +216,9 @@
                 "operationId": "downloaddok",
                 "parameters": [
                     {
-                        "name": "nama",
+                        "name": "id",
                         "in": "query",
-                        "description": "nama dokumen",
+                        "description": "id dokumen",
                         "required": true,
                         "schema": {
                             "type": "string"
