@@ -1,13 +1,10 @@
 @extends('layouts.mobile')
 
 @section('content')
-            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">Kelompok Jabatan Fungsional</h2>
+            <h2 style="text-align: center">Kelompok Jabatan Fungsional</h2>
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
-                <br>
-                <br>
-
                 <tr>
-                    <td colspan="3" align="center"><h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="padding:0px;visibility: visible; animation-duration: 0.6s;">Untuk melaksanakan Tugas, Fungsional Jabatan mempunyai Fungsi :</h2></td>
+                    <td colspan="3" align="center"><h2 style="padding:0px;visibility: visible; animation-duration: 0.6s;">Untuk melaksanakan Tugas, Fungsional Jabatan mempunyai Fungsi :</h2></td>
                 </tr>
 
                 <tr>
