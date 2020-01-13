@@ -318,8 +318,7 @@
                             <tr>
                                 <th></th>
                                 <th>JUMLAH</th>
-                                <th></th>
-                                <th></th>
+                                <th colspan="2"></th>
                             </tr>
                             </tfoot>
                         </table>
