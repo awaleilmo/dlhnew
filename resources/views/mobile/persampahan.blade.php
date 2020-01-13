@@ -305,6 +305,7 @@
                 <div id="tps" class="tab-pane">
                     <div class="panel panel-info" style="padding: 10px 10px">
                         <h1 class="hero-heading">Jenis Angkutan TPS</h1>
+                        <div style="overflow-x: scroll">
                         <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
                             <thead>
                             <tr>
@@ -368,6 +369,7 @@
                                 ],
                                 order: [[0, 'asc']],
                             });</script>
+                        </div>
                     </div>
 
                     <div class="panel panel-info" style="padding: 10px 10px">
