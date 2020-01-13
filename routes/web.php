@@ -55,6 +55,13 @@ Route::get('/mobile/uptlab', function (){return view('mobile.uptlab');} );
 Route::get('/mobile/uptperbekalan', function (){return view('mobile.uptperbekalan');});
 Route::get('/mobile/jabatan', function (){return view('mobile.jabatan');} );
 Route::get('/mobile/sipal', function (){return view('mobile.sipal');} );
+Route::get('/mobile/adwiyata', 'UserController@mobileadwiyata');
+Route::get('/mobile/banksampah','UserController@mobilebanksampah');
+Route::get('/mobile/banksampah/{id}','UserController@mobilebankdetail');
+Route::get('/mobile/pengawasan','UserController@mobilepengawasan');
+Route::get('/mobile/persampahan','UserController@mobilepersampahan');
+Route::get('/mobile/tps3r',function (){return view('mobile.tps3r');});
+Route::get('/mobile/ttps3r','AdminController@mobilettps3r');
 
 
 

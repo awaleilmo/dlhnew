@@ -1390,7 +1390,26 @@ class AdminController extends Controller
         }
         return Response()->json($arr);
     }
+    public function mobilettps3r(){
+        $pelaku = tps::all();
+        return datatables()->of($pelaku)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
 
+                $btn = '<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-pencil"></i></a>';
+                $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-trash"></i></a>';
+
+
+                return $btn;
+
+            })
+            ->addColumn('foto',function ($row){
+                $t = '<div id="fotol'.$row->id.'" style="transition: 1s"><img id="'.$row->id.'" class="fotol" src="../upload/tps/'.$row->foto.'" style="width:150px; height:100px"></div>';
+                return $t;
+            })
+            ->rawColumns(['action','foto'])
+            ->make(true);
+    }
     public function ttps3r(){
         $pelaku = tps::all();
         return datatables()->of($pelaku)

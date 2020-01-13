@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../image-resources/dlh/dlh.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../image-resources/dlh/dlh.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../image-resources/dlh/dlh.png">
-    <link rel="apple-touch-icon-precomposed" href=../image-resources/dlh/dlh.png">
+    <link rel="apple-touch-icon-precomposed" href="../image-resources/dlh/dlh.png">
     <link rel="shortcut icon" href="../image-resources/dlh/dlh.png">
 
 
@@ -63,8 +63,8 @@
 
 <!-- banner -->
 <div class="top-bar bg-topbar" style="padding: 0 0;">
-    <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 200px; margin-bottom: -.1em; background: linear-gradient(to right, #8EC220, #006B35)">
-        <img id="myP"  src="../image-resources/dlh/banner2,1.png" style="margin-left:10%; width: 80%; height: 200px; ">
+    <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 136px; margin-bottom: -.1em; background: linear-gradient(to right, #ffffff, #ffffff)">
+        <img id="myP"  src="../image-resources/dlh/banner.png" style="margin-left:24%; width: 50%; height: 136px; ">
     </div>
 </div>
 <!-- .top-bar -->

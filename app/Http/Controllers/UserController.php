@@ -200,6 +200,13 @@ class UserController extends Controller
 
     }
 
+    public function mobileadwiyata(){
+            $sca = sca::all();
+            $sct = scatingkat::all();
+            $sna = sna::all();
+            return view('mobile.adwiyata',compact('sna','sct','sca'));
+    }
+
     public function pengawasan(){
         if(Auth::check()){
             return view('program.pengawasan');
@@ -208,12 +215,19 @@ class UserController extends Controller
 
     }
 
+    public function mobilepengawasan(){
+            return view('mobile.pengawasan');
+    }
+
     public function persampahan(){
         if(Auth::check()){
             return view('program.persampahan');
         }
         return redirect('/login');
+    }
 
+    public function mobilepersampahan(){
+            return view('mobile.persampahan');
     }
 
     public function banksampah(){
@@ -224,6 +238,12 @@ class UserController extends Controller
         return redirect('/login');
 
     }
+
+    public function mobilebanksampah(){
+            $t = bank::all();
+            return view('mobile.banksampah', compact('t'));
+    }
+
     public function bankdetail($id){
         if(Auth::check()){
             $p = bank::find($id);
@@ -234,6 +254,15 @@ class UserController extends Controller
             }
         }
         return redirect('/');
+    }
+
+    public function mobilebankdetail($id){
+            $p = bank::find($id);
+            if($p != null) {
+                return view('mobile.bankdetail', compact('p'));
+            }else{
+                return redirect('banksampah')->with('error','Data yang Diminta Tidak Diketemukan');
+            }
     }
 
     public function data(){
