@@ -84,6 +84,14 @@ class UserInputWebController extends Controller
     public function tpengaduan($id){
         $pengaduan = Pengaduan::where('userId','=',$id)->get();
         return datatables()->of($pengaduan)
+            ->addColumn('penyelesaian', function($row){
+                if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else{
+                    $ttb = '-';
+                }
+                return $ttb;
+            })
             ->addColumn('status', function($row){
 
                 if($row->status == 'Selesai'){
@@ -103,7 +111,7 @@ class UserInputWebController extends Controller
                 return $btn;
 
             })
-            ->rawColumns(['action','status'])
+            ->rawColumns(['action','status','penyelesaian'])
             ->make(true);
     }
 }

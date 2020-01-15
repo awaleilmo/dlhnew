@@ -68,8 +68,20 @@ class AdminController extends Controller
         $pengaduan = Pengaduan::all();
         return datatables()->of($pengaduan)
             ->addColumn('ceked', function ($row){
+                if($row->status == 'Selesai'){
+                $btn = '';
+                }else{
                 $btn = '<input type="checkbox" class="checkbox" name="cek['.$row->id.']" value="'.$row->id.'">';
+                }
                  return $btn;
+            })
+            ->addColumn('penyelesaian', function($row){
+                if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else{
+                    $ttb = '-';
+                }
+                return $ttb;
             })
             ->addColumn('status', function($row){
 
@@ -90,7 +102,7 @@ class AdminController extends Controller
                 return $btn;
 
             })
-            ->rawColumns(['action','status','ceked'])
+            ->rawColumns(['action','status','ceked','penyelesaian'])
             ->make(true);
     }
     public function printpengaduan($id){

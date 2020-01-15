@@ -249,6 +249,7 @@
                 <thead>
                 <tr>
                     <th>{{__('Tanggal Pengaduan')}}</th>
+                    <th>{{__('Tanggal Penyelesaian')}}</th>
                     <th>{{__('Nama Pengadu')}}</th>
                     <th>{{__('Alamat Pengadu')}}</th>
                     <th>{{__('NO HP')}}</th>
@@ -259,6 +260,7 @@
                 <tfoot>
                 <tr>
                     <th>{{__('Tanggal Pengaduan')}}</th>
+                    <th>{{__('Tanggal Penyelesaian')}}</th>
                     <th>{{__('Nama Pengadu')}}</th>
                     <th>{{__('Alamat Pengadu')}}</th>
                     <th>{{__('NO HP')}}</th>
@@ -281,6 +283,7 @@
             },
             columns: [
                 { data: 'created_at', name: 'created_at', },
+                { data: 'penyelesaian',         name: 'penyelesaian', },
                 { data: 'nama', name: 'nama', },
                 { data: 'alamat', name: 'alamat', },
                 { data: 'notelp', name: 'notelp', },

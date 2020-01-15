@@ -92,7 +92,8 @@
                         Program <i class="glyph-icon icon-caret-down"></i>
                     </a>
                     <ul>
-                        <li class="dropdown"><a href="{{route('adwiyata')}}">Adwiyata</a></li>
+                        <li class="dropdown"><a href="{{route('adwiyata')}}">Adiwiyata</a></li>
+                        <li class="dropdown"><a href="javascript:(0)">Adipura</a></li>
                         <li class="dropdown"><a href="{{route('banksampah')}}">Bank Sampah</a></li>
                         <li class="dropdown"><a href="{{route('pengawasan')}}">Pengawasan</a></li>
                         <li class="dropdown"><a href="{{route('persampahan')}}">Persampahan</a></li>
