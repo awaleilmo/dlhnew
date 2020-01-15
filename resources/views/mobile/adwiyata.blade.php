@@ -192,7 +192,7 @@
                     <br>
                     <br>
                     <div style="overflow-x: scroll">
-                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap"  cellspacing="0" width="100%">
+                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap"  cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>
@@ -237,7 +237,7 @@
                     <br>
                     <br>
                     <div style="overflow-x: scroll">
-                    <table id="datatable2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                    <table id="datatable2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>
@@ -284,7 +284,7 @@
                     <br>
                     <br>
                     <div style="overflow-x: scroll">
-                    <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                    <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>

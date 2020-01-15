@@ -185,7 +185,7 @@
                     <h2 class="hero-heading">Bank Sampah di Kota Serang</h2>
                     <br>
                     <br>
-                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>

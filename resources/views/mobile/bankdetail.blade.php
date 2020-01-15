@@ -95,7 +95,7 @@
             <br>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="../../upload/banksampah/{{$p->foto}}" style="width: 100%; height: 65%">
+                    <img src="../../upload/banksampah/{{$p->foto}}" style="width: 100%; height: 45%">
                 </div>
                 <div class="col-md-6 hero-text wow bounceInUp animated animated blurred-bg-1" style="border:1px solid green;
                         padding-top: 2.5em;
