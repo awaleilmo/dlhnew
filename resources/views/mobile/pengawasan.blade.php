@@ -55,7 +55,7 @@
             <br>
             <h3><strong>Data Pelaku Usaha</strong></h3><br><br>
             <div style="overflow-x: scroll">
-                <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="80%">
+                <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="80%" style="font-size: xx-small">
                     <thead>
                     <tr>
                         <th>No</th>
@@ -134,7 +134,7 @@
                 <br>
             <h3><strong>Hasil Pengawasan</strong></h3><br><br>
                 <div style="overflow-x: scroll">
-                    <table id="datatable2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="80%">
+                    <table id="datatable2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="80%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>No</th>

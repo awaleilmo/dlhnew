@@ -109,7 +109,7 @@
                 </div>
                 <div id="timbul" class="tab-pane">
                     <div style="overflow-x: scroll">
-                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>
@@ -229,7 +229,7 @@
                 </div>
                 <div id="sampah" class="tab-pane">
                     <div style="overflow-x: scroll">
-                    <table id="datatabl2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                    <table id="datatabl2" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>
@@ -306,7 +306,7 @@
                     <div class="panel panel-info" style="padding: 10px 10px">
                         <h1 class="hero-heading">Jenis Angkutan TPS</h1>
                         <div style="overflow-x: scroll">
-                        <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0">
+                        <table id="datatable3" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" style="font-size: xx-small">
                             <thead>
                             <tr>
                                 <th>{{__("No")}}</th>
@@ -374,7 +374,7 @@
 
                     <div class="panel panel-info" style="padding: 10px 10px">
                         <h2 class="hero-heading">Jenis TPS</h2>
-                        <table id="datatable4" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <table id="datatable4" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                             <thead>
                             <tr>
                                 <th>{{__("No")}}</th>
@@ -454,7 +454,7 @@
                         <br>
                         <br>
                         <div style="overflow-x: scroll">
-                        <table id="datatable5" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                        <table id="datatable5" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                             <thead>
                             <tr>
                                 <th>{{__("No")}}</th>
