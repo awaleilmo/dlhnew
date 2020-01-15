@@ -45,7 +45,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" valign="top">
-                                <strong style="    text-decoration: underline;">Tujuan Adwiyata</strong></td>
+                                <strong style="    text-decoration: underline;">Tujuan Adiwiyata</strong></td>
                         </tr>
                         <tr>
                             <td colspan="2" style=""><span style="text-align: justify">&emsp;Tujuan sekolah Adiwiyata yang secara umum itu menerangkan dalam mewujudkan masyarakat sekolah yang peduli serta juga berbudaya dalam lingkungan dengan</span>:</td>
@@ -69,7 +69,7 @@
                             <td colspan="2" style="">&emsp;Fungsi  program adiwiyata agar seluruh pelajar ikut terlibat dalam seggala kegiatan  atau aktivitas persekolahan demi menuju lingkungan yang sehat dan juga mampu menghindari  dampak lingkungan yang negatif.</td>
                         </tr>
                         <tr>
-                            <td colspan="2" style=""><strong style="text-decoration: underline;">Prinsip Program Adwiyata</strong></td>
+                            <td colspan="2" style=""><strong style="text-decoration: underline;">Prinsip Program Adiwiyata</strong></td>
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
@@ -92,7 +92,7 @@
                             <td style=""><strong>Edukatif </strong>( Permen LH No 2013 )</td>
                         </tr>
                         <tr>
-                            <td colspan="2" style=""><strong style="text-decoration:underline">Manfaat Program Adwiyata</strong></td>
+                            <td colspan="2" style=""><strong style="text-decoration:underline">Manfaat Program Adiwiyata</strong></td>
                         </tr>
                         <tr>
                             <td style=""><strong>1.</strong></td>
@@ -123,11 +123,11 @@
                             <td style="">Meningkatkan  kualitas dan kondisi belajar mengajar yang lebih nyaman serta juga kondusif  bagi seluruh warga sekolah.</td>
                         </tr>
                         <tr>
-                            <td colspan="2" style=""><strong style="text-decoration:underline">Jenis Penghargaan Adwiyata</strong></td>
+                            <td colspan="2" style=""><strong style="text-decoration:underline">Jenis Penghargaan Adiwiyata</strong></td>
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
-                            <td style=""><strong>Penghargaan Adwiyata Kabupaten/Kota</strong></td>
+                            <td style=""><strong>Penghargaan Adiwiyata Kabupaten/Kota</strong></td>
                         </tr>
                         <tr>
                             <td style=""><p>&nbsp;</p></td>
@@ -135,7 +135,7 @@
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
-                            <td style=""><strong>Penghargaan Adwiyata Nasional</strong></td>
+                            <td style=""><strong>Penghargaan Adiwiyata Nasional</strong></td>
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
@@ -143,7 +143,7 @@
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
-                            <td style=""><strong>Penghargaan Adwiyata Tingkat Provinsi</strong></td>
+                            <td style=""><strong>Penghargaan Adiwiyata Tingkat Provinsi</strong></td>
                         </tr>
                         <tr>
                             <td style=""><p>&nbsp;</p></td>
@@ -151,14 +151,14 @@
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
-                            <td style=""><strong>Penghargaan Adwiyata Mandiri</strong></td>
+                            <td style=""><strong>Penghargaan Adiwiyata Mandiri</strong></td>
                         </tr>
                         <tr>
                             <td style="">&nbsp;</td>
                             <td style="">&emsp;Penghargaan  khusus bagi tiap-tiap sekolah dengan penilaian berupa sekolah yang mempunyai  minimal 10 Sekolah binaan yang telah mendapatkan penghargaan Adiwiyata  Kabupaten/Kota, juga penghargaan yang diberikan oleh Presiden.</td>
                         </tr>
                         <tr>
-                            <td colspan="2" style=""><strong style="text-decoration:underline">Kriteria Penilaian Penghargaan Adwiyata</strong></td>
+                            <td colspan="2" style=""><strong style="text-decoration:underline">Kriteria Penilaian Penghargaan Adiwiyata</strong></td>
                         </tr>
                         <tr>
                             <td style=""><strong>1.</strong></td>
@@ -188,7 +188,7 @@
                 <div id="sca" class="tab-pane">
                     <br>
                     <br>
-                    <h2 class="hero-heading">Sekolah Calon Adwiyata</h2>
+                    <h2 class="hero-heading">Sekolah Calon Adiwiyata</h2>
                     <br>
                     <br>
                     <div style="overflow-x: scroll">
@@ -233,7 +233,7 @@
                 <div id="sna" class="tab-pane">
                     <br>
                     <br>
-                    <h2 class="hero-heading">Sekolah Non Adwiyata</h2>
+                    <h2 class="hero-heading">Sekolah Non Adiwiyata</h2>
                     <br>
                     <br>
                     <div style="overflow-x: scroll">
@@ -280,7 +280,7 @@
                 <div id="scatingkat" class="tab-pane">
                     <br>
                     <br>
-                    <h2 class="hero-heading">Sekolah Calon Adwiyata Tingkat</h2>
+                    <h2 class="hero-heading">Sekolah Calon Adiwiyata Tingkat</h2>
                     <br>
                     <br>
                     <div style="overflow-x: scroll">
