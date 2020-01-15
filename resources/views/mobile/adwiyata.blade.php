@@ -26,7 +26,7 @@
                 <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
                 <div id="tentang" class="tab-pane active">
                     <br>
-                    <h2 class="hero-heading">Tentang Adwiyata</h2>
+                    <h2 class="hero-heading">Tentang Adiwiyata</h2>
                     <table width="100%" border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" style=" opacity:1; text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;" data-wow-duration="0.9s" data-wow-delay="0.2s">
                         <br>
                         <br>
