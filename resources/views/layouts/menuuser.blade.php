@@ -72,7 +72,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown" style="color: white"><a href="{{route('perizinanlimbah')}}"> Perizinan Limbah B3 ( SIPAL )</a>
+                        <li class="dropdown" style="color: white"><a href="{{route('perizinanlimbah')}}"> Perizinan Limbah B3  ( SIPAL )</a>
+                        <li class="dropdown" style="color: white"><a href="javascript:(0)"> IPAL </a>
                         </li>
                     </ul>
 
