@@ -27,7 +27,16 @@ class UserController extends Controller
 
     public function pojok_pengaduan(){
        if(Auth::check()){
-            return view('pelaporan.pojok_pengaduan');
+           $pengaduan = Pengaduan::all();
+            return view('pelaporan.pojok_pengaduan', compact('pengaduan'));
+        }
+        return redirect('/login');
+    }
+
+    public function detailpojok_pengaduan($id){
+        if(Auth::check()){
+            $pengaduan = Pengaduan::find($id);
+            return view('pelaporan.detailpengaduan', compact('pengaduan'));
         }
         return redirect('/login');
     }

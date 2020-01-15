@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
     <div class="hero-box hero-box-smaller bg-gradient-3 font-inverse">
         @if ($message = Session::get('alert'))
             <div id="alert" class="alert alert-success alert-block" style="text-align: center">
@@ -49,11 +47,18 @@
 
         </div>
         <div class="hero-overlay bg-green opacity-30">
-            <div class="hero-pattern pattern-bg-2" style="opacity: .3"></div>
+            <div class="hero-pattern pattern-bg-2" style="opacity: .3">
+
+            </div>
         </div>
+            <div class="btn btn-group">
+                <button id="1" onclick="myas()" class="btn btn-success active btn-lg btn-light">Formulir Pengaduan</button>
+                <button id="2" onclick="myas1()" class="btn btn-success btn-lg">Pengaduan Terkirim</button>
+            </div>
         <br>
         <br>
         <br>
+        <div id="formulir">
         <p  class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style=" opacity: 1 ; text-align: center ; font-size: xx-large; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;"> FORMULIR PENGADUAN</p>
         <br>
         <form id="pojok" method="post" action="{{url('pojok_pengaduan')}}" enctype="multipart/form-data">
@@ -61,7 +66,9 @@
         <table cellpadding="20" class="wow bounceInUp animated animated" bgcolor="" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1; color: black; width: 70%; border-radius: 10px; font-size: x-large; text-align: left" align="center">
         <tr>
              <td>Tempat</td>
-             <td><input name="tempat" class="form-control" type="text"></td>
+             <td><input name="tempat" class="form-control" type="text">
+                 <input name="userId" class="hidden" type="text" value="{{Auth::user()->id}}">
+             </td>
         </tr>
             <tr>
                 <td colspan="2"><strong>A. Identitas Pengadu</strong></td>
@@ -232,6 +239,81 @@
 
         </table>
         </form>
+        </div>
+            <script type="text/javascript" src="../../assets/widgets/datatable/datatable.js"></script>
+            <script type="text/javascript" src="../../assets/widgets/datatable/datatable-bootstrap.js"></script>
+            <script type="text/javascript" src="../../assets/widgets/datatable/datatable-tabletools.js"></script>
+        <div id="terkirim" style="display: none; width: 80%; margin-left: 10%">
+            <table id="datatable1" align="center" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+
+                <thead>
+                <tr>
+                    <th>{{__('Tanggal Pengaduan')}}</th>
+                    <th>{{__('Nama Pengadu')}}</th>
+                    <th>{{__('Alamat Pengadu')}}</th>
+                    <th>{{__('NO HP')}}</th>
+                    <th>{{__('Status')}}</th>
+                    <th>{{__('Action')}}</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>{{__('Tanggal Pengaduan')}}</th>
+                    <th>{{__('Nama Pengadu')}}</th>
+                    <th>{{__('Alamat Pengadu')}}</th>
+                    <th>{{__('NO HP')}}</th>
+                    <th>{{__('Status')}}</th>
+                    <th>{{__('Action')}}</th>
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
+    <script>
+
+        //////////////
+        $('#datatable1').DataTable({
+
+            serverSide: true,
+            ajax: {
+                url: "{{url('tpojok_pengaduan')}}/{{Auth::user()->id}}",
+                type: 'GET',
+            },
+            columns: [
+                { data: 'created_at', name: 'created_at', },
+                { data: 'nama', name: 'nama', },
+                { data: 'alamat', name: 'alamat', },
+                { data: 'notelp', name: 'notelp', },
+                { data: 'status', name: 'status', },
+                { data: 'action', name: 'action',},
+            ],
+            order: [[0, 'asc']]
+        });
+        </script>
+
+       <script>
+           function myas(){
+               let x = $('#1');
+               let y = $('#2');
+               let z = document.getElementById('formulir');
+               let p = document.getElementById('terkirim');
+               z.style.display = '';
+               p.style.display = 'none';
+               y.removeClass('active');
+               x.addClass('active');
+           }
+           function myas1(){
+               let x = $('#1');
+               let y = $('#2');
+               let z = document.getElementById('formulir');
+               let p = document.getElementById('terkirim');
+               p.style.display = '';
+               z.style.display = 'none';
+               x.removeClass('active');
+               y.addClass('active');
+
+           }
+       </script>
 
     </div>
 

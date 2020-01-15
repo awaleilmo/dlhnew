@@ -14,22 +14,5 @@ class Pengaduan extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        "tanggal",
-        "tempat",
-        "nama",
-        "alamat",
-        "notelp",
-        "alamatkejadian",
-        "jeniskegiatan",
-        "namakegiatan",
-        "waktu",
-        "uraiankejadian",
-        "dampak",
-        "penyelesaian",
-        "namainstansi",
-        "tgl",
-        "foto",
-        "lokasi",
-    ];
+    protected $guarded = [];
 }

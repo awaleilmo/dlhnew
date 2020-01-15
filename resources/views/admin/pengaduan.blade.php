@@ -27,7 +27,8 @@
                 <p>{{__('Tampilan menu pengaduan')}}</p>
             </div>
         </div>
-        <form id="contact_us" method="post" action="javascript:void(0)" >
+        <form id="contact_us" method="post" action="{{url('hitpengaduan')}}" >
+            @csrf
             <div class="row">
                 <div class="col-12">
                     <div class="alert alert-success hidden"  id="msg_div">
@@ -202,24 +203,28 @@
                                     @endforeach
                                     <thead>
                                     <tr>
+                                        <th></th>
                                         <th>{{__('Tanggal Pengaduan')}}</th>
                                         <th>{{__('Nama Pengadu')}}</th>
                                         <th>{{__('Alamat Pengadu')}}</th>
                                         <th>{{__('NO HP')}}</th>
+                                        <th>{{__('Status')}}</th>
                                         <th>{{__('Action')}}</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
+                                        <th></th>
                                         <th>{{__('Tanggal Pengaduan')}}</th>
                                         <th>{{__('Nama Pengadu')}}</th>
                                         <th>{{__('Alamat Pengadu')}}</th>
                                         <th>{{__('NO HP')}}</th>
+                                        <th>{{__('Status')}}</th>
                                         <th>{{__('Action')}}</th>
                                     </tr>
                                     </tfoot>
                                 </table>
-
+                                    <input type="submit" class="btn btn-success float-left" value="Hit">
                             </div>
                         </div>
                     </div>
@@ -236,11 +241,13 @@
                         type: 'GET',
                     },
                     columns: [
-                        { data: 'created_at', name: 'created_at', },
-                        { data: 'nama', name: 'nama', },
-                        { data: 'alamat', name: 'alamat', },
-                        { data: 'notelp', name: 'notelp', },
-                        { data: 'action', name: 'action',},
+                        { data: 'ceked',        name: 'ceked', },
+                        { data: 'created_at',   name: 'created_at', },
+                        { data: 'nama',         name: 'nama', },
+                        { data: 'alamat',       name: 'alamat', },
+                        { data: 'notelp',       name: 'notelp', },
+                        { data: 'status',       name: 'status', },
+                        { data: 'action',       name: 'action', },
                     ],
                     order: [[0, 'asc']]
                 });

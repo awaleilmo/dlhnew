@@ -1,5 +1,5 @@
 
-<div id="myO" class="main-header bg-gradient-7 wow fadeInDown font-inverse" style=" width: 100%;">
+<div id="myO" class="main-header bg-gradient-7 font-inverse" style=" width: 100%;">
     <div class="container">
 
         <div class="right-header-btn">

@@ -68,6 +68,7 @@ Route::get('/mobile/ttps3r','AdminController@mobilettps3r');
 //tampilan admin
 Route::get("/admin","AdminController@index")->name("admin");
 Route::get("/pengaduan","AdminController@pengaduan")->name("pengaduan");
+Route::post("/hitpengaduan","AdminController@hitpengaduan")->name("hitpengaduan");
 Route::get("/tpengaduan","AdminController@tpengaduan")->name("tpengaduan");
 Route::get("/pengaduan/{id}","AdminController@printpengaduan");
 Route::get("/adminpengawasan","AdminController@pengawasan")->name("admin/pengawasan");
@@ -210,7 +211,9 @@ Route::get('/data','UserController@data')->name('data');
 
 //menu pelaporan
 Route::get('/pojok_pengaduan', 'UserController@pojok_pengaduan')->name('pojok_pengaduan');
+Route::get('/pojok_pengaduan/{id}', 'UserController@detailpojok_pengaduan');
 Route::post('/pojok_pengaduan','UserInputWebController@pengaduan');
+Route::get('/tpojok_pengaduan/{id}','UserInputWebController@tpengaduan');
 
 //menu struktur bidang
 Route::get('/kadis', 'UserController@kadis')->name('kadis');

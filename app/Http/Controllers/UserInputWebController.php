@@ -6,6 +6,7 @@ use App\Pengaduan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Yajra\DataTables\Facades\DataTables;
 
 class UserInputWebController extends Controller
 {
@@ -49,21 +50,23 @@ class UserInputWebController extends Controller
         $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
         // upload file
         $file->move($tujuan_upload, $fulname);
-        $input['tempat'] = $request->tempat;
-        $input['nama'] = $request->nama;
-        $input['alamat'] = $request->alamat;
-        $input['notelp'] = $request->nohp;
-        $input['alamatkejadian'] = $request->alamatkejadian;
-        $input['jeniskegiatan'] = $request->jeniskegiatan;
-        $input['namakegiatan'] = $request->namakegiatan;
-        $input['waktu'] = $request->uraianwaktu;
-        $input['uraiankejadian'] = $request->uraiankejadian;
-        $input['dampak'] = $request->uraiandampak;
-        $input['penyelesaian'] = $request->penyelesaian;
-        $input['namainstansi'] = $ins;
-        $input['tgl'] = $instgl;
-        $input['foto'] = $fulname;
-        $input['lokasi'] = $request->lokasi;
+        $input['userId']            = $request->userId;
+        $input['tempat']            = $request->tempat;
+        $input['nama']              = $request->nama;
+        $input['alamat']            = $request->alamat;
+        $input['notelp']            = $request->nohp;
+        $input['alamatkejadian']    = $request->alamatkejadian;
+        $input['jeniskegiatan']     = $request->jeniskegiatan;
+        $input['namakegiatan']      = $request->namakegiatan;
+        $input['waktu']             = $request->uraianwaktu;
+        $input['uraiankejadian']    = $request->uraiankejadian;
+        $input['dampak']            = $request->uraiandampak;
+        $input['penyelesaian']      = $request->penyelesaian;
+        $input['namainstansi']      = $ins;
+        $input['tgl']               = $instgl;
+        $input['foto']              = $fulname;
+        $input['lokasi']            = $request->lokasi;
+        $input['status']            = 'Pending';
         $validator = Validator::make($request->all(), [
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -76,5 +79,31 @@ class UserInputWebController extends Controller
         return redirect("pojok_pengaduan")->with(['gagal' => 'Gagal']);
 
 
+    }
+
+    public function tpengaduan($id){
+        $pengaduan = Pengaduan::where('userId','=',$id)->get();
+        return datatables()->of($pengaduan)
+            ->addColumn('status', function($row){
+
+                if($row->status == 'Selesai'){
+                    $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else{
+                    $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
+                }
+                return $btn;
+
+            })
+            ->addColumn('action', function($row){
+
+
+                $btn = '<a href="pojok_pengaduan/'.$row->id.'" class="tooltip-button  edit-user1"  id="'.$row->id.'" data-toggle="modal" data-target="#myModal'.$row->id.'"><i class="glyph-icon icon-arrow-up"></i> Detail</a>';
+
+
+                return $btn;
+
+            })
+            ->rawColumns(['action','status'])
+            ->make(true);
     }
 }

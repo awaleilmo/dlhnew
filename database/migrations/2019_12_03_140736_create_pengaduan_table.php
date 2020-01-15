@@ -15,21 +15,23 @@ class CreatePengaduanTable extends Migration
     {
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tempat');
-            $table->string('nama');
-            $table->string('alamat');
-            $table->string("notelp");
-            $table->string("alamatkejadian");
-            $table->string("jeniskegiatan");
-            $table->string("namakegiatan");
-            $table->string("waktu");
-            $table->string("uraiankejadian");
-            $table->string("dampak");
-            $table->string("penyelesaian");
-            $table->string("namainstansi");
-            $table->string("tgl");
-            $table->string("foto");
-            $table->string("lokasi");
+            $table->string('tempat')->nullable();
+            $table->string('userId')->nullable();
+            $table->string('nama')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string("notelp")->nullable();
+            $table->string("alamatkejadian")->nullable();
+            $table->string("jeniskegiatan")->nullable();
+            $table->string("namakegiatan")->nullable();
+            $table->string("waktu")->nullable();
+            $table->string("uraiankejadian")->nullable();
+            $table->string("dampak")->nullable();
+            $table->string("penyelesaian")->nullable();
+            $table->string("namainstansi")->nullable();
+            $table->string("tgl")->nullable();
+            $table->string("foto")->nullable();
+            $table->string("lokasi")->nullable();
+            $table->string("status")->nullable();
             $table->timestamps();
         });
     }

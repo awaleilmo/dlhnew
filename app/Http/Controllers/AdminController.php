@@ -50,9 +50,37 @@ class AdminController extends Controller
         }
         return redirect('/');
     }
+    public function hitpengaduan(Request $request){
+        if(Auth::check() && Auth::user()->level == 'admin'){
+
+            $p = $request->cek;
+            foreach($p as $es){
+                $id = $request->cek[$es];
+                $data['status'] = 'Selesai';
+                $pengaduan = Pengaduan::where('id','=',$id)->update($data);
+            }
+            return redirect('/pengaduan');
+
+        }
+        return redirect('/');
+    }
     public function tpengaduan(){
         $pengaduan = Pengaduan::all();
         return datatables()->of($pengaduan)
+            ->addColumn('ceked', function ($row){
+                $btn = '<input type="checkbox" class="checkbox" name="cek['.$row->id.']" value="'.$row->id.'">';
+                 return $btn;
+            })
+            ->addColumn('status', function($row){
+
+                if($row->status == 'Selesai'){
+                    $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else{
+                    $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
+                }
+                return $btn;
+
+            })
             ->addColumn('action', function($row){
 
 
@@ -62,11 +90,11 @@ class AdminController extends Controller
                 return $btn;
 
             })
-            ->rawColumns(['action'])
+            ->rawColumns(['action','status','ceked'])
             ->make(true);
     }
     public function printpengaduan($id){
-        if(Auth::check() && Auth::user()->level == 'admin'){
+        if(Auth::check()){
             $pengaduan = Pengaduan::find($id);
             if($pengaduan != null) {
                 return view('admin.printpengaduan', compact('pengaduan'));
