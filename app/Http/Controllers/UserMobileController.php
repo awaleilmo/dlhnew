@@ -659,14 +659,24 @@ class UserMobileController extends Controller
      *     description="",
      *     operationId="showall",
      *
+     *     @OA\Parameter(
+     *          name="userId",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
      *     @OA\Response(
      *         response="default",
      *         description="successful operation"
      *     )
      * )
      */
-    public function showpengaduan(){
-      $p = Pengaduan::all();
+    public function showpengaduan(Request $request){
+        $f = $request->userId;
+      $p = Pengaduan::find($f);
         $url = 'http://dlh-serangkota.com/upload/pengaduan/{nama foto}';
         return response()->json(['status'=>'sukses', 'URL Foto' =>$url, 'data' => $p]);
     }
