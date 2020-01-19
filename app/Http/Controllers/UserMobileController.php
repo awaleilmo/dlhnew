@@ -676,7 +676,7 @@ class UserMobileController extends Controller
      */
     public function showpengaduan(Request $request){
         $f = $request->userId;
-      $p = Pengaduan::find($f);
+      $p = Pengaduan::where('userId' ,'=',$f)->get();
         $url = 'http://dlh-serangkota.com/upload/pengaduan/{nama foto}';
         return response()->json(['status'=>'sukses', 'URL Foto' =>$url, 'data' => $p]);
     }
