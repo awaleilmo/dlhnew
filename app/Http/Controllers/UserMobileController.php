@@ -395,6 +395,15 @@ class UserMobileController extends Controller
      *     path="/api/app/pengaduan",
      *     tags={"Pengaduan"},
      *     operationId="downloaddok",
+     *     @OA\Parameter(
+     *          name="userId",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
      *
      *      @OA\Parameter(
      *          name="tempat",
@@ -612,21 +621,23 @@ class UserMobileController extends Controller
         $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
         // upload file
         $file->move($tujuan_upload, $fulname);
-        $input['tempat'] = $request->tempat;
-        $input['nama'] = $request->nama;
-        $input['alamat'] = $request->alamat;
-        $input['notelp'] = $request->nohp;
-        $input['alamatkejadian'] = $request->alamatkejadian;
-        $input['jeniskegiatan'] = $request->jeniskegiatan;
-        $input['namakegiatan'] = $request->namakegiatan;
-        $input['waktu'] = $request->waktu;
-        $input['uraiankejadian'] = $request->uraiankejadian;
-        $input['dampak'] = $request->dampak;
-        $input['penyelesaian'] = $request->penyelesaian;
-        $input['namainstansi'] = $ins;
-        $input['tgl'] = $instgl;
-        $input['foto'] = $fulname;
-        $input['lokasi'] = $request->lokasi;
+        $input['tempat']            = $request->tempat;
+        $input['userId']            = $request->userId;
+        $input['nama']              = $request->nama;
+        $input['alamat']            = $request->alamat;
+        $input['notelp']            = $request->nohp;
+        $input['alamatkejadian']    = $request->alamatkejadian;
+        $input['jeniskegiatan']     = $request->jeniskegiatan;
+        $input['namakegiatan']      = $request->namakegiatan;
+        $input['waktu']             = $request->waktu;
+        $input['uraiankejadian']    = $request->uraiankejadian;
+        $input['dampak']            = $request->dampak;
+        $input['penyelesaian']      = $request->penyelesaian;
+        $input['namainstansi']      = $ins;
+        $input['tgl']               = $instgl;
+        $input['foto']              = $fulname;
+        $input['lokasi']            = $request->lokasi;
+        $input['status']            = 'Pending';
         $validator = Validator::make($request->all(), [
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',

@@ -303,6 +303,15 @@
                 "operationId": "downloaddok",
                 "parameters": [
                     {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "tempat",
                         "in": "query",
                         "description": "",
