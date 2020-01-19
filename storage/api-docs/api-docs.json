@@ -502,6 +502,17 @@
                 "summary": "",
                 "description": "",
                 "operationId": "showall",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "default": {
                         "description": "successful operation"
