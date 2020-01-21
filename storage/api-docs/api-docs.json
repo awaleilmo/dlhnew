@@ -520,6 +520,32 @@
                 }
             }
         },
+        "/api/app/detailpengaduan": {
+            "get": {
+                "tags": [
+                    "Pengaduan"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "find",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/tentang": {
             "get": {
                 "tags": [

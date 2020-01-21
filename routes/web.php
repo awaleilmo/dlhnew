@@ -36,6 +36,7 @@ Route::get('/api/app/sppl','UserMobileController@sppl')->name('sppl/user');
 Route::get('/api/app/amdal','UserMobileController@amdal')->name('amdal/user');
 Route::get('/api/app/info_data','UserMobileController@info_data')->name('info_data/user');
 Route::get('/api/app/showpengaduan','UserMobileController@showpengaduan')->name('showpengaduan/user');
+Route::get('/api/app/detailengaduan','UserMobileController@detailpengaduan')->name('detailpengaduan/user');
 
 //app mobile web
 Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });

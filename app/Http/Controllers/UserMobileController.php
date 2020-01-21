@@ -680,6 +680,37 @@ class UserMobileController extends Controller
         $url = 'http://dlh-serangkota.com/upload/pengaduan/{nama foto}';
         return response()->json(['status'=>'sukses', 'URL Foto' =>$url, 'data' => $p]);
     }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/detailpengaduan",
+     *     tags={"Pengaduan"},
+     *     summary="",
+     *     description="",
+     *     operationId="find",
+     *
+     *     @OA\Parameter(
+     *          name="id",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function detailpengaduan(Request $request){
+        $f = $request->id;
+        $p = Pengaduan::find($f);
+        $url = 'http://dlh-serangkota.com/upload/pengaduan/{nama foto}';
+        return response()->json(['status'=>'sukses', 'URL Foto' =>$url, 'data' => $p]);
+    }
+
     /**
      * @OA\Get(
      *     path="/api/app/tentang",
