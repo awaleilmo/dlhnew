@@ -11,13 +11,13 @@
                     <a href="#tentang" style=" color:black; font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Adiwiyata</a>
                 </li>
                 <li >
-                    <a href="#sca" style=" color:black; font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Calon Adiwiyata</a>
+                    <a href="#sca" style=" color:black; font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Adiwiyata</a>
                 </li>
                 <li >
                     <a href="#sna" style=" color:black; font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Non Adiwiyata</a>
                 </li>
                 <li >
-                    <a href="#scatingkat" style=" color:black; font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Calon Adiwiyata Tingkat</a>
+                    <a href="#scatingkat" style=" color:black; font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Adiwiyata Tingkat</a>
                 </li>
             </ul>
             <div class="tab-content">
