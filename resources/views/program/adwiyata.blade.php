@@ -8,16 +8,16 @@
           <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;">ADIWIYATA</h2><br>
             <ul class="tabs-nav" role="tablist" >
                 <li >
-                    <a href="#tentang" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Adwiyata</a>
+                    <a href="#tentang" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Tentang Adiwiyata</a>
                 </li>
                 <li >
-                    <a href="#sca" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Calon Adwiyata</a>
+                    <a href="#sca" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Adiwiyata</a>
                 </li>
                 <li >
-                    <a href="#sna" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Non Adwiyata</a>
+                    <a href="#sna" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Non Adiwiyata</a>
                 </li>
                 <li >
-                    <a href="#scatingkat" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Calon Adwiyata Tingkat</a>
+                    <a href="#scatingkat" style="font-size: 15px; border: 1px solid #3e4855; " role="tab" data-toggle="tab">Sekolah Adiwiyata Tingkat</a>
                 </li>
             </ul>
             <div class="tab-content">

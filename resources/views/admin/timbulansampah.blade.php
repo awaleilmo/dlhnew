@@ -145,31 +145,31 @@
                             });
                         });
                         $("#btn-edit").click(function (e) {
-                            $('#btn-edit').html('Sending..');
-                            $.ajax({
-                                url: '{{url("etimbulan")}}' ,
-                                type: "POST",
-                                data: $('#pelaku').serialize(),
-                                success: function( response ) {
-                                    var j = [response.msg];
-                                    $('#btn-edit').html('Edit');
-                                    $('#res_message').show();
-                                    $('#btn-submit').removeClass('hidden');
-                                    $('#btn-edit').addClass('hidden');
-                                    var oTable = $('#datatable1').dataTable();
-                                    oTable.fnDraw(false);
-                                    $('#res_message').html(j[0]);
-                                    $('#msg_div').removeClass('hidden');
-                                    document.getElementById("pelaku").reset();
-                                    document.getElementById("pelaku").style.display='none';
-                                    setTimeout(function(){
-                                        $('#res_message').addClass('hidden');
-                                        $('#msg_div').addClass('hidden');
-                                    },3000);
-                                    console.log(response.msg);
-                                }
-                            });
+                        $('#btn-edit').html('Sending..');
+                        $.ajax({
+                            url: '{{url("etimbulan")}}' ,
+                            type: "POST",
+                            data: $('#pelaku').serialize(),
+                            success: function( response ) {
+                                var j = [response.msg];
+                                $('#btn-edit').html('Edit');
+                                $('#res_message').show();
+                                $('#btn-submit').removeClass('hidden');
+                                $('#btn-edit').addClass('hidden');
+                                var oTable = $('#datatable1').dataTable();
+                                oTable.fnDraw(false);
+                                $('#res_message').html(j[0]);
+                                $('#msg_div').removeClass('hidden');
+                                document.getElementById("pelaku").reset();
+                                document.getElementById("pelaku").style.display='none';
+                                setTimeout(function(){
+                                    $('#res_message').addClass('hidden');
+                                    $('#msg_div').addClass('hidden');
+                                },3000);
+                                console.log(response.msg);
+                            }
                         });
+                    });
                     }
 
                     $('body').on('click', '.edit-user', function () {
