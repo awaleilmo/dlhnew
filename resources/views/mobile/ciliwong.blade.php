@@ -212,7 +212,7 @@
                     <h2><strong>Bang Daus<br>
                             (Lubang Daur Ulang Sampah)</strong></h2><br>
                     <p style="text-align: justify; font-size: large">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Lubang Daur Ulang Sampah merupakan lubang pembuatan kompos dari sampah organik melalui metode peuyeumisasi selama berbulan-bulan untuk menghasilkan kompos yang siap digunakan.
                     </p>
                 </div>
                 <div class="col-md-1"></div>
