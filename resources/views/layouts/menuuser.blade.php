@@ -1,7 +1,6 @@
 
-<div id="myO" class="main-header bg-gradient-7 font-inverse" style=" width: 100%;">
-    <div class="container">
-
+<div class="main-header bg-gradient-7 font-inverse" style=" width: 100%;">
+    <div class="container" style="max-width: 100%">
         <div class="right-header-btn">
             <div id="mobile-navigation">
                 <button style="    padding: 10px 35px 25px 0;" id="nav-toggle" class="collapsed" data-toggle="collapse" data-target=".header-nav">
@@ -53,7 +52,15 @@
                 <a href="{{route('cilowong')}}" title="TPAS Cilowong">
                     TPAS Cilowong
                 </a>
-
+            </li>
+            <li>
+                <a href="#" title="Components">
+                    Galeri <i class="glyph-icon icon-caret-down"></i>
+                </a>
+                <ul>
+                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Foto</a></li>
+                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Video</a></li>
+                </ul>
             </li>
             @guest
             @else
@@ -72,7 +79,24 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown" style="color: white"><a href="{{route('perizinanlimbah')}}"> Perizinan Limbah B3  ( SIPAL )</a>
+                        <li class="dropdown" style="color: white">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"> Limbah <i class="glyph-icon icon-caret-down"></i></a>
+                            <ul class="dropdown-menu" style="position:relative;background-color: #253035; height: auto; overflow-x: hidden; overflow-y: hidden;" aria-labelledby="dropdownMenu2">
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('perizinanlimbah')}}"> Izin Limbah (IPLC) </a></li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="javascript:void(0)"> Limbah Cair </a></li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="javascript:void(0)"> Limbah Padat </a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" style="color: white">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"> Uji Parameter Kualitas Lingkungan ( UPKL ) <i class="glyph-icon icon-caret-down"></i></a>
+                            <ul class="dropdown-menu" style="position:relative;background-color: #253035; height: auto; overflow-x: hidden; overflow-y: hidden;" aria-labelledby="dropdownMenu2">
+                                <li class="dropdown" style="width:100%; color: white"><a href="javascript:void(0)"> Uji Parameter Air </a></li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="javascript:void(0)"> Uji Parameter Tanah </a></li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="javascript:void(0)"> Uji Parameter Udara </a></li>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown" style="color: white"><a href="javascript:(0)"> IPAL </a>
                         </li>
                     </ul>
@@ -84,7 +108,6 @@
                     </a>
                     <ul>
                         <li class="dropdown" style="color: white"><a href="{{url('pojok_pengaduan')}}">Pengaduan</a></li>
-                        </li>
                     </ul>
 
                 </li>

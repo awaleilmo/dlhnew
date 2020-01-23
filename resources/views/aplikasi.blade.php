@@ -10,7 +10,7 @@
                         <img src="../../image-resources/dlh/hp.jpg" style="height: 80%; border: solid gray 1px">
                     </div>
                     <div class="col-md-6">
-                        <a href="../../upload/Siherang_PS.apk" download="Siherang_PS.apk" class="btn btn-success"><i class="glyph-icon icon-download"></i> Download</a>
+                        <a href="https://play.google.com/store/apps/details?id=id.tarkaz.app_siherang" class="btn btn-success" style="height: 3em "><img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" style="width:183px;height:39px" ></a>
                     </div>
                 </div>
             </div>
