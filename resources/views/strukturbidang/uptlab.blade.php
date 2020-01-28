@@ -599,5 +599,83 @@
             </table>
 
         </div>
+        <div class="hero-box bg-white hero-box-smaller ">
+            <div class="container">
+                <div class="row wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+                    <br>
+                    <br>
+                    <div class="col-md-5">
+                        <div id="mapid"  style="height: 300px; width: 100%;">
+                            <!-- Ici s'affichera la carte -->
+                        </div>
+                        <script>
+
+                            var cilowong = L.layerGroup();
+
+                            L.marker([-6.1447062,106.1759082]).addTo(cilowong)
+                                .bindPopup('<a href="https://www.google.com/maps/dir/?api=1&destination=-6.1447062,106.1759082" target="_blank" style="color: deepskyblue">Petunjuk Arah</a>').openPopup();
+
+                            var street =
+                                    L.tileLayer('https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}', {
+                                        maxZoom: 20,
+                                        minZoom: 2,
+                                        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+                                    }),
+
+                                satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+                                    maxZoom: 20,
+                                    subdomains:['mt0','mt1','mt2','mt3']
+                                });
+
+                            var mymap = L.map('mapid', {
+                                center: [-6.1447062,106.1759082],
+                                zoom: 12,
+                                layers: [street, cilowong]
+                            });
+
+                            var baseLayers = {
+                                "Map": street,
+                                "Satellite": satelite
+                            };
+
+                            var overlays = {
+                                "TPAS Cilowong": cilowong,
+
+                            };
+
+                            L.control.layers(baseLayers, overlays).addTo(mymap);
+
+                            var mark ;
+
+
+
+                            var popup = L.popup();
+
+                            function onMapClick(e) {
+                                if (mark != undefined) {
+                                    mymap.removeLayer(mark);
+                                }
+                                var lat = e.latlng;
+                                var lat1 = e.latlng.lat;
+                                var lng = e.latlng.lng;
+                                mark = L.marker(lat).addTo(mymap);
+                                document.getElementById("lat").value= lat1;
+                                document.getElementById("lng").value= lng;
+                            }
+
+                            mymap.on('click', onMapClick);
+
+                        </script>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <h1><strong>Lokasi</strong></h1><br>
+                        <p style="text-align: justify; font-size: large">
+                            Jl. Raya Petir Km. 4 belakang koramil, kelurahan cipocok jaya, kecamatan cipocok jaya, kota serang, provinsi banten.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

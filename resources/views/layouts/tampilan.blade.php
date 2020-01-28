@@ -91,6 +91,18 @@
                     (0254) 221-764
                 </center>
             </li>
+            <li>
+                <br>
+                <br>
+                <div class="container" align="center">
+                    <a href="https://www.facebook.com/dinas.lingkungan.716" style="background: #FFFFFF 0% 0% no-repeat padding-box; color: #1A62A1; font-size: 35px; padding: 10px 20px 10px 20px; margin-right: 10px; box-shadow: 0px 3px 6px #00000029; border-radius: 10px; opacity: 1;">
+                        <i class="glyph-icon icon-facebook"></i></a>
+                    <a href="https://www.instagram.com/dlhkotaserang" style="background: #FFFFFF 0% 0% no-repeat padding-box; color: #1A62A1; font-size: 35px; padding: 10px 16px 10px 18px; margin-right: 10px; box-shadow: 0px 3px 6px #00000029; border-radius: 10px; opacity: 1;">
+                        <i class="glyph-icon icon-instagram"></i></a>
+                    <a href="mailto:dlhserangkota01@gmail.com" style="background: #FFFFFF 0% 0% no-repeat padding-box; color: #1A62A1; font-size: 35px; padding: 10px 16px 10px 18px; margin-right: 10px; box-shadow: 0px 3px 6px #00000029; border-radius: 10px; opacity: 1;">
+                        <i class="glyph-icon icon-linecons-mail"></i></a>
+                </div>
+            </li>
         </ul>
     </div>
     <div class="container col-md-6">
