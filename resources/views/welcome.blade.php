@@ -194,24 +194,30 @@
             <img src="../../image-resources/dlh/foto12.jpg" class="ls-l" style="width:30%; height:50%;border-radius: 20px; bottom:0px;left:50px; padding-top: 50px" data-ls="durationin:1500;delayin:10;rotatein:20;rotatexin:30;scalexin:3;scaleyin:3;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;" />
          </div>
         <div class="col-md-4">
+            <p class="ls-l" style="top:80px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:500;rotatein:20;rotatexin:30;scalexin:3;scaleyin:3;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
+                Visi & Misi Walikota & Wakil Walikota Serang Periode 2018-2023
+            </p>
         <p class="ls-l" style="top:80px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:500;rotatein:20;rotatexin:30;scalexin:3;scaleyin:3;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
-            VISI
+            Visi
         </p>
         <p class="ls-l" style="top:140px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:2300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Bersama Menjaga Kualitas Lingkungan Hidup Kota Serang
+            "Terwujudnya Kota Peradaban yang Berdaya dan Berbudaya"
         </p>
         <p class="ls-l" style="top:180px;left:599px;height:40px;padding-right:15px;padding-left:15px;font-size:24px;line-height:37px;color:#ffffff;background:rgba(255,255,255,0.1);border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:1000;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">
-            MISI
+            Misi
         </p>
         <p class="ls-l" style="top:240px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:2600;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Meningkatkan kapasitas dan akuntabilitas.
+            Menguatkan Peradaban Berbasis Nilai-Nilai Kemanusiaan.
         </p>
         <p class="ls-l" style="top:280px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3000;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Meningkatkan kualitas lingkungan hidup dan pengelolaan sumberdaya alam
+            Meningkatkan Sarana Prasarana Daerah yang Berwawasan Lingkungan.
         </p>
         <p class="ls-l" style="top:320px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
-            Meningkatkan kemampuan, kesadaran, kepedulian, dan partisipasi para pemangku kepentingan terhadap fungsi lingkungan hidup
+            Meningkatkan Perekonomian Daerah dan Pemberdayaan Masyarakat yang Berdaya Saing.
         </p>
+            <p class="ls-l" style="top:320px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
+                Meningkatkan Tata Kelola Pemerintahan yang Baik.
+            </p>
         </div>
     </div>
 </div>
