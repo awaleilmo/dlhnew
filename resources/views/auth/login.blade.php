@@ -1,8 +1,8 @@
 @extends('layouts.tampilan')
 
 @section('content')
-    <div class="center-vertical bg-black" style="position: inherit">
-        <div class="center-content row">
+    <div class=" center-vertical bg-gradient-2" style="position: inherit">
+        <div class="row">
             <br>
             <h3 class="text-center pad25B font-gray font-size-23">Login</h3>
             <form action="{{route('login')}}" id="login-validation" class="center-margin col-xs-11 col-sm-5" method="POST" autocomplete="off">
@@ -65,5 +65,5 @@
                 </div>
                     </form>
                 </div>
-            </div>
+    </div>
 @endsection
