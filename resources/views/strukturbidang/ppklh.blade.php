@@ -68,18 +68,18 @@
                         <p style="text-align: justify">Bidang Pengendalian Pencemaran dan Kerusakan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggung jawab kepada Kepala Dinas Lingkungan Hidup, membawahi :</p></td>
                 </tr>
 
-                <tr>
+{{--                <tr>--}}
 
-                    <td colspan="4" style=""><strong>Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
-                <tr>
+{{--                    <td colspan="4" style=""><strong>Seksi Pencemaran Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>--}}
+{{--                </tr>--}}
+{{--                <tr>--}}
 
-                    <td colspan="4" style=""><strong>Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
-                <tr>
+{{--                    <td colspan="4" style=""><strong>Seksi Kerusakan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>--}}
+{{--                </tr>--}}
+{{--                <tr>--}}
 
-                    <td colspan="4" style=""><strong>Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
+{{--                    <td colspan="4" style=""><strong>Seksi Pemeliharaan Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>--}}
+{{--                </tr>--}}
 
             </table>
 

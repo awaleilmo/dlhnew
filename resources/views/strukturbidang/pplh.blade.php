@@ -69,15 +69,15 @@
                         <p style="text-align: justify">Bidang Penataan dan Penaatan Perlindungan Pengelolaan Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggung jawab kepada Kepala Dinas Lingkungan Hidup, membawahi :</p></td>
                 </tr>
 
-                <tr>
-                    <td style="" colspan="4"><strong>Seksi Perencanaan dan Pengkajian Dampak Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
-                <tr>
-                    <td style="" colspan="4"><strong>Seksi Pengaduan dan Penyelesaian Sengketa Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
-                <tr>
-                    <td style="" colspan="4"><strong>Seksi Penegakan Hukum Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
+{{--                <tr>--}}
+{{--                    <td style="" colspan="4"><strong>Seksi Perencanaan dan Pengkajian Dampak Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>--}}
+{{--                </tr>--}}
+{{--                <tr>--}}
+{{--                    <td style="" colspan="4"><strong>Seksi Pengaduan dan Penyelesaian Sengketa Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>--}}
+{{--                </tr>--}}
+{{--                <tr>--}}
+{{--                    <td style="" colspan="4"><strong>Seksi Penegakan Hukum Lingkungan Hidup (bisa di klik dan muncul page baru)</strong></td>--}}
+{{--                </tr>--}}
 
             </table>
 

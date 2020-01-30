@@ -212,7 +212,7 @@
         <p class="ls-l" style="top:320px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
             Meningkatkan Perekonomian Daerah dan Pemberdayaan Masyarakat yang Berdaya Saing.
         </p>
-            <p class="ls-l" style="top:320px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
+            <p class="ls-l" style="top:360px;left:599px;font-size:18px;margin-top: 5px; color:rgba(255,255,255,0.8);" data-ls="offsetxin:0;durationin:1500;delayin:3300;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;">
                 Meningkatkan Tata Kelola Pemerintahan yang Baik.
             </p>
         </div>
