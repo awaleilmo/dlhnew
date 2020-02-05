@@ -198,6 +198,10 @@ Route::get('/cilowong','UserController@cilowong')->name('cilowong');
 Route::get('/amdal','UserController@amdal')->name('amdal');
 Route::get('/uklupl','UserController@uklupl')->name('uklupl');
 Route::get('/sppl','UserController@sppl')->name('sppl');
+Route::post('/cdokir','UserInputWebController@cdokir');
+Route::get('/tdokiramdal/{id}','UserInputWebController@tdokiramdal');
+Route::get('/tdokirsppl/{id}','UserInputWebController@tdokirsppl');
+Route::get('/tdokiruklupl/{id}','UserInputWebController@tdokiruklupl');
 Route::get('/perizinanlimbah', 'UserController@perizinanlimbah')->name('perizinanlimbah');
 
 //menu program

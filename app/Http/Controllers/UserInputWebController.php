@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\dokir;
 use App\Pengaduan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -112,6 +113,103 @@ class UserInputWebController extends Controller
 
             })
             ->rawColumns(['action','status','penyelesaian'])
+            ->make(true);
+    }
+
+    public function cdokir(Request $request){
+        $file = $request->file('file');
+        $tujuan_upload = 'upload/dokir';
+        $idnya = $request->userId;
+        $now = Carbon::now();
+        if($file == ""){
+            $fulname = "kosong";
+        }else {
+            $fulname = $now->year . "-" . $now->month . "-" . $now->day . "_" . $now->hour . "-" . $now->minute . "-" . $now->second . "_" .$idnya."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+        }
+
+        $data['dokling'] = $request->dok;
+        $data['userId'] = $idnya;
+        $data['file'] = $fulname;
+        $data['status'] = 'Pending';
+        $check = dokir::create($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+        }
+        return Response()->json($arr);
+    }
+
+    public function tdokiramdal($id){
+        $pengaduan = dokir::where('userId','=',$id)->where('dokling','=','AMDAL')->get();
+        return datatables()->of($pengaduan)
+            ->addColumn('penyelesaian', function($row){
+                if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else{
+                    $ttb = '-';
+                }
+                return $ttb;
+            })
+            ->addColumn('status', function($row){
+
+                if($row->status == 'Selesai'){
+                    $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else{
+                    $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
+                }
+                return $btn;
+
+            })
+            ->rawColumns(['status','penyelesaian'])
+            ->make(true);
+    }
+    public function tdokirsppl($id){
+        $pengaduan = dokir::where('userId','=',$id)->where('dokling','=','SPPL')->get();
+        return datatables()->of($pengaduan)
+            ->addColumn('penyelesaian', function($row){
+                if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else{
+                    $ttb = '-';
+                }
+                return $ttb;
+            })
+            ->addColumn('status', function($row){
+
+                if($row->status == 'Selesai'){
+                    $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else{
+                    $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
+                }
+                return $btn;
+
+            })
+            ->rawColumns(['status','penyelesaian'])
+            ->make(true);
+    }
+    public function tdokiruklupl($id){
+        $pengaduan = dokir::where('userId','=',$id)->where('dokling','=','UKLUPL')->get();
+        return datatables()->of($pengaduan)
+            ->addColumn('penyelesaian', function($row){
+                if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else{
+                    $ttb = '-';
+                }
+                return $ttb;
+            })
+            ->addColumn('status', function($row){
+
+                if($row->status == 'Selesai'){
+                    $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else{
+                    $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
+                }
+                return $btn;
+
+            })
+            ->rawColumns(['status','penyelesaian'])
             ->make(true);
     }
 }
