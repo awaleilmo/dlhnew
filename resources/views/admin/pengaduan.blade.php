@@ -226,7 +226,7 @@
                                     </tr>
                                     </tfoot>
                                 </table>
-                                    <input type="submit" class="btn btn-success float-left" value="Hit">
+                                    <input type="submit" class="btn btn-success float-left" value="Submit">
                             </div>
                         </div>
                     </div>

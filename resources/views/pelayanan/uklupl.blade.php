@@ -93,7 +93,7 @@
                                     <input class="hidden" for="file" id="desk1" name="dek">
                                     <span class="btn btn-primary btn-file">
                                 <span class="fileinput-new" id="labelfile1">Select file</span>
-                                <input accept=".pdf,.doc,.docx,.doc,.xls,.xlsx" id="file" name="file" type="file"  onchange="document.getElementById('desk1').value = this.value; document.getElementById('labelfile1').innerHTML = this.value;" required autocomplete="off">
+                                <input accept=".pdf" id="file" name="file" type="file"  onchange="document.getElementById('desk1').value = this.value; document.getElementById('labelfile1').innerHTML = this.value;" required autocomplete="off">
                             </span>
                                 </div>
                             </div>

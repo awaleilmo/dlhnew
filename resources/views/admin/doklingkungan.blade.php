@@ -135,6 +135,28 @@
             </thead>
 
         </table>
+        <br>
+        <br>
+        <div class="panel panel-body panel-info">
+
+                <div id="page-title">
+                    <h2>{{__('Pelaporan User')}}</h2>
+                </div>
+            <table id="datatable2" style="font-size: small" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>{{__('Tanggal Upload')}}</th>
+                    <th>{{__('Tanggal Disetujui')}}</th>
+                    <th>{{__('Nama User')}}</th>
+                    <th>{{__('File')}}</th>
+                    <th>{{__('Keterangan')}}</th>
+                    <th>{{__('Status')}}</th>
+                </tr>
+                </thead>
+            </table>
+            <br>
+
+        </div>
 
         <script>
 
@@ -261,6 +283,7 @@
                     }
                 });
             });
+
             var table = $("#datatable1").dataTable({
                 processing: true,
                 serverSide: true,
@@ -275,6 +298,24 @@
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
                 order: [[0, 'asc']],
+            });
+
+            $('#datatable2').DataTable({
+
+                serverSide: true,
+                ajax: {
+                    url: "{{url('tpelap')}}",
+                    type: 'GET',
+                },
+                columns: [
+                    { data: 'created_at',   name: 'created_at', },
+                    { data: 'penyelesaian', name: 'penyelesaian', },
+                    { data: 'nama',         name: 'nama', },
+                    { data: 'file',         name: 'file', },
+                    { data: 'keterangan',   name: 'keterangan'},
+                    { data: 'status',       name: 'status', },
+                ],
+                order: [[0, 'asc']]
             });
 
         </script>

@@ -81,7 +81,6 @@ class UserInputWebController extends Controller
 
 
     }
-
     public function tpengaduan($id){
         $pengaduan = Pengaduan::where('userId','=',$id)->get();
         return datatables()->of($pengaduan)
@@ -115,7 +114,6 @@ class UserInputWebController extends Controller
             ->rawColumns(['action','status','penyelesaian'])
             ->make(true);
     }
-
     public function cdokir(Request $request){
         $file = $request->file('file');
         $tujuan_upload = 'upload/dokir';
@@ -139,12 +137,13 @@ class UserInputWebController extends Controller
         }
         return Response()->json($arr);
     }
-
     public function tdokiramdal($id){
         $pengaduan = dokir::where('userId','=',$id)->where('dokling','=','AMDAL')->get();
         return datatables()->of($pengaduan)
             ->addColumn('penyelesaian', function($row){
                 if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else if($row->status == 'Ditolak'){
                     $ttb = $row->updated_at;
                 }else{
                     $ttb = '-';
@@ -155,6 +154,8 @@ class UserInputWebController extends Controller
 
                 if($row->status == 'Selesai'){
                     $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else if($row->status == 'Ditolak'){
+                    $btn = '<label class="btn btn-danger" style="font-size: large ">Ditolak</label>';
                 }else{
                     $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
                 }
@@ -170,6 +171,8 @@ class UserInputWebController extends Controller
             ->addColumn('penyelesaian', function($row){
                 if($row->status == 'Selesai'){
                     $ttb = $row->updated_at;
+                }else if($row->status == 'Ditolak'){
+                    $ttb = $row->updated_at;
                 }else{
                     $ttb = '-';
                 }
@@ -179,6 +182,8 @@ class UserInputWebController extends Controller
 
                 if($row->status == 'Selesai'){
                     $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else if($row->status == 'Ditolak'){
+                    $btn = '<label class="btn btn-danger" style="font-size: large ">Ditolak</label>';
                 }else{
                     $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
                 }
@@ -194,6 +199,8 @@ class UserInputWebController extends Controller
             ->addColumn('penyelesaian', function($row){
                 if($row->status == 'Selesai'){
                     $ttb = $row->updated_at;
+                }else if($row->status == 'Ditolak'){
+                    $ttb = $row->updated_at;
                 }else{
                     $ttb = '-';
                 }
@@ -203,6 +210,8 @@ class UserInputWebController extends Controller
 
                 if($row->status == 'Selesai'){
                     $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else if($row->status == 'Ditolak'){
+                    $btn = '<label class="btn btn-danger" style="font-size: large ">Ditolak</label>';
                 }else{
                     $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
                 }

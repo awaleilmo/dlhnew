@@ -67,15 +67,33 @@
                 <li>
                     <a href="#" title="Features">
                         Pelayanan <i class="glyph-icon icon-caret-down"></i>
+                        @if($pelaynotif > 0 )
+                        <span class="badge badge-danger badge-small"></span>
+                        @endif
                     </a>
                     <ul>
                         <li class="dropdown" style="color: white">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Dokumen Lingkungan <i class="glyph-icon icon-caret-down"></i></a>
-
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Dokumen Lingkungan <i class="glyph-icon icon-caret-down"></i>
+                                @if($amdalnotif > 0  OR $spplnotif > 0  OR $ukluplnotif > 0)
+                                    <span class="badge badge-danger badge-small"></span>
+                                @endif
+                            </a>
                             <ul class="dropdown-menu" style="position:relative;background-color: #253035; height: auto; overflow-x: hidden; overflow-y: hidden;" aria-labelledby="dropdownMenu2">
-                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('amdal')}}"> AMDAL</a></li>
-                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('uklupl')}}"> UKL-UPL</a></li>
-                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('sppl')}}"> SPPL</a></li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('amdal')}}"> AMDAL @if($amdalnotif > 0 )
+                                            <span class="badge badge-danger badge-small"></span>
+                                        @endif</a>
+                                </li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('uklupl')}}"> UKL-UPL
+                                    @if($ukluplnotif > 0 )
+                                        <span class="badge badge-danger badge-small"></span>
+                                    @endif
+                                    </a>
+                                </li>
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('sppl')}}"> SPPL
+                                    @if($spplnotif > 0 )
+                                        <span class="badge badge-danger badge-small"></span>
+                                    @endif
+                                    </a>
                                 </li>
                             </ul>
                         </li>

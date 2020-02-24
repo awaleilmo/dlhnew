@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDokirsTable extends Migration
+class CreateNotifsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateDokirsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dokirs', function (Blueprint $table) {
+        Schema::create('notifs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('dokling')->nullable();
-            $table->string('userId')->nullable();
-            $table->string('status')->nullable();
-            $table->text('keterangan')->nullable();
-            $table->string('file')->nullable();
+            $table->string('menu')->nullable();
+            $table->string('sub_menu')->nullable();
+            $table->integer('on')->nullable();
+            $table->string('db')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateDokirsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dokirs');
+        Schema::dropIfExists('notifs');
     }
 }

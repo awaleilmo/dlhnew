@@ -45,6 +45,7 @@ return array(
     'App\\jenistps' => $baseDir . '/app/jenistps.php',
     'App\\limbah' => $baseDir . '/app/limbah.php',
     'App\\lokasitps' => $baseDir . '/app/lokasitps.php',
+    'App\\notif' => $baseDir . '/app/notif.php',
     'App\\pelaku' => $baseDir . '/app/pelaku.php',
     'App\\pengumuman' => $baseDir . '/app/pengumuman.php',
     'App\\pjkwarga' => $baseDir . '/app/pjkwarga.php',

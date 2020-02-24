@@ -99,7 +99,7 @@
                                 <input class="hidden" for="file" id="desk1" name="dek">
                                 <span class="btn btn-primary btn-file">
                                 <span class="fileinput-new" id="labelfile1">Select file</span>
-                                <input accept=".pdf,.doc,.docx,.doc,.xls,.xlsx" id="file" name="file" type="file"  onchange="document.getElementById('desk1').value = this.value; document.getElementById('labelfile1').innerHTML = this.value;" required autocomplete="off">
+                                <input accept=".pdf" id="file" name="file" type="file"  onchange="document.getElementById('desk1').value = this.value; document.getElementById('labelfile1').innerHTML = this.value;" required autocomplete="off">
                             </span>
                             </div>
                         </div>
@@ -119,6 +119,7 @@
                         <th>{{__('Tanggal Upload')}}</th>
                         <th>{{__('Tanggal Penyelesaian')}}</th>
                         <th>{{__('File')}}</th>
+                        <th>{{__('Keterangan')}}</th>
                         <th>{{__('Status')}}</th>
                     </tr>
                     </thead>
@@ -179,8 +180,9 @@
                     },
                     columns: [
                         { data: 'created_at',   name: 'created_at', },
-                        { data: 'penyelesaian',   name: 'penyelesaian', },
+                        { data: 'penyelesaian', name: 'penyelesaian', },
                         { data: 'file',         name: 'file', },
+                        { data: 'keterangan',   name: 'keterangan'},
                         { data: 'status',       name: 'status', },
                     ],
                     order: [[0, 'asc']]

@@ -178,6 +178,9 @@ Route::post('/ctps3r', 'AdminController@ctps3r')->name('ctps3r');
 Route::get('/stps3r/{id}', 'AdminController@stps3r')->name('stps3r');
 Route::post('/etps3r', 'AdminController@etps3r')->name('etps3r');
 Route::get('/htps3r', 'AdminController@htps3r')->name('htps3r');
+Route::get('/tpelap','AdminController@tpelap');
+Route::post('/cpelap','AdminController@cpelap');
+Route::get('/tmpdf/{id}','AdminController@tmpdf');
 
 //tampilan
 //Route::get('/s', 'UserController@')->name('');

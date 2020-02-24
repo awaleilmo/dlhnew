@@ -6,11 +6,13 @@ use App\artikel;
 use App\bank;
 use App\data;
 use App\diawasi;
+use App\dokir;
 use App\dokling;
 use App\jenisangkut;
 use App\jenistps;
 use App\limbah;
 use App\lokasitps;
+use App\notif;
 use App\pelaku;
 use App\Pengaduan;
 use App\pengumuman;
@@ -20,6 +22,7 @@ use App\scatingkat;
 use App\smphliar;
 use App\timbulan;
 use App\tps;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -52,7 +55,11 @@ class AdminController extends Controller
     }
     public function hitpengaduan(Request $request){
         if(Auth::check() && Auth::user()->level == 'admin'){
-
+            $s['menu'] = 'pelaporan';
+            $s['sub_menu'] = 'pengaduan';
+            $s['on'] = 0;
+            $s['db'] = $request->id;
+            notif::create($s);
             $p = $request->cek;
             foreach($p as $es){
                 $id = $request->cek[$es];
@@ -1060,7 +1067,6 @@ class AdminController extends Controller
         }
         return Response()->json($arr);
     }
-
     public function tdata(){
         $pelaku = data::all();
         return datatables()->of($pelaku)
@@ -1081,7 +1087,6 @@ class AdminController extends Controller
             ->rawColumns(['action','files'])
             ->make(true);
     }
-
     public function tdatat(){
         $pelaku = data::all();
         return datatables()->of($pelaku)
@@ -1537,5 +1542,76 @@ class AdminController extends Controller
             $arr = ['msg' => 'Berhasil Dihapus', 'status' => true];
         }
         return Response()->json($arr);
+    }
+    public function tpelap(){
+        $pengaduan = dokir::all();
+        return datatables()->of($pengaduan)
+            ->addColumn('file', function ($row){
+
+                if($row->status == 'Selesai') {
+                    $btn = '';
+                }else if($row->status == 'Ditolak'){
+                    $btn = '';
+                }else {
+                    $btn = '<a class="btn btn-default" href="tmpdf/' . $row->id . '" >Proses File</a>';
+                }
+                return $btn;
+            })
+            ->addColumn('nama', function ($row){
+                $ps = User::find($row->userId);
+                $btn = $ps->name;
+                return $btn;
+            })
+            ->addColumn('penyelesaian', function($row){
+                if($row->status == 'Selesai'){
+                    $ttb = $row->updated_at;
+                }else if($row->status == 'Ditolak'){
+                    $ttb = $row->updated_at;
+                }else{
+                    $ttb = '-';
+                }
+                return $ttb;
+            })
+            ->addColumn('status', function($row){
+
+                if($row->status == 'Selesai'){
+                    $btn = '<label class="btn btn-success" style="font-size: large ">Selesai</label>';
+                }else if($row->status == 'Ditolak'){
+                    $btn = '<label class="btn btn-danger" style="font-size: large ">Ditolak</label>';
+                }else{
+                    $btn = '<label class="btn btn-warning" style="font-size: large ">Pending</label>';
+                }
+                return $btn;
+
+            })
+            ->rawColumns(['file','nama','status','penyelesaian'])
+            ->make(true);
+    }
+    public function cpelap(Request $request){
+        if(isset($_POST['sub'])){
+            $s['menu'] = 'dokling';
+            $s['sub_menu'] = $request->dok;
+            $s['on'] = 0;
+            $s['db'] = $request->id;
+            notif::create($s);
+            $p['status'] = 'Selesai';
+            $p['keterangan'] = $request->ket;
+            dokir::whereId($request->id)->update($p);
+            return redirect('admindoklingkungan');
+        }elseif (isset($_POST['tol'])){
+            $s['menu'] = 'dokling';
+            $s['sub_menu'] = $request->dok;
+            $s['on'] = 0;
+            $s['db'] = $request->id;
+            notif::create($s);
+            $p['status'] = 'Ditolak';
+            $p['keterangan'] = $request->ket;
+            dokir::whereId($request->id)->update($p);
+            return redirect('admindoklingkungan');
+        }
+    }
+    public function tmpdf($id){
+        $s = dokir::find($id);
+        return view('admin.tmpdf',compact('s'));
     }
 }
