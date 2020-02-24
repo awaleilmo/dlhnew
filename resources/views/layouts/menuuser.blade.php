@@ -67,7 +67,7 @@
                 <li>
                     <a href="#" title="Features">
                         Pelayanan <i class="glyph-icon icon-caret-down"></i>
-                        @if($pelaynotif > 0 )
+                        @if($amdalnotif > 0  OR $spplnotif > 0  OR $ukluplnotif > 0 )
                         <span class="badge badge-danger badge-small"></span>
                         @endif
                     </a>

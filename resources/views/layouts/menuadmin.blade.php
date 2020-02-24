@@ -62,9 +62,14 @@
                 <a href="#" title="Elements">
                     <i class="glyph-icon icon-linecons-comment"></i>
                     <span>Pelayanan</span>
+                    @if($doklingadminnotif > 0)
+                        <span class="badge badge-danger badge-small" style="    display: inline-block;"></span>
+                    @endif
                 </a>
                 <ul class="sidebar-submenu">
-                    <li><a href="{{route('admin/doklingkungan')}}">Dokumen Lingkungan</a></li>
+                    <li><a href="{{route('admin/doklingkungan')}}">Dokumen Lingkungan @if($doklingadminnotif > 0)
+                                <span class="badge badge-danger badge-small" style="    display: inline-block;"></span>
+                            @endif</a></li>
                     <li><a href="{{route('admin/limbah')}}">Perizinan Limbah B3</a></li>
                 </ul>
             </li>

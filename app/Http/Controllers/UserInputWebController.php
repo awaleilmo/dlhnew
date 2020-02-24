@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\dokir;
+use App\notif_admin;
 use App\Pengaduan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -133,6 +134,8 @@ class UserInputWebController extends Controller
         $check = dokir::create($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){
+            $pa['dokling'] = 1;
+            notif_admin::whereId('1')->update($pa);
             $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
         }
         return Response()->json($arr);

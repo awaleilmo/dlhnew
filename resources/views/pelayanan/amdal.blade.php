@@ -74,8 +74,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <a href="upload/dokumenlingkungan/@foreach($p as $pp) {{$pp->forms}} @endforeach" download="upload/dokumenlingkungan/@foreach($p as $pp) {{$pp->forms}} @endforeach" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
+                    <td>@foreach($p as $pp)
+                        <a href="upload/dokumenlingkungan/{{$pp->forms}}" download="upload/dokumenlingkungan/{{$pp->forms}}" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
+                        @endforeach
                     </td>
                 </tr>
                 </tbody>
