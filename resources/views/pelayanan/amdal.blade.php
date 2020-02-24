@@ -12,7 +12,7 @@
                     }
                 </style>
                 <ul class="nav nav-tabs" style="padding: 0 10%;">
-                    <li><a id="1" onclick="f1()" class="aktif" href="javascript:void(0)">Formulir AMDAL</a></li>
+                    <li><a id="1" onclick="f1()" class="aktif" href="javascript:void(0)">AMDAL</a></li>
                     <li><a id="2" onclick="f2()" href="javascript:void(0)">Upload Form</a></li>
                 </ul>
             </div>
@@ -32,41 +32,81 @@
             </script>
             <div class="tab-content">
             <div id="formulir" class="tab-pane active">
-            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+            <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1; text-align: justify; visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
                 <tbody>
                 <tr>
-                    <td style="width: 27px;" valign="top">
-                        <strong>Pengertian</strong>
+                    <td style="width: 27px;" valign="top" align="center">
+                        <strong>KERANGKA ACUAN AMDAL DI OSS</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="image-resources/dlh/oss.png" style="width:80%; height:90%">
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Analisis Mengenai Dampak Lingkungan Hidup yang disebut Amdal adalah kajian mengenai dampak penting suatu Usaha dan/atau Kegiatan yang direncanakan pada lingkungan hidup yang diperlukan bagi proses pengambilan keputusan tentang penyelenggaraan Usaha dan/atau Kegiatan</p>
+                        <p style="text-align: justify">Sesuai dengan Peraturan Menteri Lingkungan Hidup dan Kehutanan (KLHK) Nomor P.26/MENLHK/SETJEN/KUM.1/7/2018 tentang Pedoman Penyusunan dan Penilaian Serta Pemeriksaan Dokumen Lingkungan Hidup Dalam Pelaksanaan Pelayanan Perizinan Berusaha Terintegrasi Secara Elektronik.
+
+                            Berikut ini metodenya :
+                        </p>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 27px;" valign="top" align="center">
-                        <strong>Persyaratan</strong>
+                    <td style="width: 27px;" valign="top">
+                        <strong>PEDOMAN PENYUSUNAN FORMULIR KERANGKA ACUAN (KA)</strong>
                 </td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <img src="image-resources/dlh/syaratamdal.png" style="width:80%; height:70%">
+                    <td valign="top"><strong>A. Tujuan dan Fungsi Formulir KA</strong></td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">1. Tujuan Penyusunan Formulir KA adalah :</p>
                     </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Merumuskan lingkup dan kedalaman Studi Andal;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Mengarahkan Studi Andal agar berjalan secara efektif dan efesien sesuai dengan biaya, tenaga, dan waktu yang tersedia.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">2. Fungsi Formulir KA adalah :</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Sebagai rujukan penting bagi pelaku usaha, penyusun Dokumen Amdal, instansi yang membidangi rencana usaha dan/atau kegiatan, dan instansi lingkungan hidup, serta Tim Teknis Komisi Penilai Amdal tentang lingkup dan kedalaman studi Andal yang akan dilakukan;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Sebagai salah satu bahan rujukan bagi penilai dokumen Andal untuk mengevaluasi hasil studi Andal.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><strong>B. Muatan Formulir KA</strong></td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">1. Informasi Umum</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">Informasi umum formulir Kerangka Acuan Andal minimal berisikan antara lain ;</p>
+                    </td>
+                </tr>
                 </tr>
 
-                <tr>
-                    <td style="width: 27px;" valign="top" align="center">
-                        <strong>Alur Penilaian Amdal</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="image-resources/dlh/amdal.png" style="width:100%; height:50%">
-                    </td>
-                </tr>
 
                 <tr>
                     <td style="width: 976px;">
