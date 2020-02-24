@@ -483,6 +483,8 @@ class ComposerStaticInit2725177876757d4729e05bf444a7b0ed
         'App\\limbah' => __DIR__ . '/../..' . '/app/limbah.php',
         'App\\lokasitps' => __DIR__ . '/../..' . '/app/lokasitps.php',
         'App\\notif' => __DIR__ . '/../..' . '/app/notif.php',
+        'App\\notif_admin' => __DIR__ . '/../..' . '/app/notif_admin.php',
+        'App\\notif_user' => __DIR__ . '/../..' . '/app/notif_user.php',
         'App\\pelaku' => __DIR__ . '/../..' . '/app/pelaku.php',
         'App\\pengumuman' => __DIR__ . '/../..' . '/app/pengumuman.php',
         'App\\pjkwarga' => __DIR__ . '/../..' . '/app/pjkwarga.php',

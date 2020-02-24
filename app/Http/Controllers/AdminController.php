@@ -53,8 +53,8 @@ class AdminController extends Controller
         }
         return redirect('/');
     }
-    public function hitpengaduan(Request $request){
-        if(Auth::check() && Auth::user()->level == 'admin'){
+    public function hitpengaduan(request $request){
+        if(auth::check() && auth::user()->level == 'admin'){
             $s['menu'] = 'pelaporan';
             $s['sub_menu'] = 'pengaduan';
             $s['on'] = 0;
@@ -63,8 +63,8 @@ class AdminController extends Controller
             $p = $request->cek;
             foreach($p as $es){
                 $id = $request->cek[$es];
-                $data['status'] = 'Selesai';
-                $pengaduan = Pengaduan::where('id','=',$id)->update($data);
+                $data['status'] = 'selesai';
+                $pengaduan = pengaduan::where('id','=',$id)->update($data);
             }
             return redirect('/pengaduan');
 
