@@ -102,7 +102,7 @@
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Informasi umum formulir Kerangka Acuan Andal minimal berisikan antara lain ;</p>
+                        <p style="text-align: justify">Informasi umum formulir Kerangka Acuan Andal minimal berisikan antara lain :</p>
                     </td>
                 </tr>
                 <tr>
@@ -135,26 +135,151 @@
                     </td>
                 </tr>
                 <tr>
+                <td style="width: 976px;">
+                    <p style="text-align: justify">2. Pelingkupan</p>
+                </td>
+                </tr>
+                <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify"></p>
+                        <p style="text-align: justify">Muatan pelingkupan pada dasarnya berisi informasi tentang :</p>
+                    </td>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">a.	Rencana Kegiatan Yang Berpotensi Menimbulkan Dampak ~ rencana kegiatan yang berpotensi menimbulkan dampak sangat terkait erat dengan tahapan rencana kegiatan yang akan dilakukan oleh pelaku usaha.</p>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify"></p>
+                        <p style="text-align: justify">b.	Pengelolaan Lingkungan Hidup Yang Sudah Direncanakan ~ pada bagian ini dijelaskan informasi terkait dengan pengelolaan lingkungan dan pemantauan lingkungan yang sudah direncanakan sebelumnya oleh pelaku usaha.</p>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify"></p>
+                        <p style="text-align: justify">c.	Komponen Lingkungan Terkena Dampak ~ pada bagian ini harus menguraikan data dan informasi yang terkait atau relevan dengan dampak yang mungkin terjadi. Deskripsi ini didasarkan data dan informasi primer dan/atau skunder yang bersifat aktual dan menggunakan sumber data informasi yang valid untuk data sekunder yang resmi dan/atau kredibel untuk menjamin validitas data informasi serta didukung oleh hasil observasi lapangan. Data dan informasi rinci terkait dengan Rona Lingkungan Hidup harus dilakukan untuk masing-masing alternatif lokasi. Deskripsi Rona Lingkungan Hidup Awal dapat disajikan dalam bentuk data dan informasi spasial.</p>
                     </td>
                 </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">d.	Dampak Potensial ~ pada bagian ini dilakukan identifikasi dan inventarisasi segenap dampak lingkungan hidup (primer, skunder dan seterusnya) yang secara potensial akan timbul sebagai akibat adanya rencana usaha dan/atau kegiatan yang dilakukan oleh pelaku usaha. Proses identifikasi dampak potensial dilakukan dengan menggunakan metode-metode ilmiah yang berlaku secara nasional dan/atau internasional di berbagai literatur. Keluaran yang diharapkan disajikan dalam bagian ini adalah berupa daftar dampak-dampak potensial yang mungkin timbul atas adanya rencana usaha dan/atau kegiatan yang diusulkan.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">e.	Evaluasi Dampak Potensial ~  pada bagian ini penyusun dokumen amdal menguraikan proses evaluasi dampak potensial yang dilakukan, yaitu dengan memisahkan dampak-dampak yang perlu kajian mendalam untuk membuktikan dugaan (hipotesa) dampak (dari dampak yang tidak lagi perlu dikaji). Dalam proses ini, harus dijelaskan dasar penentuan bagaimana suatu dampak potensial dapat disimpulkan menjadi Dampak Penting Hipotetik (DPH) atau tidak.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">f.	Dampak Penting Hipotetik ~ pada bagian ini berisikan kesimpulan dari hasil evaluasi dampak potensial yang telah dilakukan.</p>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">g.	Batas Wilayah Studi ~ batas wilayah studi ini merupakan batas terluar dari hasil tumpang susun (overlay) dari batas wilayah proyek, ekologis, sosial dan administratif setelah mempertimbangkan kendala teknis yang dihadapi.  Batasan ruang lingkup wilayah studi penentuannya disesuaikan dengan kemampuan pelaksana yang biasanya memiliki keterbatasan sumber data, seperti waktu, dana, tenaga, teknis, dan metode telaahan. Setiap penentuan masing-masing batas wilayah (proyek, ekologis, sosial dan administratif) harus dilengkapi dengan justifikasi ilmiah yang kuat. Bagian ini harus dilengkapi dengan peta batas wilayah studi yang dapat menggambarkan batas wilayah proyek, ekologis, sosial dan administratif. Peta yang disertakan harus memenuhi kaidah-kaidah kartografi.</p>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">Batas wilayah studi dibentuk dari 4 unsur yang berhubungan dengan dampak lingkungan suatu rencana kegiatan yaitu :</p>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">1.	BATAS PROYEK ~ yaitu ruang dimana seluruh komponen rencana kegiatan akan dilakukan, termasuk komponen kegiatan tahap pra-konstruksi, konstruksi, operasi dan pasca operasi. Dari ruang rencana usaha dan/atau kegiatan inilah bersumber dampak terhadap lingkungan hidup sekitarnya. Batas proyek secara mudah dapat diplotkan pada peta, karena lokasi-lokasinya dapat diperoleh langsung dari peta-peta pelaku usaha. Selain tapak proyek utama, batas proyek juga harus meliputi fasilitas pendukung seperti perumahan, dermaga, tempat penyimpanan bahan, bengkel, dan sebagainya.</p>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">2.	BATAS EKOLOGIS ~ yaitu ruang terjadinya sebaran dampak-dampak lingkungan dari suatu rencana usaha dan/atau kegiatan yang akan dikaji, mengikuti media masing-masing lingkungan (seperti air dan udara), dimana proses alami yang berlangsung dalam ruang tersebut diperkirakan akan mengalami perubahan mendasar. Batas ekologis akan mengarahkan penentuan lokasi pengumpulan data rona lingkungan hidup awal dan analisis persebaran dampak. Penentuan batas ekologis harus mempertimbangkan setiap komponen lingkungan biogeofisik-kimia yang terkena dampak (dari daftar dampak penting hipotetik). Untuk masing-masing dampak, batas persebarannya dapat diplotkan pada peta sehingga batas ekologis memiliki beberapa garis batas, sesuai dengan jumlah dampak penting hipotetik.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">3.	BATAS SOSIAL ~ yaitu ruang disekitar rencana usaha dan/atau kegiatan yang merupakan tempat berlangsungnya berbagai interaksi sosial yang mengandung norma dan nilai tertentu yang sudah mapan (termasuk sistem dan struktur sosial), sesuai dengan proses dan dinamika sosial suatu kelompok suatu kelompok masyarakat, yang diperkirakan akan mengalami perubahan mendasar akibat suatu rencana usaha dan/atau kegiatan. Batas ini pada dasarnya merupakan ruang dimana masyarakat yang terkena dampak lingkungan seperti limbah, emisi, atau kerusakan lingkungan, tinggal atau melakukan kegiatan. Batas sosial akan mempengaruhi identifikasi kelompok masyarakat yang terkena dampak sosial-ekonomi-kesehatan masyarakat dan penentuan masyarakat yang perlu dikonsultasikan (pada tahap lanjutan keterlibatan masyarakat).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">4.	BATAS ADMINISTRATIF ~ yaitu wilayah administratif terkecil yang relevan (seperti desa, kelurahan, kecamatan, kabupaten, provinsi) yang wilayahnya tercakup 3 unsur batas diatas. Dengan menumpangsusunkan (overlay) batas administratif wilayah pemerintahan dengan 3 peta batas seperti tersebut diatas, maka akan terlihat desa/kelurahan, kecamatan, kabupatan dan/atau provinsi mana saja yang masuk dalam batas proyek, batas ekologis dan batas sosial. Batas administrtif sebenarnya diperlukan untuk mengarahkan pelau usaha dan/atau penyusun amdal untuk dapat berkoordinasi ke lembaga pemerintah daerah yang relevan, baik untuk koordinasi administratif (misalnya penilaian Amdal dan pelaksanaan konsultasi masyarakat), pengumpulan data tentang kondisi rona lingkungan awal, kegiatan di sekitar lokasi kegiatan, dan sebagainya.
+                            Masing-masing batas diplotkan pada peta yang kemudian ditumpang susunkan satu sama lain (overlay) sehingga dapat ditarik garis luar gabungan ke-4 batas tersebut. Garis luar gabungan itu yang disebut sebagai 'Batas Wilayah Studi'. Dalam proses ini, harus dijelaskan dasar penentuan batas wilayah studi.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">h. Batas Waktu Kajian ~ dalam proses pelingkupan, harus teridentifikasi secara jelas pula batas waktu kajian yang akan digunakan dalam melakukan prakiraan dan evaluasi dampak dalam kajian amdal. Setiap dampak penting hipotetik yang dikaji memiliki batas waktu kajian tersendiri. Penentuan batas waktu kajian ini selanjutnya digunakan sebagai dasar untuk melakukan penentuan perubahan rona lingkungan tanpa adanya rencana usaha dan/atau kegiatan atau dengan adanya rencana usaha dan/atau kegiatan.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">3. Metode Studi</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">Pada prinsipnya metode studi ini berisi tentang penjelasan dan informasi mengenai :</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">a. Metode Pengumpulan dan Analisis Data Yang Digunakan</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">1) Metode pengumpulan dan analisis data : bagian ini berisi metode pengumpulan data primer dan skunder yang sahih serta dapat dipercaya (reliable) untuk digunakan dalam penyusunan rona lingkungan hidup awal yang rinci dan sebagai masukan dalam melakukan prakiraan besaran dan sifat penting dampak. Metode pengumpulan dan analisis data harus relevan dengan metode pengumpulan dan analisis data untuk penentuan rona lingkungan hidup rinci serta metode prakiraan dampak yang digunakan untuk setiap dampak penting hipotetik yang akan dikaji, sehingga data yang dikumpulkan relevan dan representatif dengan dampak penting hipotetik yang akan dianalisis dalam prakiraan dampak, yaitu :</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Cantumkan secara jelas metode yang digunakan dalam proses pengumpulan data berikut dengan jenis peralatan, instrumen, dan tingkat ketelitian alat yang digunakan dalam pengumpulan data. Metode pengumpulan data yang digunakan harus sesuai Standar Nasional Indonesia (SNI), sesuai peraturan perundang-undangan yang berlaku atau metode-metode ilmiah yang berlaku secara nasional dan/atau internasional di berbagai literatur.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Uraikan metode yang digunakan untuk menganalisis data hasil pengukuran. Cantumkan jenis peralatan, instrumen, dan rumus yang digunakan dalam proses analisis data. Khusus untuk analisis data primer yang memerlukan pengujian laboratorium, maka harus dilakukan di laboratorium yang terakreditasi dan/atau teregistrasi.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">b. Metode Prakiraan Dampak Penting Yang Akan Digunakan</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Bagian ini menjelaskan metode prakiraan dampak penting yang digunakan untuk memprakirakan besaran dan sifat penting dampak dalam studi andal untuk masing-masing dampak penting hipotetik, termasuk rumus-rumus dan asumsi prakiraan dampaknya disertai argumentasi/alasan pemilihan metode tersebut,</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Penyusun dokumen Amdal dapat menggunakan metode-metode ilmiah yang berlaku secara nasional dan/atau internasional di berbagai literatur untuk melakukan prakiraan dampak penting yang sesuai dengan kaidah ilmiah metode prakiraan dampak penting dalam Amdal.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">c.	Metode Evaluasi Secara Holistik Terhadap Dampak Lingkungan</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Evaluasi secara holistik terhadap dampak lingkungan yang terjadi dilakukan untuk menentukan kelayakan atau ketidaklayakan lingkungan hidup.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">• Bagian ini menguraikan metode-metode yang lazim digunakan dalam Studi Andal untuk mengevaluasi keterkaitan dan interkasi dampak lingkungan yang diprakirakan timbul (seluruh dampak penting hipotetik) secara keseluruhan dalam rangka penentuan karakteristik dampak rencana usaha dan/atau kegiatan secara total terhadap lingkungan hidup. Meotde evaluasi dampak menggunakan metode-metode ilmiah yang berlaku secara nasional dan/atau internasional di berbagai literatur yang sesuai dengan kaidah ilmiah metode evaluasi dampak penting dalam Amdal.</p>
+                    </td>
+
                 </tr>
 
 
                 <tr>
                     <td style="width: 976px;">
-                        <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen KA-Andal, Amdal dan RKL-RPL</p>
+                        <p style="text-align: justify">Semua informasi yang dijelaskan diatas disampaikan dalam bentuk Formulir KA sebagaimana berikut :</p>
                     </td>
                 </tr>
                 <tr>

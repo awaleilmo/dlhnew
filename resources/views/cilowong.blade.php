@@ -14,9 +14,34 @@
                 <br>
                 <tr>
                     <td align="left">
-                        <p style="text-align: justify; font-size: large">Tempat Pemrosesan Akhir Sampah (TPAS) Cilowong dioperasikan pada Tahun 1995, dibawah pengelolaan Pemerintah Kabupaten Serang dengan luas awal 5,5  Ha.  Periode 1995 – 2007 penambahan lahan seluas + 7 Ha, Periode  2007 – 2011 penambahan lahan seluas 0,532 Ha, dan Periode 2011 – 2013 penambahan lahan seluas 0,959 Ha, sehingga total lahan keseluruhan sampai akhir 2017 seluas ± 14,2 Ha.</p></td>
+                        <p style="text-align: justify; font-size: large">Tempat Pemrosesan Akhir (TPA), awalnya bernama Tempat Pembuangan Akhir (TPA). Berdasarkan Undang - Undang Nomor 18 Tahun 2008, tentang Pengelolaan Sampah maka istilah Tempat Pembuangan Akhir (TPA) dirubah menjadi Tempat Pemrosesan Akhir  (TPA).</p></td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large">TPA adalah tempat untuk memroses  dan mengembalikan  sampah ke media lingkungan secara aman bagi manusia dan lingkungan. Fungsi utama TPA adalah tempat pemrosesan akhir sampah.</p></td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large">Lokasi Tempat Pemrosesan Akhir Sampah (TPAS) Cilowong terletak di sekitar Kampung Cikoak dan Kampung Pasir Gadung, Kelurahan Cilowong, Kecamatan Taktakan, Kota Serang, tepatnya disisi jalan Taktakan- Gunungsari. Jarak dari pusat Kota Serang ± 12 km, sedangkan dengan permukiman terdekat ± 600 m’ dari Kampung Cikoak dan ± 1.500 m’ dari Kampung Pasir Gadung Wadas .</p></td>
                 </tr>
             </table>
+
+            <div class="hero-box bg-white hero-box-smaller ">
+                <div class="container">
+                    <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>Batas TPAS Cilowong</strong></h2>
+                    <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+                        <br>
+                        <br>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify; font-size: large">Adapun batas TPAS dengan lingkungan lainnya  adalah sebagai berikut :</p></td>
+                        </tr>
+                    </tr>
+                    </table>
 
         </div>
     </div>
