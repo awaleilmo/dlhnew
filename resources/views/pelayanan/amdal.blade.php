@@ -105,6 +105,50 @@
                         <p style="text-align: justify">Informasi umum formulir Kerangka Acuan Andal minimal berisikan antara lain ;</p>
                     </td>
                 </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">a.	Nama Kegiatan ~ pada bagian ini dicantumkan nama rencana usaha dan/atau kegiatan yang akan dilakukan.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">b.	Pelaku Usaha ~ pada bagian ini dicantumkan nama dan alamat lengkap instansi/perusahaan sebagai pelaku usaha dan/atau kegiatan, serta nama dan alamat lengkap penanggung jawab rencana usaha dan/atau kegiatan.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">c.	Penyusun Dokumen ~ pada bagian ini dicantumkan Penyusun Dokumen Amdal yang terdiri dari Tim Penyusun Dokumen Amdal, Tenaga Ahli dan Asisten Penyusun Dokumen Amdal. Penyusun Dokumen Amdal wajib dilengkapi dengan Sertifikat Kompetensi Penyusun Dokumen Amdal, dalam hal penyusunan dokumen Amdal dilakukan oleh Lembaga Penyedia Jasa Penyusun (LPJP) Amdal maka wajib disertakan bukti registrasi yang masih berlaku atas nama LPJP Amdal terkait.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">d.	Deskripsi Rencana Usaha dan/atau Kegiatan ~ pada bagian ini dijelaskan rencana kegiatan utama dan kegiatan pendukung berikut pula alternatif rencana usaha dan/atau kegiatan yang disertai pula dengan rencana pengelolaan dan pemantauan yang telah dipersiapkan.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">e.	Lokasi Rencana Kegiatan ~ pada bagian ini dijelaskan posisi lokasi rencana kegiatan yang akan dilakukan, informasi kegiatan lain di sekitar rencana usaha dan/atau kegiatan serta keterkaitannya dengan keberadaan lokasi ataupun kawasan sentitif yang ada.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">f.	Hasil Pelibatan Masyarakat ~ pada bagian ini dijelaskan hasil pelibatan masyarakat berupa saran, pendapat dan tanggapan yang dihasilkan dari proses pengumuman dan konsultasi publik yang telah dilakukan oleh pelaku usaha dan/atau kegiatan. Pada bagian ini diinformasikan pula wakil masyarakat sebagai perwakilan yang disepakati dan akan duduk sebagai Anggota Komisi Penilai Amdal.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify"></p>
+                    </td>
+                </tr>
                 </tr>
 
 
