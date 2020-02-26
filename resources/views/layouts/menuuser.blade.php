@@ -55,11 +55,24 @@
             </li>
             <li>
                 <a href="#" title="Components">
-                    Galeri <i class="glyph-icon icon-caret-down"></i>
+                    Galeri <i class="glyph-icon icon-caret-down"></i> @guest @else
+                        @if($fotonotif > 0 OR $videonotif >0)
+                            <span class="badge badge-danger badge-small"></span>
+                        @endif
+                                                                          @endguest
                 </a>
                 <ul>
-                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Foto</a></li>
-                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Video</a></li>
+                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Foto @guest @else
+                                @if($fotonotif > 0 )
+                                    <span class="badge badge-danger badge-small"></span>
+                                @endif
+                            @endguest</a></li>
+                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Video @guest @else
+                                @if($videonotif > 0 )
+                                    <span class="badge badge-danger badge-small"></span>
+                                @endif
+                        @endguest
+                        </a></li>
                 </ul>
             </li>
             @guest
@@ -79,17 +92,17 @@
                                 @endif
                             </a>
                             <ul class="dropdown-menu" style="position:relative;background-color: #253035; height: auto; overflow-x: hidden; overflow-y: hidden;" aria-labelledby="dropdownMenu2">
-                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('amdal')}}"> AMDAL @if($amdalnotif > 0 )
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{url('notif')}}/1"> AMDAL @if($amdalnotif > 0 )
                                             <span class="badge badge-danger badge-small"></span>
                                         @endif</a>
                                 </li>
-                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('uklupl')}}"> UKL-UPL
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{url('notif')}}/2"> UKL-UPL
                                     @if($ukluplnotif > 0 )
                                         <span class="badge badge-danger badge-small"></span>
                                     @endif
                                     </a>
                                 </li>
-                                <li class="dropdown" style="width:100%; color: white"><a href="{{route('sppl')}}"> SPPL
+                                <li class="dropdown" style="width:100%; color: white"><a href="{{url('notif')}}/3"> SPPL
                                     @if($spplnotif > 0 )
                                         <span class="badge badge-danger badge-small"></span>
                                     @endif
@@ -122,40 +135,57 @@
                 </li>
                 <li>
                     <a href="#" title="Components">
-                        Pelaporan <i class="glyph-icon icon-caret-down"></i>
+                        Pelaporan <i class="glyph-icon icon-caret-down"></i> @if($pengaduannotif > 0 )
+                            <span class="badge badge-danger badge-small"></span>
+                        @endif
                     </a>
                     <ul>
-                        <li class="dropdown" style="color: white"><a href="{{url('pojok_pengaduan')}}">Pengaduan</a></li>
+                        <li class="dropdown" style="color: white"><a href="{{url('notif')}}/6">Pengaduan
+                                    @if($pengaduannotif > 0 )
+                                        <span class="badge badge-danger badge-small"></span>
+                                    @endif</a></li>
                     </ul>
 
                 </li>
                 <li>
                     <a href="#" title="Pages">
-                        Program <i class="glyph-icon icon-caret-down"></i>
+                        Program <i class="glyph-icon icon-caret-down"></i> @if($banksampahnotif > 0 )
+                            <span class="badge badge-danger badge-small"></span>
+                        @endif
                     </a>
                     <ul>
                         <li class="dropdown"><a href="{{route('adwiyata')}}">Adiwiyata</a></li>
                         <li class="dropdown"><a href="javascript:(0)">Adipura</a></li>
-                        <li class="dropdown"><a href="{{route('banksampah')}}">Bank Sampah</a></li>
+                        <li class="dropdown"><a href="{{url('notif')}}/7">Bank Sampah @if($banksampahnotif > 0 )
+                                    <span class="badge badge-danger badge-small"></span>
+                                @endif</a></li>
                         <li class="dropdown"><a href="{{route('pengawasan')}}">Pengawasan</a></li>
                         <li class="dropdown"><a href="{{route('persampahan')}}">Persampahan</a></li>
                         <li class="dropdown"><a href="{{route('tps3r')}}">TPS 3R</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="{{route('data')}}" title="Pages">
-                        Data
+                    <a href="{{url('notif')}}/8" title="Pages">
+                        Data @if($datanotif > 0 )
+                            <span class="badge badge-danger badge-small"></span>
+                        @endif
                     </a>
 
                 </li>
             @endguest
             <li>
                 <a href="#" title="Pages">
-                    Berita <i class="glyph-icon icon-caret-down"></i>
+                    Berita <i class="glyph-icon icon-caret-down"></i> @if($wartanotif > 0 OR $pengumumannotif > 0)
+                        <span class="badge badge-danger badge-small"></span>
+                    @endif
                 </a>
                 <ul>
-                    <li class="dropdown" style="color: white"><a href="{{route('artikel')}}"> Pojok Warta LH</a></li>
-                    <li class="dropdown" style="color: white"><a href="{{route('pengumuman')}}"> Pengumuman</a>
+                    <li class="dropdown" style="color: white"><a href="{{url('notif')}}/9"> Pojok Warta LH @if($wartanotif > 0 )
+                                <span class="badge badge-danger badge-small"></span>
+                            @endif</a></li>
+                    <li class="dropdown" style="color: white"><a href="{{url('notif')}}/10"> Pengumuman @if($pengumumannotif > 0)
+                                <span class="badge badge-danger badge-small"></span>
+                            @endif</a>
                     </li>
                 </ul>
 

@@ -13,6 +13,8 @@ use App\jenistps;
 use App\limbah;
 use App\lokasitps;
 use App\notif;
+use App\notif_admin;
+use App\notif_user;
 use App\pelaku;
 use App\Pengaduan;
 use App\pengumuman;
@@ -26,6 +28,8 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use PHPUnit\Framework\Constraint\Count;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\File;
 
@@ -38,6 +42,53 @@ class AdminController extends Controller
 
         }
         return redirect('/');
+    }
+    public function setting(){
+        if(Auth::check() && Auth::user()->level=='admin'){
+            $all = User::all();
+            $allus = Count($all);
+            $all1 = notif_user::all();
+            $allnot = Count($all1);
+            if($allus == $allnot){
+                $ps = 1;
+            }else{
+                $ps = 0;
+            }
+            return view('admin.setting', compact('ps'));
+        }
+        return redirect('/');
+    }
+    public function repairnotif(){
+        $allus = User::all();
+        $no = 0;
+        $no1 = count($allus);
+        $no2 = 0;
+        foreach ($allus as $p ){
+            $sl = notif_user::where('user_id','=', $p->id)->get();
+
+            $als = count($sl);
+
+            if($als > 0){
+
+            }else if($als <= 0){
+                $data['user_id'] = $p->id;
+                $data['amdal'] = 0;
+                $data['sppl'] = 0;
+                $data['uklupl'] = 0;
+                $data['foto'] = 0;
+                $data['video'] = 0;
+                $data['pengaduan'] = 0;
+                $data['banksampah'] = 0;
+                $data['data'] = 0;
+                $data['warta'] = 0;
+                $data['pengumuman'] = 0;
+
+                notif_user::create($data);
+            }
+
+        }
+        return redirect('/adminsetting');
+
     }
     public function tps(){
         if (Auth::check()&& Auth::user()->level=='admin'){
@@ -55,21 +106,21 @@ class AdminController extends Controller
     }
     public function hitpengaduan(request $request){
         if(auth::check() && auth::user()->level == 'admin'){
-            $s['menu'] = 'pelaporan';
-            $s['sub_menu'] = 'pengaduan';
-            $s['on'] = 0;
-            $s['db'] = $request->id;
-            notif::create($s);
+
             $p = $request->cek;
             foreach($p as $es){
                 $id = $request->cek[$es];
-                $data['status'] = 'selesai';
+                $data['status'] = 'Selesai';
                 $pengaduan = pengaduan::where('id','=',$id)->update($data);
+                $s['pengaduan'] = 1;
+                $kl = $request->ids[$es];
+                notif_user::where('user_id','=',$kl)->update($s);
+
             }
-            return redirect('/pengaduan');
+
 
         }
-        return redirect('/');
+        return redirect('/pengaduan');
     }
     public function tpengaduan(){
         $pengaduan = Pengaduan::all();
@@ -78,7 +129,7 @@ class AdminController extends Controller
                 if($row->status == 'Selesai'){
                 $btn = '';
                 }else{
-                $btn = '<input type="checkbox" class="checkbox" name="cek['.$row->id.']" value="'.$row->id.'">';
+                $btn = '<input type="checkbox" class="checkbox" name="cek['.$row->id.']" value="'.$row->id.'"> <input type="text" class="hidden" name="ids['.$row->id.']" value="'.$row->userId.'"> ';
                 }
                  return $btn;
             })
@@ -864,6 +915,8 @@ class AdminController extends Controller
         $check = bank::create($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){
+            $s['banksampah'] = 1;
+            DB::table('notif_users')->update($s);
             $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
         }
         return Response()->json($arr);
@@ -897,6 +950,8 @@ class AdminController extends Controller
         $check = bank::whereId($id)->update($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
         if($check){
+            $s['banksampah'] = 1;
+            DB::table('notif_users')->update($s);
             $arr = ['msg' => 'Berhasil Diubah'];
         }
         return Response()->json($arr);
@@ -939,11 +994,22 @@ class AdminController extends Controller
         $now = Carbon::now();
         $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
         $file->move($tujuan_upload, $fulname);
-        $data['nama'] = $request->nama;
+        $data['nama'] = strtoupper($request->nama);
         $data['forms'] = $fulname;
+        $cek = strtoupper($request->nama);
         $check = dokling::create($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){
+            if($cek == 'AMDAL'){
+                $s['amdal'] = 1;
+                DB::table('notif_users')->update($s);
+            }elseif($cek == 'UKLUPL'){
+                $s['uklupl'] = 1;
+                DB::table('notif_users')->update($s);
+            }elseif($cek == 'SPPL'){
+                $s['sppl'] = 1;
+                DB::table('notif_users')->update($s);
+            }
             $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
         }
         return Response()->json($arr);
@@ -968,11 +1034,22 @@ class AdminController extends Controller
             $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
             $file->move($tujuan_upload, $fulname);
         }
-        $data['nama'] = $request->nama;
+        $data['nama'] = strtoupper($request->nama);
         $data['forms'] = $fulname;
+        $cek = strtoupper($request->nama);
         $check = dokling::whereId($id)->update($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
         if($check){
+            if($cek == 'AMDAL'){
+                $s['amdal'] = '1';
+                DB::table('notif_users')->update($s);
+            }elseif($cek == 'UKLUPL'){
+                $s['uklupl'] = 1;
+                DB::table('notif_users')->update($s);
+            }elseif($cek == 'SPPL'){
+                $s['sppl'] = 1;
+                DB::table('notif_users')->update($s);
+            }
             $arr = ['msg' => 'Berhasil Diubah'];
         }
         return Response()->json($arr);
@@ -1118,6 +1195,8 @@ class AdminController extends Controller
         $check = data::create($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){
+            $s['data'] = 1;
+            DB::table('notif_users')->update($s);
             $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
         }
         return Response()->json($arr);
@@ -1147,6 +1226,8 @@ class AdminController extends Controller
         $check = data::whereId($id)->update($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
         if($check){
+            $s['data'] = 1;
+            DB::table('notif_users')->update($s);
             $arr = ['msg' => 'Berhasil Diubah'];
         }
         return Response()->json($arr);
@@ -1203,6 +1284,8 @@ class AdminController extends Controller
             $check = artikel::create($data);
             $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
             if($check){
+                $s['warta'] = 1;
+                DB::table('notif_users')->update($s);
                 $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
             }
             return Redirect('/adminartikel')->with($arr);
@@ -1256,6 +1339,8 @@ class AdminController extends Controller
             $check = artikel::whereId($id)->update($data);
             $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
             if($check){
+                $s['warta'] = 1;
+                DB::table('notif_users')->update($s);
                 $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
             }
             return Redirect('/adminartikel')->with($arr);
@@ -1338,6 +1423,8 @@ class AdminController extends Controller
             $check = pengumuman::create($data);
             $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
             if($check){
+                $s['pengumuman'] = 1;
+                DB::table('notif_users')->update($s);
                 $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
             }
             return Redirect('/adminpengumuman')->with($arr);
@@ -1391,6 +1478,8 @@ class AdminController extends Controller
             $check = pengumuman::whereId($id)->update($data);
             $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
             if($check){
+                $s['pengumuman'] = 1;
+                DB::table('notif_users')->update($s);
                 $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
             }
             return Redirect('/adminpengumuman')->with($arr);
@@ -1613,5 +1702,29 @@ class AdminController extends Controller
     public function tmpdf($id){
         $s = dokir::find($id);
         return view('admin.tmpdf',compact('s'));
+    }
+    public function notif($id){
+        if($id == 1){
+            $data['dokling'] = 0;
+            $is = 1;
+            notif_admin::whereId($is)->update($data);
+            return redirect('admindoklingkungan');
+        }else if($id == 2){
+            $data['data'] = 0;
+            $is = 1;
+            notif_admin::whereId($is)->update($data);
+            return redirect('admindata');
+        }else if($id == 3){
+            $data['pelaporan'] = 0;
+            $is = 1;
+            notif_admin::whereId($is)->update($data);
+            return redirect('pengaduan');
+        }else if($id == 4){
+            $data['banksampah'] = 0;
+            $is = 1;
+            notif_admin::whereId($is)->update($data);
+            return redirect('adminbank');
+        }
+
     }
 }

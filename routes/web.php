@@ -28,6 +28,7 @@ Route::get('/api/app/findartikel','UserMobileController@findpojokwarga')->name('
 Route::get('/api/app/pengumuman','UserMobileController@pengumuman')->name('pengumuman/user');
 Route::get('/api/app/findpengumuman','UserMobileController@findpengumuman')->name('findpengumuman/user');
 Route::post('/api/app/pengaduan','UserMobileController@pengaduan')->name('pengaduan/user');
+Route::post('/api/app/dokupload','UserMobileController@dokir')->name('dokupload/user');
 Route::get('/api/app/tentang','UserMobileController@tentang')->name('tentang/user');
 Route::get('/api/app/bidang','UserMobileController@bidang')->name('bidang/user');
 Route::get('/api/app/ukl','UserMobileController@ukl')->name('ukl/user');
@@ -85,12 +86,14 @@ Route::get("/adminbank","AdminController@bank")->name("admin/banksampah");
 Route::get("/admindoklingkungan","AdminController@doklingkungan")->name("admin/doklingkungan");
 Route::get("/adminlimbah","AdminController@limbah")->name("admin/limbah");
 Route::get("/admindata","AdminController@adata")->name("admin/data");
+Route::get("/adminsetting","AdminController@setting")->name("admin/setting");
 Route::get("/adminpojok","AdminController@pojok")->name("admin/pojok");
 Route::get("/adminartikel","AdminController@artikel")->name("admin/artikel");
 Route::get("/adminpengumuman","AdminController@pengumuman")->name("admin/pengumuman");
 Route::get('/tps3r','AdminController@tps')->name('admin/tps3r');
 
 //admin function button
+Route::get('/repairnotif', 'AdminController@repairnotif')->name('repairnotif');
 Route::get('/tpelaku', 'AdminController@tpelaku')->name('tpelaku');
 Route::post('/cpelaku', 'AdminController@cpelaku')->name('cpelaku');
 Route::get('/spelaku/{id}', 'AdminController@spelaku')->name('spelaku');
@@ -247,3 +250,7 @@ Route::get('/artikel','UserController@artikel')->name('artikel');
 Route::get('/artikel/{id}','UserController@artikelsub');
 Route::get('/pengumuman','UserController@pengumuman')->name('pengumuman');
 Route::get('/pengumuman/{id}','UserController@pengumumansub');
+
+//system action
+Route::get('/adminnotif/{id}','AdminController@notif');
+Route::get('/notif/{id}','UserController@notif');
