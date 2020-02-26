@@ -8,15 +8,67 @@
     </div>
     <div class="hero-box bg-white hero-box-smaller ">
         <div class="container">
-            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>TPAS Cilowong</strong></h2>
+            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>Sejarah TPAS Cilowong</strong></h2>
             <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
                 <tr>
                     <td align="left">
-                        <p style="text-align: justify; font-size: large">Tempat Pemrosesan Akhir Sampah (TPAS) Cilowong dioperasikan pada Tahun 1995, dibawah pengelolaan Pemerintah Kabupaten Serang dengan luas awal 5,5  Ha.  Periode 1995 – 2007 penambahan lahan seluas + 7 Ha, Periode  2007 – 2011 penambahan lahan seluas 0,532 Ha, dan Periode 2011 – 2013 penambahan lahan seluas 0,959 Ha, sehingga total lahan keseluruhan sampai akhir 2017 seluas ± 14,2 Ha.</p></td>
+                        <p style="text-align: justify; font-size: large">Tempat Pemrosesan Akhir (TPA), awalnya bernama Tempat Pembuangan Akhir (TPA). Berdasarkan Undang - Undang Nomor 18 Tahun 2008, tentang Pengelolaan Sampah maka istilah Tempat Pembuangan Akhir (TPA) dirubah menjadi Tempat Pemrosesan Akhir  (TPA). TPA adalah tempat untuk memroses
+                            dan mengembalikan  sampah ke media lingkungan secara aman bagi manusia dan lingkungan. Fungsi utama TPA adalah tempat pemrosesan akhir sampah. Tempat Pemrosesan Akhir Sampah (TPAS) Cilowong dibangun dan dioperasikan mulai  Tahun 1995 oleh Pemerintah Kabupaten Serang dengan luas awal 5,5  Ha.,
+                            dan pada Periode 1995 – 2007 penambahan lahan seluas + 7 Ha.</p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large">Setelah keluarnya Undang Undang Nomor 32 Tahun 2007 tentang Pembentukan Kota Serang, TPAS Cilowong yang lokasinya berada di Kecamatan Taktakan Wilayah Kota Serang, maka pada awal tahun 2009 pengelolaan TPAS Cilowong diserahkan dari Pemerintah Kabupaten Serang kepada Pemerintah Kota Serang, akan tetapi penggunaannya untuk menampung sampah baik
+                            dari wilayah Kota Serang maupun sampah dari wilayah Kabupaten Serang. Saat ini status kepemilikan lahan TPAS Cilowong di bawah Pemerintah Kota Serang.</p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large">Pada tahun 2009, antara Pemerintah Kota Serang, Pemerintah Kabupaten Serang , PT. Enviro Recycle Indonesia (ERI), dan PT. ERC mengadakan perjanjian kerjasama untuk pengelolaan sampah di TPAS Cilowong. PT. ERI mengelola sampah menjadi kompos/pembuatan pupuk organik, sedangkan PT. ERC mengelola gas methane menjadi energi listrik. Namun kerjasama
+                            tersebut mengalami kendala sehingga sampai habis waktu kerjasama yang ditentukan tidak berhasil sesuai yang telah diharapkan.</p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large">Pada tahun 2011 Pemerintah Kota Serang mengadakan penambahan lahan seluas 0,532 Ha, Periode 2011 – 2013 penambahan lahan seluas 0,959 Ha, dan pada akhir tahun 2019 penambahan lahan seluas sekitar 1,7 Ha sehingga luas lahan TPAS Cilowong keseluruhan sampai akhir tahun 2019 seluas ± 15,9 Ha.</p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large">Pengelolaan TPAS Cilowong pada Tahun 2009 s/d Desember 2011 tugas pokok dan fungsinya ada pada Seksi Pengelolaan Persampahan di bawah Bidang Kebersihan, Dinas Pekerjaan Umum. Dengan adanya perubahan Struktur Organisasi di Pemerintah Kota Serang dengan terbentuknya Dinas Tata Kota, dari awal tahun 2012
+                            Pengelolaan sampah tugas pokok dan fungsinya ada pada Seksi Penglolaan Persampahan dibawah Bidang Kebersihan Dinas Tata Kota.  Pada bulan September 2014 Seksi Pengelolaan Persampahan dirubah menjadi Seksi Pengawasan Dan Peningkatan Peran Serta Masyarakat, dan pada Tanggal 04 Desember 2014 TPAS Cilowong statusnya berubah menjadi UPT TPAS Cilowong. Dan dengan diberlakukannya Peraturan Pemerintah Nomor 18 Tahun 2016, tentang Perangkat Daerah, dari bulan Januari 2017 UPT TPAS Cilowong dirubah menjadi UPT Kebersihan, dan pada tahun 2019 dirubah lagi menjadi Unit Pelaksana Teknis Dinas (UPTD) Pengelolaan Sampah di bawah Dinas Lingkungan Hidup Kota Serang.</p></td>
                 </tr>
             </table>
+            <div class="hero-box bg-white hero-box-smaller ">
+                <div class="container">
+                    <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>Batas TPAS Cilowong</strong></h2>
+                    <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+                        <br>
+                        <br>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify;"><strong>Adapun batas TPAS dengan lingkungan lainnya  adalah sebagai berikut :</strong></p></td
+                    </tr>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify">1. Sebelah Barat : Jalan Raya Taktakan - Gunungsari</p></td>
+
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify">2. Sebelah Utara : Kebun Campuran milik masyarakat</p></td>
+
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify">3. Sebelah Timur : Kebun Campuran milik masyarakat</p></td>
+
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify">4. Sebelah Selatan : Kebun Campuran milik masyarakat</p></td>
+
+                        </tr>
+                    </table>
 
         </div>
     </div>
@@ -31,6 +83,18 @@
                         <p style="text-align: justify; font-size: large">
                             Tempat Pemrosesan Akhir ( TPA ), awalnya bernama Tempat Pembuangan Akhir (TPA). Berdasarkan Undang - Undang Nomor 18 Tahun 2008 tentang Pengelolaan
                             Sampah maka istilah Tempat Pembuangan Akhir (TPA) dirubah menjadi Tempat Pemrosesan Akhir  (TPA).</p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large"><strong>1. Undang Undang Republik Indonesia Nomor 18 Tahun 2008 Tentang Pengelolaan Sampah;</strong></p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large"><strong>2. Peraturan Pemerintah Republik Indonesia Nomor 81 Tahun 2012 Tentang Pengelolaan Sampah Rumah Tangga dan Sampah Sejenis Sampah Rumah Tangga;</strong></p></td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p style="text-align: justify; font-size: large"><strong>3.	Peraturan Menteri Pekerjaan Umum Republik Indonesia Nomor 03/PRT/M/2013 Tentang Penyelenggaraan Prasarana dan Sarana Persampahan Dalam Penanganan Sampah Rumah Tangga dan Sampah Sejenis Sampah Rumah Tangga.</strong></p></td>
                 </tr>
             </table>
 
@@ -139,33 +203,54 @@
     <br>
     <div class="hero-box bg-white hero-box-smaller ">
         <div class="container">
-            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>TPAS Cilowong</strong></h2>
+            <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>Sarana dan Prasarana</strong></h2>
             <div  class="row wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="opacity:1;visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
                 <br>
                 <br>
                 <div class="col-md-6">
-                    <h2><strong>Tujuan</strong></h2><br>
+                    <h2><strong>Bangunan</strong></h2><br>
                     <p style="text-align: left; font-size: large">
-                        <i class="glyph-icon icon-check font-blue"></i> Mengelola sampah agar  tidak menjadi bahan pencemar bagi lingkungan.
-                    </p><br>
+                        <i class="glyph-icon icon-check font-blue"></i> Kantor</p><br>
                     <p style="text-align: left; font-size: large" >
-                        <i class="glyph-icon icon-check font-blue"></i> Mengelola sampah Kota Serang dan Kabupaten Serang agar menjadi produk yang bermanfaat bagi masyarakat.</p><br>
+                        <i class="glyph-icon icon-check font-blue"></i> Bangunan Pabrik Kompos</p><br>
                     <p style="text-align: left; font-size: large">
-                        <i class="glyph-icon icon-check font-blue"></i> Dengan pengembangan TPAS Cilowong, dapat meningkatkan upaya pelayanan pengelolaan persampahan di Kota Serang dan Kab. Serang.
-                    </p>
+                        <i class="glyph-icon icon-check font-blue"></i> Gudang</p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Jalan Operasi</p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Pos Jaga </p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Sel Penampungan Sampah</p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Sel Penampungan Sampah</p>
 
                 </div>
                 <div class="col-md-6">
-                    <h2 style="text-align: center;"><strong>Manfaat</strong></h2><br>
-                    <p style=" text-align: center; font-size: large">
-                        <i class="glyph-icon icon-check font-blue"></i> Lingkungan menjadi bersih dan sehat
+                    <h2 style="text-align: left;"><strong>Peralatan, Alat Berat dan Kendaraan </strong></h2><br>
+                    <p style=" text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Mesin Pengolahan Kompos  : 1 Unit
                         </p><br>
-                    <p style="text-align: center; font-size: large">
-                        <i class="glyph-icon icon-check font-blue"></i> Kota Serang menjadi kota yang bersih
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Mesin Pengolahan Air Limbah : 3 Buah
                         </p><br>
-                    <p style="text-align: center; font-size: large">
-                        <i class="glyph-icon icon-check font-blue"></i> Sanitasi lingkungan menjadi lebih baik
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Whell Loader/Sovel : 1 Unit
                         </p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Buldozer : 1 Unit
+                    </p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Excavator : 2 Unit
+                    </p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Dump Truk : 1 Unit
+                    </p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Mobil Pick Up : 2 Unit
+                    </p><br>
+                    <p style="text-align: left; font-size: large">
+                        <i class="glyph-icon icon-check font-blue"></i> Sepeda Motor : 1 Unit
+                    </p>
                 </div>
             </div>
 

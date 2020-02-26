@@ -12,7 +12,7 @@
                     }
                 </style>
                 <ul class="nav nav-tabs" style="padding: 0 10%;">
-                    <li><a id="1" onclick="f1()" class="aktif" href="javascript:void(0)">Formulir UKL UPL</a></li>
+                    <li><a id="1" onclick="f1()" class="aktif" href="javascript:void(0)">UKL-UPL</a></li>
                     <li><a id="2" onclick="f2()" href="javascript:void(0)">Upload Form</a></li>
                 </ul>
             </div>
