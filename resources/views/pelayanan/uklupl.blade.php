@@ -75,6 +75,21 @@
                         <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen UKL-UPL</p>
                     </td>
                 </tr>
+
+                <tr>
+                    <td style="width: 976px;">
+                        <p style="text-align: justify">Untuk melengkapi persyaratan diatas, download form di bawah ini sebagai syarat dalam pembuatan dokumen UKL UPL</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        @foreach($p as $pp)
+                            <a href="upload/dokumenlingkungan/{{$pp->forms}}" download="upload/dokumenlingkungan/{{$pp->forms}}" class="btn btn-primary" style="font-size: large;"><i class="glyph-icon icon-file-word-o"></i> Download Form </a>
+                        @endforeach
+                    </td>
+                </tr>
                 </tbody>
             </table>
                 </div>

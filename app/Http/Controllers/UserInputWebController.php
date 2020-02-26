@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\dokir;
+use App\notif_admin;
 use App\Pengaduan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -75,6 +76,9 @@ class UserInputWebController extends Controller
         ]);
         $user = Pengaduan::create($input);
         if($user){
+            $s['pelaporan'] = 1;
+            $z= 1;
+            notif_admin::where('id','=',$z)->update($s);
             return redirect("pojok_pengaduan")->with(['alert' => 'Sukses']);
         }
         return redirect("pojok_pengaduan")->with(['gagal' => 'Gagal']);
@@ -133,6 +137,9 @@ class UserInputWebController extends Controller
         $check = dokir::create($data);
         $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
         if($check){
+            $s['dokling'] = 1;
+            $z= 1;
+            notif_admin::where('id','=',$z)->update($s);
             $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
         }
         return Response()->json($arr);

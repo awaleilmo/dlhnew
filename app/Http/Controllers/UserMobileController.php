@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\artikel;
 use App\data;
+use App\dokir;
 use App\dokling;
 use App\limbah;
+use App\notif_admin;
 use App\Pengaduan;
 use App\pengumuman;
 use App\User;
@@ -645,6 +647,9 @@ class UserMobileController extends Controller
         ]);
         $user = Pengaduan::create($input);
         if($user){
+            $s['pelaporan'] = 1;
+            $z= 1;
+            notif_admin::where('id','=',$z)->update($s);
             return response()->json(['status'=>'sukses']);
         }
         return response()->json(['status'=>'gagal']);
@@ -845,5 +850,80 @@ class UserMobileController extends Controller
         return response()->json(['status' => 'sukses','URL Download' => $url, 'data' => $user]);
     }
 
+    /**
+     * @OA\Post(
+     *     path="/api/app/dokupload",
+     *     tags={"dokupload"},
+     *     operationId="downloaddok",
+     *     @OA\Parameter(
+     *          name="userId",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="dok",
+     *          description="nama dokumen",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *
+     *
+     *      @OA\RequestBody(
+     *         required=true,
+     *         @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     property="foto",
+     *                     type="file",
+     *                     format="file",
+     *                 ),
+     *                 required={"file"}
+     *             )
+     *         )
+     *     ),
+     *
+     *
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
 
+    public function cdokir(Request $request){
+        $file = $request->file('file');
+        $tujuan_upload = 'upload/dokir';
+        $idnya = $request->userId;
+        $now = Carbon::now();
+        if($file == ""){
+            $fulname = "kosong";
+        }else {
+            $fulname = $now->year . "-" . $now->month . "-" . $now->day . "_" . $now->hour . "-" . $now->minute . "-" . $now->second . "_" .$idnya."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+        }
+
+        $data['dokling'] = $request->dok;
+        $data['userId'] = $idnya;
+        $data['file'] = $fulname;
+        $data['status'] = 'Pending';
+        $check = dokir::create($data);
+        $arr = ['status' => 'gagal'];
+        if($check){
+            $s['dokling'] = 1;
+            $z= 1;
+            notif_admin::where('id','=',$z)->update($s);
+            $arr = ['status' => 'sukses'];
+        }
+        return Response()->json($arr);
+    }
 }

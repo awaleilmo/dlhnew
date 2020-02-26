@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use App\notif;
+use App\notif_admin;
+use App\notif_user;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,22 +28,57 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
        view()->composer('*', function($vi){
-           $a = notif::where('menu','=','dokling')->orWhere('menu','=','limbah')->orWhere('menu','=','upkl')
-               ->orWhere('menu','=','ipal')
-               ->where('on','=','0')
-               ->get();
-           $amdal = notif::where('menu','=','dokling')->where('sub_menu','=','AMDAL')->where('on','=','0');
-           $sppl = notif::where('menu','=','dokling')->where('sub_menu','=','SPPL')->where('on','=','0');
-           $uklupl = notif::where('menu','=','dokling')->where('sub_menu','=','UKLUPL')->where('on','=','0');
 
-           $amdalnotif = $amdal->count();
-           $spplnotif = $sppl->count();
-           $ukluplnotif = $uklupl->count();
-           $pelaynotif = $a->count();
-           $vi->with('pelaynotif',$pelaynotif)
-               ->with('amdalnotif',$amdalnotif)
+           $amdalnotif = 0;
+           $spplnotif = 0;
+           $ukluplnotif = 0;
+           $fotonotif = 0;
+           $videonotif = 0;
+           $pengaduannotif = 0;
+           $banksampahnotif = 0;
+           $datanotif = 0;
+           $wartanotif = 0;
+           $pengumumannotif = 0;
+           $doklingadminnotif = 0;
+           $dataadminnotif = 0;
+           $pelaporanadminnotif = 0;
+           $banksampahadminnotif = 0;
+           if(Auth::check()){
+               $a = notif_user::where('user_id','=', Auth::user()->id)->get();
+               foreach ($a as $p){
+               $amdalnotif = $p->amdal;
+               $spplnotif = $p->sppl;
+               $ukluplnotif = $p->uklupl;
+               $fotonotif = $p->foto;
+               $videonotif = $p->video;
+               $pengaduannotif = $p->pengaduan;
+               $banksampahnotif = $p->banksampah;
+               $datanotif = $p->data;
+               $wartanotif = $p->warta;
+               $pengumumannotif = $p->pengumuman;
+               }
+                $taaa = 1;
+               $z = notif_admin::find($taaa);
+               $doklingadminnotif = $z->dokling;
+               $dataadminnotif = $z->data;
+               $pelaporanadminnotif = $z->pelaporan;
+               $banksampahadminnotif = $z->banksampah;
+           }
+
+           $vi->with('amdalnotif',$amdalnotif)
                ->with('spplnotif',$spplnotif)
-               ->with('ukluplnotif',$ukluplnotif);
+               ->with('ukluplnotif',$ukluplnotif)
+               ->with('fotonotif',$fotonotif)
+               ->with('videonotif',$videonotif)
+               ->with('pengaduannotif',$pengaduannotif)
+               ->with('banksampahnotif',$banksampahnotif)
+               ->with('datanotif',$datanotif)
+               ->with('wartanotif',$wartanotif)
+               ->with('pengumumannotif',$pengumumannotif)
+               ->with('doklingadminnotif', $doklingadminnotif)
+               ->with('dataadminnotif', $dataadminnotif)
+               ->with('pelaporanadminnotif', $pelaporanadminnotif)
+               ->with('banksampahadminnotif', $banksampahadminnotif);
        });
 	//Builder::defaultStringLength(255);
         //config(['app.locale' => 'id']);

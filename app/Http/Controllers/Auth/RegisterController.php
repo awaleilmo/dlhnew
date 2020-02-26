@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\notif_user;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,7 +65,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        $al =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
 	    'level' => $data['level'],
@@ -72,5 +74,23 @@ class RegisterController extends Controller
             'remember_token' => csrf_token(),
             'password' => Hash::make($data['password']),
         ]);
+        $sel = User::where('email','=',$data['email'])->get();
+        foreach ($sel as $p){
+            $dataa['user_id'] = $p->id;
+            $dataa['amdal'] = 0;
+            $dataa['sppl'] = 0;
+            $dataa['uklupl'] = 0;
+            $dataa['foto'] = 0;
+            $dataa['video'] = 0;
+            $dataa['pengaduan'] = 0;
+            $dataa['banksampah'] = 0;
+            $dataa['data'] = 0;
+            $dataa['warta'] = 0;
+            $dataa['pengumuman'] = 0;
+
+            notif_user::create($dataa);
+        }
+
+        return $al;
     }
 }

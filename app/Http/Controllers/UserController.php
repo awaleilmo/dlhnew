@@ -6,6 +6,8 @@ use App\artikel;
 use App\bank;
 use App\dokling;
 use App\limbah;
+use App\notif_admin;
+use App\notif_user;
 use App\Pengaduan;
 use App\pengumuman;
 use App\sca;
@@ -280,6 +282,61 @@ class UserController extends Controller
         }
         return redirect('/login');
 
+    }
+
+    public function notif($id){
+
+        if($id == 1){
+            $data['amdal'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('amdal');
+        }else if($id == 2){
+            $data['uklupl'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('uklupl');
+        }else if($id == 3){
+            $data['sppl'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('sppl');
+        }else if($id == 4){
+            $data['foto'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('foto');
+        }else if($id == 5){
+            $data['video'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('video');
+        }else if($id == 6){
+            $data['pengaduan'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('pojok_pengaduan');
+        }else if($id == 7){
+            $data['banksampah'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('banksampah');
+        }else if($id == 8){
+            $data['data'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('data');
+        }else if($id == 9){
+            $data['warta'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('artikel');
+        }else if($id == 10){
+            $data['pengumuman'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return redirect('pengumuman');
+        }
     }
 
 }

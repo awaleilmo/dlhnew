@@ -65,15 +65,7 @@
                         <p style="text-align: justify">Bidang Pengelolaan Sampah, Limbah B3 dan Peningkatan Kapasitas Lingkungan Hidup dipimpin oleh Kepala Bidang yang berada dibawah dan bertanggung jawab kepada Kepala Dinas Lingkungan Hidup, membawahi :</p></td>
                 </tr>
 
-                <tr>
-                    <td style="" colspan="4"><strong>Seksi Pengelolaan Sampah (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
-                <tr>
-                    <td style="" colspan="4"><strong>SSeksi Limbah B3 (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
-                <tr>
-                    <td style="" colspan="4"><strong>Seksi Peningkatan Kapasitas (bisa di klik dan muncul page baru)</strong></td>
-                </tr>
+
 
             </table>
 @endsection

@@ -1,6 +1,18 @@
 @extends('layouts.layouts')
 
 @section('konten')
+    <script type="text/javascript">
+        $(window).load(function(){
+            $.ajax({
+                url: '{{url("adminnotif")}}/1',
+                type: "GET",
+
+            });
+
+        });
+
+
+    </script>
     <style>
         .modal-backdrop{
             position: inherit;
@@ -315,7 +327,7 @@
                     { data: 'keterangan',   name: 'keterangan'},
                     { data: 'status',       name: 'status', },
                 ],
-                order: [[0, 'asc']]
+                order: [[0, 'desc']]
             });
 
         </script>

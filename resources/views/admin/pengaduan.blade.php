@@ -252,7 +252,7 @@
                         { data: 'status',       name: 'status', },
                         { data: 'action',       name: 'action', },
                     ],
-                    order: [[0, 'asc']]
+                    order: [[1, 'desc'],[6,'asc']]
                 });
 
                 /////////////
