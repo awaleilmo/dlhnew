@@ -180,12 +180,14 @@
                     @endif
                 </a>
                 <ul>
-                    <li class="dropdown" style="color: white"><a href="{{url('notif')}}/9"> Pojok Warta LH @if($wartanotif > 0 )
+                    <li class="dropdown" style="color: white">@guest <a href="{{url('artikel')}}"> @else<a href="{{url('notif')}}/9"> @endguest Pojok Warta LH @guest @else @if($wartanotif > 0 )
                                 <span class="badge badge-danger badge-small"></span>
-                            @endif</a></li>
-                    <li class="dropdown" style="color: white"><a href="{{url('notif')}}/10"> Pengumuman @if($pengumumannotif > 0)
+                            @endif
+                        @endguest
+                        </a></li>
+                    <li class="dropdown" style="color: white">@guest <a href="{{url('pengumuman')}}"> @else <a href="{{url('notif')}}/10"> @endguest Pengumuman @guest @else @if($pengumumannotif > 0)
                                 <span class="badge badge-danger badge-small"></span>
-                            @endif</a>
+                            @endif @endguest</a>
                     </li>
                 </ul>
 
