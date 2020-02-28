@@ -853,7 +853,7 @@ class UserMobileController extends Controller
     /**
      * @OA\Post(
      *     path="/api/app/dokupload",
-     *     tags={"dokupload"},
+     *     tags={"Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"},
      *     operationId="downloaddok",
      *     @OA\Parameter(
      *          name="userId",
