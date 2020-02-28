@@ -650,6 +650,57 @@
                     }
                 }
             }
+        },
+        "/api/app/dokupload": {
+            "post": {
+                "tags": [
+                    "dokupload"
+                ],
+                "operationId": "downloaddok",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dok",
+                        "in": "query",
+                        "description": "nama dokumen",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "file"
+                                ],
+                                "properties": {
+                                    "foto": {
+                                        "type": "file",
+                                        "format": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
         }
     },
     "components": {
