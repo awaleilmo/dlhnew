@@ -293,6 +293,7 @@ class UserController extends Controller
 
     public function  video(){
         $kl = video::orderBy('created_at','desc')->paginate(9);
+
         return view('galeri.video', compact('kl'));
     }
 

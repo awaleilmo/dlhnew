@@ -65,8 +65,11 @@
 
                         @foreach($kl as $p)
                             <div style="margin-left: 5px; margin-right: 5px; float: left; margin-top:10px;">
-                                <div class="panel panel-info panel-box content-box" style=" margin-left: 10px; margin-right: 10px">
-                                    <div class="panel-heading text-uppercase"> {{$p->judul}} </div>
+                                <div class="panel panel-info panel-box content-box" style="width:350px; height: 250px; margin-left: 10px; margin-right: 10px">
+                                    <div class="panel-heading text-uppercase" style="font-size: small"> @php
+                                            $k = $p->judul;
+                                            echo substr( $k, 0,40);
+                                            @endphp... </div>
                                     <div id="fotol{{$p->id}}" class="panel-body">
                                         <a href="{{url('video')}}/{{$p->id}}" style="cursor: pointer">
                                             <i class="glyph-icon icon-play-circle iti" style="position: absolute;  width: 100%; "></i>
