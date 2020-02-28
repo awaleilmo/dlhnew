@@ -30,6 +30,18 @@
             <li class="divider"></li>
             <li>
                 <a href="#" title="Elements">
+                    <i class="glyph-icon icon-linecons-photo"></i>
+                    <span>Galeri</span>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li><a href="{{route('admin/foto')}}">Foto </a></li>
+                    <li><a href="{{route('admin/video')}}">Video </a></li>
+                </ul>
+            </li>
+            <li>
+            <li class="divider"></li>
+            <li>
+                <a href="#" title="Elements">
                     <i class="glyph-icon icon-linecons-graduation-cap"></i>
                     <span>Program </span>
                     @if($banksampahadminnotif > 0)
@@ -104,7 +116,7 @@
             </li>
             <li>
                 <a href="{{route('admin/setting')}}" title="Elements">
-                    <i class="glyph-icon icon-linecons-desktop"></i>
+                    <i class="glyph-icon icon-linecons-cog"></i>
                     <span>Settings </span>
                 </a>
             </li>

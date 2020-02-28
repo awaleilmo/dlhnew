@@ -8,6 +8,7 @@ use App\data;
 use App\diawasi;
 use App\dokir;
 use App\dokling;
+use App\foto;
 use App\jenisangkut;
 use App\jenistps;
 use App\limbah;
@@ -25,6 +26,7 @@ use App\smphliar;
 use App\timbulan;
 use App\tps;
 use App\User;
+use App\video;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -270,6 +272,146 @@ class AdminController extends Controller
             return view('admin.pengumuman');
         }
         return redirect('/');
+    }
+    public function foto(){
+        if(Auth::check() && Auth::user()->level == 'admin' ){
+            $kl = foto::orderBy('created_at','desc')->paginate(15);
+            return view('admin.foto', compact('kl'));
+        }
+            return redirect('/');
+    }
+    public function video(){
+        if(Auth::check() && Auth::user()->level == 'admin' ){
+            return view('admin.video');
+        }
+        return redirect('/');
+    }
+    public function cfoto(Request $request){
+        $file = $request->file('foto');
+        $tujuan_upload = 'upload/galeri/foto';
+        $now = Carbon::now();
+        if($file == ""){
+            $fulname = "kosong";
+        }else {
+            $fulname = $now->year . "-" . $now->month . "-" . $now->day . "_" . $now->hour . "-" . $now->minute . "-" . $now->second . "_" . $file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+        }
+
+        $data['judul'] = $request->judul;
+        $data['file'] = $fulname;
+        $check = foto::create($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $s['foto'] = 1;
+            DB::table('notif_users')->update($s);
+            $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+        }
+        return redirect('/adminfoto',)->with($arr);
+        //return $data;
+    }
+    public function sfoto($id){
+        $pelaku = foto::find($id);
+        return Response()->json($pelaku);
+    }
+    public function efoto(Request $request){
+        $id = $request->id;
+        $ids = $request->desk;
+        $file = $request->file('foto');
+        $cek = foto::find($id);
+        if($cek->file == $ids){
+            $fulname = $cek->file;
+        } else {
+            $tujuan_upload = 'upload/galeri/foto';
+            $hps = 'upload/galeri/foto/'.$cek->file;
+            File::delete($hps);
+            $now = Carbon::now();
+            $fulname = $now->year."-".$now->month."-".$now->day."_".$now->hour."-".$now->minute."-".$now->second."_".$file->getClientOriginalName();
+            $file->move($tujuan_upload, $fulname);
+        }
+        $data['judul'] = $request->judul;
+        $data['file'] = $fulname;
+        $check = foto::whereId($id)->update($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
+        if($check){
+            $s['foto'] = 1;
+            DB::table('notif_users')->update($s);
+            $arr = ['msg' => 'Berhasil Diubah'];
+        }
+        return redirect('/adminfoto',)->with($arr);
+    }
+    public function hfoto(Request $request){
+        $id = $request->id;
+        $cek = foto::find($id);
+        $hps = 'upload/galeri/foto/'.$cek->file;
+        File::delete($hps);
+        $check = foto::whereId($id)->delete();
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $arr = ['msg' => 'Berhasil Dihapus', 'status' => true];
+        }
+        return redirect('/adminfoto',)->with($arr);
+    }
+    public function tvideo(){
+        $pelaku = video::all();
+        return datatables()->of($pelaku)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+
+                $btn = '<a href="javascript:void(0)"  class="tooltip-button demo-icon edit-user"  id="'.$row->id.'" style="font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-pencil"></i></a>';
+                $btn = $btn.'<a href="javascript:void(0)" class="tooltip-button demo-icon hapus-user" id="'.$row->id.'" style="color:red; font-size: 19px; line-height: 30px; width: 30px; height: 30px; margin: 2px"><i class="glyph-icon icon-trash"></i></a>';
+
+
+                return $btn;
+
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+    }
+    public function cvideo(Request $request){
+        $ps = explode('v=', $request->link);
+        $data['judul'] = $request->judul;
+        $data['link'] = $ps[1];
+        $check = video::create($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $s['video'] = 1;
+            DB::table('notif_users')->update($s);
+            $arr = ['msg' => 'Berhasil Disimpan', 'status' => true];
+        }
+        return redirect('/adminvideo',)->with($arr);
+    }
+    public function svideo($id){
+        $pelaku = video::find($id);
+        return response()->json($pelaku);
+    }
+    public function evideo(Request $request){
+        $id = $request->id;
+        $cek = video::find($id);
+        if($cek->link == $request->link){
+            $fulname = $cek->link;
+        } else {
+            $ps = explode('v=', $request->link);
+            $fulname = $ps[1];
+        }
+        $data['judul'] = $request->judul;
+        $data['link'] = $fulname;
+        $check = video::whereId($id)->update($data);
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi'];
+        if($check){
+            $s['video'] = 1;
+            DB::table('notif_users')->update($s);
+            $arr = ['msg' => 'Berhasil Diubah'];
+        }
+        return redirect('/adminvideo',)->with($arr);
+    }
+    public function hvideo(Request $request){
+        $id = $request->id;
+        $check = video::whereId($id)->delete();
+        $arr = ['msg' => 'Terjadi Kesalahan, Coba Lagi', 'status' => false];
+        if($check){
+            $arr = ['msg' => 'Berhasil Dihapus', 'status' => true];
+        }
+        return redirect('/adminvideo',)->with($arr);
     }
     public function tpelaku(){
         $pelaku = pelaku::all();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\artikel;
 use App\bank;
 use App\dokling;
+use App\foto;
 use App\limbah;
 use App\notif_admin;
 use App\notif_user;
@@ -13,6 +14,7 @@ use App\pengumuman;
 use App\sca;
 use App\scatingkat;
 use App\sna;
+use App\video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -282,6 +284,21 @@ class UserController extends Controller
         }
         return redirect('/login');
 
+    }
+
+    public function  foto(){
+        $kl = foto::orderBy('created_at','desc')->paginate(9);
+        return view('galeri.foto', compact('kl'));
+    }
+
+    public function  video(){
+        $kl = video::orderBy('created_at','desc')->paginate(9);
+        return view('galeri.video', compact('kl'));
+    }
+
+    public function  videosub($id){
+        $p = video::find($id);
+        return view('galeri.videosub', compact('p'));
     }
 
     public function notif($id){

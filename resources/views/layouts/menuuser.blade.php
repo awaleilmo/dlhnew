@@ -62,12 +62,12 @@
                                                                           @endguest
                 </a>
                 <ul>
-                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Foto @guest @else
+                    <li class="dropdown" style="color: white">@guest <a href="{{url('/foto')}}"> @else<a href="{{url('notif')}}/4"> @endguest Foto @guest @else
                                 @if($fotonotif > 0 )
                                     <span class="badge badge-danger badge-small"></span>
                                 @endif
                             @endguest</a></li>
-                    <li class="dropdown" style="color: white"><a href="javascript:void(0)">Galeri Video @guest @else
+                    <li class="dropdown" style="color: white">@guest <a href="{{url('/video')}}"> @else<a href="{{url('notif')}}/5"> @endguest Video @guest @else
                                 @if($videonotif > 0 )
                                     <span class="badge badge-danger badge-small"></span>
                                 @endif
@@ -184,7 +184,7 @@
                                 <span class="badge badge-danger badge-small"></span>
                             @endif
                         @endguest
-                        </a></li>
+                        </a> </li>
                     <li class="dropdown" style="color: white">@guest <a href="{{url('pengumuman')}}"> @else <a href="{{url('notif')}}/10"> @endguest Pengumuman @guest @else @if($pengumumannotif > 0)
                                 <span class="badge badge-danger badge-small"></span>
                             @endif @endguest</a>

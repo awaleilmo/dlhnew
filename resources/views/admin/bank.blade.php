@@ -372,6 +372,7 @@
                     }
                 });
             });
+
             var table = $("#datatable1").dataTable({
                 processing: true,
                 serverSide: true,

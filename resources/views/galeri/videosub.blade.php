@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="main-header-fixed">
 
 <div id="loading">
     <div class="spinner">
@@ -35,19 +35,22 @@
     </div>
 </div>
 
-<!-- banner -->
-
 <div class="top-bar bg-topbar" style="padding: 0 0;">
     <div id="myL" class="top-bar font-inverse" style="padding: 0px; width: 100%; height: 136px; margin-bottom: -.1em; background: linear-gradient(to right, #ffffff, #ffffff)">
         <img id="myP"  src="../image-resources/dlh/banner.png" style="margin-left:24%; width: 50%; height: 136px; ">
     </div>
 </div>
+<!-- banner -->
+
 @include('layouts.menuuser')
-<div class="hero-box hero-box-smaller blurred-img-2 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
+<div class="hero-box hero-box-smaller full-bg-9 font-inverse" data-top-bottom="background-position: 50% 0px;" data-bottom-top="background-position: 50% -600px;">
     <div class="container">
-        <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s" style="opacity: 1;text-shadow: black 0px 0px 10px; color: white">{{$p->judul}}</h1>
+
+            <h1 class="hero-heading wow fadeInDown" data-wow-duration="0.6s">Galeri Video</h1>
+            <p class="hero-text wow bounceInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">Kumpulan Video Kegiatan DLH Kota Serang</p>
+
     </div>
-    <div class="hero-pattern opacity-10 pattern-bg-2" style="opacity: .19 !important;"></div>
+
 </div>
 
 <!-- Lazyload -->
@@ -76,92 +79,28 @@
     });
 </script>
 
-<div id="page-content" class="container mrg25T">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="blog-box blog-box-single blog-box-alt row">
-                <div class="post-image">
-                    <a href="../upload/pengumuman/{{$p->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="Blog post title">
-                        <img class="img-responsive lazy img-rounded" src="#" data-original="../upload/pengumuman/{{$p->foto}}" alt="" />
-                    </a>
-                </div>
-                <a class="post-title" href="pengumuman/{{$p->id}}" title="">
-                    <h3>{{$p->judul}}</h3>
-                </a>
-                <div class="post-content-wrapper">
-                    <div class="post-meta clearfix">
-                        <span class="float-left">
-                            <i class="glyph-icon icon-user"></i>
-                            Admin DLH Kota Serang
-                        </span>
-                        <span class="float-left">
-                            <i class="glyph-icon icon-clock-o"></i>
-                            {{$p->created_at->day." ".$p->created_at->monthName." ".$p->created_at->year}}
-                        </span>
+<div id="page-content" style="padding: 0">
+    <div class="hero-box hero-box-smaller bg-gradient-3 font-inverse">
+
+        <div class="dashboard-box dashboard-box-chart" style="background-color: transparent">
+            <div class="content-wrapper">
+                <div class="example-box-wrapper">
+
+                    <div style="margin-left: 5px; margin-right: 5px;">
+                        <div class="panel panel-info" style="margin-left: 10px; margin-right: 10px">
+                            <div class="panel-heading text-uppercase"> {{$p->judul}} </div>
+                            <div id="fotol{{$p->id}}" class="panel-body">
+                                <iframe width="100%" height="600px" src="https://www.youtube.com/embed/{{$p->link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </div>
-                    <div class="divider"></div>
-                    <div class="post-content">
-                        {!! $p->deskripsi !!}
-                    </div>
-
                 </div>
-            </div>
 
-
-
-
-
-        </div>
-        <div class="col-md-3">
-            <div class="content-box">
-                <h3 class="content-box-header bg-default">
-                    Berita Terbaru
-                </h3>
-                <div class="posts-list content-box-wrapper">
-                    <ul class="">
-                        @foreach($z as $zz)
-                            <li>
-                                <div class="post-image">
-                                    <a href=".../upload/artikel/{{$zz->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$zz->judul}}">
-                                        <img class="img-responsive" src="../upload/artikel/{{$zz->foto}}" alt="" />
-                                    </a>
-                                </div>
-                                <div class="post-body">
-                                    <a class="post-title" href="../artikel/{{$zz->id}}" title="">
-                                        <h3>{{$zz->judul}}</h3>
-                                    </a>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            <div class="content-box">
-                <h3 class="content-box-header bg-default">
-                    Pengumuman Terbaru
-                </h3>
-                <div class="posts-list content-box-wrapper">
-                    <ul class="">
-                        @foreach($x as $xx)
-                            <li>
-                                <div class="post-image">
-                                    <a href=".../upload/pengumuman/{{$xx->foto}}" class="prettyphoto" rel="prettyPhoto[pp_gal]" title="{{$xx->judul}}">
-                                        <img class="img-responsive" src="../upload/pengumuman/{{$xx->foto}}" alt="" />
-                                    </a>
-                                </div>
-                                <div class="post-body">
-                                    <a class="post-title" href="{{$xx->id}}" title="">
-                                        <h3>{{$xx->judul}}</h3>
-                                    </a>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="main-footer bg-black clearfix">
     <div class="container col-md-6" style="margin-top: 5%">
         <h4 class="header"><center>Hubungi Kami</center></h4>

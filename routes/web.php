@@ -91,8 +91,19 @@ Route::get("/adminpojok","AdminController@pojok")->name("admin/pojok");
 Route::get("/adminartikel","AdminController@artikel")->name("admin/artikel");
 Route::get("/adminpengumuman","AdminController@pengumuman")->name("admin/pengumuman");
 Route::get('/tps3r','AdminController@tps')->name('admin/tps3r');
+Route::get('/adminfoto','AdminController@foto')->name('admin/foto');
+Route::get('/adminvideo','AdminController@video')->name('admin/video');
 
 //admin function button
+Route::post('/cfoto', 'AdminController@cfoto')->name('cfoto');
+Route::get('/sfoto/{id}', 'AdminController@sfoto')->name('sfoto');
+Route::post('/efoto', 'AdminController@efoto')->name('efoto');
+Route::get('/hfoto/{id}', 'AdminController@hfoto')->name('hfoto');
+Route::get('/tvideo', 'AdminController@tvideo')->name('tvideo');
+Route::post('/cvideo', 'AdminController@cvideo')->name('cvideo');
+Route::get('/svideo/{id}', 'AdminController@svideo')->name('svideo');
+Route::post('/evideo', 'AdminController@evideo')->name('evideo');
+Route::get('/hvideo', 'AdminController@hvideo')->name('hvideo');
 Route::get('/repairnotif', 'AdminController@repairnotif')->name('repairnotif');
 Route::get('/tpelaku', 'AdminController@tpelaku')->name('tpelaku');
 Route::post('/cpelaku', 'AdminController@cpelaku')->name('cpelaku');
@@ -251,6 +262,12 @@ Route::get('/artikel/{id}','UserController@artikelsub');
 Route::get('/pengumuman','UserController@pengumuman')->name('pengumuman');
 Route::get('/pengumuman/{id}','UserController@pengumumansub');
 
+//galeri
+Route::get('/foto','UserController@foto');
+Route::get('/video','UserController@video');
+Route::get('/video/{id}','UserController@videosub');
+
 //system action
 Route::get('/adminnotif/{id}','AdminController@notif');
 Route::get('/notif/{id}','UserController@notif');
+

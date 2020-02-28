@@ -90,7 +90,7 @@
                     </div>
                 </div>
             @endforeach
-            {{ $p ?? ''->links() }}
+            {{ $p->links() }}
         </div>
 
         <div class="col-md-3">
