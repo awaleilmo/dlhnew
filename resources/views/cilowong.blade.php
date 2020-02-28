@@ -106,7 +106,7 @@
             <div class="row wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s; opacity: 1">
                 <br>
                     <div class="col-md-6">
-                        <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s; padding: 0"><strong>Sejarah</strong></h2><br>
+                        <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s; padding: 0"><strong>TPAS Cilowong</strong></h2><br>
                         <p style="text-align: justify; font-size: large">
                             Pada awal  Tahun 2009 Pengelolaan TPAS Cilowong telah diserahkan dari Pemerintah Kabupaten Serang kepada Pemerintah Kota Serang.
                             Akan tetapi penggunaannya untuk menampung sampah baik dari wilayah Kota Serang maupun sampah dari wilayah Kabupaten Serang.
@@ -126,14 +126,22 @@
                 <tr>
                     <td align="left">
                         <p style="text-align: justify; font-size: large">
-                            Setelah terbentuk ketinggian tersebut , timbunan kemudian ditutup dengan tanah penutup antara setebal minimum 20 cm. Tinggi lapisan setinggi sekitar 5 m
-                            yang disebut sebagai 1 lift. Sebelum ditutup tanah, sampah disemprot menggunakan bahan kimia EM4 khusus limbah untuk membantu pembusukan
-                            sampah dan disemprot menggunakan bahan kimia Lanatte Dufon untuk mengurangi pengembang biakan lalat, dilakukan pemasangan pipa pengumpul gas methan.</p>
+                            Metode pengelolaan sampah di TPAS Cilowong awalnya menggunakan sistem open dumping yaitu sistem pembuangan sampah
+                            dilahan tanah lapang terbuka tanpa adanya pengolahan/pengelolaan lebih lanjut. </p>
+                        <br>
                         <p style="text-align: justify; font-size: large">
-                            TPAS Cilowong menggunakan sistem pengelolaan sampah Lahan Urug Terkendali (controll landfill) yaitu sampah disebar dan dipadatkan lapis per lapis
-                            sampai ketebalan sekitar 4,50 m yang terdiri dari lapisan lapisan sampah setebal sekitar 0,50 m yang digilas dengan Steel Wheel Compactor atau Buldozer
-                            paling tidak sebanyak 3 sampai 5 gilasan sehingga menjadi sel sel sampah.
+                            Berdasarkan Undang – Undang Nomor 18 Tahun 2008 tentang pengelolaan sampah, pengelolaan sampah dengan sistem open dumping  sudah
+                            tidak diperkenankan. Dengan adanya Undang - Undang tersebut, maka TPAS Cilowong mengubah sistem pengelolaan sampah dari open dumping
+                            menjadi Lahan Urug Terkendali (control landfill) yaitu sampah disebar dan dipadatkan lapis per lapis sampai ketebalan sekitar 4,50 m
+                            yang terdiri dari lapisan lapisan sampah setebal sekitar 0,50 m yang digilas dengan Steel Wheel Compactor atau Buldozer paling tidak
+                            sebanyak 3 sampai 5 gilasan sehingga menjadi sel sel sampah. Setelah terbentuk ketinggian tersebut, timbunan kemudian ditutup dengan
+                            tanah penutup antara setebal minimum 20 cm. Tinggi lapisan setinggi sekitar 5 m disebut sebagai 1 lift. Sebelum ditutup tanah, sampah disemprot menggunakan bahan kimia EM4 khusus limbah untuk membantu pembusukan sampah
+                            dan disemprot menggunakan bahan kimia Lanatte Dufon untuk mengurangi pengembang biakan lalat, dilakukan pemasangan pipa pengumpul gas methane.
                         </p>
+                        <br>
+                        <p style="text-align: justify; font-size: large">
+                            TPAS Cilowong selain melakukan pekerjaan utama yang meliputi : Penimbunan/pemadatan sampah, Penutupan sampah menggunakan tanah, Pengolahan lindi, dan Penanganan gas, juga melakukan pengurangan
+                            sampah yang ada di TPAS Cilowong dengan pemanfaatkan kembali sampah organik menjadi kompos,  sampah plastik menjadi BBM, sampah menjadi carbon, dan air lindi menjadi pupuk cair. </p>
                     </td>
                 </tr>
             </table>
@@ -249,13 +257,37 @@
                         <i class="glyph-icon icon-check font-blue"></i> Mobil Pick Up : 2 Unit
                     </p><br>
                     <p style="text-align: left; font-size: large">
-                        <i class="glyph-icon icon-check font-blue"></i> Sepeda Motor : 1 Unit
+                        <i class="glyph-icon icon-check font-blue"></i> Sepeda Motor : 1php Unit
                     </p>
                 </div>
             </div>
 
         </div>
     </div>
+
+            <div class="hero-box bg-white hero-box-smaller " style="padding: 6em 0 0 0">
+                <div class="container">
+                    <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>Penanganan Sampah</strong></h2>
+                    <table border="0" cellpadding="10" class="hero-text wow bounceInUp animated animated" data-wow-duration="0.9s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.2s;">
+                        <br>
+                        <br>
+                        <tr>
+                            <td align="left">
+                                <p style="text-align: justify; font-size: large">
+                                    Penanganan sampah di TPAS Cilowong Kota Serang dari tahun 2009 s/d. 2011 dikelola oleh Dinas Pekerjaan Umum Kota Serang, dari tahun
+                                    2012 s/d. 2016 oleh Dinas Tata Kota Kota Serang, dan mulai bulan Januari 2017 oleh Dinas Lingkungan Hidup Kota Serang. </p>
+                                <br>
+                                <p style="text-align: justify; font-size: large">
+                                    TPAS Cilowong hanya menerima Sampah Rumah Tangga yaitu sampah yang berasal dari kegiatan sehari-hari  dalam rumah tangga yang tidak
+                                    termasuk tinja dan sampah spesifik, dan Sampah Sejenis Sampah Rumah Tangga, yaitu sampah rumah tangga yang berasal dari kawasan komersial, kawasan industri, kawasan khusus, kawasan sosial, kawasan umum, dan/atau fasilitas lainnya.
+                                </p>
+                                <br>
+                                <p style="text-align: justify; font-size: large">
+                                    Secara umum sampah padat yang dihasilkan dari kegiatan rumah tangga, pasar, dan/atau fasilitas lainnya dari wilayah Kota Serang  dikumpulkan baik dengan menggunakan gerobak atau Cator kemudian dibawa ke titik pengumpulan atau
+                                    pengalihan yang disebut Tempat Penampungan Sampah Sementara (TPSS). Dari TPSS kemudian dilakukan pemindahan, biasanya secara manual ke dalam truk yang lebih besar untuk di bawa ke Tempat Pemrosesan Akhir Sampah (TPAS) Cilowong, atau dari pengumpulan langsung masuk ke dalam truk atau Bak Container untuk dibawa ke TPAS Cilowong.</p>
+                            </td>
+                        </tr>
+                    </table>
     <div class="hero-box bg-white hero-box-smaller ">
         <div class="container">
             <h2 class="hero-heading wow fadeInDown animated animated" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s;"><strong>TIMBULAN SAMPAH</strong></h2>
@@ -265,21 +297,16 @@
                 <div class="col-md-5">
                     <h1><strong>Kota Serang</strong></h1><br>
                 <p style="text-align: justify; font-size: large">
-                    Dengan jumlah penduduk Kota Serang tahun 2017 ± 650.000 Jiwa,
-                    dengan asumsi setiap jiwa mengasilkan sampah 0,0025 m3/hari , maka timbulan sampah di Kota Serang sekitar 1.625 m3/hari.
-                    Sementara dengan sarana dan prasarana yang ada, Pemerintah Kota Serang, sebelumnya melalui Dinas Tata Kota dan sejak awal
-                    tahun 2017 oleh Dinas Lingkungan Hidup baru mampu mengangkut sampah ke TPAS Cilowong ± 600 m3/hari. Sedangkan yang dikelola atau
-                    diangkut oleh pihak swasta ± 150 m3/hari. Sehingga dari timbulan sampah ± 1.500 m3/hari, baru tertangani ± 750 m3/hari.
+                    Jumlah penduduk Kota Serang tahun 2019 ± 650.000 Jiwa, dengan asumsi setiap jiwa mengasilkan sampah 0,0025 m3/hari, maka timbulan sampah di Kota Serang sekitar 1.625 m3/hari.
+                    Sementara dengan sarana dan prasarana yang ada, Pemerintah Kota Serang, mengangkut sampah ke TPAS Cilowong ± 600 m3/hari. Sedangkan yang dikelola atau diangkut oleh pihak lain/swasta ± 130 m3/hari. Sehingga dari timbulan sampah ± 1.625 m3/hari, yang terangkut  ke TPAS Cilowong sekitar ± 730 m3/hari.
                 </p>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
                     <h1><strong>Kabupaten Serang</strong></h1><br>
                     <p style="text-align: justify; font-size: large">
-                        Sampah Kabupaten Serang yang masuk ke TPAS Cilowong, ditangani oleh Pemerintah Kabupaten Serang ± 200 m3/hari.
-                        Dari dua wilayah yaitu Kota Serang dan Kabupaten Serang, total sampah yang masuk ke TPAS Cilowong sebanyak ± 900 m3/hari.
-                        Sejak dioperasikan mulai tahun 1995 s/d. akhir tahun 2018, berdasarkan catatan, volume sampah yang tertampung di TPAS Cilowong sebanyak ± 3.229.379 m3.
-                        Berat  Jenis  Sampah yang masuk ke TPAS Cilowong rata-rata 227 kg/m3.
+                        Sampah Kabupaten Serang yang diangkut  ke TPAS Cilowong, ditangani oleh Pemerintah Kabupaten Serang ±220 m3/hari. Dari dua wilayah yaitu Kota Serang dan Kabupaten Serang, total sampah yang masuk ke TPAS Cilowong sebanyak ± 950 m3/hari.
+                        Sejak dioperasikan mulai tahun 1995 s/d. akhir tahun 2018, berdasarkan catatan, volume sampah yang tertampung di TPAS Cilowong sebanyak ± 3.229.379 m3
                     </p>
                 </div>
             </div>
