@@ -707,6 +707,39 @@
                 }
             }
         },
+        "/api/app/clearnotif": {
+            "get": {
+                "tags": [
+                    "Notifikasi"
+                ],
+                "operationId": "clear",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "menu",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/dokupload": {
             "post": {
                 "tags": [

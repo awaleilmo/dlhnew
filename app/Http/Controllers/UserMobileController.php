@@ -916,7 +916,92 @@ class UserMobileController extends Controller
         $user = notif_user::where('user_id','=',$id)->get();
         return response()->json(['status' => 'sukses', 'data' => $user]);
     }
-
+    /**
+     * @OA\Get(
+     *     path="/api/app/clearnotif",
+     *     tags={"Notifikasi"},
+     *     operationId="clear",
+     *
+     *      @OA\Parameter(
+     *          name="userId",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *      @OA\Parameter(
+     *          name="menu",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function notif(Request $request){
+        $id = $request->menu;
+        $us = $request->userId;
+        if($id == 1){
+            $data['amdal'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 2){
+            $data['uklupl'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 3){
+            $data['sppl'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 4){
+            $data['foto'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 5){
+            $data['video'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 6){
+            $data['pengaduan'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 7){
+            $data['banksampah'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 8){
+            $data['data'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 9){
+            $data['warta'] = 0;
+            $is = Auth::user()->id;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }else if($id == 10){
+            $data['pengumuman'] = 0;
+            $is = $us;
+            notif_user::where('user_id','=',$is)->update($data);
+            return response()->json(['status' => 'sukses']);
+        }
+    }
     /**
      * @OA\Post(
      *     path="/api/app/dokupload",

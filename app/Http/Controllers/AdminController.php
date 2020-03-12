@@ -1830,7 +1830,7 @@ class AdminController extends Controller
                 $data['uklupl'] = 1;
             }
             $is = $request->userid;
-            notif_user::whereId($is)->update($data);
+            notif_user::where('user_id','=',$is)->update($data);
             $p['status'] = 'Selesai';
             $p['keterangan'] = $request->ket;
             dokir::whereId($request->id)->update($p);
@@ -1846,7 +1846,7 @@ class AdminController extends Controller
                 $data['uklupl'] = 1;
             }
             $is = $request->userid;
-            notif_user::whereId($is)->update($data);
+            notif_user::where('user_id','=',$is)->update($data);
             $p['status'] = 'Ditolak';
             $p['keterangan'] = $request->ket;
             dokir::whereId($request->id)->update($p);
