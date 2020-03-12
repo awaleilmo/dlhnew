@@ -1826,7 +1826,7 @@ class AdminController extends Controller
             if($request->dok == 'SPPL'){
                 $data['sppl'] = 1;
             }
-            if($request->dok == 'UKLUPL'){
+            if($request->dok == 'UKL UPL'){
                 $data['uklupl'] = 1;
             }
             $is = $request->userid;
@@ -1842,7 +1842,7 @@ class AdminController extends Controller
             if($request->dok == 'SPPL'){
                 $data['sppl'] = 1;
             }
-            if($request->dok == 'UKLUPL'){
+            if($request->dok == 'UKL UPL'){
                 $data['uklupl'] = 1;
             }
             $is = $request->userid;
