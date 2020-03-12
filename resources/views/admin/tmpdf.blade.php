@@ -6,7 +6,8 @@
     <form id="contact_us" method="post" action="{{url('/cpelap')}} " style="background-color: #0e2e42">
         @csrf
         <input name="dok" type="hidden" value="{{$s->dokling}}">
-        <input name="id" type="hidden" value="{{$s->userId}}">
+        <input name="userid" type="hidden" value="{{$s->userId}}">
+        <input name="id" type="hidden" value="{{$s->id}}">
         <div class="container" >
             <div class="row">
             <br>

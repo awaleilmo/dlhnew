@@ -1820,21 +1820,33 @@ class AdminController extends Controller
     }
     public function cpelap(Request $request){
         if(isset($_POST['sub'])){
-            $s['menu'] = 'dokling';
-            $s['sub_menu'] = $request->dok;
-            $s['on'] = 0;
-            $s['db'] = $request->id;
-            notif::create($s);
+            if($request->dok == 'AMDAL'){
+                $data['amdal'] = 1;
+            }
+            if($request->dok == 'SPPL'){
+                $data['sppl'] = 1;
+            }
+            if($request->dok == 'UKLUPL'){
+                $data['uklupl'] = 1;
+            }
+            $is = $request->userid;
+            notif_user::whereId($is)->update($data);
             $p['status'] = 'Selesai';
             $p['keterangan'] = $request->ket;
             dokir::whereId($request->id)->update($p);
             return redirect('admindoklingkungan');
         }elseif (isset($_POST['tol'])){
-            $s['menu'] = 'dokling';
-            $s['sub_menu'] = $request->dok;
-            $s['on'] = 0;
-            $s['db'] = $request->id;
-            notif::create($s);
+            if($request->dok == 'AMDAL'){
+                $data['amdal'] = 1;
+            }
+            if($request->dok == 'SPPL'){
+                $data['sppl'] = 1;
+            }
+            if($request->dok == 'UKLUPL'){
+                $data['uklupl'] = 1;
+            }
+            $is = $request->userid;
+            notif_user::whereId($is)->update($data);
             $p['status'] = 'Ditolak';
             $p['keterangan'] = $request->ket;
             dokir::whereId($request->id)->update($p);
