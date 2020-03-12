@@ -28,7 +28,7 @@ Route::get('/api/app/findartikel','UserMobileController@findpojokwarga')->name('
 Route::get('/api/app/pengumuman','UserMobileController@pengumuman')->name('pengumuman/user');
 Route::get('/api/app/findpengumuman','UserMobileController@findpengumuman')->name('findpengumuman/user');
 Route::post('/api/app/pengaduan','UserMobileController@pengaduan')->name('pengaduan/user');
-Route::post('/api/app/dokupload','UserMobileController@dokir')->name('dokupload/user');
+Route::post('/api/app/dokupload','UserMobileController@cdokir')->name('dokupload/user');
 Route::get('/api/app/tentang','UserMobileController@tentang')->name('tentang/user');
 Route::get('/api/app/bidang','UserMobileController@bidang')->name('bidang/user');
 Route::get('/api/app/ukl','UserMobileController@ukl')->name('ukl/user');

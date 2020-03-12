@@ -937,7 +937,7 @@ class UserMobileController extends Controller
      */
 
     public function cdokir(Request $request){
-        $file = $request->file('file');
+        $file = $request->file('foto');
         $tujuan_upload = 'upload/dokir';
         $idnya = $request->userId;
         $now = Carbon::now();
