@@ -651,12 +651,44 @@
                 }
             }
         },
+        "/api/app/infodok": {
+            "get": {
+                "tags": [
+                    "Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"
+                ],
+                "operationId": "infodok",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dok",
+                        "in": "query",
+                        "description": "nama dokumen",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/dokupload": {
             "post": {
                 "tags": [
                     "Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"
                 ],
-                "operationId": "downloaddok",
+                "operationId": "dokupload",
                 "parameters": [
                     {
                         "name": "userId",

@@ -851,10 +851,46 @@ class UserMobileController extends Controller
     }
 
     /**
+     * @OA\Get(
+     *     path="/api/app/infodok",
+     *     tags={"Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"},
+     *     operationId="infodok",
+     *
+     *      @OA\Parameter(
+     *          name="userId",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *      @OA\Parameter(
+     *          name="dok",
+     *          description="nama dokumen",
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function info_dok(Request $request){
+        $user = dokir::paginate(4);
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
      * @OA\Post(
      *     path="/api/app/dokupload",
      *     tags={"Dokumen Lingkungan ( SPPL, AMDAL, UKL UPL )"},
-     *     operationId="downloaddok",
+     *     operationId="dokupload",
      *     @OA\Parameter(
      *          name="userId",
      *          description="",
