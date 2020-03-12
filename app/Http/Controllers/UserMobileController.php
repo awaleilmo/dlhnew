@@ -882,7 +882,9 @@ class UserMobileController extends Controller
      * )
      */
     public function info_dok(Request $request){
-        $user = dokir::paginate(4);
+        $id = $request->userId;
+        $nm = $request->dok;
+        $user = dokir::where('userId','=',$id)->where('dokling','=',$nm)->paginate(4);
         return response()->json(['status' => 'sukses', 'data' => $user]);
     }
 
