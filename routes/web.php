@@ -39,6 +39,7 @@ Route::get('/api/app/info_data','UserMobileController@info_data')->name('info_da
 Route::get('/api/app/showpengaduan','UserMobileController@showpengaduan')->name('showpengaduan/user');
 Route::get('/api/app/detailpengaduan','UserMobileController@detailpengaduan')->name('detailpengaduan/user');
 Route::get('/api/app/infodok','UserMobileController@info_dok')->name('info_dok/user');
+Route::get('/api/app/notifuser','UserMobileController@notifuser');
 
 //app mobile web
 Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });

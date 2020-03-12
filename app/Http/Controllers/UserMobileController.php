@@ -8,6 +8,7 @@ use App\dokir;
 use App\dokling;
 use App\limbah;
 use App\notif_admin;
+use App\notif_user;
 use App\Pengaduan;
 use App\pengumuman;
 use App\User;
@@ -885,6 +886,34 @@ class UserMobileController extends Controller
         $id = $request->userId;
         $nm = $request->dok;
         $user = dokir::where('userId','=',$id)->where('dokling','=',$nm)->paginate(4);
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/notifuser",
+     *     tags={"Notifikasi"},
+     *     operationId="user",
+     *
+     *      @OA\Parameter(
+     *          name="userId",
+     *          description="",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *     ),
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function notifuser(Request $request){
+        $id = $request->userId;
+        $user = notif_user::where('user_id','=',$id)->get();
         return response()->json(['status' => 'sukses', 'data' => $user]);
     }
 

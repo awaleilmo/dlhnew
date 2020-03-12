@@ -683,6 +683,30 @@
                 }
             }
         },
+        "/api/app/notifuser": {
+            "get": {
+                "tags": [
+                    "Notifikasi"
+                ],
+                "operationId": "user",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
         "/api/app/dokupload": {
             "post": {
                 "tags": [
