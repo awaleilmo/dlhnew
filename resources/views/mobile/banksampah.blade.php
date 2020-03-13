@@ -1,4 +1,4 @@
-@extends('layouts.tampilan')
+@extends('layouts.mobile')
 
 @section('content')
     <script type="text/javascript" src="../../assets/widgets/tabs/tabs.js"></script>
@@ -94,13 +94,13 @@
 
                         <tr>
                             <td align="center" colspan="2">
-                                <img src="image-resources/dlh/mendirikan.png" style="width:80%; height:70%">
+                                <img src="../image-resources/dlh/mendirikan.png" style="width:100%; height:25%">
                             </td>
                         </tr>
 
                         <tr>
                             <td align="center" colspan="2">
-                                <img src="image-resources/dlh/menjadi.png" style="width:80%; height:70%">
+                                <img src="../image-resources/dlh/menjadi.png" style="width:100%; height:25%">
                             </td>
                         </tr>
 
@@ -355,7 +355,7 @@
                     </script>
                     <br>
                     <br>
-                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+                    <table id="datatable1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%" style="font-size: xx-small">
                         <thead>
                         <tr>
                             <th>{{__("No")}}</th>
