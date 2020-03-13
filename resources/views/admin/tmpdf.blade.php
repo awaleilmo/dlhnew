@@ -10,8 +10,10 @@
         <input name="id" type="hidden" value="{{$s->id}}">
         <div class="container" >
             <div class="row">
+
             <br>
-            <div class="col-md-8">
+                <div class="col-md-2"><h1 style="color: white">{{$s->dokling}}</h1></div>
+            <div class="col-md-6">
                 <textarea style="width: 100%; height: 10%; border-radius: 5px" placeholder="Keterangan" name="ket" required></textarea>
                 <br>
                 <br>

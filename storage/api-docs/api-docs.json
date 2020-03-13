@@ -790,6 +790,32 @@
                     }
                 }
             }
+        },
+        "/api/app/foto": {
+            "get": {
+                "tags": [
+                    "Galeri"
+                ],
+                "operationId": "foto",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/app/video": {
+            "get": {
+                "tags": [
+                    "Galeri"
+                ],
+                "operationId": "video",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
         }
     },
     "components": {

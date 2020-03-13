@@ -6,12 +6,14 @@ use App\artikel;
 use App\data;
 use App\dokir;
 use App\dokling;
+use App\foto;
 use App\limbah;
 use App\notif_admin;
 use App\notif_user;
 use App\Pengaduan;
 use App\pengumuman;
 use App\User;
+use App\video;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -1077,5 +1079,39 @@ class UserMobileController extends Controller
             $arr = ['status' => 'sukses'];
         }
         return Response()->json($arr);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/foto",
+     *     tags={"Galeri"},
+     *     operationId="foto",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function foto(Request $request){
+        $user = foto::paginate(10);
+        return response()->json(['status' => 'sukses', 'data' => $user]);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/app/video",
+     *     tags={"Galeri"},
+     *     operationId="video",
+     *
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     )
+     * )
+     */
+    public function video(Request $request){
+        $user = video::paginate(10);
+        return response()->json(['status' => 'sukses', 'data' => $user]);
     }
 }
