@@ -969,7 +969,7 @@ class UserMobileController extends Controller
             return response()->json(['status' => 'sukses']);
         }else if($id == 4){
             $data['foto'] = 0;
-            $is = Auth::user()->id;
+            $is = $us;
             notif_user::where('user_id','=',$is)->update($data);
             return response()->json(['status' => 'sukses']);
         }else if($id == 5){
