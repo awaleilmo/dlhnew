@@ -43,6 +43,7 @@ Route::get('/api/app/notifuser','UserMobileController@notifuser');
 Route::get('/api/app/clearnotif','UserMobileController@notif');
 Route::get('/api/app/foto','UserMobileController@foto');
 Route::get('/api/app/video','UserMobileController@video');
+Route::get('/api/app/video/{id}','AdminController@videom');
 
 //app mobile web
 Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });

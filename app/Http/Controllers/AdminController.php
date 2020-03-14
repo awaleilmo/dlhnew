@@ -1881,4 +1881,8 @@ class AdminController extends Controller
         }
 
     }
+    public function videom($id){
+        $p = video::find($id);
+        return view('mobile.videom',compact('p'));
+    }
 }
