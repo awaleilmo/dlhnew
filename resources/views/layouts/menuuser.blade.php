@@ -140,6 +140,7 @@
                         @endif
                     </a>
                     <ul>
+                        <li class="dropdown"><a href="{{route('panduan_pelaporan')}}">Tata Cara Pengaduan</a></li>
                         <li class="dropdown" style="color: white"><a href="{{url('notif')}}/6">Pengaduan
                                     @if($pengaduannotif > 0 )
                                         <span class="badge badge-danger badge-small"></span>

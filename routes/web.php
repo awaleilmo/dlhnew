@@ -238,6 +238,7 @@ Route::get('/usertps3r',function (){return view('program.tps3r');})->name('tps3r
 Route::get('/data','UserController@data')->name('data');
 
 //menu pelaporan
+Route::get('/panduan_pelaporan', function (){return view('pelaporan.panduan');})->name('panduan_pelaporan');
 Route::get('/pojok_pengaduan', 'UserController@pojok_pengaduan')->name('pojok_pengaduan');
 Route::get('/pojok_pengaduan/{id}', 'UserController@detailpojok_pengaduan');
 Route::post('/pojok_pengaduan','UserInputWebController@pengaduan');
