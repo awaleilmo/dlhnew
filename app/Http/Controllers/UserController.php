@@ -25,7 +25,7 @@ class UserController extends Controller
     {
         $z = artikel::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
         $x = pengumuman::where('tipe','=','1')->orderBy('created_at','desc')->limit(4)->get();
-        return view('welcome',compact('z','x'));
+        return view('welcome2',compact('z','x'));
 
     }
 
