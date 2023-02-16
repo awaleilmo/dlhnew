@@ -9,6 +9,12 @@
  */
 namespace PHPUnit\Util;
 
+use const DIRECTORY_SEPARATOR;
+use function class_exists;
+use function defined;
+use function dirname;
+use function strpos;
+use function sys_get_temp_dir;
 use Composer\Autoload\ClassLoader;
 use DeepCopy\DeepCopy;
 use Doctrine\Instantiator\Instantiator;
@@ -20,6 +26,8 @@ use phpDocumentor\Reflection\Project;
 use phpDocumentor\Reflection\Type;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophet;
+use ReflectionClass;
+use ReflectionException;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
 use SebastianBergmann\CodeUnitReverseLookup\Wizard;
 use SebastianBergmann\Comparator\Comparator;
@@ -49,91 +57,91 @@ final class Blacklist
      */
     public static $blacklistedClassNames = [
         // composer
-        ClassLoader::class => 1,
+        ClassLoader::class        => 1,
 
         // doctrine/instantiator
-        Instantiator::class => 1,
+        Instantiator::class       => 1,
 
         // myclabs/deepcopy
-        DeepCopy::class => 1,
+        DeepCopy::class           => 1,
 
         // phar-io/manifest
-        Manifest::class => 1,
+        Manifest::class           => 1,
 
         // phar-io/version
-        PharIoVersion::class => 1,
+        PharIoVersion::class      => 1,
 
         // phpdocumentor/reflection-common
-        Project::class => 1,
+        Project::class            => 1,
 
         // phpdocumentor/reflection-docblock
-        DocBlock::class => 1,
+        DocBlock::class           => 1,
 
         // phpdocumentor/type-resolver
-        Type::class => 1,
+        Type::class               => 1,
 
         // phpspec/prophecy
-        Prophet::class => 1,
+        Prophet::class            => 1,
 
         // phpunit/phpunit
-        TestCase::class => 2,
+        TestCase::class           => 2,
 
         // phpunit/php-code-coverage
-        CodeCoverage::class => 1,
+        CodeCoverage::class       => 1,
 
         // phpunit/php-file-iterator
         FileIteratorFacade::class => 1,
 
         // phpunit/php-invoker
-        Invoker::class => 1,
+        Invoker::class            => 1,
 
         // phpunit/php-text-template
-        Text_Template::class => 1,
+        Text_Template::class      => 1,
 
         // phpunit/php-timer
-        Timer::class => 1,
+        Timer::class              => 1,
 
         // phpunit/php-token-stream
-        PHP_Token::class => 1,
+        PHP_Token::class          => 1,
 
         // sebastian/code-unit-reverse-lookup
-        Wizard::class => 1,
+        Wizard::class             => 1,
 
         // sebastian/comparator
-        Comparator::class => 1,
+        Comparator::class         => 1,
 
         // sebastian/diff
-        Diff::class => 1,
+        Diff::class               => 1,
 
         // sebastian/environment
-        Runtime::class => 1,
+        Runtime::class            => 1,
 
         // sebastian/exporter
-        Exporter::class => 1,
+        Exporter::class           => 1,
 
         // sebastian/global-state
-        Snapshot::class => 1,
+        Snapshot::class           => 1,
 
         // sebastian/object-enumerator
-        Enumerator::class => 1,
+        Enumerator::class         => 1,
 
         // sebastian/recursion-context
-        Context::class => 1,
+        Context::class            => 1,
 
         // sebastian/resource-operations
         ResourceOperations::class => 1,
 
         // sebastian/type
-        TypeName::class => 1,
+        TypeName::class           => 1,
 
         // sebastian/version
-        Version::class => 1,
+        Version::class            => 1,
 
         // theseer/tokenizer
-        Tokenizer::class => 1,
+        Tokenizer::class          => 1,
 
         // webmozart/assert
-        Assert::class => 1,
+        Assert::class             => 1,
     ];
 
     /**
@@ -158,14 +166,14 @@ final class Blacklist
      */
     public function isBlacklisted(string $file): bool
     {
-        if (\defined('PHPUNIT_TESTSUITE')) {
+        if (defined('PHPUNIT_TESTSUITE')) {
             return false;
         }
 
         $this->initialize();
 
         foreach (self::$directories as $directory) {
-            if (\strpos($file, $directory) === 0) {
+            if (strpos($file, $directory) === 0) {
                 return true;
             }
         }
@@ -182,34 +190,34 @@ final class Blacklist
             self::$directories = [];
 
             foreach (self::$blacklistedClassNames as $className => $parent) {
-                if (!\class_exists($className)) {
+                if (!class_exists($className)) {
                     continue;
                 }
 
                 try {
-                    $directory = (new \ReflectionClass($className))->getFileName();
+                    $directory = (new ReflectionClass($className))->getFileName();
                     // @codeCoverageIgnoreStart
-                } catch (\ReflectionException $e) {
+                } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
-                        (int) $e->getCode(),
+                        $e->getCode(),
                         $e
                     );
                 }
                 // @codeCoverageIgnoreEnd
 
                 for ($i = 0; $i < $parent; $i++) {
-                    $directory = \dirname($directory);
+                    $directory = dirname($directory);
                 }
 
                 self::$directories[] = $directory;
             }
 
             // Hide process isolation workaround on Windows.
-            if (\DIRECTORY_SEPARATOR === '\\') {
+            if (DIRECTORY_SEPARATOR === '\\') {
                 // tempnam() prefix is limited to first 3 chars.
                 // @see https://php.net/manual/en/function.tempnam.php
-                self::$directories[] = \sys_get_temp_dir() . '\\PHP';
+                self::$directories[] = sys_get_temp_dir() . '\\PHP';
             }
         }
     }

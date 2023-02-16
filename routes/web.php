@@ -235,7 +235,7 @@ Route::get('/banksampah','UserController@banksampah')->name('banksampah');
 Route::get('/banksampah/{id}','UserController@bankdetail')->name('bankdetail');
 Route::get('/usertps3r',function (){return view('program.tps3r');})->name('tps3r');
 //menu data
-Route::get('/data','UserController@data')->name('data');
+Route::get('/datas','UserController@data')->name('data');
 
 //menu pelaporan
 Route::get('/panduan_pelaporan', function (){return view('pelaporan.panduan');})->name('panduan_pelaporan');

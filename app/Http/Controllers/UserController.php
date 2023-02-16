@@ -343,7 +343,7 @@ class UserController extends Controller
             $data['data'] = 0;
             $is = Auth::user()->id;
             notif_user::where('user_id','=',$is)->update($data);
-            return redirect('data');
+            return redirect('datas');
         }else if($id == 9){
             $data['warta'] = 0;
             $is = Auth::user()->id;

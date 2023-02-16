@@ -9,9 +9,10 @@ namespace Highlight;
  */
 final class Terminators
 {
+    /** @var bool */
     private $caseInsensitive;
 
-    /** @var array<int, Mode> */
+    /** @var array<int, Mode|string> */
     private $matchIndexes = array();
 
     /** @var RegEx|null */
@@ -29,6 +30,9 @@ final class Terminators
     /** @var int */
     public $lastIndex = 0;
 
+    /**
+     * @param bool $caseInsensitive
+     */
     public function __construct($caseInsensitive)
     {
         $this->caseInsensitive = $caseInsensitive;
@@ -37,7 +41,7 @@ final class Terminators
     /**
      * @internal
      *
-     * @param $mode
+     * @param Mode $mode
      *
      * @return self
      */
@@ -67,6 +71,7 @@ final class Terminators
             $this->addRule('illegal', $mode->illegal);
         }
 
+        /** @var array<int, string> $terminators */
         $terminators = array();
         foreach ($this->regexes as $regex) {
             $terminators[] = $regex[1];
@@ -78,6 +83,11 @@ final class Terminators
         return $this;
     }
 
+    /**
+     * @param string $s
+     *
+     * @return RegExMatch|null
+     */
     public function exec($s)
     {
         if (count($this->regexes) === 0) {
@@ -90,6 +100,7 @@ final class Terminators
             return null;
         }
 
+        /** @var Mode|string $rule */
         $rule = null;
         for ($i = 0; $i < count($match); ++$i) {
             if ($match[$i] !== null && isset($this->matchIndexes[$i])) {
@@ -100,7 +111,6 @@ final class Terminators
 
         if (is_string($rule)) {
             $match->type = $rule;
-            $match->extra = array($this->mode->illegal, $this->mode->terminator_end);
         } else {
             $match->type = "begin";
             $match->rule = $rule;
@@ -123,6 +133,8 @@ final class Terminators
     /**
      * @param Mode|string $rule
      * @param string      $regex
+     *
+     * @return void
      */
     private function addRule($rule, $regex)
     {
@@ -139,8 +151,8 @@ final class Terminators
      * match group, keeping track of the sequencing of those match groups
      * is currently an exercise for the caller. :-)
      *
-     * @param array  $regexps
-     * @param string $separator
+     * @param array<int, string> $regexps
+     * @param string             $separator
      *
      * @return string
      */
@@ -202,6 +214,11 @@ final class Terminators
         return $ret;
     }
 
+    /**
+     * @param RegEx|string $re
+     *
+     * @return mixed
+     */
     private function reStr($re)
     {
         if ($re && isset($re->source)) {

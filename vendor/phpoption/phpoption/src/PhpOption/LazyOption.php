@@ -18,6 +18,8 @@
 
 namespace PhpOption;
 
+use Traversable;
+
 /**
  * @template T
  *
@@ -25,29 +27,30 @@ namespace PhpOption;
  */
 final class LazyOption extends Option
 {
-    /** @var callable */
+    /** @var callable(mixed...):(Option<T>) */
     private $callback;
 
-    /** @var array */
+    /** @var array<int, mixed> */
     private $arguments;
 
     /** @var Option<T>|null */
     private $option;
 
     /**
-     * @param callable $callback
-     * @param array    $arguments
+     * @template S
+     * @param callable(mixed...):(Option<S>) $callback
+     * @param array<int, mixed>              $arguments
      *
-     * @return LazyOption<T>
+     * @return LazyOption<S>
      */
-    public static function create($callback, array $arguments = [])
+    public static function create($callback, array $arguments = []): self
     {
         return new self($callback, $arguments);
     }
 
     /**
-     * @param callable $callback
-     * @param array    $arguments
+     * @param callable(mixed...):(Option<T>) $callback
+     * @param array<int, mixed>              $arguments
      */
     public function __construct($callback, array $arguments = [])
     {
@@ -59,12 +62,12 @@ final class LazyOption extends Option
         $this->arguments = $arguments;
     }
 
-    public function isDefined()
+    public function isDefined(): bool
     {
         return $this->option()->isDefined();
     }
 
-    public function isEmpty()
+    public function isEmpty(): bool
     {
         return $this->option()->isEmpty();
     }
@@ -96,7 +99,7 @@ final class LazyOption extends Option
 
     public function ifDefined($callable)
     {
-        $this->option()->ifDefined($callable);
+        $this->option()->forAll($callable);
     }
 
     public function forAll($callable)
@@ -134,7 +137,10 @@ final class LazyOption extends Option
         return $this->option()->reject($value);
     }
 
-    public function getIterator()
+    /**
+     * @return Traversable<T>
+     */
+    public function getIterator(): Traversable
     {
         return $this->option()->getIterator();
     }
@@ -152,14 +158,15 @@ final class LazyOption extends Option
     /**
      * @return Option<T>
      */
-    private function option()
+    private function option(): Option
     {
         if (null === $this->option) {
-            $this->option = call_user_func_array($this->callback, $this->arguments);
-            if (!$this->option instanceof Option) {
-                $this->option = null;
-
-                throw new \RuntimeException(sprintf('Expected instance of \%s', Option::class));
+            /** @var mixed */
+            $option = call_user_func_array($this->callback, $this->arguments);
+            if ($option instanceof Option) {
+                $this->option = $option;
+            } else {
+                throw new \RuntimeException(sprintf('Expected instance of %s', Option::class));
             }
         }
 
