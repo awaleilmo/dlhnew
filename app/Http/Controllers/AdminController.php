@@ -734,7 +734,7 @@ class AdminController extends Controller
             ->make(true);
     }
     public function ctps(Request $request){
-        $data['lokasi'] = $request->lokasi;
+        $data['lokasi'] = $request->lks;
         $data['keldesa'] = $request->keldes;
         $data['kecamatan'] = $request->kecamatan;
         $data['jenistps'] = $request->jenistps;
