@@ -189,7 +189,7 @@
                     $('#btn-edit').removeClass('hidden');
                     $('#jenistps').val(data.jenistps);
                     $('#unit').val(data.unit);
-                    $('#lokasi').val(data.lks);
+                    $('#lokasi').val(data.lokasi);
                     $('#keldes').val(data.keldesa);
                     $('#kecamatan').val(data.kecamatan);
                     $('#id').val(data.id);
@@ -261,7 +261,7 @@
                 },
                 columns: [
                     { data: 'DT_RowIndex', name: 'DT_RowIndex', },
-                    { data: 'lks', name: 'lks', },
+                    { data: 'lokasi', name: 'lokasi', },
                     { data: 'keldesa', name: 'keldesa', },
                     { data: 'kecamatan', name: 'kecamatan', },
                     { data: 'jenistps', name: 'jenistps', },

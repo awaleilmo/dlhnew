@@ -509,7 +509,7 @@
                                 },
                                 columns: [
                                     { data: 'DT_RowIndex', name: 'DT_RowIndex', },
-                                    { data: 'lks', name: 'lks', },
+                                    { data: 'lokasi', name: 'lokasi', },
                                     { data: 'keldesa', name: 'keldesa', },
                                     { data: 'kecamatan', name: 'kecamatan', },
                                     { data: 'jenistps', name: 'jenistps', },

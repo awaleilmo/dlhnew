@@ -1,7 +1,9 @@
 /node_modules
 /public/hot
+/vendor
 /public/storage
 /storage/*.key
+.idea
 .env
 .env.backup
 .phpunit.result.cache
