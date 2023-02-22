@@ -468,13 +468,13 @@ class AdminController extends Controller
         return datatables()->of($pelaku)
             ->addIndexColumn()
             ->addColumn('kategori', function($row){
-                $dt = explode(',',$row->kategori);
+                $dt = explode(':',$row->kategori);
                 $sas = $dt[0];
                 $sas = $sas.'<br><hr style="border-top: 2px solid #8da0aa;">'.$dt[1];
                 return $sas;
             })
             ->addColumn('jumlah', function($row){
-                $dt = explode(',',$row->jumlahperusahaan);
+                $dt = explode(':',$row->jumlahperusahaan);
                 $sas = $dt[0];
                 $sas = $sas.'<br><hr style="border-top: 2px solid #8da0aa;">'.$dt[1];
                 return $sas;
@@ -493,11 +493,11 @@ class AdminController extends Controller
     }
     public function cdiawasi(Request $request){
         if($request->selek == 'memiliki'){
-            $jml = $request->jumlah1.','.$request->jumlah2;
-            $kategori = $request->kategori1.','.$request->kategori2;
+            $jml = $request->jumlah1.':'.$request->jumlah2;
+            $kategori = $request->kategori1.':'.$request->kategori2;
         }else if($request->selek == 'taat'){
-            $jml = $request->jumlah3.','.$request->jumlah4;
-            $kategori = $request->kategori3.','.$request->kategori4;
+            $jml = $request->jumlah3.':'.$request->jumlah4;
+            $kategori = $request->kategori3.':'.$request->kategori4;
         }
         $data['tahun'] = $request->tahun;
         $data['temuan'] = $request->temuan;
@@ -512,16 +512,16 @@ class AdminController extends Controller
     }
     public function sdiawasi($id){
         $pelaku = diawasi::find($id);
-        $pelaku['jumlah'] = explode(',', $pelaku->jumlahperusahaan);
+        $pelaku['jumlah'] = explode(':', $pelaku->jumlahperusahaan);
         return response()->json($pelaku);
     }
     public function ediawasi(Request $request){
         if($request->selek == 'memiliki'){
-            $jml = $request->jumlah1.','.$request->jumlah2;
-            $kategori = $request->kategori1.','.$request->kategori2;
+            $jml = $request->jumlah1.':'.$request->jumlah2;
+            $kategori = $request->kategori1.':'.$request->kategori2;
         }else if($request->selek == 'taat'){
-            $jml = $request->jumlah3.','.$request->jumlah4;
-            $kategori = $request->kategori3.','.$request->kategori4;
+            $jml = $request->jumlah3.':'.$request->jumlah4;
+            $kategori = $request->kategori3.':'.$request->kategori4;
         }
         $id = $request->id;
         $data['tahun'] = $request->tahun;

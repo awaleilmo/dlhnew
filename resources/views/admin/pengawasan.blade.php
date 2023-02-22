@@ -393,13 +393,13 @@
                         $('#iddiawasi').val(data.id);
                         $('#temuan').val(data.temuan);
                         $('#tahun1').val(data.tahun);
-                        if(data.kategori == 'Memiliki,Tidak Memiliki'){
+                        if(data.kategori == 'Memiliki:Tidak Memiliki'){
                             $('#kategori').select().val('memiliki');
                             $('#memiliki1').removeClass('hidden');
                             $('#taat1').addClass('hidden');
                             $('#jumlah1').val(data.jumlah[0]);
                             $('#jumlah2').val(data.jumlah[1]);
-                        }else if(data.kategori == 'Taat,Tidak Taat'){
+                        }else if(data.kategori == 'Taat:Tidak Taat'){
                             $('#kategori').select().val('taat');
                             $('#taat1').removeClass('hidden');
                             $('#memiliki1').addClass('hidden');

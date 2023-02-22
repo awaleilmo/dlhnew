@@ -17,7 +17,7 @@ class CreateDiawasisTable extends Migration
             $table->bigIncrements('id');
             $table->string("temuan");
             $table->string("kategori");
-            $table->integer("jumlahperusahaan");
+            $table->string("jumlahperusahaan");
             $table->string("tahun");
             $table->timestamps();
         });
