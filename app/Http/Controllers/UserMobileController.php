@@ -102,9 +102,21 @@ class UserMobileController extends Controller
         $user = User::create($input);
         $success['token'] =  csrf_token();
         $success['name'] =  $user->name;
+        $data['user_id'] = $p->id;
+        $data['amdal'] = 0;
+        $data['sppl'] = 0;
+        $data['uklupl'] = 0;
+        $data['foto'] = 0;
+        $data['video'] = 0;
+        $data['pengaduan'] = 0;
+        $data['banksampah'] = 0;
+        $data['data'] = 0;
+        $data['warta'] = 0;
+        $data['pengumuman'] = 0;
+
+        notif_user::create($data);
         return response()->json(['status'=>'sukses','data'=>$user]);
 
-        //return "success";
     }
 
     /**

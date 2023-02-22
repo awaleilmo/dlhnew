@@ -13,38 +13,6 @@
 
 Auth::routes();
 
-// api auth mobile
-Route::post("/api/app/register", "UserMobileController@register")->name("mobileRegister");
-Route::post("/api/app/login", "UserMobileController@login")->name("mobileLogin");
-Route::get("/api/app/showuser", "UserMobileController@alluser")->name("showuser");
-Route::get("/api/app/finduser", "UserMobileController@alluserfind")->name("finduser");
-Route::get("/api/app/logout", "UserMobileController@logout")->name("logout/user");
-Route::get("/api/app/dokling", "UserMobileController@dokling")->name("dokling/user");
-Route::get("/api/app/cek/dokling",'UserMobileController@cekdokling')->name('cekdokling/user');
-Route::get("/api/app/sipal", "UserMobileController@perizinan")->name("sipal/user");
-Route::get("/api/app/cek/sipal",'UserMobileController@cekperizinan')->name('ceksipal/user');
-Route::get('/api/app/artikel','UserMobileController@pojokwarga')->name('artikel/user');
-Route::get('/api/app/findartikel','UserMobileController@findpojokwarga')->name('findartikel/user');
-Route::get('/api/app/pengumuman','UserMobileController@pengumuman')->name('pengumuman/user');
-Route::get('/api/app/findpengumuman','UserMobileController@findpengumuman')->name('findpengumuman/user');
-Route::post('/api/app/pengaduan','UserMobileController@pengaduan')->name('pengaduan/user');
-Route::post('/api/app/dokupload','UserMobileController@cdokir')->name('dokupload/user');
-Route::get('/api/app/tentang','UserMobileController@tentang')->name('tentang/user');
-Route::get('/api/app/bidang','UserMobileController@bidang')->name('bidang/user');
-Route::get('/api/app/ukl','UserMobileController@ukl')->name('ukl/user');
-Route::get('/api/app/menu/sipal','UserMobileController@sipal')->name('sipal/user');
-Route::get('/api/app/sppl','UserMobileController@sppl')->name('sppl/user');
-Route::get('/api/app/amdal','UserMobileController@amdal')->name('amdal/user');
-Route::get('/api/app/info_data','UserMobileController@info_data')->name('info_data/user');
-Route::get('/api/app/showpengaduan','UserMobileController@showpengaduan')->name('showpengaduan/user');
-Route::get('/api/app/detailpengaduan','UserMobileController@detailpengaduan')->name('detailpengaduan/user');
-Route::get('/api/app/infodok','UserMobileController@info_dok')->name('info_dok/user');
-Route::get('/api/app/notifuser','UserMobileController@notifuser');
-Route::get('/api/app/clearnotif','UserMobileController@notif');
-Route::get('/api/app/foto','UserMobileController@foto');
-Route::get('/api/app/video','UserMobileController@video');
-Route::get('/api/app/video/{id}','AdminController@videom');
-
 //app mobile web
 Route::get('/mobile/cilowong',function (){ return view('mobile.ciliwong'); });
 Route::get('/mobile/data',function (){ return view('mobile.datam'); });
@@ -70,8 +38,6 @@ Route::get('/mobile/pengawasan','UserController@mobilepengawasan');
 Route::get('/mobile/persampahan','UserController@mobilepersampahan');
 Route::get('/mobile/tps3r',function (){return view('mobile.tps3r');});
 Route::get('/mobile/ttps3r','AdminController@mobilettps3r');
-
-
 
 //tampilan admin
 Route::get("/admin","AdminController@index")->name("admin");
