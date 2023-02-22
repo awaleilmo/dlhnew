@@ -102,7 +102,7 @@ class UserMobileController extends Controller
         $user = User::create($input);
         $success['token'] =  csrf_token();
         $success['name'] =  $user->name;
-        $data['user_id'] = $p->id;
+        $data['user_id'] = $user->id;
         $data['amdal'] = 0;
         $data['sppl'] = 0;
         $data['uklupl'] = 0;
